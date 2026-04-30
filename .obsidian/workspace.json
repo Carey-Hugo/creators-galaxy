@@ -1,24 +1,40 @@
 {
   "main": {
-    "id": "8407b3d574c65fd2",
+    "id": "0f26b60dfa4ddeaf",
     "type": "split",
     "children": [
       {
-        "id": "7862e282b8b93176",
+        "id": "b2e7783b82ab63dc",
         "type": "tabs",
         "children": [
           {
-            "id": "2bb91e8b2ebbbc8a",
+            "id": "002d3be9546ee1c6",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "docs/01-knowledge-base/创客星球项目全景知识库.md",
-                "bFile": "docs/01-knowledge-base/创客星球项目全景知识库.md",
-                "aRef": ""
+                "file": "欢迎.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 创客星球项目全景知识库  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "欢迎"
+            }
+          }
+        ]
+      },
+      {
+        "id": "77b2e6005eeac3ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10db998177720da4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -27,15 +43,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "8669a39df7f48dce",
+    "id": "1b73601f3b5023d7",
     "type": "split",
     "children": [
       {
-        "id": "939642e8e0f967dc",
+        "id": "1c9be14c4d830958",
         "type": "tabs",
         "children": [
           {
-            "id": "92d9fb55a611330a",
+            "id": "aa4b87c2d2fe7adc",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +64,7 @@
             }
           },
           {
-            "id": "da458ba2f820e118",
+            "id": "353370ae1d5241dc",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +81,7 @@
             }
           },
           {
-            "id": "32957e5d93f65428",
+            "id": "7080c67fd6da9f52",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,20 +97,20 @@
     "width": 300
   },
   "right": {
-    "id": "d9d6b76dedeea100",
+    "id": "c2fabd8b31b622af",
     "type": "split",
     "children": [
       {
-        "id": "1fe0cb116ce6e1bd",
+        "id": "52432188cee1af04",
         "type": "tabs",
         "children": [
           {
-            "id": "82b0fb46121b95d4",
+            "id": "327a0a46208a3e25",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "创客星球商业生态系统白皮书_V2.md",
+                "file": "欢迎.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +120,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "创客星球商业生态系统白皮书_V2 的反向链接列表"
+              "title": "欢迎 的反向链接列表"
             }
           },
           {
-            "id": "37a71288b60109ea",
+            "id": "7d69946e21f391d0",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "创客星球商业生态系统白皮书_V2.md",
+                "file": "欢迎.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "创客星球商业生态系统白皮书_V2 的出链列表"
+              "title": "欢迎 的出链列表"
             }
           },
           {
-            "id": "2d29b4c90307e462",
+            "id": "7a8a201b66f8be80",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +153,7 @@
             }
           },
           {
-            "id": "c885accd3f554831",
+            "id": "9736d15de797f72b",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,36 +167,26 @@
             }
           },
           {
-            "id": "f063c39700cf794d",
+            "id": "322e2ee33b03014e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "创客星球商业生态系统白皮书_V2.md",
+                "file": "欢迎.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "创客星球商业生态系统白皮书_V2 的大纲"
-            }
-          },
-          {
-            "id": "8c47d2538554f3ec",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "欢迎 的大纲"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 430.5
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,34 +196,43 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false
+      "bases:新建数据库": false
     }
   },
-  "active": "8c47d2538554f3ec",
+  "active": "002d3be9546ee1c6",
   "lastOpenFiles": [
     "test-overseas.txt",
-    "docs/05-poster-copy/images/value-creator-owner.png",
     "docs/05-poster-copy/images/why-100-yuan-ticket.png",
+    "docs/05-poster-copy/images/value-creator-owner.png",
     "docs/05-poster-copy/images/super-individual-manifesto.png",
     "docs/05-poster-copy/images/sports-idle-sharing-recruitment.png",
     "docs/05-poster-copy/images/pet-economy-recruitment.png",
     "docs/05-poster-copy/images/i-have-a-dream-poster.png",
     "docs/05-poster-copy/images/contribution-ownership.png",
     "docs/05-poster-copy/images/centralized-vs-decentralized.png",
+    "docs/05-poster-copy/CGHub海报文案集.md",
     "docs/05-poster-copy/images",
+    "docs/05-poster-copy",
+    "docs/04-book-plan/CGHub书籍策划案.md",
+    "docs/04-book-plan",
     "docs/03-whitepaper/images/whitepaper-cover.png",
     "docs/03-whitepaper/images/super-individual-organization.png",
     "docs/03-whitepaper/images",
+    "docs/03-whitepaper/CGHub商业生态系统白皮书_V2.md",
+    "docs/03-whitepaper/CGHub商业生态系统白皮书.md",
+    "docs/03-whitepaper",
+    "docs/02-partner-recruitment/CGHub合伙人招募计划.md",
+    "docs/02-partner-recruitment",
     "docs/01-knowledge-base/images",
-    "docs/02-partner-recruitment/创客星球合伙人招募计划.md",
-    "创客星球合伙人招募计划.md",
-    "创客星球海报文案集.md",
-    "docs/01-knowledge-base/创客星球项目全景知识库.md",
-    "创客星球书籍策划案.md",
-    "创客星球项目全景知识库.md",
-    "创客星球商业生态系统白皮书.md",
-    "创客星球商业生态系统白皮书_V2.md",
-    "docs/03-whitepaper/创客星球商业生态系统白皮书_V2.md"
+    "docs/01-knowledge-base/CGHub项目全景知识库.md",
+    "docs/01-knowledge-base",
+    "docs",
+    "CGHub项目全景知识库.md",
+    "CGHub海报文案集.md",
+    "CGHub商业生态系统白皮书_V2.md",
+    "CGHub商业生态系统白皮书.md",
+    "CGHub合伙人招募计划.md",
+    "CGHub书籍策划案.md",
+    "欢迎.md"
   ]
 }
