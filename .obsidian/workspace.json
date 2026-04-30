@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "8407b3d574c65fd2",
+    "type": "split",
+    "children": [
+      {
+        "id": "7862e282b8b93176",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2bb91e8b2ebbbc8a",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "docs/01-knowledge-base/创客星球项目全景知识库.md",
+                "bFile": "docs/01-knowledge-base/创客星球项目全景知识库.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 创客星球项目全景知识库  (Working Tree)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8669a39df7f48dce",
+    "type": "split",
+    "children": [
+      {
+        "id": "939642e8e0f967dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "92d9fb55a611330a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "da458ba2f820e118",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "32957e5d93f65428",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d9d6b76dedeea100",
+    "type": "split",
+    "children": [
+      {
+        "id": "1fe0cb116ce6e1bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82b0fb46121b95d4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "创客星球商业生态系统白皮书_V2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "创客星球商业生态系统白皮书_V2 的反向链接列表"
+            }
+          },
+          {
+            "id": "37a71288b60109ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "创客星球商业生态系统白皮书_V2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "创客星球商业生态系统白皮书_V2 的出链列表"
+            }
+          },
+          {
+            "id": "2d29b4c90307e462",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "c885accd3f554831",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "f063c39700cf794d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "创客星球商业生态系统白皮书_V2.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "创客星球商业生态系统白皮书_V2 的大纲"
+            }
+          },
+          {
+            "id": "8c47d2538554f3ec",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 430.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "8c47d2538554f3ec",
+  "lastOpenFiles": [
+    "docs/02-partner-recruitment/创客星球合伙人招募计划.md",
+    "创客星球合伙人招募计划.md",
+    "创客星球海报文案集.md",
+    "docs/01-knowledge-base/创客星球项目全景知识库.md",
+    "创客星球书籍策划案.md",
+    "创客星球项目全景知识库.md",
+    "创客星球商业生态系统白皮书.md",
+    "创客星球商业生态系统白皮书_V2.md",
+    "docs/03-whitepaper/创客星球商业生态系统白皮书_V2.md"
+  ]
+}
