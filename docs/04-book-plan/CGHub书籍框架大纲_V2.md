@@ -1,11 +1,11 @@
-# 《AI新时代——当机器学会分配》书籍框架 V2.0
+# 《AI新时代——当机器人学会分配》书籍框架 V2.0
 
 > **可见范围 / Visibility：** 内部（Internal Only）
 > **最后更新 / Last Updated：** 2025-05-01
 # The AI Epoch — When Machines Learn to Distribute
 
 > **版本 / Version：** V2.0（2025年5月1日更新）
-> **书名 / Working Title：** 《AI新时代——当机器学会分配》
+> **书名 / Working Title：** 《AI新时代——当机器人学会分配》
 > **英文名 / English Title：** *The AI Epoch — When Machines Learn to Distribute*
 > **副标题 / Subtitle：** AI时代驱动新型生产关系变革——共同富裕探路者自组织实践
 > **Subtitle (EN)：** AI-Driven New Production Relations: Self-Governed Practices on the Path to Common Prosperity
@@ -47,7 +47,7 @@ AI（先进生产力）× Web3（生产关系变革）× 共同富裕（理念�
 ## 二、书籍架构总览
 
 ```
-《序章》      ：当机器学会分配（直接破题，回答核心命题）
+《序章》      ：当机器人学会分配（直接破题，回答核心命题）
               When Machines Learn to Distribute
 
 《第一章》    ：分配史上的三次革命
@@ -231,7 +231,7 @@ AI（先进生产力）× Web3（生产关系变革）× 共同富裕（理念�
 ## 六、修订记录
 
 ### V2.0（2025年5月1日）
-- 书名更新为《AI新时代——当机器学会分配》
+- 书名更新为《AI新时代——当机器人学会分配》
 - 新增开篇直接破题的序章设计
 - 新增东西方古典哲学引用系统
 - 新增六章结构（+ 序章 + 终章）

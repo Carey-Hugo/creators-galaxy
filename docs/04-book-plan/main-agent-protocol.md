@@ -14,7 +14,7 @@
 ```
 触发关键词（满足任一即触发）：
 - 创客星球 / 创客 / CGHub / Creators Galaxy Hub
-- 《AI新时代——当机器学会分配》/ 书籍封面 / 书籍策划 / 书籍内容
+- 《AI新时代——当机器人学会分配》/ 书籍封面 / 书籍策划 / 书籍内容
 - 白皮书 / 合伙人招募 / 品牌文案
 - Web3 / DAO / 区块链（且与CGHub相关）
 - Gitee 仓库 / 推送代码 / git pull / git push
@@ -127,7 +127,7 @@ Slogan：点燃创客之光，点亮未来梦想
 Gitee：https://gitee.com/carey-hugo/creators-galaxy
 GitHub：由Gitee镜像同步
 
-当前书籍：《AI新时代——当机器学会分配》
+当前书籍：《AI新时代——当机器人学会分配》
 英文名：The AI Epoch — When Machines Learn to Distribute
 ```
 

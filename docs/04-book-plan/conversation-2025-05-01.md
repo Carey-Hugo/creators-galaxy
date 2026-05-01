@@ -9,7 +9,7 @@
 ## 一、书籍核心定位确认
 
 ### 书名（最终版）
-- **中文**：《AI新时代——当机器学会分配》
+- **中文**：《AI新时代——当机器人学会分配》
 - **英文**：The AI Epoch — When Machines Learn to Distribute
 - **副标题**：AI时代驱动新型生产关系变革——共同富裕探路者自组织实践
 - **英文副标题**：AI-Driven New Production Relations: Self-Governed Practices on the Path to Common Prosperity
@@ -23,7 +23,7 @@
 ## 二、书籍框架（6章 + 序章 + 终章）
 
 ```
-序章    ：当机器学会分配（直接破题，回答核心命题）
+序章    ：当机器人学会分配（直接破题，回答核心命题）
 第一章  ：分配史上的三次革命
 第二章  ：传统分配的三个致命缺陷
 第三章  ：代码即法律——区块链如何改变分配
