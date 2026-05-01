@@ -38,7 +38,7 @@ docs/04-book-plan/main-agent-protocol.md
 ## 触发关键词（供总助识别）
 
 ```
-创客星球 | CGHub | Creators Galaxy Hub | 《AI新时代——当机器学会分配》
+创客星球 | CGHub | Creators Galaxy Hub | 《AI新时代——当机器人学会分配》
 书籍封面 | 书籍策划 | 白皮书 | 合伙人招募 | Web3 | DAO
 Gitee | git push | git pull
 ```

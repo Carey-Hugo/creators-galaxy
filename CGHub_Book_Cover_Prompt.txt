@@ -1,4 +1,4 @@
-# 《AI新时代——当机器学会分配》封面设计提示词
+# 《AI新时代——当机器人学会分配》封面设计提示词
 # The AI Epoch — Book Cover Design Prompts
 # For: 总助 (Main AI Agent)
 
@@ -6,7 +6,7 @@
 
 ## 书籍信息 / Book Info
 
-中文书名：AI新时代——当机器学会分配
+中文书名：AI新时代——当机器人学会分配
 英文书名：The AI Epoch — When Machines Learn to Distribute
 副标题：AI时代驱动新型生产关系变革——共同富裕探路者自组织实践
 Subtitle: AI-Driven New Production Relations: Self-Governed Practices on the Path to Common Prosperity
@@ -117,7 +117,7 @@ OUTPUT: PNG with transparent background
 ### 意境描述（中文）/ Visual Description (Chinese)
 
 ```
-封面视觉概念：《当机器学会分配》
+封面视觉概念：《当机器人学会分配》
 
 核心星球：
 一颗悬浮的星球，承载着人类文明的全部元素。星球的左半球是东方古典的意境——
