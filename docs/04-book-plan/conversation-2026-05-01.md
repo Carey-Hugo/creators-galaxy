@@ -50,3 +50,18 @@
 - 重点检查：单独封面与组合预览中的封面是否统一。
 
 ---
+
+## [10:40 CST] 任务：修复图像生成工具并重生成中文版封面
+
+- 用户反馈：图像生成工具报错，需要先修复，再生成图片。
+- 处理结果：
+  - 诊断到原图像后端不可用，新增并切换到 `pollinations` 图像生成后端作为无密钥备用方案。
+  - 验证 `image_generate` 测试图生成成功。
+  - 发现直接让模型生成中文文字会出现严重伪中文/乱码。
+  - 改用“先生成无文字背景，再用本机字体叠加真实中英文排版”的方案，解决中文封面文字不可读问题。
+- 新生成文件：
+  - `docs/04-book-plan/generated-covers/CGHub_中文版_封面.png`
+  - `docs/04-book-plan/generated-covers/CGHub_中文版_封底.png`
+  - `docs/04-book-plan/generated-covers/CGHub_中文版_书脊.png`
+  - `docs/04-book-plan/generated-covers/CGHub_中文版_组合预览.png`
+- 设计要点：中文版为主，英文辅助；真实太极星球方向；深空蓝、电光青、暖金统一；封面/封底/书脊/组合预览同一套视觉。
