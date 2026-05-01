@@ -123,7 +123,7 @@ Step 5：根据任务类型，读取对应的项目文件：
 
 ```
 品牌名：CGHub / 创客星球
-Slogan：点燃激情，点亮梦想 / Ignite Passion, Illuminate Dreams
+Slogan：点燃创客之光，点亮未来梦想
 Gitee：https://gitee.com/carey-hugo/creators-galaxy
 GitHub：由Gitee镜像同步
 

@@ -526,10 +526,10 @@ AI (Advanced Productive Forces) × Web3 (Production Relations Revolution) × Com
 
 ```
 1. 创客星球的定位 CGHub's Positioning
-   - AI时代超级个体的创业孵化平台
-   - Unicorn startup incubator for super individuals in the AI era
-   - Mission：让人人都是创客，让邻里皆是伙伴
-   - Mission: Everyone is a creator; every neighbor is a partner
+   - 人类文明未来方向的探索基地，人类命运共同体的创新实践
+   - A exploration base for civilization's future, innovation practice for Community of Shared Future
+   - Vision：天下大同、万物共生
+   - Mission：创新实践人类命运共同体蓝图，为人类文明的未来形态探路
 
 2. 创客星球的名字由来 Origin of the Name
    - 创客（Maker）：创造者，不只是使用者
@@ -1003,7 +1003,7 @@ Characteristics:
 | Web3 | Web3 | 基于区块链的去中心化互联网 |
 | DAO | DAO | 去中心化自治组织 |
 | 智能合约 | Smart Contract | 自动执行的计算机程序 |
-| 创客星球 | Creators Galaxy Hub (CGHub) | AI时代超级个体的创业孵化平台 |
+| 创客星球 | Creators Galaxy Hub (CGHub) | 人类文明未来方向的探索基地，人类命运共同体的创新实践 |
 | 双代币体系 | Dual-Token System | MKT+STAR双代币经济模型 |
 | 贡献确权 | Contribution Verification | 用区块链记录和确认贡献 |
 

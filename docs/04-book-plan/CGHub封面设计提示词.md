@@ -15,7 +15,7 @@
 Subtitle: AI-Driven New Production Relations: Self-Governed Practices on the Path to Common Prosperity
 
 品牌：CGHub（创客星球 / Creators Galaxy Hub）
-Slogan：点燃激情，点亮梦想 / Ignite Passion, Illuminate Dreams
+Slogan：点燃创客之光，点亮未来梦想
 
 ---
 
@@ -308,7 +308,7 @@ OUTPUT: PNG
 - 品牌名：CGHub
 - 全称：Creators Galaxy Hub
 - 中文名：创客星球
-- Slogan：点燃激情，点亮梦想 / Ignite Passion, Illuminate Dreams
+- Slogan：点燃创客之光，点亮未来梦想
 - Gitee：https://gitee.com/carey-hugo/creators-galaxy
 
 ---
