@@ -34,7 +34,7 @@
 
 深空蓝背景，电光青、暖金、银白配色，极淡金色人类命运共同体光环，节点等亮无中心。
 
-排版：大标题“AI新时代”，副标题“当机器学会分配”，小英文“The AI Epoch — When Machines Learn to Distribute”，品牌“CGHub 创客星球”，底部“点燃激情，点亮梦想 / Ignite Passion, Illuminate Dreams”。
+排版：大标题“AI新时代”，副标题“当机器学会分配”，小英文“The AI Epoch — When Machines Learn to Distribute”，品牌“CGHub 创客星球”，底部"点燃创客之光，点亮未来梦想"。
 
 风格：时尚、前沿、全球化、中文国内版、高端出版物、哲学感、科技感。
 ```
@@ -54,7 +54,7 @@
 
 下层：AI赋能共同体。多个金色人形轮廓站在等亮节点上，彼此连接成圆，底部有黎明光。
 
-文字区：中文为主。顶部小标题：机器如何学会分配？中部三层旁边可有简短中文标签：传统黑箱 / 链上规则 / AI共创。底部语录：大道之行也，天下为公。下方小英文：When the Great Way prevails, the world belongs to all. 另一侧小英文点缀：Knowledge is power. — Francis Bacon。底部：CGHub 创客星球，点燃激情，点亮梦想 / Ignite Passion, Illuminate Dreams。
+文字区：中文为主。顶部小标题：机器如何学会分配？中部三层旁边可有简短中文标签：传统黑箱 / 链上规则 / AI共创。底部语录：大道之行也，天下为公。下方小英文：When the Great Way prevails, the world belongs to all. 另一侧小英文点缀：Knowledge is power. — Francis Bacon。底部：CGHub 创客星球，点燃创客之光，点亮未来梦想。
 
 要求：信息图属性更强，但仍然像高端书籍封底；文字不要过密，留足呼吸感；与封面同一套视觉语言。
 ```
