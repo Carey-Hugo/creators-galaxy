@@ -1,4 +1,7 @@
 # 《AI新时代——当机器学会分配》封面设计提示词
+
+> **可见范围 / Visibility：** 内部（Internal Only）
+> **最后更新 / Last Updated：** 2025-05-01
 # The AI Epoch — Book Cover Design Prompts
 # For: 总助 (Main AI Agent)
 

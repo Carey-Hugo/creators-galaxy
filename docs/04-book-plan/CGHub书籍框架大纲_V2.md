@@ -1,4 +1,7 @@
 # 《AI新时代——当机器学会分配》书籍框架 V2.0
+
+> **可见范围 / Visibility：** 内部（Internal Only）
+> **最后更新 / Last Updated：** 2025-05-01
 # The AI Epoch — When Machines Learn to Distribute
 
 > **版本 / Version：** V2.0（2025年5月1日更新）
