@@ -223,7 +223,7 @@ AI（先进生产力）× Web3（生产关系变革）× 共同富裕（理念�
 - **品牌名**：CGHub
 - **全称**：Creators Galaxy Hub
 - **中文名**：创客星球
-- **Slogan**：点燃激情，点亮梦想 / Ignite Passion, Illuminate Dreams
+- **Slogan**：点燃创客之光，点亮未来梦想
 - **Gitee**：https://gitee.com/carey-hugo/creators-galaxy
 
 ---
