@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>创客星球小报童发刊词封面</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;width:1600px;height:900px;background:#020611;overflow:hidden}
+  body{position:relative}
+  .cover{position:relative;width:1600px;height:900px;overflow:hidden;color:white;font-family:"WenQuanYi Zen Hei","Droid Sans Fallback","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:
+    radial-gradient(circle at 79% 39%, rgba(255,202,91,.42) 0 3%, transparent 16%),
+    radial-gradient(circle at 82% 38%, rgba(16,230,255,.28) 0 2%, transparent 18%),
+    radial-gradient(circle at 69% 29%, rgba(0,101,255,.34), transparent 30%),
+    linear-gradient(123deg,#020611 0%,#041126 37%,#081633 58%,#020714 100%)}
+  .cover:before{content:"";position:absolute;inset:-8%;background-image:
+    radial-gradient(circle, rgba(255,255,255,.85) 0 1.2px, transparent 1.6px),
+    radial-gradient(circle, rgba(44,225,255,.55) 0 1px, transparent 1.4px);background-size:86px 86px,137px 137px;background-position:13px 29px,61px 12px;opacity:.42;filter:drop-shadow(0 0 8px rgba(91,219,255,.5));z-index:0}
+  .nebula{position:absolute;inset:0;z-index:1;background:conic-gradient(from 238deg at 76% 42%, transparent 0 12%, rgba(22,215,255,.22) 18%, rgba(255,184,64,.2) 28%, transparent 43%, rgba(68,92,255,.18) 58%, transparent 72%);filter:blur(18px);opacity:.74;mix-blend-mode:screen}
+  .planet{position:absolute;right:92px;top:96px;width:382px;height:382px;border-radius:50%;z-index:2;background:radial-gradient(circle at 35% 30%, rgba(255,245,189,.95), rgba(255,187,57,.72) 19%, rgba(11,207,255,.55) 37%, rgba(0,42,102,.75) 60%, rgba(2,9,26,.95) 76%),linear-gradient(130deg,#0ff,#014);box-shadow:0 0 70px rgba(40,223,255,.7),0 0 150px rgba(255,176,56,.34),inset -42px -38px 70px rgba(0,0,0,.62);opacity:.92}
+  .planet:after{content:"";position:absolute;inset:-26px;border-radius:50%;border:1px solid rgba(119,235,255,.24);transform:rotate(-18deg) scaleX(1.45);filter:blur(.3px)}
+  .path{position:absolute;right:313px;bottom:0px;width:230px;height:280px;z-index:2;background:radial-gradient(ellipse at 50% 0,rgba(255,198,81,.75),rgba(255,166,37,.22) 42%,transparent 72%);clip-path:polygon(42% 0,58% 0,100% 100%,0 100%);filter:blur(4px);opacity:.8}
+  .nodes svg{position:absolute;inset:0;z-index:2}.nodes line{stroke:rgba(83,229,255,.23);stroke-width:1}.nodes circle{fill:#93f3ff;filter:drop-shadow(0 0 7px #2fe6ff);opacity:.9}.nodes .gold{fill:#ffd26c;filter:drop-shadow(0 0 9px #ffb93b)}
+  .ship{position:absolute;right:315px;bottom:98px;width:332px;height:416px;z-index:3;filter:drop-shadow(0 0 28px rgba(255,191,71,.45))}
+  .ship .body{position:absolute;left:72px;top:30px;width:184px;height:336px;background:linear-gradient(95deg,rgba(8,23,51,.72),rgba(12,45,89,.84));clip-path:polygon(50% 0,88% 19%,100% 100%,0 100%,12% 19%);border:1px solid rgba(111,232,255,.38)}
+  .ship .door{position:absolute;left:112px;top:168px;width:104px;height:142px;border-radius:58px 58px 10px 10px;background:radial-gradient(circle at 50% 35%,#fff8c9,#ffc95f 36%,#ff8a1f 70%);box-shadow:0 0 35px #ffc45a,0 0 95px rgba(255,160,50,.75)}
+  .ship .wing-l,.ship .wing-r{position:absolute;bottom:45px;width:112px;height:170px;background:linear-gradient(160deg,rgba(4,16,38,.82),rgba(3,154,194,.28));border:1px solid rgba(99,224,255,.28)}
+  .ship .wing-l{left:0;clip-path:polygon(100% 0,100% 100%,0 100%)} .ship .wing-r{right:0;clip-path:polygon(0 0,100% 100%,0 100%)}
+  .human{position:absolute;right:410px;bottom:159px;width:36px;height:92px;z-index:4;background:linear-gradient(#fff2b8,#ffb641);clip-path:polygon(42% 0,58% 0,65% 18%,62% 100%,38% 100%,35% 18%);filter:drop-shadow(0 0 14px #ffc55c)}
+  .copy{position:absolute;left:96px;top:90px;width:780px;z-index:5}.eyebrow{font-size:34px;letter-spacing:.16em;color:#7febff;text-transform:uppercase;margin-bottom:42px;text-shadow:0 0 18px rgba(66,227,255,.5)}
+  h1{margin:0;font-size:86px;line-height:1.08;font-weight:900;letter-spacing:-.03em;text-shadow:0 0 36px rgba(0,0,0,.72),0 0 30px rgba(34,215,255,.22)}
+  h1 .gold{color:#ffd577;text-shadow:0 0 25px rgba(255,191,71,.58)}
+  .subtitle{margin-top:31px;font-size:38px;line-height:1.32;color:#e9fbff;font-weight:500;text-shadow:0 0 24px rgba(0,0,0,.82)}
+  .quote{position:absolute;left:100px;bottom:170px;width:690px;z-index:5;padding-left:28px;border-left:4px solid #ffd16b;font-size:34px;line-height:1.42;color:#cbeef7;text-shadow:0 0 16px rgba(0,0,0,.7)}
+  .brand{position:absolute;left:100px;bottom:92px;z-index:5;font-size:26px;color:#fff;letter-spacing:.06em}.brand span{color:#7eeeff}.badge{position:absolute;right:120px;top:72px;z-index:5;border:1px solid rgba(126,238,255,.42);border-radius:999px;padding:13px 22px;font-size:24px;color:#dcfbff;background:rgba(1,15,34,.36);backdrop-filter:blur(10px)}
+  .grain{position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:5px 5px;opacity:.38;mix-blend-mode:overlay}
+  .vignette{position:absolute;inset:0;z-index:4;pointer-events:none;box-shadow:inset 0 0 72px rgba(2,6,17,.72)}
+</style>
+</head>
+<body><main class="cover">
+  <div class="nebula"></div><div class="planet"></div><div class="path"></div>
+  <div class="nodes"><svg viewBox="0 0 1600 900" aria-hidden="true">
+    <line x1="870" y1="210" x2="1010" y2="270"/><line x1="1010" y1="270" x2="1160" y2="210"/><line x1="1040" y1="450" x2="1220" y2="390"/><line x1="1170" y1="610" x2="1335" y2="500"/><line x1="935" y1="620" x2="1170" y2="610"/><line x1="1280" y1="245" x2="1430" y2="180"/><line x1="1210" y1="335" x2="1388" y2="322"/>
+    <circle cx="870" cy="210" r="4"/><circle cx="1010" cy="270" r="5"/><circle cx="1160" cy="210" r="4"/><circle cx="1040" cy="450" r="4"/><circle cx="1220" cy="390" r="5"/><circle cx="1170" cy="610" r="5"/><circle cx="1335" cy="500" r="4"/><circle cx="935" cy="620" r="4"/><circle class="gold" cx="1280" cy="245" r="6"/><circle cx="1430" cy="180" r="4"/><circle cx="1210" cy="335" r="4"/><circle class="gold" cx="1388" cy="322" r="5"/>
+  </svg></div>
+  <div class="ship"><div class="wing-l"></div><div class="wing-r"></div><div class="body"></div><div class="door"></div></div><div class="human"></div>
+  <section class="copy"><div class="eyebrow">CGHub · 小报童发刊词</div><h1>通往新世界的<br><span class="gold">星海征途</span></h1><div class="subtitle">欢迎领取创客星球船票，<br>我们一起远航</div></section>
+  <div class="quote">不是一个公司，不是一个平台，不是一个工具。<br>是一套让创造被看见、贡献被记录的系统。</div>
+  <div class="brand">创客星球 <span>Creators Galaxy Hub</span></div><div class="badge">船票已出 · 请登船</div><div class="grain"></div><div class="vignette"></div>
+</main></body></html>
