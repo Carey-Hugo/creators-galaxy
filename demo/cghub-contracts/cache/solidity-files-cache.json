@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/ubuntu/creators-galaxy/demo/cghub-contracts/contracts/CGHubSubscription.sol": {
+      "lastModificationDate": 1778576614937,
+      "contentHash": "02a084556e6efd1db3d444dc7a8cfa74",
+      "sourceName": "contracts/CGHubSubscription.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "prague",
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "CGHubSubscription"
+      ]
+    }
+  }
+}
