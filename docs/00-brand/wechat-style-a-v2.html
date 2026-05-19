@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGHub 排版风格A V2 · 深色极简</title>
+<style>
+/* ── 基础重置 ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0e0f14;
+  font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  padding: 48px 20px;
+  color: #d0d0e0;
+}
+
+/* ── 文章容器 ── */
+.article {
+  max-width: 660px;
+  margin: 0 auto;
+  background: #13141c;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #1e2030;
+}
+
+/* ── 顶部封面区 ── */
+.article-header {
+  background: linear-gradient(160deg, #0d1828 0%, #111827 60%, #0a0f1a 100%);
+  padding: 40px 40px 36px;
+  border-bottom: 1px solid #1e2030;
+  position: relative;
+  overflow: hidden;
+}
+.article-header::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(74,157,232,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 连载标签 */
+.series-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(74,157,232,0.08);
+  border: 1px solid rgba(74,157,232,0.25);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: #4a9de8;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+.series-badge .dot {
+  width: 5px; height: 5px;
+  background: #4a9de8;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* 文章大标题 */
+.article-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.45;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+/* 导言/摘要 */
+.article-lead {
+  font-size: 15px;
+  color: #8899bb;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* 作者 + 元信息行 */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 12px;
+  color: #445;
+}
+.meta-author {
+  color: #6699cc;
+  font-weight: 600;
+  margin-right: 16px;
+}
+.meta-item {
+  color: #445566;
+  margin-right: 12px;
+}
+.meta-item::before { content: '· '; }
+.meta-reading {
+  margin-left: auto;
+  color: #334;
+  font-size: 11px;
+  border: 1px solid #223;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+}
+
+/* ── 正文区 ── */
+.article-body {
+  padding: 40px 40px 0;
+}
+
+/* 正文段落 */
+.article-body p {
+  font-size: 15px;
+  line-height: 2;
+  color: #b0b8cc;
+  margin-bottom: 16px;
+}
+
+/* 加粗强调 */
+.article-body strong {
+  color: #e0e8ff;
+  font-weight: 600;
+}
+
+/* ── 章节标题层级 ── */
+
+/* H2：主章节（一、二、三...） */
+.article-body h2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 44px 0 18px;
+}
+.h2-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a9de8;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 40px;
+}
+.h2-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #dde8ff;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  flex: 1;
+}
+.h2-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #1e2a3a, transparent);
+  min-width: 20px;
+  max-width: 60px;
+}
+
+/* H3：小节标题（如有） */
+.article-body h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7799bb;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 28px 0 10px;
+  padding-left: 12px;
+  border-left: 2px solid #2a4060;
+}
+
+/* ── 时代分块卡片 ── */
+.era-block {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid #1e2535;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin: 12px 0;
+  position: relative;
+  overflow: hidden;
+}
+.era-block::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #1e3a5a;
+  border-radius: 3px 0 0 3px;
+}
+.era-block.active::before { background: #4a9de8; }
+.era-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #4a6688;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.era-block.active .era-label { color: #4a9de8; }
+.era-content {
+  font-size: 14px;
+  color: #8899aa;
+  line-height: 1.8;
+}
+.era-block.active .era-content { color: #aabbcc; }
+
+/* ── 引言/金句 ── */
+.pullquote {
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: #0d1520;
+  border-left: 3px solid #4a9de8;
+  border-radius: 0 8px 8px 0;
+}
+.pullquote p {
+  font-size: 17px !important;
+  font-weight: 500;
+  color: #c8d8f0 !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+
+/* ── 书籍推荐卡片 ── */
+.book-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #0d1520;
+  border: 1px solid #1a2840;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 28px 0;
+}
+.book-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, #1a3a5c, #0d2040);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  border: 1px solid #1e3a5c;
+}
+.book-info { flex: 1; }
+.book-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8bbce8;
+  margin-bottom: 6px;
+}
+.book-desc {
+  font-size: 13px;
+  color: #556677;
+  line-height: 1.7;
+  margin: 0 !important;
+}
+.book-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #4a9de8;
+  border: 1px solid rgba(74,157,232,0.3);
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+/* ── 分割线 ── */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #1e2535, transparent);
+}
+.section-divider span {
+  font-size: 10px;
+  color: #2a3545;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── 结尾问句 ── */
+.closing-question {
+  text-align: center;
+  padding: 32px 20px;
+  margin: 32px 0 0;
+}
+.closing-question .q {
+  font-size: 20px;
+  font-weight: 600;
+  color: #dde8ff;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.closing-question .sub {
+  font-size: 13px;
+  color: #445566;
+}
+
+/* ── 底部页脚 ── */
+.article-footer {
+  background: #0e0f16;
+  border-top: 1px solid #1a1e28;
+  padding: 28px 40px 32px;
+  margin-top: 0;
+}
+.footer-series {
+  font-size: 12px;
+  color: #334;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.footer-series strong {
+  color: #4a9de8 !important;
+  font-weight: 600;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid #1a1e28;
+  padding-top: 16px;
+  margin-top: 4px;
+}
+.footer-prev, .footer-next {
+  color: #334455;
+  max-width: 44%;
+}
+.footer-prev span, .footer-next span {
+  display: block;
+  font-size: 10px;
+  color: #223;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.footer-next { text-align: right; color: #4a7aaa; }
+.footer-cta {
+  background: rgba(74,157,232,0.06);
+  border: 1px solid rgba(74,157,232,0.15);
+  border-radius: 8px;
+  padding: 14px 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #557799;
+  line-height: 1.7;
+}
+.footer-cta strong { color: #4a9de8 !important; }
+</style>
+</head>
+<body>
+
+<div class="article">
+
+  <!-- 文章头部 -->
+  <div class="article-header">
+    <div class="series-badge">
+      <div class="dot"></div>
+      AI新时代·当机器人学会分配 &nbsp;/&nbsp; 第06篇
+    </div>
+    <h1 class="article-title">520，我想跟你聊聊钱的问题</h1>
+    <p class="article-lead">你这些年认认真真干活，创造的价值，有多少真正进了你的口袋？分配权的问题，比你想象的古老，也比你想象的近。</p>
+    <div class="article-meta">
+      <span class="meta-author">Hugo</span>
+      <span class="meta-item">2026年5月20日</span>
+      <span class="meta-item">公众号首发</span>
+      <span class="meta-reading">5 min read</span>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <div class="article-body">
+
+    <p>今天是520。朋友圈里全是鲜花，全是表白，全是各种凑在一起的热闹。</p>
+    <p>我也想说点什么。但我想聊的，不是爱情。</p>
+    <p>前段时间，有个读者给我发了条消息。她在一个短视频平台做了一年半内容，粉丝涨到了两万多，还不错。但她算了一下，这一年半投进去的时间、精力，还有拍摄剪辑买设备的钱，平台实际分给她的，远不到她付出的十分之一。</p>
+    <p>她问我：是我哪里做错了吗？</p>
+    <p>我跟她说：你没做错。你只是在一套别人制定的规则里，认真地打了一场注定不公平的牌。</p>
+
+    <!-- 章节一 -->
+    <h2>
+      <span class="h2-num">ONE</span>
+      <span class="h2-text">分配权，从有文明以来就没在普通人手里</span>
+      <span class="h2-line"></span>
+    </h2>
+
+    <p>这不是她一个人的故事，这是人类文明几千年来的老问题。我们走过三个大时代，每个时代都有一套分配规则，但规则背后的逻辑从来没变过。</p>
+
+    <div class="era-block">
+      <div class="era-label">土地时代</div>
+      <div class="era-content">谁控制土地，谁控制分配。你种了一年的地，能拿多少，地主说了算。你的命运，写在别人的田契上。</div>
+    </div>
+
+    <div class="era-block">
+      <div class="era-label">机器时代</div>
+      <div class="era-content">权力从土地转到了工厂。工资怎么算，老板心里有一本账，但你看不到。生产力越高，工人拿到的相对份额反而越来越低。</div>
+    </div>
+
+    <div class="era-block active">
+      <div class="era-label">算法时代 · 现在</div>
+      <div class="era-content">权力从工厂转到了平台。谁控制算法，谁控制分配。规则从田契变成了合同，从合同变成了算法，但有一件事始终没变——<strong>规则不是你定的。</strong></div>
+    </div>
+
+    <p style="margin-top:20px;">我讲这段历史，不是要让你愤怒，也不是贩卖焦虑。我只是想说一件事：这是个结构性的问题，不是你不够努力。</p>
+
+    <!-- 章节二 -->
+    <h2>
+      <span class="h2-num">TWO</span>
+      <span class="h2-text">为什么掌握规则的人，不会主动改变规则</span>
+      <span class="h2-line"></span>
+    </h2>
+
+    <p>这里有个很简单的逻辑，但大多数人没想清楚。规则的制定，需要两个条件：信息优势，和执行能力。</p>
+    <p>土地时代，地主掌握土地。机器时代，资本家掌握资本。算法时代，平台掌握数据和技术。所以每一次，规则都是由掌握稀缺资源的那一方来制定的。这不是谁坏，这是结构决定的。</p>
+    <p>更关键的是：掌握规则的人，没有动力去改变规则。改变规则意味着放弃优势，没有人会主动这样做。</p>
+
+    <div class="pullquote">
+      <p>历史上每一次分配规则的改变，要么靠暴力革命，要么靠技术革命。前者代价太高。后者，才是真正的希望所在。</p>
+    </div>
+
+    <!-- 章节三 -->
+    <h2>
+      <span class="h2-num">THREE</span>
+      <span class="h2-text">机器，第一次学会了"分配"</span>
+      <span class="h2-line"></span>
+    </h2>
+
+    <p>区块链这个词，很多人一听就皱眉。这几年骗局太多，我理解。但区块链本身要解决的问题，从来不是投机，是信任。更准确地说，是用技术替代信任，用代码替代中间人。</p>
+    <p>它做到了人类历史上第一次做到的事：</p>
+    <p><strong>把分配规则写成代码，部署到一个谁都无法单方面修改的地方。</strong></p>
+    <p>这叫智能合约。说白了就这一件事。过去，规则写在合同里，你信不信对方会执行，是个人品问题。现在，规则写在代码里，代码自己执行，不经过任何人的手，不需要你信任任何人。</p>
+    <p>平台该抽多少佣，合约里写死，没人能偷偷改。你贡献了多少价值，链上有记录，没人能抹掉。该到你的那份，自动执行。</p>
+    <p>那个做了一年半内容的读者，如果分配规则公开透明，写入合约，她的一年半会是完全不同的结局。这不是幻想，是正在被代码实现的方向。</p>
+
+    <div class="book-card">
+      <div class="book-icon">📖</div>
+      <div class="book-info">
+        <div class="book-title">推荐阅读：《区块链革命》</div>
+        <p class="book-desc">Don Tapscott父子写的这本书，用商业语言把区块链说清楚了，不需要技术背景也读得懂。如果你对"规则写入代码"这件事感兴趣，这本书是很好的入口。</p>
+        <span class="book-link">微信小店购买 →</span>
+      </div>
+    </div>
+
+    <!-- 章节四 -->
+    <h2>
+      <span class="h2-num">FOUR</span>
+      <span class="h2-text">这和你有什么关系</span>
+      <span class="h2-line"></span>
+    </h2>
+
+    <p>你可能觉得这些还是很远。但我觉得，这比大多数人想的近得多。</p>
+    <p>AI已经把生产力的门槛拉平了，一个人加一套工具，可以做过去一个团队的事。但生产力的提升，不会自动带来分配的公平。生产力和生产关系，从来是两件事。</p>
+    <p>这就是我做创客星球(CGHub)这件事的起点。不是说我找到了答案，是我觉得这道题值得认真去解。核心只有一句话：<strong>参与者即股东，创造即确权。</strong></p>
+    <p>不是承诺，是代码。不是情怀，是机制。</p>
+
+    <div class="section-divider"><span>· · ·</span></div>
+
+    <div class="closing-question">
+      <div class="q">规则，可以不是别人说了算吗？</div>
+      <div class="sub">下篇，我们接着聊。</div>
+    </div>
+
+  </div>
+
+  <!-- 页脚 -->
+  <div class="article-footer">
+    <div class="footer-series">
+      <strong>关于本书与连载</strong><br>
+      《AI新时代，当机器人学会分配》· AI生产力跃迁驱动新型生产关系变革——共同富裕探路者自组织实践
+    </div>
+    <div class="footer-nav">
+      <div class="footer-prev">
+        <span>上一篇</span>
+        AI时代普通人如何拿到属于自己的三种杠杆
+      </div>
+      <div class="footer-next">
+        <span>下一篇</span>
+        传统分配的三个致命缺陷
+      </div>
+    </div>
+    <div class="footer-cta">
+      如果你认同我的观察、思考与探索实践，欢迎关注本公众号<br>
+      <strong>一起交流，一起成为同路人</strong>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
