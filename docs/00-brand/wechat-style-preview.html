@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGHub 公众号排版风格选择</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1a1a2e; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; padding: 40px 20px; }
+
+  .selector { display: flex; gap: 16px; justify-content: center; margin-bottom: 40px; flex-wrap: wrap; }
+  .btn { padding: 10px 28px; border: 2px solid #576b95; border-radius: 24px; background: transparent; color: #576b95; cursor: pointer; font-size: 15px; transition: all .2s; }
+  .btn.active, .btn:hover { background: #576b95; color: #fff; }
+
+  .preview-area { display: none; max-width: 680px; margin: 0 auto; }
+  .preview-area.active { display: block; }
+
+  .label { text-align: center; color: #888; font-size: 13px; margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase; }
+
+  /* ────── 风格A：深色极简 ────── */
+  .style-a {
+    background: #111318;
+    border-radius: 12px;
+    padding: 48px 40px;
+    color: #e8e8e8;
+    line-height: 2;
+    font-size: 15px;
+  }
+  .style-a .meta {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+  }
+  .style-a .meta span { margin-right: 16px; }
+  .style-a .series-tag {
+    display: inline-block;
+    border: 1px solid #2a6db5;
+    color: #4a9de8;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+  }
+  .style-a .lead {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    border-left: 3px solid #2a6db5;
+    padding-left: 20px;
+  }
+  .style-a h2 {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #4a9de8;
+    text-transform: uppercase;
+    margin: 40px 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .style-a h2::after { content: ''; flex: 1; height: 1px; background: #2a2a3a; }
+  .style-a p { margin-bottom: 14px; color: #c8c8d8; }
+  .style-a strong { color: #fff; }
+  .style-a .highlight {
+    background: #0d1a2d;
+    border: 1px solid #1a3a5c;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+    color: #88b8e8;
+  }
+  .style-a .highlight strong { color: #4a9de8; display: block; margin-bottom: 8px; }
+  .style-a .divider { border: none; border-top: 1px solid #2a2a3a; margin: 40px 0; }
+  .style-a .footer { font-size: 13px; color: #444; line-height: 1.8; }
+  .style-a .footer .next { color: #4a9de8; margin-top: 12px; }
+
+  /* ────── 风格B：白底杂志 ────── */
+  .style-b {
+    background: #fff;
+    border-radius: 12px;
+    padding: 48px 40px;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .style-b .meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  .style-b .series-banner {
+    background: linear-gradient(135deg, #576b95 0%, #3a5080 100%);
+    color: #fff;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-bottom: 36px;
+    display: inline-block;
+    letter-spacing: 1px;
+  }
+  .style-b .lead {
+    font-size: 22px;
+    font-weight: 400;
+    color: #111;
+    line-height: 1.6;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 2px solid #eee;
+  }
+  .style-b h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+    margin: 36px 0 14px;
+    padding-left: 14px;
+    border-left: 4px solid #576b95;
+  }
+  .style-b p { margin-bottom: 14px; }
+  .style-b strong { color: #576b95; }
+  .style-b .callout {
+    background: #f7f9ff;
+    border-left: 4px solid #576b95;
+    padding: 20px 24px;
+    margin: 28px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .style-b .callout strong { display: block; margin-bottom: 8px; color: #333; font-size: 15px; }
+  .style-b .callout p { margin: 0; font-size: 14px; color: #555; line-height: 1.7; }
+  .style-b .divider { border: none; margin: 40px 0; text-align: center; color: #ccc; letter-spacing: 8px; }
+  .style-b .divider::before { content: '· · ·'; }
+  .style-b .footer { background: #f9f9f9; border-radius: 8px; padding: 20px 24px; font-size: 13px; color: #666; line-height: 1.8; margin-top: 40px; }
+  .style-b .footer strong { color: #333; }
+  .style-b .footer .cta { color: #576b95; font-weight: 600; margin-top: 10px; display: block; }
+
+  /* ────── 风格C：暖色人文 ────── */
+  .style-c {
+    background: #faf8f4;
+    border-radius: 12px;
+    padding: 48px 40px;
+    color: #2d2d2d;
+    font-size: 16px;
+    line-height: 2;
+    font-family: 'Georgia', 'STSong', serif;
+  }
+  .style-c .meta { font-family: -apple-system, sans-serif; font-size: 12px; color: #aaa; margin-bottom: 8px; letter-spacing: 1px; }
+  .style-c .series-tag {
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+    color: #c07a3a;
+    border-bottom: 1px solid #e8d5c0;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    display: block;
+    letter-spacing: 1px;
+  }
+  .style-c .lead {
+    font-size: 21px;
+    line-height: 1.7;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+  }
+  .style-c h2 {
+    font-family: -apple-system, 'PingFang SC', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #c07a3a;
+    letter-spacing: 3px;
+    margin: 40px 0 16px;
+  }
+  .style-c h2 span { margin-right: 8px; }
+  .style-c p { margin-bottom: 16px; }
+  .style-c strong { font-weight: 700; color: #1a1a1a; }
+  .style-c .callout {
+    background: #fff;
+    border: 1px solid #e8d5c0;
+    border-top: 3px solid #c07a3a;
+    padding: 20px 24px;
+    margin: 28px 0;
+    border-radius: 0 0 8px 8px;
+  }
+  .style-c .callout strong { color: #c07a3a; display: block; margin-bottom: 8px; font-family: -apple-system, sans-serif; }
+  .style-c .callout p { font-family: -apple-system, sans-serif; font-size: 14px; color: #666; margin: 0; }
+  .style-c .divider { text-align: center; margin: 40px 0; color: #d4b896; letter-spacing: 12px; }
+  .style-c .divider::before { content: '✦ ✦ ✦'; font-size: 10px; }
+  .style-c .footer { font-family: -apple-system, sans-serif; font-size: 13px; color: #888; line-height: 1.8; border-top: 1px solid #e8d5c0; padding-top: 24px; margin-top: 40px; }
+  .style-c .footer .cta { color: #c07a3a; margin-top: 12px; display: block; }
+</style>
+</head>
+<body>
+
+<div class="selector">
+  <button class="btn active" onclick="show('a')">风格A · 深色极简</button>
+  <button class="btn" onclick="show('b')">风格B · 白底杂志</button>
+  <button class="btn" onclick="show('c')">风格C · 暖色人文</button>
+</div>
+
+<!-- 风格A -->
+<div id="pa" class="preview-area active">
+  <div class="label">Style A · Dark Minimal · 深色极简</div>
+  <div class="style-a">
+    <div class="meta">
+      <span>Hugo</span><span>2026.05.20</span><span>2100字 · 5分钟</span>
+    </div>
+    <div class="series-tag">《AI新时代·当机器人学会分配》第06篇连载</div>
+    <div class="lead">今天是520。我想聊的不是爱情，是一件比爱情更难开口的事——你这些年认认真真干活，创造的价值，有多少真正进了你的口袋？</div>
+
+    <p>前段时间，有个读者给我发了条消息。她在一个短视频平台做了一年半内容，粉丝涨到了两万多，还不错。</p>
+    <p>但她算了一下，这一年半投进去的时间、精力，还有拍摄剪辑买设备的钱，平台实际分给她的，远不到她付出的十分之一。</p>
+    <p>她问我：是我哪里做错了吗？</p>
+    <p>我跟她说：你没做错。你只是在一套别人制定的规则里，认真地打了一场注定不公平的牌。</p>
+
+    <h2>一 · 分配权，从有文明以来就没在普通人手里</h2>
+    <p>我们走过三个大时代，每个时代都有一套分配规则，但规则背后的逻辑从来没变过。</p>
+    <p><strong>土地时代</strong> — 谁控制土地，谁控制分配。你种了一年的地，能拿多少，地主说了算。</p>
+    <p><strong>机器时代</strong> — 权力从土地转到了工厂。工资怎么算，老板心里有一本账，但你看不到。</p>
+    <p><strong>算法时代</strong> — 权力从工厂转到了平台。谁控制算法，谁控制分配。但有一件事始终没变——<strong>规则不是你定的。</strong></p>
+
+    <h2>二 · 为什么掌握规则的人，不会主动改变规则</h2>
+    <p>历史上每一次分配规则的改变，要么靠暴力革命，要么靠技术革命。前者代价太高。后者，才是真正的希望所在。</p>
+
+    <h2>三 · 机器，第一次学会了"分配"</h2>
+    <p>区块链做到了人类历史上第一次做到的事：<strong>把分配规则写成代码，部署到一个谁都无法单方面修改的地方。</strong></p>
+    <p>这叫智能合约。代码自己执行，不经过任何人的手，不需要你信任任何人。</p>
+
+    <div class="highlight">
+      <strong>📖 推荐阅读：《区块链革命》</strong>
+      Don Tapscott父子写的这本书，用商业语言把区块链说清楚了，不需要技术背景也读得懂。
+    </div>
+
+    <h2>四 · 这和你有什么关系</h2>
+    <p>这就是我做创客星球(CGHub)这件事的起点。核心只有一句话：<strong>参与者即股东，创造即确权。</strong></p>
+    <p>不是承诺，是代码。不是情怀，是机制。</p>
+    <p><strong>规则，可以不是别人说了算吗？</strong></p>
+    <p>下篇，我们接着聊。</p>
+
+    <hr class="divider">
+    <div class="footer">
+      <div>《AI新时代，当机器人学会分配》第06篇连载</div>
+      <div>上篇：AI时代普通人如何拿到三种杠杆 · 下篇：传统分配的三个致命缺陷</div>
+      <div class="next">如果你认同我的探索，欢迎关注，一起成为同路人 →</div>
+    </div>
+  </div>
+</div>
+
+<!-- 风格B -->
+<div id="pb" class="preview-area">
+  <div class="label">Style B · White Magazine · 白底杂志</div>
+  <div class="style-b">
+    <div class="meta">
+      <span>Hugo</span><span>·</span><span>2026年5月20日</span><span>·</span><span>约2100字</span>
+    </div>
+    <div class="series-banner">《AI新时代·当机器人学会分配》· 第06篇连载</div>
+
+    <div class="lead">
+      今天是520。我想聊的不是爱情，是一件比爱情更难开口的事——你这些年认认真真干活，创造的价值，有多少真正进了你的口袋？
+    </div>
+
+    <p>前段时间，有个读者给我发了条消息。她在一个短视频平台做了一年半内容，粉丝涨到了两万多，还不错。</p>
+    <p>但她说，这一年半投进去的时间、精力，还有设备费用，平台实际分给她的，远不到她付出的十分之一。</p>
+    <p>她问我：是我哪里做错了吗？我跟她说：你没做错。你只是在一套别人制定的规则里，认真地打了一场注定不公平的牌。</p>
+
+    <h2>一、分配权，从有文明以来就没在普通人手里</h2>
+    <p>我们走过三个大时代，每个时代都有一套分配规则，但规则背后的逻辑从来没变过。</p>
+    <p><strong>土地时代</strong>，谁控制土地，谁控制分配。你的命运，写在别人的田契上。</p>
+    <p><strong>机器时代</strong>，权力从土地转到了工厂。工资怎么算的，老板心里有一本账，但你看不到。</p>
+    <p><strong>算法时代</strong>，权力从工厂转到了平台。谁控制算法，谁控制分配。但有一件事始终没变——<strong>规则不是你定的。</strong></p>
+
+    <h2>二、为什么掌握规则的人，不会主动改变规则</h2>
+    <p>每一次规则都是由掌握稀缺资源的那一方来制定的。这不是谁坏，这是结构决定的。历史上每一次分配规则的改变，要么靠暴力革命，要么靠技术革命。前者代价太高。后者，才是真正的希望所在。</p>
+
+    <h2>三、机器，第一次学会了"分配"</h2>
+    <p>区块链做到了人类历史上第一次做到的事：</p>
+    <p><strong>把分配规则写成代码，部署到一个谁都无法单方面修改的地方。</strong></p>
+    <p>这叫智能合约。代码自己执行，不经过任何人的手，不需要你信任任何人。</p>
+
+    <div class="callout">
+      <strong>推荐阅读：《区块链革命》</strong>
+      <p>Don Tapscott父子写的这本书，用商业语言把区块链说清楚了，不需要技术背景也读得懂。如果你对"规则写入代码"这件事感兴趣，这本书是很好的入口。</p>
+    </div>
+
+    <h2>四、这和你有什么关系</h2>
+    <p>这就是我做创客星球(CGHub)这件事的起点。核心只有一句话：<strong>参与者即股东，创造即确权。</strong>不是承诺，是代码。不是情怀，是机制。</p>
+    <p><strong>规则，可以不是别人说了算吗？</strong></p>
+    <p>下篇，我们接着聊。</p>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      <strong>关于本书与连载</strong><br>
+      这是《AI新时代，当机器人学会分配》（AI生产力跃迁驱动新型生产关系变革——共同富裕探路者自组织实践）第06篇连载。<br>
+      上篇：AI时代普通人如何拿到三种杠杆 · 下篇：传统分配的三个致命缺陷
+      <span class="cta">如果你认同我的观察、思考与探索实践，欢迎关注本公众号，一起交流，一起成为同路人。</span>
+    </div>
+  </div>
+</div>
+
+<!-- 风格C -->
+<div id="pc" class="preview-area">
+  <div class="label">Style C · Warm Humanist · 暖色人文</div>
+  <div class="style-c">
+    <div class="meta">Hugo · 2026年5月20日 · 正文约2100字，5分钟阅读</div>
+    <div class="series-tag">公众号首发 · 书籍《AI新时代，当机器人学会分配》第06篇连载</div>
+
+    <div class="lead">
+      今天是520。朋友圈里全是鲜花，全是表白，全是各种凑在一起的热闹。我也想说点什么，但我想聊的，不是爱情。我想聊一件比爱情更难开口的事：钱。
+    </div>
+
+    <p>前段时间，有个读者给我发了条消息。她在一个短视频平台做了一年半内容，粉丝涨到了两万多，还不错。</p>
+    <p>但她说，她算了一下，这一年半投进去的时间、精力，还有拍摄剪辑买设备的钱，平台实际分给她的，远不到她付出的十分之一。</p>
+    <p>她问我：是我哪里做错了吗？我跟她说：你没做错。你只是在一套别人制定的规则里，认真地打了一场注定不公平的牌。</p>
+
+    <h2><span>一</span>分配权，从有文明以来就没在普通人手里</h2>
+    <p>这不是她一个人的故事，这是人类文明几千年来的老问题。我们走过三个大时代，每个时代都有一套分配规则，但规则背后的逻辑从来没变过。</p>
+    <p><strong>土地时代</strong>，谁控制土地，谁控制分配。你种了一年的地，能拿多少，地主说了算。你的命运，写在别人的田契上。</p>
+    <p><strong>机器时代</strong>，权力从土地转到了工厂。工资怎么算的，老板心里有一本账，但你看不到。</p>
+    <p><strong>算法时代</strong>，权力从工厂转到了平台。谁控制算法，谁控制分配。规则从田契变成了合同，从合同变成了算法，但有一件事始终没变——<strong>规则不是你定的。</strong></p>
+
+    <h2><span>二</span>为什么掌握规则的人，不会主动改变规则</h2>
+    <p>这不是谁坏，这是结构决定的。历史上每一次分配规则的改变，要么靠暴力革命，要么靠技术革命。前者代价太高。后者，才是真正的希望所在。</p>
+
+    <h2><span>三</span>机器，第一次学会了"分配"</h2>
+    <p>区块链做到了人类历史上第一次做到的事：把分配规则写成代码，部署到一个谁都无法单方面修改的地方。</p>
+    <p>这叫智能合约。代码自己执行，不经过任何人的手，不需要你信任任何人。平台该抽多少佣，合约里写死，没人能偷偷改。该到你的那份，自动执行。</p>
+
+    <div class="callout">
+      <strong>推荐阅读：《区块链革命》</strong>
+      <p>Don Tapscott父子写的这本书，用商业语言把区块链说清楚了，不需要技术背景也读得懂。如果你对"规则写入代码"这件事感兴趣，这本书是很好的入口。</p>
+    </div>
+
+    <h2><span>四</span>这和你有什么关系</h2>
+    <p>这就是我做创客星球(CGHub)这件事的起点。核心只有一句话：<strong>参与者即股东，创造即确权。</strong></p>
+    <p>不是承诺，是代码。不是情怀，是机制。</p>
+    <p><strong>规则，可以不是别人说了算吗？</strong></p>
+    <p>下篇，我们接着聊。</p>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      这是《AI新时代，当机器人学会分配》（AI生产力跃迁驱动新型生产关系变革——共同富裕探路者自组织实践）第06篇连载。<br>
+      上篇：AI时代普通人如何拿到三种杠杆 · 下篇：传统分配的三个致命缺陷
+      <span class="cta">如果你认同我的观察、思考与探索实践，欢迎关注本公众号，一起交流，一起成为同路人。</span>
+    </div>
+  </div>
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.preview-area').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('p' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
