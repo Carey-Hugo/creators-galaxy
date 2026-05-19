@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{文章标题}}</title>
+    <style>
+        /* CGHub公众号标准样式规范 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            text-align: justify;
+        }
+        
+        /* 图片规范 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        
+        /* 开头问候 */
+        .opening {
+            font-size: 17px;
+color: rgba(0,0,0,0.9);
+            margin: 20px 0;
+        }
+        
+        /* 连载标签区块 */
+        .series-label {
+            margin: 14px 0;
+            padding: 14px 18px;
+            border-left: 4px solid #576b95;
+            background: #f7f7f7;
+            font-size: 15px;
+            font-style: italic;
+        }
+        
+        /* 章节标题 */
+        .chapter-title {
+            background: #0d1828;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 24px 0;
+        }
+        .chapter-number {
+            font-size: 10px;
+            color: #4a9de8;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .chapter-name {
+            font-size: 18px;
+            color: #dde8ff;
+            font-weight: 700;
+        }
+        
+        /* 正文段落 */
+        .paragraph {
+            font-size: 15px;
+            color: #333;
+            margin: 16px 0;
+            line-height: 1.8;
+        }
+        
+        /* 时代卡片 */
+        .era-card {
+            margin: 20px 0;
+            padding: 18px 22px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .era-land {
+            background: #f7f8fa;
+            border-left: 3px solid #ccc;
+        }
+        .era-machine {
+            background: #f7f8fa;
+            border-left: 3px solid #aaa;
+        }
+        .era-algorithm {
+            background: #f0f5ff;
+            border-left: 3px solid #576b95;
+        }
+        
+        /* 金句引言 */
+        .quote {
+            background: #f9f6f0;
+            border-left: 3px solid #c09060;
+            font-size: 16px;
+            color: #444;
+            padding: 18px 22px;
+            margin: 24px 0;
+        }
+        
+        /* 书籍推荐 */
+        .book-recommendation {
+            margin: 14px 0;
+            padding: 14px 18px;
+            border-left: 4px solid #576b95;
+            background: #f7f7f7;
+            font-size: 15px;
+        }
+        
+        /* 疗愈感区块 */
+        .healing-block {
+            margin: 28px 0;
+            padding: 22px 24px;
+            background: linear-gradient(135deg,#f0f8ff,#e6f7ff);
+            border-left: 4px solid #4a9de8;
+            border-radius: 8px;
+        }
+        .healing-title {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+            color: #1e4d7b;
+            font-weight: 600;
+        }
+        .healing-text {
+            margin: 0 0 12px 0;
+            font-size: 15px;
+            color: #2c5282;
+            line-height: 1.7;
+        }
+        
+        /* 互动环节 */
+        .interaction {
+            font-size: 17px;
+            margin: 25px 0;
+        }
+        .interaction-text {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.8;
+            margin: 18px 0;
+        }
+        
+        /* 关于本书 */
+        .book-info {
+            margin: 14px 0;
+            padding: 14px 18px;
+            border-left: 4px solid #576b95;
+            background: #f7f7f7;
+            font-size: 15px;
+        }
+        
+        /* 结尾部分 */
+        .ending {
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        .next-preview {
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+            margin: 20px 0 30px;
+        }
+        
+        /* 互动引导 */
+        .engagement {
+            font-size: 17px;
+            margin: 20px 0;
+        }
+        
+        /* 点赞转发行 */
+        .social-actions {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        /* 署名行 */
+        .author-signature {
+            font-size: 14px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        /* 版权行 */
+        .copyright {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin: 15px 0 30px;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
+        }
+        
+        strong {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 封面图 -->
+<img src="{{封面图URL}}" alt="{{文章标题}}">
+
+<!-- 开头问候 -->
+<div class="opening">
+    大家好，我是Hugo。<br>
+    正文约{{字数}}字，{{阅读时长}}分钟阅读
+</div>
+
+<!-- 连载标签 -->
+<div class="series-label">
+    📖 公众号首发，本文为书籍《AI新时代，当机器人学会分配》<br>
+    （AI生产力跃迁驱动新型生产关系变革——共同富裕探路者自组织实践）<br>
+    第{{篇数}}篇连载
+</div>
+
+<hr>
+
+<!-- 正文内容 -->
+{{正文内容}}
+
+<!-- 疗愈感区块 -->
+<section class="healing-block">
+    <p class="healing-title">💫 这里不是焦虑的贩卖场，而是梦想的孵化器</p>
+    <p class="healing-text">创客星球CGHub不是一个追逐热点的社区，而是你我共同构建的精神家园——给疲惫的身心一个栖息地，给迷茫的灵魂一个明确的方向。</p>
+    <p class="healing-text">AI时代有太多不确定性，但在这里，我们选择成为确定性本身——用代码构建信任，用技术创造公平，用社区治愈孤独。</p>
+</section>
+
+<!-- 互动环节 -->
+<div class="interaction">互动环节</div>
+<div class="interaction-text">
+    {{互动问题}}<br>
+    如果觉得这篇文章说到了你的痛点，<strong>转发</strong>给那个和你一样在坑里的朋友。
+</div>
+
+<hr>
+
+<!-- 关于本书 -->
+<div class="book-info">
+    📖 关于本书与连载：<br>
+    这是《AI新时代，当机器人学会分配》第{{篇数}}篇连载。<br>
+    <br>
+    {{上篇回顾}}<br>
+    {{下篇预告}}
+</div>
+
+<hr>
+
+<!-- 结尾 -->
+<div class="ending">
+    创客星球CGHub新LOGO已定稿，欢迎鉴赏点评
+</div>
+
+<div class="next-preview">
+    下篇，我们接着聊。
+</div>
+
+<!-- 互动引导 -->
+<div class="engagement">
+    既然看到这里了，欢迎评论区聊聊，若有启发请随手点赞、在看、转发三连，要第一时间收到推送，可点头像进去关注。
+</div>
+
+<!-- 点赞转发 -->
+<div class="social-actions">
+    如果这篇文章对你有帮助，欢迎点赞、在看、转发
+</div>
+
+<!-- 署名 -->
+<div class="author-signature">
+    「胡戈AI赋能」专注AI编程出海、Web3、OPC
+</div>
+
+<!-- 版权 -->
+<div class="copyright">
+    © 胡戈AI赋能 数字游民 新思想探路者 AI独立开发实践者
+</div>
+
+</body>
+</html>
