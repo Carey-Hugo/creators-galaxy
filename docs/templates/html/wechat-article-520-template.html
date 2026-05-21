@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{文章标题}} · CGHub</title>
+<style>
+/* ═══════════════════════════════════════════════════
+   CGHub 公众号文章 HTML 排版模板 V3.0（520深色标准版）
+   基于 2026-05-20 520文章样式规范
+   特征：深色极简 · 全页CSS · 章节ONE/TWO/THREE/FOUR
+   组件：series-badge / era-block / pullquote / book-card / closing-question
+   ═══════════════════════════════════════════════════ */
+
+/* ── 基础重置 ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── 页面壳 ── */
+body {
+  background: #0e0f14;
+  font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  padding: 48px 20px;
+  color: #d0d0e0;
+}
+
+/* ── 文章容器 ── */
+.article {
+  max-width: 660px;
+  margin: 0 auto;
+  background: #13141c;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #1e2030;
+}
+
+/* ── 顶部封面区 ── */
+.article-header {
+  background: linear-gradient(160deg, #0d1828 0%, #111827 60%, #0a0f1a 100%);
+  padding: 40px 40px 36px;
+  border-bottom: 1px solid #1e2030;
+  position: relative;
+  overflow: hidden;
+}
+.article-header::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(74,157,232,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 连载标签 */
+.series-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(74,157,232,0.08);
+  border: 1px solid rgba(74,157,232,0.25);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: #4a9de8;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+}
+.series-badge .dot {
+  width: 5px; height: 5px;
+  background: #4a9de8;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* 文章大标题 */
+.article-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.45;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+/* 导言/摘要 */
+.article-lead {
+  font-size: 15px;
+  color: #8899bb;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* 作者 + 元信息行 */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 12px;
+  color: #445;
+}
+.meta-author {
+  color: #6699cc;
+  font-weight: 600;
+  margin-right: 16px;
+}
+.meta-item {
+  color: #445566;
+  margin-right: 12px;
+}
+.meta-item::before { content: '· '; }
+.meta-reading {
+  margin-left: auto;
+  color: #334;
+  font-size: 11px;
+  border: 1px solid #223;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+}
+
+/* ── 正文区 ── */
+.article-body {
+  padding: 40px 40px 0;
+}
+
+/* 正文段落 */
+.article-body p {
+  font-size: 15px;
+  line-height: 2;
+  color: #b0b8cc;
+  margin-bottom: 16px;
+}
+
+/* 加粗强调 */
+.article-body strong {
+  color: #e0e8ff;
+  font-weight: 600;
+}
+
+/* ── 章节标题 ── */
+.article-body h2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 44px 0 18px;
+}
+.h2-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4a9de8;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 40px;
+}
+.h2-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #dde8ff;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  flex: 1;
+}
+.h2-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #1e2a3a, transparent);
+  min-width: 20px;
+  max-width: 60px;
+}
+
+/* H3 小节 */
+.article-body h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7799bb;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 28px 0 10px;
+  padding-left: 12px;
+  border-left: 2px solid #2a4060;
+}
+
+/* ── 时代分块卡片 ── */
+.era-block {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid #1e2535;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin: 12px 0;
+  position: relative;
+  overflow: hidden;
+}
+.era-block::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #1e3a5a;
+  border-radius: 3px 0 0 3px;
+}
+.era-block.active::before { background: #4a9de8; }
+.era-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #4a6688;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.era-block.active .era-label { color: #4a9de8; }
+.era-content {
+  font-size: 14px;
+  color: #8899aa;
+  line-height: 1.8;
+}
+.era-block.active .era-content { color: #aabbcc; }
+
+/* ── 引言/金句 ── */
+.pullquote {
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: #0d1520;
+  border-left: 3px solid #4a9de8;
+  border-radius: 0 8px 8px 0;
+}
+.pullquote p {
+  font-size: 17px !important;
+  font-weight: 500;
+  color: #c8d8f0 !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+}
+
+/* ── 书籍推荐卡片 ── */
+.book-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #0d1520;
+  border: 1px solid #1a2840;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 28px 0;
+}
+.book-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, #1a3a5c, #0d2040);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  border: 1px solid #1e3a5c;
+}
+.book-info { flex: 1; }
+.book-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8bbce8;
+  margin-bottom: 6px;
+}
+.book-desc {
+  font-size: 13px;
+  color: #556677;
+  line-height: 1.7;
+  margin: 0 !important;
+}
+.book-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #4a9de8;
+  border: 1px solid rgba(74,157,232,0.3);
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+/* ── 分割线 ── */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #1e2535, transparent);
+}
+.section-divider span {
+  font-size: 10px;
+  color: #2a3545;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── 结尾问句 ── */
+.closing-question {
+  text-align: center;
+  padding: 32px 20px;
+  margin: 32px 0 0;
+}
+.closing-question .q {
+  font-size: 20px;
+  font-weight: 600;
+  color: #dde8ff;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.closing-question .sub {
+  font-size: 13px;
+  color: #445566;
+}
+
+/* ── 底部页脚 ── */
+.article-footer {
+  background: #0e0f16;
+  border-top: 1px solid #1a1e28;
+  padding: 28px 40px 32px;
+  margin-top: 0;
+}
+.footer-series {
+  font-size: 12px;
+  color: #334;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+.footer-series strong {
+  color: #4a9de8 !important;
+  font-weight: 600;
+}
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid #1a1e28;
+  padding-top: 16px;
+  margin-top: 4px;
+}
+.footer-prev, .footer-next {
+  color: #334455;
+  max-width: 44%;
+}
+.footer-prev span, .footer-next span {
+  display: block;
+  font-size: 10px;
+  color: #223;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.footer-next { text-align: right; color: #4a7aaa; }
+.footer-cta {
+  background: rgba(74,157,232,0.06);
+  border: 1px solid rgba(74,157,232,0.15);
+  border-radius: 8px;
+  padding: 14px 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #557799;
+  line-height: 1.7;
+}
+.footer-cta strong { color: #4a9de8 !important; }
+</style>
+</head>
+<body>
+
+<div class="article">
+
+  <!-- 文章头部 -->
+  <div class="article-header">
+    <div class="series-badge">
+      <div class="dot"></div>
+      AI新时代·当机器人学会分配 &nbsp;/&nbsp; 第{{连载序号}}篇
+    </div>
+    <h1 class="article-title">{{文章标题}}</h1>
+    <p class="article-lead">{{导言/摘要}}</p>
+    <div class="article-meta">
+      <span class="meta-author">Hugo</span>
+      <span class="meta-item">{{发布日期}}</span>
+      <span class="meta-item">公众号首发</span>
+      <span class="meta-reading">{{阅读时间}} min read</span>
+    </div>
+  </div>
+
+  <!-- 正文 -->
+  <div class="article-body">
+
+    {{正文内容}}
+
+  </div>
+
+  <!-- 页脚 -->
+  <div class="article-footer">
+    <div class="footer-series">
+      <strong>关于本书与连载</strong><br>
+      《AI新时代，当机器人学会分配》· AI生产力跃迁驱动新型生产关系变革——共同富裕探路者自组织实践
+    </div>
+    <div class="footer-nav">
+      <div class="footer-prev">
+        <span>上一篇</span>
+        {{上篇标题}}
+      </div>
+      <div class="footer-next">
+        <span>下一篇</span>
+        {{下篇标题}}
+      </div>
+    </div>
+    <div class="footer-cta">
+      如果你认同我的观察、思考与探索实践，欢迎关注本公众号<br>
+      <strong>一起交流，一起成为同路人</strong>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
