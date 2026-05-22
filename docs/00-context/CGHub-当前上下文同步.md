@@ -109,3 +109,28 @@
 ---
 
 *最后更新：2026-05-22 by Hermes*
+
+---
+
+## 🔬 竞品深度调研（2026-05-22）
+
+**结论：CGHub 定位（创客价值操作系统）是市场空白，无直接竞品**
+
+### 最值得集成的开源项目
+
+| 优先级 | 项目 | 类型 | 借鉴价值 |
+|--------|------|------|----------|
+| 🔴 | Lens Protocol | 去中心化社交图谱 | 集成作为 CGHub 社交层 |
+| 🔴 | Safe | 智能合约钱包 | AI Wallet + 托管基础 |
+| 🟡 | wagmi | Web3 前端库 | 前端开发效率 |
+| 🟡 | DeveloperDAO | 开发者社区 | 创客作品集闭环参考 |
+
+### 关键洞察
+
+- **Paragraph** → 创客变现机制参考
+- **Hey（Lens应用）** → 个人主页 UI + 技术栈参考（Next.js + TypeScript + GraphQL）
+- **Gitcoin** → 声誉系统 + 贡献记录
+- **Nouns DAO** → 视觉识别系统（PPG）参考
+- **NCC 游牧岛** → Web2.5 版本，CGHub Web3 原生有根本性优势
+
+详细报告：`docs/04-book-plan/competitive-analysis.md`
