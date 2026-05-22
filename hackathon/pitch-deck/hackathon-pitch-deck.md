@@ -1,7 +1,19 @@
 # CGHub Hackathon Pitch Deck
 
-> **活动 / Event：** Hackathon 名称（待补充）
-> **日期 / Date：** 2026-05-XX
+## ⏰ Hackathon 时间线（6.1 - 6.14，两周）
+
+```
+Day 1  （6月1日）  项目启动 + 分工
+Day 2-3（6月2-3日）核心功能开发
+Day 4  （6月4日）  中期检查点
+Day 5-6（6月5-6日）产品集成
+Day 7  （6月7日）  第一次演示演练
+Day 8-9（6月8-9日）修复 + 优化
+Day 10 （6月10日） 第二次演示演练
+Day 11-12（6月11-12日）预录演示视频 + 材料定稿
+Day 13 （6月13日） 最终演练
+Day 14 （6月14日） 正式路演
+```
 > **创始人 / Founder：** Carey Hugo
 > **联系方式 / Contact：** careyhugo@cgworld.io
 
