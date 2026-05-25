@@ -55,6 +55,20 @@
 
 共学流程：共学→军师写文件→推GitHub→Carey在WCB提交→确认后推进
 
+## 全息投影记忆系统（Hermes Agent 双层记忆）
+
+- Layer 1：`~/.hermes/memories/MEMORY.md`（文件层，CGHub repo 同步版本：`memory.md`）
+- Layer 2：Holographic Fact Store（向量数据库，`~/.hermes/memories/holographic.db`）
+- 配置手册：`docs/00-context/Hermes-Holographic-Memory-操作手册.md`
+- 配置步骤：选Holographic → SQLite默认回车 → true → 0.4 → 跳过API → 重启 → 验证`fact_store(action="list")`
+- ⚠️ 若遇`su: Authentication failure`，先`sudo passwd root`设root密码
+
 ## 关键账号
 
 - 微信公众号 AppID: wx34cf0b6a53435a05
+
+## 技术环境
+
+- Tailscale：服务器100.68.78.70，Carey Win PC 100.104.154.122
+- VNC：端口5901，启动`vncserver :1 -localhost no`
+- Chrome远程调试：Carey Win需用CMD启动（PowerShell不支持`--`参数）
