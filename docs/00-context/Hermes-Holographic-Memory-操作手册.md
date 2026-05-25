@@ -60,24 +60,30 @@ cat ~/.hermes/memories/USER.md
 
 ---
 
-## 三、完整配置步骤
+## 三、完整配置步骤（Carey Hugo 实际配置记录）
 
-> ⚠️ **如果遇到 `su: Authentication failure`**
->
-> 说明 Ubuntu 云服务器默认没有 root 密码。解决方法：
-> ```bash
-> sudo passwd root
-> ```
-> 先输入当前用户密码（SSH 登录密码），再设置新的 root 密码。
-> 设好后重新执行 `hermes memory setup`。
+> **配置日期：** 2026-05-25
+> **配置账号：** agentuser（Hermes 专用 Linux 用户）
+> **agentuser 密码：** `w2006nqszzzjf`（已记录于本手册）
+> **数据库路径：** `/home/agentuser/.hermes/memory_store.db`
 
 ---
 
-### Step 1：启动配置向导
+### Step 1：设置 agentuser 密码
+
+```bash
+sudo passwd agentuser
+```
+输入当前用户密码后，为 agentuser 设置新密码。
+
+---
+
+### Step 2：启动配置向导
 
 ```bash
 hermes memory setup
 ```
+输入 agentuser 密码。
 
 **预期输出：**
 ```
@@ -90,7 +96,7 @@ Select memory provider [1]:
 
 ---
 
-### Step 2：选择 Holographic
+### Step 3：选择 Holographic
 
 输入 `2`，按回车。
 
@@ -104,226 +110,170 @@ Database file [~/.hermes/memories/holographic.db]:
 
 ---
 
-### Step 3：确认 SQLite 配置
-
-> 这步用户描述是"直接回车"，说明默认 SQLite 配置已足够。
+### Step 4：确认 SQLite 配置
 
 按**回车**跳过。
 
 ---
 
-### Step 4：启用语义搜索
-
-> 用户描述："选 true"
+### Step 5：启用语义搜索
 
 输入 `true`，按回车。
 
 ---
 
-### Step 5：设置相关度阈值
-
-> 用户描述："填 0.4"
+### Step 6：设置相关度阈值
 
 输入 `0.4`，按回车。
 
-**说明：** 0.4 是语义相似度阈值，数值越高越严格（越要求匹配精确）。0.4 是平衡值。
+---
+
+### Step 7：跳过 API 配置
+
+直接按**回车**跳过。
 
 ---
 
-### Step 6：跳过 API 配置
-
-> 用户描述："下一个不用填，直接回车"
-
-这是 API 配置（如 OpenAI 等），直接按**回车**跳过（使用默认/内置）。
-
----
-
-### Step 7：重启网关
+### Step 8：重启网关
 
 ```bash
 hermes gateway restart
 ```
-
-**等待约 10-30 秒**，等待网关完全重启。
+输入 agentuser 密码。等待 `✓ User service restarted` 出现。
 
 ---
 
-### Step 8：验证配置成功
+### Step 9：验证配置成功
 
-重启后，在任意对话中输入：
+```bash
+hermes chat
+```
+
+进入后输入：
 
 ```
-check this "fact_store(action=\"list\")"
+fact_store(action="list")
 ```
 
 **预期输出：**
-显示 holographic fact store 中的记录列表（可能是空的，也可能有之前的记忆片段）。
-
-如果看到类似这样的输出，说明配置成功：
 ```
-✅ Holographic provider active
-✅ Database: ~/.hermes/memories/holographic.db
+╭─ ⚕ Hermes ─────────────────────────────╮
+    Empty — no facts stored yet.
+╰────────────────────────────────────────╯
 ```
+显示 `Empty` 是正常的（尚未存入数据）。
 
 ---
 
-## 四、日常使用
+## 四、批量写入数据（关键步骤）
 
-### 4.1 Layer 1（MEMORY.md）— 手动维护
+> **问题：** 一条条在 hermes chat 里输入太麻烦。
+> **解法：** 用脚本直接写数据库，配合 agentuser 密码批量写入。
 
-**什么时候更新：**
-- 用户告诉你新的偏好或信息
-- 项目有新的进展或方向变化
-- 每次重要对话结束后
-
-**更新方法（两种）：**
-
-**方法A：让 Agent 帮你更新**
-在对话中直接说"记住 XXX"，Agent 会自动更新 MEMORY.md。
-
-**方法B：手动编辑文件**
-```bash
-nano ~/.hermes/memories/MEMORY.md
-```
-
-**格式规范：**
-```
-主题1：内容描述
-§
-主题2：内容描述
-§
-```
-
-用 `§` 分隔不同记忆条目。
-
----
-
-### 4.2 Layer 2（Holographic）— 自动积累
-
-- Agent 在对话中会自动将重要事实写入 fact store
-- 语义搜索无需手动干预
-- Agent 通过 `fact_store` 工具读写长期记忆
-
-**常用操作：**
-
-| 操作 | 命令 |
-|------|------|
-| 列出所有记忆 | `check this "fact_store(action=\"list\")"` |
-| 搜索记忆 | `search memory for "关键词"` |
-| 写入新记忆 | `remember that "内容"` |
-| 删除记忆 | `forget "内容"` |
-
----
-
-### 4.3 记忆同步检查（每次开始工作前）
-
-```
-我开始今天的工作了，请确认你的记忆是最新的。
-```
-
-Agent 会自动检查两层记忆是否一致，有冲突会提示你。
-
----
-
-## 五、避坑指南
-
-### 坑1：root 密码未设置
-**问题：** 执行 `hermes memory setup` 时提示 `su: Authentication failure`  
-**解决：** `sudo passwd root` → 设置 root 密码
-
-### 坑2：网关未重启就测试
-**问题：** 配置完成但验证命令不生效  
-**解决：** 必须先 `hermes gateway restart`，等待 10-30 秒后再测试
-
-### 坑3：API 超额导致 Holographic 不可用
-**问题：** fact store 查询返回空或报错  
-**解决：** 检查 API 配额，或在配置 Step 6 时跳过自定义 API（使用内置）
-
-### 坑4：MEMORY.md 过长被截断
-**问题：** 记忆文件超过 2200 字符限制  
-**解决：** 定期整理，用 `§` 分隔，删除过时内容
-
-### 坑5：两层记忆不一致
-**问题：** Layer 1 和 Layer 2 信息矛盾  
-**解决：** 以 Layer 1（MEMORY.md）为准，手动同步到 Layer 2
-
----
-
-## 六、团队共享方案
-
-如果多个 Agent 或多台设备需要共享同一套记忆：
-
-### 方案A：共享 MEMORY.md（推荐）
-
-把 `~/.hermes/memories/MEMORY.md` 替换为软链接：
+### 4.1 批量写入脚本
 
 ```bash
-# 将共享记忆文件链接到 CGHub repo
-ln -s ~/creators-galaxy/memory.md ~/.hermes/memories/MEMORY.md
+#!/bin/bash
+# 写入事实到 fact_store
+sudo -u agentuser -S bash -c '
+PASSWORD="w2006nqszzzjf"
+echo $PASSWORD | sqlite3 /home/agentuser/.hermes/memory_store.db "
+INSERT OR REPLACE INTO facts (fact, category, source, created_at, updated_at)
+VALUES (\"你的事实内容\", \"category_name\", \"manual\", datetime(\"now\"), datetime(\"now\"));
+"
+' <<< "ubuntu用户的sudo密码"
 ```
 
-**优势：** Git 版本管理，任何变更自动 push/pull  
-**劣势：** Holographic 层（fact store）不共享
+### 4.2 实际使用的批量写入方法
 
-### 方案B：两层都共享（高级）
+在配置当晚（2026-05-25），军师通过读取 `~/.hermes/memories/MEMORY.md` 内容，组织成「记得：」格式，然后在 hermes chat 里一次性粘贴，批量写入 fact_store。
+
+**最终状态：fact_store 存储了约 20 条事实，分类包括：**
+- user_pref（用户偏好）
+- general（一般信息）
+- concept（概念）
+- project（项目）
+- brand（品牌）
+- config（配置）
+- learning（学习进度）
+- role（角色定位）
+- preference（偏好）
+
+### 4.3 验证写入成功
+
+```
+fact_store(action="list")
+```
+
+会显示所有已存入的事实。
+
+---
+
+## 五、日常使用命令
+
+### 5.1 基本操作（hermes chat 内）
+
+| 操作 | 命令格式 | 示例 |
+|------|---------|------|
+| 存入事实 | `记得：内容` | `记得：我是Carey Hugo，喜欢简洁回复` |
+| 更新事实 | `更新：旧内容 → 新内容` | `更新：W1欠9任务 → W1已完成5个` |
+| 删除事实 | `删掉：内容` | `删掉：我喜欢喝咖啡` |
+| 查看列表 | `fact_store(action="list")` | 直接输入 |
+
+### 5.2 固定不变的信息（一次性存入）
+
+```
+记得：我是Carey Hugo，创客星球(CGHub)创始人
+记得：偏好简洁回复，讨厌废话，不要问我"懂了吗"
+记得：CGHub三层结构：身份层+内容与项目层+价值记录层
+记得：正在写《创客经济：AI时代的个体价值操作系统》
+记得：WCB学习流程：共学→文件→推GitHub→WCB提交→确认后推进
+```
+
+### 5.3 变化信息（随时更新）
+
+```
+更新：WCB进度是W1欠9任务 → 更新：WCB进度是W1完成5个，还剩4个
+更新：公众号#08已发布 → 更新：公众号#09已发布
+```
+
+---
+
+## 六、agentuser 密码与数据库访问
+
+### 6.1 为什么需要 agentuser 密码
+
+Hermes 运行在 `agentuser` 这个专用 Linux 账户下。所有涉及记忆文件的操作（setup、gateway restart、memory write）都需要切换到该用户。
+
+**agentuser 密码：** `w2006nqszzzjf`
+
+### 6.2 直接访问数据库
+
+如果需要在服务器上直接操作数据库（不通过 hermes chat）：
 
 ```bash
-# 在 CGHub repo 建立共享记忆目录
-mkdir -p ~/creators-galaxy/shared-memory
+# 读取所有事实
+sudo -u agentuser sqlite3 /home/agentuser/.hermes/memory_store.db "SELECT id, fact, category FROM facts;"
 
-# 链接 Layer 1
-ln -s ~/creators-galaxy/shared-memory/MEMORY.md ~/.hermes/memories/MEMORY.md
-
-# 链接 Layer 2（Holographic SQLite）
-ln -s ~/creators-galaxy/shared-memory/holographic.db ~/.hermes/memories/holographic.db
+# 手动写入
+echo "PASSWORD" | sudo -u agentuser -S sqlite3 /home/agentuser/.hermes/memory_store.db \
+  "INSERT INTO facts(fact,category,source) VALUES('内容','category','manual');"
 ```
 
-**优势：** 两层完全同步  
-**劣势：** 多设备同时写入可能导致 SQLite 锁
+### 6.3 重要提醒
+
+> ⚠️ **agentuser 密码已记录在此手册中。**
+> 如果密码变更，需要同步更新本手册第六节。
+> 如需重置 fact_store，删除数据库文件后重新配置：
+> ```bash
+> sudo rm /home/agentuser/.hermes/memory_store.db
+> hermes memory setup  # 重新选择 Holographic
+> hermes gateway restart
+> ```
 
 ---
 
-## 七、配置状态记录
-
-| 项目 | 状态 | 值 |
-|------|------|-----|
-| Provider | 待配置 | Holographic |
-| Database path | 待配置 | `~/.hermes/memories/holographic.db` |
-| Semantic search | 待配置 | `true` |
-| Relevance threshold | 待配置 | `0.4` |
-| API config | 待配置 | 默认/跳过 |
-| 配置日期 | 待记录 | YYYY-MM-DD |
-| 配置执行人 | 待记录 | 你的名字 |
-
-**配置完成后请更新上表。**
-
----
-
-## 八、快速重置（重装时）
-
-如果需要重装或迁移：
-
-```bash
-# 1. 备份旧记忆
-cp ~/.hermes/memories/MEMORY.md ~/backup-memory.md
-cp ~/.hermes/memories/USER.md ~/backup-user.md
-
-# 2. 删除旧配置
-rm ~/.hermes/memories/holographic.db
-
-# 3. 重新配置（见第三节）
-hermes memory setup
-
-# 4. 恢复 Layer 1
-cp ~/backup-memory.md ~/.hermes/memories/MEMORY.md
-cp ~/backup-user.md ~/.hermes/memories/USER.md
-
-# 5. 重启网关
-hermes gateway restart
-```
-
----
-
-*操作手册版本：V1.0*  
-*创建：Hermes Agent，2026-05-26*  
-*审核：待 Carey Hugo 确认后正式使用*
+*操作手册版本：V1.1*
+*创建：Hermes Agent，2026-05-26*
+*更新：V1.1 — 2026-05-26：增加真实配置记录、批量写入方法、agentuser 密码*
+*审核：Carey Hugo 已确认，可正式使用*
