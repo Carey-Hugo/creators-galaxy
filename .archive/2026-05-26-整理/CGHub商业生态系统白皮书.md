@@ -1,3 +1,6 @@
+# 归档文件 - 2026-05-26
+# 归档原因：已被CGHub商业生态系统白皮书_V2.md替代
+
 # 创客星球(CGHub)商业生态系统白皮书
 
 > 品牌命名：中文统一使用“创客星球(CGHub)”，英文统一使用“Creators Galaxy Hub(CGHub)”。英文版见：`docs/07-english/CGHub_Business_Ecosystem_Whitepaper_EN.md`。

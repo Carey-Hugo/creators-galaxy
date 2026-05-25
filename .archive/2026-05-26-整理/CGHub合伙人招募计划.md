@@ -1,3 +1,6 @@
+# 归档文件 - 2026-05-26
+# 归档原因：已被docs/02-partner-recruitment/CGHub合伙人招募计划.md替代
+
 # 创客星球(CGHub)
 
 > 品牌命名：中文统一使用“创客星球(CGHub)”，英文统一使用“Creators Galaxy Hub(CGHub)”。英文版见：`docs/07-english/CGHub_Partner_Recruitment_Plan_EN.md`。

@@ -1,3 +1,6 @@
+# 归档文件 - 2026-05-26
+# 归档原因：已被docs/04-book-plan/创客经济-书籍大纲.md替代
+
 # 创客星球(CGHub)书籍策划案
 
 > 品牌命名：中文统一使用“创客星球(CGHub)”，英文统一使用“Creators Galaxy Hub(CGHub)”。英文版见：`docs/07-english/CGHub_Book_Plan_EN.md`。
