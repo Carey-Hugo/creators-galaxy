@@ -1,3 +1,6 @@
+# 归档文件 - 2026-05-26
+# 归档原因：已被docs/04-book-plan/CGHub书籍框架大纲_V2.md替代
+
 # 创客星球（CGHub）书籍框架与大纲
 # Creators Galaxy Hub (CGHub) — Book Framework & Outline
 
