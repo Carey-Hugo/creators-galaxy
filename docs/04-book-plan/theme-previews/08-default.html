@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第08篇 - 经典主题</title>
+<style>
+body { max-width: 680px; margin: 0 auto; padding: 20px; background: #fff; }
+:root {
+  /* 动态配置变量 */
+  --md-primary-color: #0F4C81;
+  --md-font-family: undefined;
+  --md-font-size: undefined;
+}
+
+/* 段落缩进和对齐 */
+#output p {
+  
+  
+}
+/**
+ * MD 基础主题样式
+ * 包含所有元素的基础样式和 CSS 变量定义
+ */
+
+/* ==================== 容器样式 ==================== */
+section,
+container {
+  font-family: var(--md-font-family);
+  font-size: var(--md-font-size);
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* 确保 #output 容器应用基础样式 */
+#output {
+  font-family: var(--md-font-family);
+  font-size: var(--md-font-size);
+  line-height: 1.75;
+  text-align: left;
+}
+
+/* 去除第一个元素的 margin-top */
+#output section > :first-child {
+  margin-top: 0 !important;
+}
+
+.mermaid-diagram .nodeLabel p {
+  color: unset !important;
+  letter-spacing: unset !important;
+}
+
+/**
+ * MD 默认主题（经典主题）
+ * 按 Alt/Option + Shift + F 可格式化
+ * 如需使用主题色，请使用 var(--md-primary-color) 代替颜色值
+ */
+
+/* ==================== 一级标题 ==================== */
+h1 {
+  display: table;
+  padding: 0 1em;
+  border-bottom: 2px solid var(--md-primary-color);
+  margin: 2em auto 1em;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.2);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ==================== 二级标题 ==================== */
+h2 {
+  display: table;
+  padding: 0 0.2em;
+  margin: 4em auto 2em;
+  color: #fff;
+  background: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 1.2);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ==================== 三级标题 ==================== */
+h3 {
+  padding-left: 8px;
+  border-left: 3px solid var(--md-primary-color);
+  margin: 2em 8px 0.75em 0;
+  color: hsl(var(--foreground));
+  font-size: calc(var(--md-font-size) * 1.1);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* ==================== 四级标题 ==================== */
+h4 {
+  margin: 2em 8px 0.5em;
+  color: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 1);
+  font-weight: bold;
+}
+
+/* ==================== 五级标题 ==================== */
+h5 {
+  margin: 1.5em 8px 0.5em;
+  color: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 1);
+  font-weight: bold;
+}
+
+/* ==================== 六级标题 ==================== */
+h6 {
+  margin: 1.5em 8px 0.5em;
+  font-size: calc(var(--md-font-size) * 1);
+  color: var(--md-primary-color);
+}
+
+/* ==================== 段落 ==================== */
+p {
+  margin: 1.5em 8px;
+  letter-spacing: 0.1em;
+  color: hsl(var(--foreground));
+}
+
+/* ==================== 引用块 ==================== */
+blockquote {
+  font-style: normal;
+  padding: 1em;
+  border-left: 4px solid var(--md-primary-color);
+  border-radius: 6px;
+  color: hsl(var(--foreground));
+  background: var(--blockquote-background);
+  margin-bottom: 1em;
+}
+
+blockquote > p {
+  display: block;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+/* ==================== GFM 警告块 ==================== */
+.alert-title-note,
+.alert-title-tip,
+.alert-title-info,
+.alert-title-important,
+.alert-title-warning,
+.alert-title-caution,
+.alert-title-abstract,
+.alert-title-summary,
+.alert-title-tldr,
+.alert-title-todo,
+.alert-title-success,
+.alert-title-done,
+.alert-title-question,
+.alert-title-help,
+.alert-title-faq,
+.alert-title-failure,
+.alert-title-fail,
+.alert-title-missing,
+.alert-title-danger,
+.alert-title-error,
+.alert-title-bug,
+.alert-title-example,
+.alert-title-quote,
+.alert-title-cite {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.alert-title-note {
+  color: #478be6;
+}
+
+.alert-title-tip {
+  color: #57ab5a;
+}
+
+.alert-title-info {
+  color: #93c5fd;
+}
+
+.alert-title-important {
+  color: #986ee2;
+}
+
+.alert-title-warning {
+  color: #c69026;
+}
+
+.alert-title-caution {
+  color: #e5534b;
+}
+
+/* Obsidian-style callout colors */
+.alert-title-abstract,
+.alert-title-summary,
+.alert-title-tldr {
+  color: #00bfff;
+}
+
+.alert-title-todo {
+  color: #478be6;
+}
+
+.alert-title-success,
+.alert-title-done {
+  color: #57ab5a;
+}
+
+.alert-title-question,
+.alert-title-help,
+.alert-title-faq {
+  color: #c69026;
+}
+
+.alert-title-failure,
+.alert-title-fail,
+.alert-title-missing {
+  color: #e5534b;
+}
+
+.alert-title-danger,
+.alert-title-error {
+  color: #e5534b;
+}
+
+.alert-title-bug {
+  color: #e5534b;
+}
+
+.alert-title-example {
+  color: #986ee2;
+}
+
+.alert-title-quote,
+.alert-title-cite {
+  color: #9ca3af;
+}
+
+/* GFM Alert SVG 图标颜色 */
+.alert-icon-note {
+  fill: #478be6;
+}
+
+.alert-icon-tip {
+  fill: #57ab5a;
+}
+
+.alert-icon-info {
+  fill: #93c5fd;
+}
+
+.alert-icon-important {
+  fill: #986ee2;
+}
+
+.alert-icon-warning {
+  fill: #c69026;
+}
+
+.alert-icon-caution {
+  fill: #e5534b;
+}
+
+/* Obsidian-style callout icon colors */
+.alert-icon-abstract,
+.alert-icon-summary,
+.alert-icon-tldr {
+  fill: #00bfff;
+}
+
+.alert-icon-todo {
+  fill: #478be6;
+}
+
+.alert-icon-success,
+.alert-icon-done {
+  fill: #57ab5a;
+}
+
+.alert-icon-question,
+.alert-icon-help,
+.alert-icon-faq {
+  fill: #c69026;
+}
+
+.alert-icon-failure,
+.alert-icon-fail,
+.alert-icon-missing {
+  fill: #e5534b;
+}
+
+.alert-icon-danger,
+.alert-icon-error {
+  fill: #e5534b;
+}
+
+.alert-icon-bug {
+  fill: #e5534b;
+}
+
+.alert-icon-example {
+  fill: #986ee2;
+}
+
+.alert-icon-quote,
+.alert-icon-cite {
+  fill: #9ca3af;
+}
+
+/* ==================== 代码块 ==================== */
+pre.code__pre,
+.hljs.code__pre {
+  font-size: 90%;
+  overflow-x: auto;
+  border-radius: 8px;
+  padding: 0 !important;
+  line-height: 1.5;
+  margin: 10px 8px;
+}
+
+/* ==================== 图片 ==================== */
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0.1em auto 0.5em;
+  border-radius: 4px;
+}
+
+/* ==================== 列表 ==================== */
+ol {
+  padding-left: 1em;
+  margin-left: 0;
+  color: hsl(var(--foreground));
+}
+
+ul {
+  list-style: circle;
+  padding-left: 1em;
+  margin-left: 0;
+  color: hsl(var(--foreground));
+}
+
+li {
+  display: block;
+  margin: 0.2em 8px;
+  color: hsl(var(--foreground));
+}
+
+/* ==================== 脚注 ==================== */
+/* footnotes 在 buildFootnotes() 中渲染为 <p> 标签 */
+p.footnotes {
+  margin: 0.5em 8px;
+  font-size: 80%;
+  color: hsl(var(--foreground));
+}
+
+/* ==================== 图表 ==================== */
+figure {
+  margin: 1.5em 8px;
+  color: hsl(var(--foreground));
+}
+
+figcaption,
+.md-figcaption {
+  text-align: center;
+  color: #888;
+  font-size: 0.8em;
+}
+
+/* ==================== 分隔线 ==================== */
+hr {
+  border-style: solid;
+  border-width: 2px 0 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(1, 0.5);
+  transform-origin: 0 0;
+  transform: scale(1, 0.5);
+  height: 0.4em;
+  margin: 1.5em 0;
+}
+
+/* ==================== 行内代码 ==================== */
+code {
+  font-size: 90%;
+  color: #d14;
+  background: rgba(27, 31, 35, 0.05);
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
+/* 代码块内的 code 标签需要特殊处理（覆盖行内 code 样式） */
+pre.code__pre > code,
+.hljs.code__pre > code {
+  display: -webkit-box;
+  padding: 0.5em 1em 1em;
+  overflow-x: auto;
+  text-indent: 0;
+  color: inherit;
+  background: none;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* ==================== 强调 ==================== */
+em {
+  font-style: italic;
+  font-size: inherit;
+}
+
+/* ==================== 链接 ==================== */
+a {
+  color: #576b95;
+  text-decoration: none;
+}
+
+/* ==================== 粗体 ==================== */
+strong {
+  color: var(--md-primary-color);
+  font-weight: bold;
+  font-size: inherit;
+}
+
+/* ==================== 表格 ==================== */
+table {
+  color: hsl(var(--foreground));
+}
+
+thead {
+  font-weight: bold;
+  color: hsl(var(--foreground));
+}
+
+th {
+  border: 1px solid #dfdfdf;
+  padding: 0.25em 0.5em;
+  color: hsl(var(--foreground));
+  word-break: keep-all;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+td {
+  border: 1px solid #dfdfdf;
+  padding: 0.25em 0.5em;
+  color: hsl(var(--foreground));
+  word-break: keep-all;
+}
+
+/* ==================== KaTeX 公式 ==================== */
+.katex-inline {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.katex-block {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+/* ==================== 标记高亮 ==================== */
+.markup-highlight {
+  background-color: var(--md-primary-color);
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.markup-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--md-primary-color);
+}
+
+.markup-wavyline {
+  text-decoration: underline wavy;
+  text-decoration-color: var(--md-primary-color);
+  text-decoration-thickness: 2px;
+}
+
+</style>
+</head>
+<body>
+<section class="container mx-auto"><h1 class="h1" data-heading="true">08-平台改规则，你只能认栽？但有另一条路</h1><blockquote class="blockquote"><p class="p"><strong class="strong">本文为《AI新时代——当机器人学会分配》第08篇连载</strong><br><strong class="strong">公众号首发</strong></p></blockquote><hr class="hr hr-dash"><p class="p">大家好吗，我是Hugo。<br>正文约2500字，8分钟阅读。</p><p class="p">📖 公众号首发，本文为书籍《AI新时代——当机器人学会分配》第08篇连载</p><hr class="hr hr-dash"><p class="p">你有没有遇到过，或听说过这样的事儿。</p><p class="p">辛辛苦苦做了一年的账号，说封就封了。<br>写了几十万字的内容，平台说下架就下架了。<br>帮平台拉来了百万用户，最后发现——那个用户数据库是平台的，不是你的。</p><p class="p">你问为什么。<br>平台说："规则是我们定的，解释权归我们。"</p><p class="p">你还能说什么？只能认栽。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">一、规则，从来都是这样被写的</strong></p><p class="p">平台规则这件事，不是今天才这样。</p><p class="p">互联网从第一天起，就是这个逻辑：</p><p class="p"><strong class="strong">谁拥有服务器，谁就拥有规则。</strong></p><p class="p">你的粉丝数据存在平台的数据库里，那是平台的资产。<br>你的内容存在平台的服务器上，那是平台的内容。<br>你辛苦建立的账号体系，说到底是平台借给你用的。</p><p class="p">为什么是这样？</p><p class="p">因为规则写在他们的服务器里。他们想改，一行代码就改了。你改不了。</p><p class="p">《道德经》第七十九章说过一句话：</p><blockquote class="blockquote"><p class="p">"天之道，损有余而补不足。"</p></blockquote><p class="p">意思是，自然的规律是，把多余的拿出来，补给不够的。这是老子眼中的天道。</p><p class="p">但互联网平台的逻辑，正好相反。</p><p class="p">它不是"损有余补不足"，它是"损不足补有余"——创作者贡献了最多的内容，但平台拿走了大部分的价值。这就是洛克所说的"劳动财产权"的问题：你的劳动成果，应该属于你。但在平台上，你的劳动成果属于平台。</p><p class="p">为什么？因为规则是平台写的。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">二、Web3改变了什么？</strong></p><p class="p">Web3做了一件很简单的事——</p><p class="p"><strong class="strong">把规则，从"服务器"搬到"链上"。</strong></p><p class="p">链上是什么意思？</p><p class="p">就是这段规则代码，被部署到一个没有人能单独控制的系统里。没有CEO能改，没有CTO能改，没有任何一个"超级管理员"能改。</p><p class="p">你想改？可以。但要按规则来。而规则本身，也是写死的。</p><p class="p">这就是那句话的意思——</p><blockquote class="blockquote"><p class="p">"代码即法律。"</p></blockquote><p class="p">不是说代码比法律大。<br>而是说，一旦规则被写成代码部署上去，它就像法律一样稳定。你不能因为今天心情好，就改掉它。</p><p class="p">这其实接近卢梭在《社会契约论》里的思考：</p><blockquote class="blockquote"><p class="p">"人生而自由，却无往不在枷锁之中。"</p></blockquote><p class="p">卢梭问的是：为什么人们愿意服从规则？因为规则是所有人共同约定的，不是某个人单方面强加的。Web3用技术回答了这个问题——不是靠一个权威机构来保证规则被遵守，而是靠密码学和分布式网络，让规则本身变得不可篡改。</p><p class="p">代码，成了新的社会契约。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">三、从"信任人"到"信任代码"</strong></p><p class="p">有人说：这不就是要相信代码吗？代码不是人写的吗？人写的代码怎么会可靠？</p><p class="p">问得好。</p><p class="p">传统世界里的信任是这样的：</p><blockquote class="blockquote"><p class="p">我相信你会履约——但如果你不履约，我要去打官司。</p></blockquote><p class="p">Web3里的信任是这样的：</p><blockquote class="blockquote"><p class="p">我不需要相信你会履约。因为履约这件事，不由你决定，由代码决定。代码会执行，你拦不住。</p></blockquote><p class="p">这解决了一个根本问题——</p><p class="p">在互联网上，陌生人之间协作最大的障碍，是信任问题。<br>传统解法是找中介、签合同、托管资金。<br>Web3的解法是：把规则写进代码，让代码来执行。</p><p class="p">你不需要信任对方。你只需要信任数学。</p><p class="p">哈耶克在《自由秩序原理》里提出过一个概念，叫"自发秩序"——</p><p class="p">最有效率的社会秩序，往往不是某个人设计出来的，而是无数个体在追求自己利益的过程中，自然而然形成的。法律、货币、语言，都是这样产生的。</p><p class="p">智能合约，也是一种自发秩序。它不是某个权威在分配价值，而是规则被写死之后，价值按规则自动流动。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">四、你的贡献记录，为什么是平台的？</strong></p><p class="p">这是最让人不舒服的部分。</p><p class="p">你在一个平台上辛辛苦苦做内容、写代码、做设计。你的所有贡献——粉丝、互动、作品——全部记录在平台的数据库里。</p><p class="p">那个数据库是平台的。</p><p class="p">不是你的。</p><p class="p">平台可以用这些数据做任何事。卖给广告商，关掉你的账号，甚至在你不知情的情况下，用你的内容训练AI模型。</p><p class="p">你没有议价权，因为数据不在你手里。<br>你没有知情权，因为规则是平台定的。<br>你甚至没有追索权，因为用户协议里有一行小字，说你同意了。</p><p class="p"><strong class="strong">这是不公平的。</strong></p><p class="p">《礼记·礼运》里有一句话：</p><blockquote class="blockquote"><p class="p">"大道之行也，天下为公。"</p></blockquote><p class="p">天下是天下人的天下，不是某个平台的天下。但当平台的数据库成了"私产"，当创作者的贡献成了"平台资产"，这句话就成了空话。</p><p class="p">不公平感本身不能改变任何事。我们需要的是出路。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">五、出路在哪里？</strong></p><p class="p">出路就是——让规则上链。</p><p class="p">你的贡献记录上链，就变成你自己的。没有人能删，没有人能改，没有人能在你不知情的情况下使用它。</p><p class="p">你的收益分配上链，就变成自动执行的。没有平台可以截留，没有中间人可以被收买，没有"最终解释权"这种话。</p><p class="p">这不是反叛。<br>这不是破坏。<br><strong class="strong">这是在重建一套更公平的操作系统。</strong></p><hr class="hr hr-dash"><p class="p"><strong class="strong">平台也有平台的贡献</strong></p><p class="p">说这些，不是要否定平台。</p><p class="p">事实是，在那个阶段，平台创造了真正的价值。</p><p class="p">它让创作者有了发声渠道，让无数普通人被看见，让内容创作的门槛大幅降低。它让信息流通，让兴趣相同的人找到彼此，让很多根本没有机会被关注的人，靠自己的作品站到了聚光灯下。</p><p class="p">这些是真实的贡献，不应该被泯灭。</p><p class="p">《易经·系辞》里有一句话：</p><blockquote class="blockquote"><p class="p">"穷则变，变则通，通则久。"</p></blockquote><p class="p">意思是，当一种模式走到极限，就要变。变了才能通达，通达了才能持久。</p><p class="p">每个时代都有每个时代的基础设施。曾经电话是基础设施，后来互联网成了基础设施。平台模式是那个时代的最优解，这是事实。但当AI让个体的能力被无限放大，当一个人的产出可以等于过去一个团队，这时候，个体价值被看见、被记录、被公平分配，成了新的需求。</p><p class="p">这不是谁想做就能做的事，也不是谁不想做就能挡住的事。</p><p class="p">纳瓦尔说过一句话：</p><blockquote class="blockquote"><p class="p">"代码和媒体，是新时代的杠杆。"</p></blockquote><p class="p">但这句话还没有说完——**有组织的代码和媒体，才是真正的新杠杆。**一个人写代码，力量有限；一个系统协同写代码，力量是前者的N次方。而这套系统本身，就是Web3在构建的东西。</p><p class="p"><strong class="strong">这是时代在推动的方向。</strong></p><p class="p">就像当年互联网出现，没有人能阻止它，因为它解决了一个更根本的问题——信息不对称。Web3做的事情同样，它解决的是一个更根本的问题——价值不对称。</p><p class="p">平台完成了它那个阶段的使命。<br>下一阶段的使命，正在发生。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">六、这跟创客星球有什么关系？</strong></p><p class="p">创客星球正在做的事，简单说就是——</p><p class="p"><strong class="strong">把分配规则，写成代码，部署上链。</strong></p><p class="p">你的每一份贡献，从第一天起就被链上记录。<br>你和协作者之间的分配规则，从一开始就用智能合约约定。<br>项目完成后，收益按规则自动分配，不需要任何一方"信任"另一方。</p><p class="p">这不是承诺。<br>这是代码。</p><blockquote class="blockquote"><p class="p">"代码即法律"不是一句口号。<br>它是创客星球每一天在写的东西。</p></blockquote><hr class="hr hr-dash"><p class="p"><strong class="strong">七、这篇说了什么</strong></p><p class="p">上一篇文章我们聊了传统分配的三个致命缺陷：不透明、中心化、可篡改。</p><p class="p">今天这篇，给了"可篡改"这个问题一个具体的解法——把规则从服务器搬到链上，让代码来执行，没有人能篡改。同时引用了中西方经典，说明这不是凭空创造，而是文明演进中的自然延伸：《道德经》的"天之道"、卢梭的社会契约论、哈耶克的自发秩序、《礼记》的"天下为公"、《易经》的"穷则变变则通"，都在指向同一个方向——更公平的规则，更透明的系统，更对等的协作。</p><p class="p">下一篇文章，我们聊一个很现实的问题：</p><blockquote class="blockquote"><p class="p">一个人用AI干活，叫OPC（一人公司）。<br>一群AI给一个人干活，听谁的话？当AI Agent团队越来越大，决策权归谁？出了错谁来负责？</p></blockquote><p class="p">这是OPC的治理问题，也是一套操作系统必须回答的问题。</p><hr class="hr hr-dash"><p class="p"><strong class="strong">💫 互动话题</strong></p><p class="p">你有没有过"规则被改"的经历？账号被封、内容被删、收益被扣——当时是什么感受？</p><p class="p">评论区聊聊，有共鸣的话请随手点赞、在看、转发三连。</p><hr class="hr hr-dash"><p class="p">「关注公众号，回复"AI创客"，加入创客星球共创交流群」</p><hr class="hr hr-dash"><p class="p"><em class="em">字数统计：约2500字 | 阅读时间：8分钟 | 适合读者：独立开发者、内容创作者、Web3探索者</em></p>
+    <style>
+      .preview-wrapper pre::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #ccc;
+        text-align: center;
+        font-size: 0.8em;
+        padding: 5px 10px 0;
+        line-height: 15px;
+        height: 15px;
+        font-weight: 600;
+      }
+    </style>
+  
+    <style>
+      .hljs.code__pre > .mac-sign {
+        display: none;
+      }
+    </style>
+  
+    <style>
+      h2 strong {
+        color: inherit !important;
+      }
+    </style>
+  </section>
+</body>
+</html>
