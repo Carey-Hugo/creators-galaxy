@@ -121,14 +121,22 @@ class WeChatPublisher:
         # 清理HTML内容
         cleaned_html = self.clean_html_content(html_content)
         
-        # 构建草稿数据
+        # 确保HTML有完整结构（微信API要求）
+        if not cleaned_html.strip().startswith('<html'):
+            cleaned_html = '<html><body>' + cleaned_html
+        if not cleaned_html.strip().endswith('</html>'):
+            cleaned_html = cleaned_html + '</body></html>'
+        
+        # 构建草稿数据（微信API正确格式：articles数组）
         draft_data = {
-            "title": title,
-            "author": "Hugo",
-            "digest": f"AI新时代的生产关系变革探讨",
-            "content": cleaned_html,
-            "content_source_url": "",
-            "thumb_media_id": thumb_media_id
+            "articles": [{
+                "title": title,
+                "author": "Hugo",
+                "digest": f"AI新时代的生产关系变革探讨",
+                "content": cleaned_html,
+                "content_source_url": "",
+                "thumb_media_id": thumb_media_id
+            }]
         }
         
         url = f"{self.add_draft_url}?access_token={access_token}"

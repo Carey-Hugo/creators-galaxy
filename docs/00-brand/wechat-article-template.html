@@ -4,290 +4,99 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文章标题</title>
-    <style>
-        /* ✅ 草稿预览用：可使用 style 标签 + class */
-        /* ⚠️ 发布到微信编辑器前：必须转换为纯 inline style */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 8px;
-        }
-        .greeting {
-            font-size: 17px;
-            color: rgba(0,0,0,0.9);
-            margin: 20px 0;
-        }
-        .series-block {
-            margin: 14px 0;
-            padding: 14px 18px;
-            border-left: 4px solid rgb(87, 107, 149);
-            background: rgb(247, 247, 247);
-            font-size: 15px;
-            font-style: italic;
-        }
-        .chapter-title {
-            background: #0d1828;
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 30px 0 20px;
-        }
-        .chapter-num {
-            font-size: 10px;
-            color: #4a9de8;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin: 0 0 5px;
-        }
-        .chapter-name {
-            font-size: 18px;
-            color: #dde8ff;
-            font-weight: 700;
-            margin: 0;
-        }
-        .paragraph {
-            font-size: 15px;
-            color: #333;
-            line-height: 1.8;
-            text-align: justify;
-            margin: 18px 0;
-        }
-        .quote {
-            background: #f9f6f0;
-            border-left: 3px solid #c09060;
-            font-size: 16px;
-            color: #444;
-            padding: 18px 22px;
-            margin: 24px 0;
-            line-height: 1.7;
-        }
-        .emphasis {
-            font-size: 16px;
-            color: #111;
-            font-weight: 700;
-            margin: 20px 0;
-            line-height: 1.7;
-        }
-        .recommendation {
-            margin: 14px 0;
-            padding: 14px 18px;
-            border-left: 4px solid rgb(87, 107, 149);
-            background: rgb(247, 247, 247);
-            font-size: 15px;
-        }
-        .about-block {
-            margin: 14px 0;
-            padding: 14px 18px;
-            border-left: 4px solid rgb(87, 107, 149);
-            background: rgb(247, 247, 247);
-            font-size: 15px;
-        }
-        .interaction {
-            font-size: 17px;
-            margin: 25px 0;
-        }
-        .actions {
-            font-size: 14px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .signature {
-            font-size: 14px;
-            text-align: center;
-            margin: 15px 0;
-        }
-        .copyright {
-            font-size: 12px;
-            text-align: center;
-            color: #666;
-            margin: 15px 0;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #eee;
-            margin: 30px 0;
-        }
-    </style>
 </head>
 <body>
 
 <!-- 封面图 -->
-<img src="封面图URL" alt="文章标题" style="max-width: 100%; display: block; margin: 0 auto; border-radius: 8px;">
+<img src="封面图URL" alt="文章标题" style="max-width:100%;display:block;margin:0 auto;border-radius:8px;">
 
-<!-- 开头 -->
-<div class="greeting">
-    大家好，我是Hugo。<br>
-    正文约XXXX字，X分钟阅读
-</div>
+<!-- 开头问候 -->
+<p style="font-size:17px;color:rgba(0,0,0,0.9);margin:20px 0;">大家好，我是Hugo。<br>正文约XXXX字，X分钟阅读</p>
 
 <!-- 连载标签 -->
-<div class="series-block">
-    📖 公众号首发，本文为书籍《书名》<br>
-    （副标题）<br>
-    第XX篇连载
+<div style="margin:14px 0;padding:14px 18px;border-left:4px solid rgb(87,107,149);background:rgb(247,247,247);font-size:15px;font-style:italic;">
+📖 公众号首发，本文为书籍《AI新时代——当机器人学会分配》第XX篇连载
 </div>
 
 <!-- 声明 -->
-<div style="font-size: 14px; color: #888; margin: 14px 0;">
-    本文为原创连载，每周一主题，旨在系统探讨AI时代生产力与生产关系变革。不是投机蹭热点，而是持续结构化的深度探讨。
+<div style="font-size:14px;color:#888;margin:14px 0;">
+本文为原创连载，每周一主题，系统探讨AI时代变革。
 </div>
 
-<hr>
+<!-- 分割线 -->
+<hr style="border:none;height:1px;background:linear-gradient(to right,transparent,#e0e0e0,transparent);margin:28px 0;">
 
 <!-- ====== 章节 ONE ====== -->
-<div class="chapter-title">
-    <div class="chapter-num">ONE</div>
-    <div class="chapter-name">一、章节标题</div>
-</div>
+<table style="background:#0d1828;border-radius:8px;padding:0;border-spacing:0;margin:28px 0 18px;width:100%;"><tbody><tr><td style="padding:14px 18px 12px;"><span style="font-size:10px;color:#4a9de8;letter-spacing:3px;display:block;margin-bottom:4px;">ONE</span><span style="font-size:17px;color:#dde8ff;font-weight:700;line-height:1.5;letter-spacing:0.3px;">一、章节标题</span></td></tr></tbody></table>
 
-<div class="paragraph">
-    正文内容
-</div>
+<!-- 正文段落 -->
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:#333333;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">
+正文内容
+</p>
 
-<div class="emphasis">
-    强调内容
-</div>
-
-<div class="quote">
-    > 金句内容
-</div>
-
-<div class="recommendation">
-    📖 推荐阅读：《书名》<br>
-    推荐理由<br>
-    【微信小店购买链接：待上架后插入】
-</div>
-
-<hr>
+<!-- 分割线 -->
+<hr style="border:none;height:1px;background:linear-gradient(to right,transparent,#e0e0e0,transparent);margin:28px 0;">
 
 <!-- ====== 章节 TWO ====== -->
-<div class="chapter-title">
-    <div class="chapter-num">TWO</div>
-    <div class="chapter-name">二、章节标题</div>
+<table style="background:#0d1828;border-radius:8px;padding:0;border-spacing:0;margin:28px 0 18px;width:100%;"><tbody><tr><td style="padding:14px 18px 12px;"><span style="font-size:10px;color:#4a9de8;letter-spacing:3px;display:block;margin-bottom:4px;">TWO</span><span style="font-size:17px;color:#dde8ff;font-weight:700;line-height:1.5;letter-spacing:0.3px;">二、章节标题</span></td></tr></tbody></table>
+
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:#333333;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">
+正文内容
+</p>
+
+<!-- 金句 -->
+<div style="background:#f9f6f0;border-left:3px solid #c09060;padding:18px 22px;margin:24px 0;font-size:16px;color:#444;line-height:1.7;">
+"金句内容"
 </div>
 
-<div class="paragraph">
-    正文内容
-</div>
-
-<div class="emphasis">
-    强调内容
-</div>
-
-<div class="quote">
-    > 金句内容
-</div>
-
-<div class="recommendation">
-    📖 推荐阅读：《书名》<br>
-    推荐理由<br>
-    【微信小店购买链接：待上架后插入】
-</div>
-
-<hr>
+<!-- 分割线 -->
+<hr style="border:none;height:1px;background:linear-gradient(to right,transparent,#e0e0e0,transparent);margin:28px 0;">
 
 <!-- ====== 章节 THREE ====== -->
-<div class="chapter-title">
-    <div class="chapter-num">THREE</div>
-    <div class="chapter-name">三、章节标题</div>
-</div>
+<table style="background:#0d1828;border-radius:8px;padding:0;border-spacing:0;margin:28px 0 18px;width:100%;"><tbody><tr><td style="padding:14px 18px 12px;"><span style="font-size:10px;color:#4a9de8;letter-spacing:3px;display:block;margin-bottom:4px;">THREE</span><span style="font-size:17px;color:#dde8ff;font-weight:700;line-height:1.5;letter-spacing:0.3px;">三、章节标题</span></td></tr></tbody></table>
 
-<div class="paragraph">
-    正文内容
-</div>
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:#333333;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">
+正文内容
+</p>
 
-<div class="emphasis">
-    强调内容
-</div>
-
-<div class="quote">
-    > 金句内容
-</div>
-
-<div class="recommendation">
-    📖 推荐阅读：《书名》<br>
-    推荐理由<br>
-    【微信小店购买链接：待上架后插入】
-</div>
-
-<hr>
+<!-- 分割线 -->
+<hr style="border:none;height:1px;background:linear-gradient(to right,transparent,#e0e0e0,transparent);margin:28px 0;">
 
 <!-- ====== SUMMARY ====== -->
-<div class="chapter-title">
-    <div class="chapter-num">SUMMARY</div>
-    <div class="chapter-name">总结标题</div>
-</div>
+<table style="background:#0d1828;border-radius:8px;padding:0;border-spacing:0;margin:28px 0 18px;width:100%;"><tbody><tr><td style="padding:14px 18px 12px;"><span style="font-size:10px;color:#4a9de8;letter-spacing:3px;display:block;margin-bottom:4px;">SUMMARY</span><span style="font-size:17px;color:#dde8ff;font-weight:700;line-height:1.5;letter-spacing:0.3px;">这篇说了什么</span></td></tr></tbody></table>
 
-<div class="paragraph">
-    总结内容
-</div>
-
-<hr>
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:#333333;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">
+总结内容
+</p>
 
 <!-- 互动区块 -->
-<section style="margin: 28px 0; padding: 22px 24px; background: linear-gradient(135deg, #f0f8ff, #e6f7ff); border-left: 4px solid #4a9de8; border-radius: 8px;">
-    <p style="margin: 0 0 12px 0; font-size: 16px; color: #1e4d7b; font-weight: 600;">💫 标题</p>
-    <p style="margin: 0 0 12px 0; font-size: 15px; color: #2c5282; line-height: 1.7;">内容</p>
-    <p style="margin: 0; font-size: 15px; color: #2c5282; line-height: 1.7;">内容</p>
+<section style="margin:28px 0;padding:22px 24px;background:linear-gradient(135deg,#f0f8ff,#e6f7ff);border-left:4px solid #4a9de8;border-radius:8px;">
+<p style="margin:0 0 12px;font-size:16px;color:#1e4d7b;font-weight:600;">💫 互动话题</p>
+<p style="margin:0 0 12px;font-size:15px;color:#2c5282;line-height:1.7;">互动内容</p>
+<p style="margin:0;font-size:15px;color:#2c5282;line-height:1.7;">互动引导</p>
 </section>
 
-<!-- 互动问题 -->
-<div class="paragraph">
-    你有没有掉进过这三个坑？在评论区聊聊你的经历。
-</div>
-<div class="paragraph">
-    如果觉得这篇文章说到了你的痛点，<strong>转发</strong>给那个和你一样在坑里的朋友。
-</div>
+<!-- 互动引导 -->
+<p style="font-size:17px;color:#333;margin:25px 0;line-height:1.7;">既然看到这里了，欢迎评论区聊聊，若有启发请随手点赞、在看、转发三连。</p>
 
-<hr>
+<hr style="border:none;height:1px;background:linear-gradient(to right,transparent,#e0e0e0,transparent);margin:28px 0;">
 
 <!-- 关于本书连载 -->
-<div class="about-block">
-    📖 关于本书与连载：<br>
-    这是《书名》第XX篇连载。<br>
-    <br>
-    本篇内容摘要。
+<div style="margin:14px 0;padding:14px 18px;border-left:4px solid rgb(87,107,149);background:rgb(247,247,247);font-size:15px;">
+📖 关于本书与连载：<br>
+这是《AI新时代——当机器人学会分配》第XX篇连载。<br><br>
+上篇聊了XXX，这篇聊了XXX。<br>
+下篇，我们聊XXX。
 </div>
-<div class="paragraph">
-    下篇预告内容。
-</div>
-
-<hr>
 
 <!-- 下篇预告 -->
-<div style="font-size: 14px; color: #999; text-align: center; margin: 20px 0 30px;">
-    下篇，我们接着聊。
-</div>
-
-<!-- 互动引导 -->
-<div class="interaction">
-    既然看到这里了，欢迎评论区聊聊，若有启发请随手点赞、在看、转发三连，要第一时间收到推送，可点头像进去关注。
-</div>
-
-<!-- 点赞转发 -->
-<div class="actions">
-    如果这篇文章对你有帮助，欢迎点赞、在看、转发
-</div>
+<p style="font-size:14px;color:#999;text-align:center;margin:20px 0 30px;">下篇，我们接着聊。</p>
 
 <!-- 署名 -->
-<div class="signature">
-    「胡戈AI赋能」，专注AI编程出海、Web3、OPC
-</div>
+<p style="font-size:14px;text-align:center;margin:15px 0;">「胡戈AI赋能」，专注AI编程出海、Web3、OPC</p>
 
 <!-- 版权 -->
-<div class="copyright">
-    © 胡戈AI赋能 数字游民 新思想探路者 AI独立开发实践者
-</div>
+<p style="font-size:12px;text-align:center;color:#666;margin:15px 0;">© 胡戈AI赋能 数字游民 新思想探路者 AI独立开发实践者</p>
 
 </body>
 </html>
