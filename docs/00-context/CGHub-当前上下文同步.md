@@ -112,6 +112,29 @@
 
 ---
 
+## 🧠 记忆系统架构（2026-05-26 更新）
+
+### 三层记忆架构
+| 层级 | 存储 | 注入方式 |
+|------|------|---------|
+| 热层 | MEMORY.md（~900 chars，限2200） | 每轮固定注入 |
+| 温层 | fact_store（Holographic SQLite） | 按需调用 recall |
+| 冷层 | Obsidian vault + session 文件 | 手动精确搜索 |
+
+### fact_store 当前状态
+- 19条facts（已去重）
+- 分类：user_pref(1) · general(2) · concept(1) · project(4) · brand(1) · config(2) · learning(2) · preference(5) · role(1)
+- 每周一cron自动检查重复+膨胀（job ID: d667e6a5515a）
+
+### 维护规则（参考MrWallace实践）
+- 30天未recall的记忆 → 软删除标签（待实现）
+- proof_count>2 保护
+- 重叠内容优先存 fact_store，MEMORY.md 保持精简
+
+详细优化报告：`docs/00-context/memory-optimization-notes.md`
+
+---
+
 ## 🔬 竞品深度调研（2026-05-22）
 
 **结论：CGHub 定位（创客价值操作系统）是市场空白，无直接竞品**
