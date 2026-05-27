@@ -38,24 +38,24 @@ logo 定稿文件（旧文件已废弃）：
 - 长版(1600×700)：`docs/00-brand/logo-v2-horizontal-clean.png`
 - 正版(1200×1200)：`docs/00-brand/logo-v1-square-clean.png`
 
-### 1.2 开头问候
+### 1.2 开场白（17px，深色）
 ```html
-<p style="font-size:17px;color:rgba(0,0,0,0.9);margin:20px 0;">大家好，我是Hugo。<br>正文约XXXX字，X分钟阅读</p>
+<p style="font-size:17px;color:rgba(0,0,0,0.9);margin:20px 0;">大家好，我是Hugo，数字游民在路上。<br>正文约XXXX字，X分钟阅读</p>
 ```
+⚠️ 注意：文章内容正文段落用 `rgb(51,51,51)` 而不是 `rgba(0,0,0,0.9)`，两者在正文中不要混淆。
 
-### 1.3 连载标签（灰底+蓝左边框）
+### 1.3 声明（灰底+细边框，斜体）
 ```html
-<div style="margin:14px 0;padding:14px 18px;border-left:4px solid rgb(87,107,149);background:rgb(247,247,247);font-size:15px;font-style:italic;">
-📖 公众号首发，本文为书籍《AI新时代——当机器人学会分配》第XX篇连载
-</div>
+<table style="margin:0 0 10px;padding:0;border-collapse:collapse;display:table;width:100%;max-width:100%;box-sizing:border-box;border:1px solid rgb(221,221,221);background:rgb(255,255,255);"><tbody><tr><td style="padding:5px 10px;"><p style="margin:0;padding:0;font-size:13px;color:rgb(136,136,136);line-height:1.7;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;"><em>本文为创客星球(CGHub)黑客松队友招募贴，期待链接同DAO有缘人。</em></p><p style="margin:0;padding:0;font-size:13px;color:rgb(136,136,136);line-height:1.7;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;"><em>正文约1800字 · 8分钟阅读</em></p></td></tr></tbody></table>
 ```
+⚠️ 必须用 table 结构（微信编辑器会剥离 div 的 border），斜体用 `<em>`（不是 `<span style="font-style:italic">`）
 
-### 1.4 声明
+### 1.3.1 开场白
 ```html
-<div style="font-size:14px;color:#888;margin:14px 0;">
-本文为原创连载，每周一主题，系统探讨AI时代变革。
-</div>
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:rgb(51,51,51);font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">大家好，我是Hugo，数字游民在路上。</p>
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:rgb(51,51,51);font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">AI生产力跃迁驱动新文明正在加速到来，希望这次你不再只是旁观者...</p>
 ```
+⚠️ 内容顶格写，不要加 text-indent 或任何缩进。
 
 ### 1.5 分割线
 ```html
@@ -125,41 +125,49 @@ logo 定稿文件（旧文件已废弃）：
 <p style="font-size:14px;color:#999;text-align:center;margin:20px 0 30px;">下篇，我们接着聊。</p>
 ```
 
-### 1.15 署名
+### 1.16 角色表格（深蓝表头，数据结构）
 ```html
-<p style="font-size:14px;text-align:center;margin:15px 0;">「胡戈AI赋能」，专注AI编程出海、Web3、OPC</p>
+<table style="border-collapse:collapse;margin:12px 0;font-size:14px;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;width:100%;"><thead><tr style="background:#0d1828;color:#dde8ff;"><th style="padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid #e0e0e0;color:rgb(2,30,170);">角色</th><th style="padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid #e0e0e0;color:rgb(2,30,170);">职责</th><th style="padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid #e0e0e0;color:rgb(2,30,170);">技能要求</th></tr></thead><tbody><tr><td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;color:#333333;">Solidity 开发者</td><td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;color:#333333;">合约：贡献记录 + 收益分配 + 多签</td><td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;color:#333333;">Solidity / 智能钱包 / ERC-4337</td></tr></tbody></table>
+```
+⚠️ 表头背景 `#0d1828`，表头文字颜色 `rgb(2,30,170)`（深蓝，非电蓝）
+
+### 1.17 小标题（emoji + 加粗）
+```html
+<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:#333333;"><strong>🎯 核心角色（参与执行，成为初创合伙人）</strong></p>
 ```
 
-### 1.16 版权
+### 1.18 署名（居中，14px）
 ```html
-<p style="font-size:12px;text-align:center;color:#666;margin:15px 0;">© 胡戈AI赋能 数字游民 新思想探路者 AI独立开发实践者</p>
+<p style="font-size:14px;text-align:center;color:#666;margin:15px 0;">© 胡戈AI赋能 数字游民 新思想探路者 AI独立开发实践者</p>
 ```
 
 ---
 
-## 二、字号规范
+## 三、正文内容顶格原则
+
+⚠️ **所有正文内容必须顶格写，禁止加任何缩进（text-indent、padding-left 等）**
+
+---
+
+## 四、字号规范（V5.1 更新）
 
 | 元素 | 字号 | 颜色 |
 |------|------|------|
-| 开头问候 | 17px | rgba(0,0,0,0.9) |
-| 连载标签 | 15px | #333（italic） |
-| 声明 | 14px | #888 |
+| 开场白（17px） | 17px | rgba(0,0,0,0.9) |
+| 声明（灰底框） | 13px | rgb(136,136,136) |
 | 章节序号 | 10px | #4a9de8 |
 | 章节标题 | 17px | #dde8ff（font-weight:700） |
-| 正文段落 | 15px | #333333 |
-| 强调段 | 16px | #111 |
-| 金句 | 16px | #444 |
-| 互动区块标题 | 16px | #1e4d7b |
-| 互动区块正文 | 15px | #2c5282 |
-| 互动引导 | 17px | #333 |
-| 关于本书 | 15px | #333 |
-| 下篇预告 | 14px | #999 |
-| 署名 | 14px | #333 |
-| 版权 | 12px | #666 |
+| 正文段落 | 15px | #333333 或 rgb(51,51,51) |
+| 强调段 | 16px | #111（font-weight:700） |
+| 引用（金句框） | 16px | rgb(68,68,68) |
+| 小标题 | 15px | #333（加粗） |
+| 表格内容 | 14px | #333333 |
+| 署名 | 14px | #666（居中） |
+| 版权 | 14px | #666（居中） |
 
 ---
 
-## 三、创作规范
+## 五、创作规范（2026-05-27 更新）
 
 - 每篇提供信息增量，对标书籍独立章节
 - 标题不得同质化
@@ -167,7 +175,8 @@ logo 定稿文件（旧文件已废弃）：
 - 调性：积极、破局、希望感。不用"陷阱/坑/锁链/焦虑"
 - 引用经典：古代（孔孟老易）+ 当代（纳瓦尔/哈耶克/卢梭）
 - 结尾引导关注，回复词："AI创客"
+- **内容顶格写，禁止缩进**
 
 ---
 
-*版本：V5.0 · 2026-05-25 · 以定时发表文章为唯一标准锁定*
+*版本：V5.1 · 2026-05-27 · 基于黑客松招募文章排版校准，新增声明边框表、角色表格、emoji小标题样式*
