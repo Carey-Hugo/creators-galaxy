@@ -1,7 +1,7 @@
 # CGHub 公众号排版规范 V5.0 连载版
-# 2026-05-27 定稿（用于：书籍《AI新时代——当机器人学会分配》连载专用）
+# 2026-05-29 更新（用于：书籍《AI新时代——当机器人学会分配》连载专用）
 # ⚠️ V5.1 为通用版（爆款/招募/时评），两者结构不同，不可混用
-# ⚠️ 标准模板文件：`wechat-article-serial-template.html`（连载）、`wechat-article-template.html`（通用）
+# ⚠️ 标准模板文件：`content/serial/09-Harness-AI失控边界.html`（连载参考范本）
 # ⚠️ 本版本为工作流基准，所有创作必须严格遵循，禁止自行变更样式
 
 ---
@@ -24,40 +24,38 @@
 
 ## 一、组件样式速查
 
-### 1.1 封面图
+### 1.2 封面配图（article内嵌配图，section包裹，居中）
 ```html
-<img src="封面图URL" alt="文章标题" style="max-width:100%;display:block;margin:0 auto;border-radius:8px;">
+<section style="text-align:center;margin:0 0 10px;">
+  <img src="封面图URL" alt="文章标题" style="max-width:100%;display:block;margin:0 auto;border-radius:8px;">
+</section>
 ```
 
-**⚠️ Logo 合成规范（必须，不允许在 prompt 里画 logo）：**
-1. AI 生成底图（prompt 只描述主体视觉，不提 logo）
-2. Pillow 代码合成 `docs/00-brand/logo-v2-horizontal-clean.png` 到右下角
-   - logo 高度 = 封面高度 × 11%
-   - 距边缘 20px
-3. 用 `uv run python3` 执行（系统 Python 无 Pillow）
-
-logo 定稿文件（旧文件已废弃）：
-- 长版(1600×700)：`docs/00-brand/logo-v2-horizontal-clean.png`
-- 正版(1200×1200)：`docs/00-brand/logo-v1-square-clean.png`
-
-### 1.2 开场白（17px，深色）
-```html
-<p style="font-size:17px;color:rgba(0,0,0,0.9);margin:20px 0;">大家好，我是Hugo，数字游民在路上。<br>正文约XXXX字，X分钟阅读</p>
+### 1.2.1 片头标准顺序（必须严格按此顺序）
 ```
-⚠️ 注意：文章内容正文段落用 `rgb(51,51,51)` 而不是 `rgba(0,0,0,0.9)`，两者在正文中不要混淆。
-
-### 1.3 声明（灰底+细边框，斜体）
-```html
-<table style="margin:0 0 10px;padding:0;border-collapse:collapse;display:table;width:100%;max-width:100%;box-sizing:border-box;border:1px solid rgb(221,221,221);background:rgb(255,255,255);"><tbody><tr><td style="padding:5px 10px;"><p style="margin:0;padding:0;font-size:13px;color:rgb(136,136,136);line-height:1.7;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;"><em>本文为创客星球(CGHub)黑客松队友招募贴，期待链接同DAO有缘人。</em></p><p style="margin:0;padding:0;font-size:13px;color:rgb(136,136,136);line-height:1.7;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;"><em>正文约1800字 · 8分钟阅读</em></p></td></tr></tbody></table>
+1. 封面配图（section包裹）
+2. 声明框（灰底+蓝左边框div）
+3. 声明附注（font-size:14px;color:#888）
+4. 开场白（17px，深色，rgba(0,0,0,0.9)）
+5. 分割线hr
 ```
-⚠️ 必须用 table 结构（微信编辑器会剥离 div 的 border），斜体用 `<em>`（不是 `<span style="font-style:italic">`）
 
-### 1.3.1 开场白
+### 1.3 开场白（17px，深色）
 ```html
-<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:rgb(51,51,51);font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">大家好，我是Hugo，数字游民在路上。</p>
-<p style="margin:0 0 14px;font-size:15px;line-height:1.9;color:rgb(51,51,51);font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;">AI生产力跃迁驱动新文明正在加速到来，希望这次你不再只是旁观者...</p>
+<p style="font-size:17px;color:rgba(0,0,0,0.9);margin:20px 0;">
+大家好，我是Hugo，数字游民在路上。<br>
+正文约XXXX字，X分钟阅读
+</p>
 ```
-⚠️ 内容顶格写，不要加 text-indent 或任何缩进。
+⚠️ 注意：文章内容正文段落用 `rgb(51,51,51)` / `#333333` 而不是 `rgba(0,0,0,0.9)`，两者不要混淆。
+
+### 1.4 声明（灰底+蓝左边框div，斜体）
+```html
+<div style="margin:14px 0;padding:14px 18px;border-left:4px solid rgb(87,107,149);background:rgb(247,247,247);font-size:15px;font-style:italic;">
+📖 公众号首发，本文为书籍《AI新时代——当机器人学会分配》第XX篇连载
+</div>
+```
+⚠️ 斜体用 `<em>` 在声明附注中，正文声明框用 `font-style:italic` 在 div 上；不要用 `<span>` 斜体
 
 ### 1.5 分割线
 ```html
@@ -83,12 +81,13 @@ logo 定稿文件（旧文件已废弃）：
 <p style="margin:20px 0;font-size:16px;color:#111;font-weight:700;line-height:1.7;">强调内容</p>
 ```
 
-### 1.9 金句引言（暖色调 #f9f6f0）
+### 1.9 金句引言（暖色调 div #f9f6f0，左侧金色3px边框）
 ```html
 <div style="background:#f9f6f0;border-left:3px solid #c09060;padding:18px 22px;margin:24px 0;font-size:16px;color:#444;line-height:1.7;">
 "金句内容"
 </div>
 ```
+⚠️ 金句用 `<div>` 而非 `<blockquote>`（微信编辑器会剥离 blockquote 的背景色）；div 内直接写文字，不需要再包 `<p>`
 
 ### 1.10 推荐阅读（灰底+蓝左边框）
 ```html
