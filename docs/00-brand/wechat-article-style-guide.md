@@ -88,6 +88,7 @@
 </div>
 ```
 ⚠️ 金句用 `<div>` 而非 `<blockquote>`（微信编辑器会剥离 blockquote 的背景色）；div 内直接写文字，不需要再包 `<p>`
+⚠️ **金句数量：按需添加，一般2~5句**。每篇根据内容质量判断是否值得做金句，不要机械套用固定数量。选金句标准：该句是全篇核心观点的高浓度凝练，或引用有力值得特别突出。
 
 ### 1.10 推荐阅读（灰底+蓝左边框）
 ```html
@@ -97,7 +98,7 @@
 </div>
 ```
 
-### 1.11 互动区块（渐变蓝底）
+### 1.11 互动区块（渐变蓝底，末尾元素）
 ```html
 <section style="margin:28px 0;padding:22px 24px;background:linear-gradient(135deg,#f0f8ff,#e6f7ff);border-left:4px solid #4a9de8;border-radius:8px;">
 <p style="margin:0 0 12px;font-size:16px;color:#1e4d7b;font-weight:600;">💫 互动话题</p>
@@ -105,13 +106,34 @@
 <p style="margin:0;font-size:15px;color:#2c5282;line-height:1.7;">互动引导</p>
 </section>
 ```
+⚠️ **互动话题是文章最后一个内容模块**，在「关于本书与连载」之后
 
-### 1.12 互动引导（17px 正文）
+### 1.12 结尾模块标准顺序（连载版）
+```
+1. 关于本书与连载（灰底+蓝左边框div）← 连载版才有
+2. 下篇预告（14px灰色居中）← 连载版才有
+3. 分割线hr
+4. 互动话题区块（section渐变蓝底）
+5. 互动引导（17px正文）
+6. 公众号名片
+7. 署名（12px灰色居中）
+```
+
+### 1.13 结尾模块标准顺序（通用版）
+```
+1. 分割线hr
+2. 互动话题区块（section渐变蓝底）
+3. 互动引导（17px正文）
+4. 公众号名片
+5. 署名（12px灰色居中）
+```
+
+### 1.14 互动引导（17px 正文）
 ```html
 <p style="font-size:17px;color:#333;margin:25px 0;line-height:1.7;">既然看到这里了，欢迎评论区聊聊，若有启发请随手点赞、在看、转发三连。</p>
 ```
 
-### 1.13 关于本书连载（灰底+蓝左边框）
+### 1.15 关于本书连载（灰底+蓝左边框）
 ```html
 <div style="margin:14px 0;padding:14px 18px;border-left:4px solid rgb(87,107,149);background:rgb(247,247,247);font-size:15px;">
 📖 关于本书与连载：<br>
@@ -121,12 +143,12 @@
 </div>
 ```
 
-### 1.14 下篇预告
+### 1.16 下篇预告
 ```html
 <p style="font-size:14px;color:#999;text-align:center;margin:20px 0 30px;">下篇，我们接着聊。</p>
 ```
 
-### 1.16 角色表格（深蓝表头，数据结构）
+### 1.18 角色表格（深蓝表头，数据结构）
 ```html
 <table style="border-collapse:collapse;margin:12px 0;font-size:14px;font-family:-apple-system,'PingFang SC','Noto Sans SC','Microsoft YaHei',sans-serif;width:100%;"><thead><tr style="background:#0d1828;color:#dde8ff;"><th style="padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid #e0e0e0;color:rgb(2,30,170);">角色</th><th style="padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid #e0e0e0;color:rgb(2,30,170);">职责</th><th style="padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid #e0e0e0;color:rgb(2,30,170);">技能要求</th></tr></thead><tbody><tr><td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;color:#333333;">Solidity 开发者</td><td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;color:#333333;">合约：贡献记录 + 收益分配 + 多签</td><td style="padding:10px 12px;border-bottom:1px solid #e0e0e0;color:#333333;">Solidity / 智能钱包 / ERC-4337</td></tr></tbody></table>
 ```
