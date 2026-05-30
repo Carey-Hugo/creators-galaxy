@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGHub-创客星球发展规划概览</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --bg: #080c14;
+            --surface: #0d1520;
+            --surface2: #111d2e;
+            --border: #1e2d42;
+            --primary: #4a9de8;
+            --gold: #e8b84a;
+            --green: #4ae8a8;
+            --text: #d8e8f8;
+            --text2: #8aabb8;
+            --accent: #a78bfa;
+            --orange: #f59e4a;
+            --cyan: #4ae8e8;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+        /* ====== HERO ====== */
+        .hero {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+            border-radius: 0 0 16px 16px;
+        }
+        .hero img.bg {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.45);
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(8,12,20,0.3) 0%, rgba(8,12,20,0.85) 100%);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: flex-end;
+            padding: 40px 30px;
+        }
+        .hero-badge {
+            background: rgba(74,157,232,0.15);
+            border: 1px solid rgba(74,157,232,0.4);
+            color: var(--primary);
+            font-size: 11px; letter-spacing: 3px;
+            padding: 4px 16px; border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: 28px; font-weight: 700;
+            background: linear-gradient(135deg, #dde8ff, #a78bfa);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .hero-sub { color: var(--text2); font-size: 14px; margin-bottom: 20px; }
+        .hero-logo {
+            position: absolute; top: 24px; right: 24px;
+            width: 80px; height: 80px;
+            border-radius: 50%; object-fit: cover;
+            border: 2px solid rgba(74,157,232,0.5);
+        }
+        .hero-meta {
+            display: flex; gap: 20px; font-size: 12px; color: var(--text2);
+        }
+        .hero-meta span { display: flex; align-items: center; gap: 5px; }
+
+        /* ====== SECTION ====== */
+        .section { padding: 40px 0; }
+        .section-label {
+            font-size: 10px; letter-spacing: 3px; color: var(--primary);
+            text-transform: uppercase; margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 20px; font-weight: 700; margin-bottom: 20px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-title::before {
+            content: ''; width: 3px; height: 20px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        /* ====== BRAND CARD ====== */
+        .brand-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .brand-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 18px 20px;
+        }
+        .brand-card.full { grid-column: 1 / -1; }
+        .brand-card-label {
+            font-size: 10px; color: var(--text2); letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+        .brand-card-value {
+            font-size: 15px; font-weight: 500;
+            color: #e8f0ff;
+        }
+        .brand-card-value.highlight-gold { color: var(--gold); }
+        .brand-card-value.highlight-green { color: var(--green); }
+        .brand-card-value.highlight-accent { color: var(--accent); }
+
+        .manifesto-block {
+            background: linear-gradient(135deg, rgba(74,157,232,0.08), rgba(167,139,250,0.08));
+            border: 1px solid rgba(74,157,232,0.2);
+            border-radius: 12px; padding: 20px;
+        }
+        .manifesto-block .value { font-size: 15px; line-height: 1.9; color: var(--text); }
+
+        /* ====== QUOTE BANNER ====== */
+        .quote-banner {
+            background: var(--surface);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            font-size: 14px; color: var(--text2);
+            margin: 20px 0;
+        }
+        .quote-banner strong { color: var(--gold); }
+
+        /* ====== POSITIONING SECTION ====== */
+        .positioning-box {
+            background: var(--surface2);
+            border-radius: 12px; padding: 24px;
+            border: 1px solid var(--border);
+        }
+        .positioning-title {
+            font-size: 13px; color: var(--primary);
+            margin-bottom: 12px; font-weight: 500;
+        }
+        .check-list { list-style: none; }
+        .check-list li {
+            padding: 8px 0 8px 28px;
+            position: relative; border-bottom: 1px solid rgba(30,45,66,0.5);
+        }
+        .check-list li:last-child { border-bottom: none; }
+        .check-list li::before {
+            content: '✅'; position: absolute; left: 0;
+        }
+        .core-thought {
+            margin-top: 16px;
+            background: rgba(74,232,168,0.08);
+            border: 1px solid rgba(74,232,168,0.2);
+            border-radius: 8px; padding: 12px 16px;
+            font-size: 14px; color: var(--green);
+        }
+
+        /* ====== SHIP NARRATIVE ====== */
+        .ship-section { position: relative; }
+        .ship-visual {
+            width: 100%; height: 220px; object-fit: cover;
+            border-radius: 12px; margin-bottom: 20px;
+            filter: brightness(0.8);
+        }
+        .ship-code {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px; padding: 20px 24px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px; line-height: 2;
+            color: var(--text2);
+            white-space: pre-wrap;
+        }
+        .ship-code .highlight { color: var(--gold); font-weight: 700; }
+
+        /* ====== EQUATION ====== */
+        .equation-box {
+            background: linear-gradient(135deg, var(--surface), var(--surface2));
+            border: 1px solid var(--border);
+            border-radius: 14px; padding: 30px;
+            text-align: center;
+        }
+        .eq-formula {
+            font-size: 18px; font-weight: 700; margin-bottom: 16px;
+            color: #dde8ff;
+        }
+        .eq-formula .ai { color: var(--primary); }
+        .eq-formula .web3 { color: var(--accent); }
+        .eq-formula .goal { color: var(--gold); }
+        .eq-arrow { color: var(--text2); font-size: 22px; margin: 10px 0; }
+        .eq-result {
+            font-size: 22px; font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .eq-desc {
+            margin-top: 16px; font-size: 13px; color: var(--text2);
+        }
+
+        /* ====== PROBLEM SOLVING ====== */
+        .compare-table {
+            width: 100%; border-collapse: collapse;
+            background: var(--surface); border-radius: 12px;
+            overflow: hidden;
+        }
+        .compare-table th {
+            background: var(--surface2);
+            padding: 12px 16px; text-align: left;
+            font-size: 12px; color: var(--text2);
+        }
+        .compare-table td {
+            padding: 11px 16px; border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table .now { color: var(--text2); }
+        .compare-table .future { color: var(--green); font-weight: 500; }
+
+        .flow-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px; padding: 20px; margin-top: 20px;
+        }
+        .flow-row {
+            display: flex; align-items: center; gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(30,45,66,0.4);
+        }
+        .flow-row:last-child { border-bottom: none; }
+        .flow-step {
+            min-width: 90px; font-size: 13px; font-weight: 500;
+            color: var(--primary);
+        }
+        .flow-arrow { color: var(--text2); font-size: 16px; }
+        .flow-desc { font-size: 13px; color: var(--text); }
+        .flow-note {
+            margin-top: 16px; font-size: 13px;
+            background: rgba(74,232,168,0.06);
+            border: 1px solid rgba(74,232,168,0.15);
+            border-radius: 8px; padding: 12px 16px;
+            color: var(--green);
+        }
+
+        /* ====== PRODUCT ARCH ====== */
+        .arch-visual {
+            width: 100%; height: 240px; object-fit: cover;
+            border-radius: 12px; margin-bottom: 20px;
+        }
+        .arch-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+        }
+        .arch-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px;
+        }
+        .arch-card-title {
+            font-size: 12px; font-weight: 700; margin-bottom: 8px;
+            padding-bottom: 8px; border-bottom: 1px solid var(--border);
+        }
+        .arch-card.layer0 .arch-card-title { color: var(--primary); }
+        .arch-card.layer1 .arch-card-title { color: var(--gold); }
+        .arch-card.layer2 .arch-card-title { color: var(--green); }
+        .arch-card ul { list-style: none; font-size: 12px; color: var(--text2); }
+        .arch-card ul li { padding: 3px 0; }
+
+        /* ====== OPC MECHANISM ====== */
+        .opp-table {
+            width: 100%; border-collapse: collapse;
+            background: var(--surface); border-radius: 12px;
+            overflow: hidden;
+        }
+        .opp-table th {
+            background: var(--surface2); padding: 12px 16px;
+            text-align: left; font-size: 12px; color: var(--text2);
+        }
+        .opp-table td {
+            padding: 12px 16px; border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        .opp-table tr:last-child td { border-bottom: none; }
+        .opp-table .star { color: var(--gold); font-weight: 700; }
+
+        /* ====== ECOSYSTEM ====== */
+        .eco-visual {
+            width: 100%; height: 240px; object-fit: cover;
+            border-radius: 12px; margin-bottom: 20px;
+        }
+        .eco-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .eco-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px;
+        }
+        .eco-card-icon { font-size: 24px; margin-bottom: 8px; }
+        .eco-card-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+        .eco-card-title.t1 { color: var(--accent); }
+        .eco-card-title.t2 { color: var(--gold); }
+        .eco-card-title.t3 { color: var(--primary); }
+        .eco-card-title.t4 { color: var(--green); }
+        .eco-card-desc { font-size: 12px; color: var(--text2); }
+        .eco-loop {
+            margin-top: 16px;
+            background: rgba(167,139,250,0.08);
+            border: 1px solid rgba(167,139,250,0.2);
+            border-radius: 8px; padding: 12px 16px;
+            text-align: center; font-size: 13px; color: var(--accent);
+            font-weight: 500;
+        }
+
+        /* ====== ROADMAP ====== */
+        .roadmap {
+            display: flex; align-items: center; gap: 0;
+            overflow-x: auto; padding: 10px 0;
+        }
+        .rm-node {
+            display: flex; flex-direction: column; align-items: center;
+            min-width: 100px;
+        }
+        .rm-dot {
+            width: 12px; height: 12px; border-radius: 50%;
+            margin-bottom: 8px;
+        }
+        .rm-node.now .rm-dot { background: var(--primary); box-shadow: 0 0 8px var(--primary); }
+        .rm-node.future .rm-dot { background: var(--border); }
+        .rm-label { font-size: 11px; color: var(--text2); }
+        .rm-title { font-size: 12px; font-weight: 700; margin: 4px 0 2px; }
+        .rm-line {
+            flex: 1; height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--border));
+            min-width: 40px;
+        }
+        .rm-keys {
+            margin-top: 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .rm-key {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; padding: 14px 16px;
+            font-size: 13px;
+        }
+        .rm-key-title { color: var(--primary); font-weight: 700; margin-bottom: 4px; }
+
+        /* ====== WHY JOIN ====== */
+        .why-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .why-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px;
+            font-size: 13px; color: var(--text2); line-height: 1.7;
+        }
+        .why-card b { color: var(--text); }
+
+        /* ====== CONTACT ====== */
+        .contact-box {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 12px; padding: 24px;
+            display: flex; gap: 30px; align-items: center;
+        }
+        .contact-item { font-size: 14px; }
+        .contact-item span { color: var(--text2); }
+
+        /* ====== FOOTER ====== */
+        .footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 24px 0; text-align: center;
+        }
+        .footer-note { font-size: 12px; color: var(--text2); margin-bottom: 8px; }
+        .footer-logo {
+            width: 60px; height: 60px; border-radius: 50%;
+            object-fit: cover; margin-bottom: 12px;
+            border: 1px solid rgba(74,157,232,0.3);
+        }
+        .footer-version {
+            font-size: 11px; color: var(--text2);
+            margin-top: 8px;
+        }
+
+        /* ====== DIVIDER ====== */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 8px 0;
+        }
+
+        @media (max-width: 600px) {
+            .brand-grid { grid-template-columns: 1fr; }
+            .arch-grid { grid-template-columns: 1fr; }
+            .eco-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .rm-keys { grid-template-columns: 1fr; }
+            .contact-box { flex-direction: column; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<div class="hero">
+    <img class="bg" src="assets/hero-cosmos.png" alt="">
+    <img class="hero-logo" src="assets/logo-sm.png" alt="CGHub Logo">
+    <div class="hero-overlay">
+        <div class="hero-badge">CREATORS GALAXY HUB</div>
+        <h1>CGHub-创客星球发展规划概览</h1>
+        <div class="hero-sub">给新伙伴们的入门阅读手册</div>
+        <div class="hero-meta">
+            <span>v1.3</span>
+            <span>2026-05-30</span>
+            <span>创客星球战略规划总纲 V2.0 + 白皮书 V2.0</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- ====== BRAND IDENTITY ====== -->
+<div class="section">
+    <div class="section-label">品牌定性</div>
+    <div class="section-title">我们是谁</div>
+
+    <div class="brand-grid">
+        <div class="brand-card full">
+            <div class="brand-card-label">中文名</div>
+            <div class="brand-card-value">创客星球 (CGHub)</div>
+        </div>
+        <div class="brand-card full">
+            <div class="brand-card-label">英文名</div>
+            <div class="brand-card-value" style="color:var(--text2)">Creators Galaxy Hub (CGHub)</div>
+        </div>
+        <div class="brand-card full" style="background:linear-gradient(135deg,rgba(74,157,232,0.06),rgba(167,139,250,0.06));border-color:rgba(74,157,232,0.2);">
+            <div class="brand-card-value" style="font-size:16px;line-height:2.2; text-align:center;">
+                <strong style="color:#dde8ff">这不是一个生意，这是一场社会实验。</strong><br>
+                <strong style="color:var(--primary)">不是承诺，是代码；不是情怀，是机制。</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== MISSION/VISION/etc ====== -->
+<div class="section">
+    <div class="section-label">核心理念</div>
+    <div class="section-title">使命 / 愿景 / 理念 / 价值观 / 行动宣言 / Slogan</div>
+
+    <div class="manifesto-block" style="margin-bottom:14px;">
+        <div class="brand-card-label">使命 MISSION</div>
+        <div class="value">创新实践人类命运共同体蓝图，为人类文明的<strong style="color:var(--gold)">未来新形态</strong>探路</div>
+    </div>
+
+    <div class="manifesto-block" style="margin-bottom:14px;">
+        <div class="brand-card-label">愿景 VISION</div>
+        <div class="value" style="font-size:17px; font-weight:700; color:var(--gold);">和合共生、天下大同</div>
+    </div>
+
+    <div class="manifesto-block" style="margin-bottom:14px;">
+        <div class="brand-card-label">理念 PHILOSOPHY</div>
+        <div class="value">敬天爱人、革知善行、至简至美</div>
+    </div>
+
+    <div class="manifesto-block" style="margin-bottom:14px;">
+        <div class="brand-card-label">价值观 VALUES</div>
+        <div class="value">诚信尊重、包容感恩、厚德自强</div>
+    </div>
+
+    <div class="manifesto-block" style="margin-bottom:14px;">
+        <div class="brand-card-label">行动宣言 MANIFESTO</div>
+        <div class="value">探索驾驭AI生产力变革，破解社会达尔文主义丛林法则，推动共同富裕的幸福安康盛世。</div>
+    </div>
+
+    <div class="manifesto-block">
+        <div class="brand-card-label">SLOGAN</div>
+        <div class="value" style="color:var(--accent); font-weight:700; font-size:16px;">点燃创客之光，点亮未来梦想</div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== POSITIONING ====== -->
+<div class="section">
+    <div class="section-label">战略定位</div>
+    <div class="section-title">一句话定位 / 定位说明 / 核心思想</div>
+
+    <div class="quote-banner">
+        <strong>一句话定位：</strong>人类文明未来生态探路者与新型组织协作关系构建者们共创共建共治共享的实践基地和价值创造与分配操作系统
+    </div>
+
+    <div class="positioning-box" style="margin-top:16px;">
+        <div class="positioning-title">定位说明</div>
+        <ul class="check-list">
+            <li>人类文明发展方向与人类命运共同体理念探路者的精神家园</li>
+            <li>AI驱动生产力跃迁背景下，新型组织、社会和分配关系的变革者实践基地</li>
+            <li>AI新时代创客们共创共建共治共享的创新孵化基地</li>
+            <li>AI新时代创客们的个体价值创造与分配操作系统</li>
+        </ul>
+    </div>
+
+    <div class="core-thought">
+        <strong>核心思想：</strong>竞争关系是弱后的生产关系，未来是共创共享和合共生
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== SHIP NARRATIVE ====== -->
+<div class="section">
+    <div class="section-label">船票叙事</div>
+    <div class="section-title">登船 = 获得船票 = 共享人类文明美好未来</div>
+
+    <div class="ship-section">
+        <img class="ship-visual" src="assets/rocket.png" alt="Rocket">
+        <div class="ship-code"><span class="highlight">创客星球CGHub = 登录未来美好生活的宇宙飞船船票</span>
+
+<span style="color:var(--text2)">登船 = 获得船票 = 共享人类文明美好未来的共识证明</span>
+
+本质 = 同DAO中人的共识证明
+飞船由大家共建，成就由大家共享
+代码即法律，价值贡献记录在链上，不可篡改</div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== CORE EQUATION ====== -->
+<div class="section">
+    <div class="section-label">核心方程式</div>
+    <div class="section-title">AI × Web3 × 共同富裕 = CGHub</div>
+
+    <div class="equation-box">
+        <div class="eq-formula">
+            <span class="ai">AI（先进生产力）</span> × <span class="web3">Web3（生产关系变革）</span> × <span class="goal">共同富裕（理念）</span>
+        </div>
+        <div class="eq-arrow">↓</div>
+        <div class="eq-result">创客星球 (CGHub)</div>
+        <div class="eq-desc">这不是技术投机。这是在用先进的AI生产力，结合全新的Web3生产关系，服务于共同富裕的目标。</div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== PROBLEM SOLVING ====== -->
+<div class="section">
+    <div class="section-label">价值主张</div>
+    <div class="section-title">我们解决什么问题</div>
+
+    <div style="margin-bottom:16px;">
+        <img style="width:100%;height:200px;object-fit:cover;border-radius:12px;" src="assets/blockchain.png" alt="">
+    </div>
+
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>维度</th>
+                <th>现在</th>
+                <th>创客星球(CGHub)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>贡献记录</td>
+                <td class="now">平台说了算</td>
+                <td class="future">链上不可篡改</td>
+            </tr>
+            <tr>
+                <td>分配规则</td>
+                <td class="now">平台制定</td>
+                <td class="future">智能合约锁定</td>
+            </tr>
+            <tr>
+                <td>收益结算</td>
+                <td class="now">月结/平台抽成</td>
+                <td class="future">按合约自动执行</td>
+            </tr>
+            <tr>
+                <td>身份系统</td>
+                <td class="now">平台账号</td>
+                <td class="future">钱包+链上声誉</td>
+            </tr>
+            <tr>
+                <td>协作透明</td>
+                <td class="now">黑箱</td>
+                <td class="future">全链上可见</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="flow-box" style="margin-top:20px;">
+        <div style="font-size:12px;color:var(--text2);margin-bottom:10px;">最小闭环示例</div>
+        <div class="flow-row">
+            <div class="flow-step">创客A完成贡献</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-desc">CGHub Agent记录贡献（时间、内容、价值评估）</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-step">x402证明</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-desc">x402协议生成贡献证明（可验证的支付凭证）</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-step">智能合约</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-desc">智能合约按预设规则自动分配收益</div>
+        </div>
+        <div class="flow-row">
+            <div class="flow-step">钱包到账</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-desc">创客A钱包实时到账</div>
+        </div>
+        <div class="flow-note">这个闭环，CGHub是第一个把它做到最小化、可演示的产品。</div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== PRODUCT ARCHITECTURE ====== -->
+<div class="section">
+    <div class="section-label">使命的具体化</div>
+    <div class="section-title">个体价值操作系统</div>
+
+    <p style="font-size:14px;color:var(--text2);margin-bottom:16px;">
+        让每个创客的贡献都被链上记录、按代码分配。
+    </p>
+
+    <img class="arch-visual" src="assets/pyramid.png" alt="三层架构">
+
+    <div class="arch-grid">
+        <div class="arch-card layer0">
+            <div class="arch-card-title">【身份层】L0-L4 身份体系</div>
+            <ul>
+                <li>L0 游客</li>
+                <li>L1 创客</li>
+                <li>L2 贡献者</li>
+                <li>L3 船票持有者</li>
+                <li>L4 合伙人</li>
+            </ul>
+        </div>
+        <div class="arch-card layer1">
+            <div class="arch-card-title">【内容与项目层】</div>
+            <ul>
+                <li>个人主页 / 作品集</li>
+                <li>项目协作</li>
+                <li>去中心化开源社区</li>
+                <li>社交UGC</li>
+                <li>共享互助</li>
+            </ul>
+        </div>
+        <div class="arch-card layer2">
+            <div class="arch-card-title">【价值记录层】Web3原生</div>
+            <ul>
+                <li>链上贡献记录</li>
+                <li>智能合约分配</li>
+                <li>钱包（Safe多签）</li>
+                <li>AI Agent托管</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== OPC MECHANISM ====== -->
+<div class="section">
+    <div class="section-label">初创期协作机制</div>
+    <div class="section-title">创客星球初创期分工协作机制</div>
+
+    <div style="margin-bottom:16px;">
+        <img style="width:100%;height:200px;object-fit:cover;border-radius:12px;" src="assets/collaboration.png" alt="">
+    </div>
+
+    <div class="positioning-box">
+        <div class="positioning-title">核心理念：加入即记录，智能合约保证，类Web3空投逻辑</div>
+    </div>
+
+    <table class="opp-table" style="margin-top:16px;">
+        <thead>
+            <tr>
+                <th>参与方式</th>
+                <th>获得</th>
+                <th>门槛</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>加入微信共创交流群</td>
+                <td><span class="star">99</span> 星钻</td>
+                <td style="color:var(--text2)">免费</td>
+            </tr>
+            <tr>
+                <td>加入Telegram共创群</td>
+                <td><span class="star">399</span> 星钻（初创合伙人）</td>
+                <td style="color:var(--text2)">参与执行</td>
+            </tr>
+            <tr>
+                <td>参加黑客松开发</td>
+                <td><span class="star">奖金 + 399</span> 星钻</td>
+                <td style="color:var(--text2)">实际贡献</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="core-thought" style="margin-top:14px;">
+        <strong>星钻用途：</strong>代表贡献记录和未来收益分配权重
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== ECOSYSTEM ====== -->
+<div class="section">
+    <div class="section-label">四层生态架构</div>
+    <div class="section-title">思想 → 社区 → 激励 → 技术</div>
+
+    <img class="eco-visual" src="assets/mindmap.png" alt="四层架构">
+
+    <div class="eco-grid">
+        <div class="eco-card">
+            <div class="eco-card-icon">📚</div>
+            <div class="eco-card-title t1">【思想层】</div>
+            <div class="eco-card-desc">书籍 + 白皮书 + 战斗檄文<br>建立思想坐标，吸引同路人</div>
+        </div>
+        <div class="eco-card">
+            <div class="eco-card-icon">🌏</div>
+            <div class="eco-card-title t2">【社区层】</div>
+            <div class="eco-card-desc">公众号 + 小报童 + 微信群<br>聚人，形成共同体<br>自建去中心化开源社区主阵地</div>
+        </div>
+        <div class="eco-card">
+            <div class="eco-card-icon">⚡</div>
+            <div class="eco-card-title t3">【激励层】</div>
+            <div class="eco-card-desc">积分体系 + 贡献确权 + DAO治理<br>规则驱动，持续运转，参与者即股东</div>
+        </div>
+        <div class="eco-card">
+            <div class="eco-card-icon">🔐</div>
+            <div class="eco-card-title t4">【技术层】</div>
+            <div class="eco-card-desc">CGHub 去中心化代码仓库<br>基础设施，让贡献者真正拥有代码所有权</div>
+        </div>
+    </div>
+
+    <div class="eco-loop">四层闭环：思想吸引 → 社区沉淀 → 激励驱动 → 技术确权</div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== ROADMAP ====== -->
+<div class="section">
+    <div class="section-label">路线图</div>
+    <div class="section-title">当前阶段与路线图</div>
+
+    <div class="roadmap">
+        <div class="rm-node now">
+            <div class="rm-dot"></div>
+            <div class="rm-label">现在</div>
+            <div class="rm-title" style="color:var(--primary)">黑客松</div>
+        </div>
+        <div class="rm-line"></div>
+        <div class="rm-node future">
+            <div class="rm-dot"></div>
+            <div class="rm-label">6/1-14</div>
+            <div class="rm-title">MVP Demo</div>
+        </div>
+        <div class="rm-line"></div>
+        <div class="rm-node future">
+            <div class="rm-dot"></div>
+            <div class="rm-label">Q3</div>
+            <div class="rm-title">v1.0 MVP</div>
+        </div>
+        <div class="rm-line"></div>
+        <div class="rm-node future">
+            <div class="rm-dot"></div>
+            <div class="rm-label">Q4</div>
+            <div class="rm-title">v2.0 社交集成</div>
+        </div>
+        <div class="rm-line"></div>
+        <div class="rm-node future">
+            <div class="rm-dot"></div>
+            <div class="rm-label">2027</div>
+            <div class="rm-title">v3.0 开放平台</div>
+        </div>
+    </div>
+
+    <div class="rm-keys">
+        <div class="rm-key">
+            <div class="rm-key-title">🔵 黑客松（6/1-14）</div>
+            用两周做出MVP演示，证明完整闭环
+        </div>
+        <div class="rm-key">
+            <div class="rm-key-title">🔵 核心演示内容</div>
+            贡献记录 → Agent → x402证明 → 链上收益分配
+        </div>
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== WHY JOIN ====== -->
+<div class="section">
+    <div class="section-label">招募理由</div>
+    <div class="section-title">为什么你来这里</div>
+
+    <div class="why-grid">
+        <div class="why-card">
+            想做一件<b>使命驱动</b>的事，不是纯为了投机
+        </div>
+        <div class="why-card">
+            对<b>AI + Web3</b>的结合感兴趣，想一起探索
+        </div>
+        <div class="why-card">
+            相信<b>透明协作</b>和<b>代码分配</b>是未来的方向
+        </div>
+        <div class="why-card">
+            想找到<b>志同道合</b>的合伙人，一起为人类文明未来探路
+        </div>
+    </div>
+
+    <div style="margin-top:16px;padding:16px;background:rgba(74,157,232,0.06);border:1px solid rgba(74,157,232,0.15);border-radius:10px;font-size:13px;color:var(--text2);text-align:center;">
+        这里可能适合你。
+    </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ====== CONTACT ====== -->
+<div class="section">
+    <div class="section-title">联系方式</div>
+
+    <div class="contact-box">
+        <div class="contact-item"><span>微信：</span>HugoAID</div>
+        <div class="contact-item"><span>Telegram：</span>@Carey Hugo</div>
+    </div>
+</div>
+
+</div><!-- /container -->
+
+<!-- ====== FOOTER ====== -->
+<div class="footer">
+    <img class="footer-logo" src="assets/logo-sm.png" alt="CGHub">
+    <div class="footer-note">
+        这是初创期伙伴们的入门文档。之后参与共建者会收到更具体的黑客松执行文件。
+    </div>
+    <div class="footer-note">
+        基于《创客星球战略规划总纲 V2.0》和《CGHub商业生态系统白皮书 V2.0》编写。
+    </div>
+    <div class="footer-version">v1.3 · 2026-05-30</div>
+</div>
+
+</body>
+</html>
