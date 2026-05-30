@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>创客星球 CGHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;510;590&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       Linear-inspired design system
+       ============================================================ */
+    :root {
+      --bg: #08090a;
+      --bg-panel: #0f1011;
+      --bg-surface: #191a1b;
+      --bg-elevated: #28282c;
+      --text-primary: #f7f8f8;
+      --text-secondary: #d0d6e0;
+      --text-muted: #8a8f98;
+      --text-quiet: #62666d;
+      --accent: #5e6ad2;
+      --accent-bright: #7170ff;
+      --accent-hover: #828fff;
+      --success: #10b981;
+      --success-muted: rgba(16,185,129,0.15);
+      --gold: #fbbf24;
+      --gold-muted: rgba(251,191,36,0.15);
+      --error: #ef4444;
+      --border: rgba(255,255,255,0.08);
+      --border-subtle: rgba(255,255,255,0.05);
+      --border-medium: rgba(255,255,255,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-feature-settings: "cv01", "ss03";
+      background: var(--bg);
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(8,9,10,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0 2rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 15px;
+      font-weight: 510;
+      letter-spacing: -0.24px;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-mark {
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .network-badge {
+      font-size: 12px;
+      font-weight: 510;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: var(--success-muted);
+      color: var(--success);
+      border: 1px solid rgba(16,185,129,0.2);
+      letter-spacing: -0.13px;
+    }
+
+    .network-badge.testnet {
+      background: var(--gold-muted);
+      color: var(--gold);
+      border-color: rgba(251,191,36,0.2);
+    }
+
+    .wallet-btn {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 510;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: -0.13px;
+    }
+
+    .wallet-btn:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .wallet-btn.connected {
+      border-color: rgba(16,185,129,0.3);
+      color: var(--text-primary);
+    }
+
+    /* Main */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* Demo banner */
+    .demo-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 2.5rem;
+      font-size: 13px;
+    }
+
+    .demo-banner .icon {
+      font-size: 16px;
+      line-height: 1;
+      margin-top: 1px;
+    }
+
+    .demo-banner strong {
+      color: var(--text-primary);
+      font-weight: 590;
+    }
+
+    .demo-banner span {
+      color: var(--text-muted);
+    }
+
+    /* Hero */
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 510;
+      letter-spacing: -0.704px;
+      line-height: 1.13;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.6;
+      letter-spacing: -0.165px;
+    }
+
+    /* Status cards */
+    .status-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .status-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .status-icon.free { background: var(--success-muted); }
+    .status-icon.premium { background: var(--gold-muted); }
+    .status-icon.locked { background: rgba(255,255,255,0.05); }
+    .status-icon.subscribed { background: var(--success-muted); }
+
+    .status-info h3 {
+      font-size: 14px;
+      font-weight: 590;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+      letter-spacing: -0.182px;
+    }
+
+    .status-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: -0.13px;
+    }
+
+    .status-info .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-quiet);
+    }
+
+    /* Section label */
+    .section-label {
+      font-size: 11px;
+      font-weight: 590;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-quiet);
+      margin-bottom: 10px;
+      margin-top: 2.5rem;
+    }
+
+    /* Content cards */
+    .content-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .content-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      position: relative;
+      transition: border-color 0.15s;
+    }
+
+    .content-card:hover {
+      border-color: var(--border-medium);
+    }
+
+    .content-card.public { border-left: 2px solid var(--success); }
+    .content-card.premium { border-left: 2px solid var(--gold); }
+    .content-card.locked { opacity: 0.7; }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 590;
+      letter-spacing: 0.04em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .badge.free {
+      background: var(--success-muted);
+      color: var(--success);
+    }
+
+    .badge.premium {
+      background: var(--gold-muted);
+      color: var(--gold);
+    }
+
+    .badge.locked {
+      background: rgba(255,255,255,0.05);
+      color: var(--text-quiet);
+    }
+
+    .content-card h3 {
+      font-size: 14px;
+      font-weight: 590;
+      color: var(--text-primary);
+      margin-bottom: 5px;
+      letter-spacing: -0.182px;
+    }
+
+    .content-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .lock-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8,9,10,0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .lock-overlay .lock-icon { font-size: 20px; }
+    .lock-overlay p { font-size: 12px; color: var(--text-muted); }
+
+    /* Subscribe CTA */
+    .subscribe-cta {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .subscribe-cta h2 {
+      font-size: 20px;
+      font-weight: 590;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.24px;
+    }
+
+    .subscribe-cta > p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: 510;
+      color: var(--text-primary);
+      letter-spacing: -1.408px;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .price span {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: normal;
+    }
+
+    .price-sub {
+      font-size: 12px;
+      color: var(--text-quiet);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.13px;
+    }
+
+    .subscribe-btn {
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 590;
+      letter-spacing: -0.13px;
+      padding: 10px 24px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subscribe-btn:hover:not(:disabled) {
+      background: var(--accent-hover);
+    }
+
+    .subscribe-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .subscribe-btn .spinner {
+      width: 14px;
+      height: 14px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .subscribe-cta .footnote {
+      font-size: 11px;
+      color: var(--text-quiet);
+      margin-top: 12px;
+    }
+
+    #subscribeError {
+      color: var(--error);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    /* Contract info */
+    .contract-info {
+      margin-top: 3rem;
+      padding: 20px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+    }
+
+    .contract-info h4 {
+      font-size: 12px;
+      font-weight: 590;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      letter-spacing: -0.13px;
+    }
+
+    .contract-info ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contract-info li {
+      color: var(--text-muted);
+      display: flex;
+      gap: 6px;
+    }
+
+    .contract-info li strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+      min-width: 50px;
+    }
+
+    .contract-info code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      background: rgba(255,255,255,0.05);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--accent-bright);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: 12px;
+      padding: 1.75rem;
+      max-width: 380px;
+      width: 90%;
+      box-shadow: rgba(0,0,0,0.4) 0px 0px 0px 1px, rgba(0,0,0,0.2) 0px 8px 24px;
+    }
+
+    .modal h3 {
+      font-size: 16px;
+      font-weight: 590;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.24px;
+    }
+
+    .modal > p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .mock-tx {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      word-break: break-all;
+      margin-bottom: 1.25rem;
+    }
+
+    .mock-tx .label { color: var(--text-quiet); }
+    .mock-tx .value { color: var(--text-secondary); }
+    .mock-tx .accent { color: var(--accent-bright); }
+
+    .modal-btns {
+      display: flex;
+      gap: 8px;
+    }
+
+    .modal-btns button {
+      flex: 1;
+      padding: 9px;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 590;
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: -0.13px;
+    }
+
+    .btn-cancel {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    .btn-cancel:hover {
+      background: rgba(255,255,255,0.07);
+    }
+
+    .btn-confirm {
+      background: var(--accent);
+      border: none;
+      color: #fff;
+    }
+
+    .btn-confirm:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-confirm:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Success state in modal */
+    .modal-success {
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .modal-success .check-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--success-muted);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin: 0 auto 1rem;
+    }
+
+    .modal-success h3 {
+      text-align: center;
+    }
+
+    .modal-success p {
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    /* Forum */
+    .forum-section {
+      margin-top: 2.5rem;
+    }
+
+    .forum-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .forum-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .forum-tab {
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 510;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: -0.13px;
+    }
+
+    .forum-tab.active {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--border);
+      color: var(--text-primary);
+    }
+
+    .forum-compose {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .forum-compose textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 13px;
+      line-height: 1.6;
+      resize: none;
+      min-height: 60px;
+    }
+
+    .forum-compose textarea::placeholder { color: var(--text-quiet); }
+
+    .forum-compose-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .points-badge {
+      font-size: 11px;
+      font-weight: 590;
+      color: var(--gold);
+      background: var(--gold-muted);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .forum-compose-footer .char-count {
+      font-size: 11px;
+      color: var(--text-quiet);
+    }
+
+    .compose-submit {
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 590;
+      padding: 6px 16px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: -0.13px;
+    }
+
+    .compose-submit:hover:not(:disabled) { background: var(--accent-hover); }
+    .compose-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .forum-post {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; } }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .post-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 590;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .post-meta {
+      flex: 1;
+    }
+
+    .post-author {
+      font-size: 13px;
+      font-weight: 590;
+      color: var(--text-primary);
+      letter-spacing: -0.13px;
+    }
+
+    .post-time {
+      font-size: 11px;
+      color: var(--text-quiet);
+      letter-spacing: -0.13px;
+    }
+
+    .post-content {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .post-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .post-action {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--text-quiet);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+
+    .post-action:hover { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+    .post-action.liked { color: var(--accent-bright); }
+
+    .post-points {
+      font-size: 11px;
+      font-weight: 590;
+      color: var(--gold);
+      margin-left: auto;
+    }
+
+    .post-points.earned { background: var(--gold-muted); padding: 2px 6px; border-radius: 4px; }
+
+    .forum-empty {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-quiet);
+      font-size: 13px;
+    }
+
+    .forum-readonly-notice {
+      text-align: center;
+      padding: 10px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .forum-readonly-notice strong { color: var(--text-secondary); }
+
+    /* Profile Panel */
+    .profile-btn {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 510;
+      padding: 6px 14px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: -0.13px;
+      display: none;
+    }
+
+    .profile-btn.visible {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .profile-btn:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+    }
+
+    .profile-avatar-small {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 590;
+      color: #fff;
+    }
+
+    /* Profile Drawer */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 200;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s;
+    }
+
+    .drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .profile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 340px;
+      max-width: 90vw;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-medium);
+      z-index: 201;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .drawer-overlay.active .profile-drawer {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-shrink: 0;
+    }
+
+    .drawer-header h3 {
+      font-size: 14px;
+      font-weight: 590;
+      color: var(--text-primary);
+      letter-spacing: -0.182px;
+    }
+
+    .drawer-close {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.05);
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+
+    .drawer-close:hover {
+      background: rgba(255,255,255,0.08);
+      color: var(--text-primary);
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    /* Profile Hero */
+    .profile-hero {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 20px;
+    }
+
+    .profile-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-bright));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 590;
+      color: #fff;
+      margin: 0 auto 12px;
+      position: relative;
+    }
+
+    .profile-avatar .member-badge {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 20px;
+      height: 20px;
+      background: var(--gold);
+      border-radius: 50%;
+      border: 2px solid var(--bg-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+    }
+
+    .profile-address {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .profile-wallet-id {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255,255,255,0.05);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      color: var(--text-quiet);
+    }
+
+    /* Stats Row */
+    .profile-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .profile-stat {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 8px;
+      text-align: center;
+    }
+
+    .profile-stat .stat-value {
+      font-size: 20px;
+      font-weight: 590;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .profile-stat .stat-label {
+      font-size: 10px;
+      color: var(--text-quiet);
+      letter-spacing: 0.02em;
+    }
+
+    .profile-stat.points .stat-value { color: var(--gold); }
+
+    /* Rank Card */
+    .profile-rank {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+
+    .profile-rank-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .profile-rank-header h4 {
+      font-size: 12px;
+      font-weight: 590;
+      color: var(--text-secondary);
+      letter-spacing: -0.13px;
+    }
+
+    .rank-badge {
+      font-size: 10px;
+      font-weight: 590;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--gold-muted);
+      color: var(--gold);
+    }
+
+    .rank-bar-bg {
+      height: 6px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 3px;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+
+    .rank-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
+    .rank-bar-label {
+      font-size: 10px;
+      color: var(--text-quiet);
+      text-align: right;
+    }
+
+    /* Achievement Pills */
+    .profile-achievements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .achievement-pill {
+      font-size: 10px;
+      font-weight: 590;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    .achievement-pill.active {
+      background: var(--gold-muted);
+      border-color: rgba(251,191,36,0.2);
+      color: var(--gold);
+    }
+
+    /* Recent Activity */
+    .profile-activity {
+      margin-top: 16px;
+    }
+
+    .profile-activity h4 {
+      font-size: 12px;
+      font-weight: 590;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      letter-spacing: -0.13px;
+    }
+
+    .activity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .activity-item:last-child { border-bottom: none; }
+
+    .activity-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .activity-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .activity-text strong { color: var(--text-secondary); }
+
+    .activity-time {
+      font-size: 10px;
+      color: var(--text-quiet);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-mark">🌌</div>
+      创客星球 CGHub
+    </div>
+    <div class="header-right">
+      <span class="network-badge testnet" id="networkBadge">测试网</span>
+      <button class="profile-btn" id="profileBtn" onclick="openProfile()">
+        <span class="profile-avatar-small" id="profileAvatarSmall"></span>
+        <span id="profileBtnText">我的主页</span>
+      </button>
+      <button class="wallet-btn" id="walletBtn" onclick="connectWallet()">连接钱包</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Demo Banner -->
+    <div class="demo-banner" id="demoBanner">
+      <span class="icon">🎯</span>
+      <div>
+        <strong>DEMO 模式</strong> — 区块链订阅验证演示<br>
+        <span>连接 MetaMask 后即可体验真实的链上订阅流程</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>AI时代探路者社区</h1>
+      <p>共创 · 共建 · 共治 · 共享 — 用区块链重新定义生产关系</p>
+    </section>
+
+    <!-- Dynamic Status -->
+    <div id="statusBanner"></div>
+
+    <!-- Content -->
+    <div class="section-label">内容</div>
+    <div class="content-grid" id="contentGrid">
+      <div class="content-card public">
+        <span class="badge free">免费</span>
+        <h3>什么是创客星球？</h3>
+        <p>创客星球是 AI 时代超级个体创业孵化平台。核心理念：AI 打破劳动力、代码、媒体三大杠杆，普通人迎来翻身机会。参与者即股东，创造即确权。</p>
+      </div>
+      <div id="premiumContent"></div>
+    </div>
+
+    <!-- Subscribe CTA -->
+    <div id="subscribeCTA" class="subscribe-cta">
+      <h2>成为船票会员</h2>
+      <p>解锁全部高级内容，参与 DAO 治理</p>
+      <div class="price" id="feeDisplay">1 <span>MON</span></div>
+      <div class="price-sub">每年 · 随时取消</div>
+      <button class="subscribe-btn" id="subscribeBtn" onclick="initiateSubscribe()">
+        用 MON 订阅
+      </button>
+      <div class="footnote">Monad 链上自动执行 · 智能合约保障</div>
+      <div id="subscribeError"></div>
+    </div>
+
+    <!-- Contract Info -->
+    <div class="contract-info">
+      <h4>技术栈</h4>
+      <ul>
+        <li><strong>链上</strong><code>CGHubSubscription.sol</code></li>
+        <li><strong>网络</strong>Monad 测试网 (chainId: 10143)</li>
+        <li><strong>前端</strong>ethers.js v6 + MetaMask</li>
+        <li><strong>订阅</strong><code>contract.subscribe({ value: 1e18 })</code></li>
+        <li><strong>查询</strong><code>contract.isSubscriber(addr)</code></li>
+      </ul>
+    </div>
+
+    <!-- Forum -->
+    <section class="forum-section" id="forumSection">
+      <div class="forum-header">
+        <div class="section-label" style="margin-top:0">社区动态</div>
+        <div class="forum-tabs">
+          <button class="forum-tab active" onclick="switchForumTab('latest')">最新</button>
+          <button class="forum-tab" onclick="switchForumTab('hot')">热门</button>
+        </div>
+      </div>
+
+      <!-- Compose box -->
+      <div id="forumCompose"></div>
+
+      <!-- Post list -->
+      <div id="forumPosts"></div>
+    </section>
+  </main>
+
+  <!-- Profile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeProfile(event)">
+    <div class="profile-drawer" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <h3>我的主页</h3>
+        <button class="drawer-close" onclick="closeProfile()">✕</button>
+      </div>
+      <div class="drawer-body">
+        <div id="profileContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <div id="modalContent">
+        <h3>确认订阅</h3>
+        <p>即将从您的钱包扣除 <strong style="color:var(--text-primary)">1 MON</strong></p>
+        <div class="mock-tx" id="txPreview">
+          <span class="label">to  </span><span class="value" id="txTo">0x55cf5d...593BD</span><br>
+          <span class="label">val </span><span class="accent" id="txValue">1 MON</span><br>
+          <span class="label">gas </span><span class="value">~0.002 MON</span>
+        </div>
+        <div class="modal-btns">
+          <button class="btn-cancel" onclick="closeModal()">取消</button>
+          <button class="btn-confirm" id="confirmBtn" onclick="confirmSubscribe()">确认支付</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ethers.js -->
+  <script src="ethers.min.js"></script>
+
+  <script>
+    // ============================================
+    // Configuration
+    // ============================================
+    const CONTRACT_ADDRESS = "0x55cf5dc754614f99AaAFBD5fdf0eF353620359BD";
+
+    const CONTRACT_ABI = [
+      "function subscribe() external payable",
+      "function isSubscriber(address user) external view returns (bool)",
+      "function getSubscriptionExpiry(address user) external view returns (uint256)",
+      "function getFee() external view returns (uint256)",
+      "function SUBSCRIPTION_FEE() external view returns (uint256)",
+      "function SUBSCRIPTION_DURATION() external view returns (uint256)",
+      "function platformWallet() external view returns (address)",
+      "event Subscribed(address indexed user, uint256 startTime, uint256 endTime, uint256 amount)"
+    ];
+
+    const MONAD_CHAIN_ID = 10143;
+    const MONAD_RPC = "https://testnet-rpc.monad.xyz";
+
+    // ============================================
+    // State
+    // ============================================
+    let walletAddress = null;
+    let isSubscribed = false;
+    let contract = null;
+    let provider = null;
+    let signer = null;
+    let subscriptionFee = null;
+    const isDemoMode = !CONTRACT_ADDRESS;
+
+    const premiumContentData = [
+      {
+        badge: '高级',
+        title: '纳瓦尔杠杆理论深度解读',
+        excerpt: '为什么现在是普通人翻身的机会？四大杠杆如何被 AI 打破...'
+      },
+      {
+        badge: '高级',
+        title: 'Web3 生产关系革命',
+        excerpt: '区块链如何让分配规则第一次不可篡改？DAO 治理机制设计...'
+      },
+      {
+        badge: '高级',
+        title: '创客星球商业白皮书（完整版）',
+        excerpt: '平台代币经济模型、收益分配机制、DAO 治理投票权重设计...'
+      }
+    ];
+
+    // ============================================
+    // Forum
+    // ============================================
+    let forumTab = 'latest';
+    const POINTS_PER_POST = 10;
+    const POINTS_PER_LIKE = 2;
+
+    const SAMPLE_POSTS = [
+      {
+        id: 'p1',
+        author: 'Carey',
+        addr: '0xd4f0...D0B5',
+        content: '刚刚完成了 CGHub 订阅合约的部署！在 Monad 测试网上顺利跑通。\n\n核心理念：用智能合约实现"参与者即股东"，订阅费直接进合约，分配规则写死在代码里，没人能篡改。\n\n#创客星球 #Monad',
+        time: Date.now() - 1000 * 60 * 8,
+        likes: 24,
+        liked: false,
+        earned: true
+      },
+      {
+        id: 'p2',
+        author: '匿名访客',
+        addr: '0x7c3a...f123',
+        content: '这个 idea 很棒！AI 打破三大杠杆 + Web3 分配机制，正好是我一直在找的方向。',
+        time: Date.now() - 1000 * 60 * 31,
+        likes: 8,
+        liked: false,
+        earned: false
+      },
+      {
+        id: 'p3',
+        author: '匿名访客',
+        addr: '0xa1b2...c456',
+        content: '报名了小报童，期待后续内容。现在加入能拿到早期股东身份吗？',
+        time: Date.now() - 1000 * 60 * 55,
+        likes: 3,
+        liked: false,
+        earned: false
+      }
+    ];
+
+    function getForumKey() { return 'cghub_forum_' + (walletAddress || 'guest'); }
+
+    function loadPosts() {
+      try {
+        const stored = localStorage.getItem(getForumKey());
+        return stored ? JSON.parse(stored) : null;
+      } catch { return null; }
+    }
+
+    function savePosts(posts) {
+      try { localStorage.setItem(getForumKey(), JSON.stringify(posts)); } catch {}
+    }
+
+    function getPosts() {
+      const personal = loadPosts();
+      const all = personal ? [...personal, ...SAMPLE_POSTS] : [...SAMPLE_POSTS];
+      if (forumTab === 'hot') return [...all].sort((a, b) => b.likes - a.likes);
+      return [...all].sort((a, b) => b.time - a.time);
+    }
+
+    function renderForumCompose() {
+      const container = document.getElementById('forumCompose');
+      if (!walletAddress) {
+        container.innerHTML = `
+          <div class="forum-readonly-notice">
+            <strong>登录后可发言</strong> — 连接钱包即可参与讨论
+          </div>`;
+        return;
+      }
+      if (!isSubscribed) {
+        container.innerHTML = `
+          <div class="forum-readonly-notice">
+            <strong>订阅后解锁发言 + 积分奖励</strong> — 成为船票会员可发言并获得 ${POINTS_PER_POST} 积分/条
+          </div>`;
+        return;
+      }
+      const addrShort = walletAddress.slice(0, 4) + '..' + walletAddress.slice(-4);
+      container.innerHTML = `
+        <div class="forum-compose">
+          <textarea id="composeText" placeholder="分享你的想法..." maxlength="500"></textarea>
+          <div class="forum-compose-footer">
+            <span class="points-badge">+${POINTS_PER_POST} 积分</span>
+            <span class="char-count"><span id="charCount">0</span>/500</span>
+            <button class="compose-submit" id="composeSubmit" onclick="submitPost()">发布</button>
+          </div>
+        </div>`;
+
+      document.getElementById('composeText').addEventListener('input', function () {
+        document.getElementById('charCount').textContent = this.value.length;
+      });
+    }
+
+    function renderForumPosts() {
+      const container = document.getElementById('forumPosts');
+      const posts = getPosts();
+
+      if (posts.length === 0) {
+        container.innerHTML = '<div class="forum-empty">还没有发言，来做第一个吧</div>';
+        return;
+      }
+
+      container.innerHTML = posts.map(p => `
+        <div class="forum-post">
+          <div class="post-header">
+            <div class="post-avatar">${p.author.slice(0, 2)}</div>
+            <div class="post-meta">
+              <div class="post-author">${p.author}</div>
+              <div class="post-time">${timeAgo(p.time)} · ${p.addr}</div>
+            </div>
+          </div>
+          <div class="post-content">${escapeHtml(p.content)}</div>
+          <div class="post-footer">
+            <button class="post-action${p.liked ? ' liked' : ''}" onclick="toggleLike('${p.id}')">
+              ${p.liked ? '♥' : '♡'} ${p.likes}
+            </button>
+            ${p.earned ? `<span class="post-points earned">+${POINTS_PER_POST} 积分</span>` : ''}
+          </div>
+        </div>`).join('');
+    }
+
+    function renderForum() { renderForumCompose(); renderForumPosts(); }
+
+    function switchForumTab(tab) {
+      forumTab = tab;
+      document.querySelectorAll('.forum-tab').forEach(t => {
+        t.classList.toggle('active', t.textContent === (tab === 'latest' ? '最新' : '热门'));
+      });
+      renderForumPosts();
+    }
+
+    function submitPost() {
+      const textarea = document.getElementById('composeText');
+      const content = textarea.value.trim();
+      if (!content || !walletAddress) return;
+
+      const posts = loadPosts() || [];
+      const newPost = {
+        id: 'u_' + Date.now(),
+        author: walletAddress.slice(0, 6) + '..' + walletAddress.slice(-4),
+        addr: walletAddress.slice(0, 8),
+        content,
+        time: Date.now(),
+        likes: 0,
+        liked: false,
+        earned: true
+      };
+      posts.unshift(newPost);
+      savePosts(posts);
+      textarea.value = '';
+      document.getElementById('charCount').textContent = '0';
+      renderForumPosts();
+    }
+
+    function toggleLike(postId) {
+      const personal = loadPosts() || [];
+      const sampleIdx = SAMPLE_POSTS.findIndex(p => p.id === postId);
+      let target = personal.find(p => p.id === postId);
+      if (!target && sampleIdx >= 0) {
+        // clone sample post into personal
+        target = { ...SAMPLE_POSTS[sampleIdx] };
+        personal.push(target);
+      }
+      if (!target) return;
+      target.liked = !target.liked;
+      target.likes += target.liked ? 1 : -1;
+      savePosts(personal);
+      renderForumPosts();
+    }
+
+    function timeAgo(ts) {
+      const d = Math.floor((Date.now() - ts) / 1000);
+      if (d < 60) return d + '秒前';
+      if (d < 3600) return Math.floor(d / 60) + '分钟前';
+      if (d < 86400) return Math.floor(d / 3600) + '小时前';
+      return Math.floor(d / 86400) + '天前';
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+    }
+
+    // ============================================
+    // Wallet Connection
+    // ============================================
+    async function connectWallet() {
+      if (typeof window.ethereum === 'undefined') {
+        alert('请安装 MetaMask 钱包');
+        return;
+      }
+
+      try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        if (accounts.length === 0) throw new Error('没有获取到账户');
+
+        walletAddress = accounts[0];
+
+        const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+
+        if (parseInt(chainId) !== MONAD_CHAIN_ID) {
+          try {
+            await window.ethereum.request({
+              method: 'wallet_switchEthereumChain',
+              params: [{ chainId: '0x277F' }]
+            });
+          } catch (switchError) {
+            if (switchError.code === 4902) {
+              await window.ethereum.request({
+                method: 'wallet_addEthereumChain',
+                params: [{
+                  chainId: '0x277F',
+                  chainName: 'Monad Testnet',
+                  rpcUrls: [MONAD_RPC],
+                  nativeCurrency: { name: 'MON', symbol: 'MON', decimals: 18 },
+                  blockExplorerUrls: ['https://testnet.monad.xyz/']
+                }]
+              });
+            }
+          }
+        }
+
+        provider = new ethers.BrowserProvider(window.ethereum);
+        signer = await provider.getSigner();
+
+        if (!isDemoMode) {
+          contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+          try {
+            subscriptionFee = await contract.getFee();
+            document.getElementById('feeDisplay').innerHTML =
+              ethers.formatEther(subscriptionFee) + ' <span>MON</span>';
+          } catch(e) { /* use default */ }
+        }
+
+        updateWalletUI();
+        await checkSubscriptionStatus();
+
+        window.ethereum.on('accountsChanged', handleAccountsChanged);
+        window.ethereum.on('chainChanged', handleChainChanged);
+
+      } catch (err) {
+        console.error('钱包连接失败:', err);
+        alert('钱包连接失败: ' + err.message);
+      }
+    }
+
+    function handleAccountsChanged(accounts) {
+      if (accounts.length === 0) {
+        walletAddress = null;
+        contract = null;
+        updateWalletUI();
+        renderUI();
+      } else if (accounts[0] !== walletAddress) {
+        walletAddress = accounts[0];
+        checkSubscriptionStatus();
+      }
+    }
+
+    function handleChainChanged() {
+      window.location.reload();
+    }
+
+    function updateWalletUI() {
+      const btn = document.getElementById('walletBtn');
+      const badge = document.getElementById('networkBadge');
+      const profileBtn = document.getElementById('profileBtn');
+
+      if (walletAddress) {
+        const short = walletAddress.slice(0, 6) + '...' + walletAddress.slice(-4);
+        btn.textContent = short;
+        btn.classList.add('connected');
+        badge.textContent = 'Monad';
+        badge.classList.remove('testnet');
+
+        // Show profile button only for subscribers
+        if (isSubscribed) {
+          profileBtn.classList.add('visible');
+          const avatarSmall = document.getElementById('profileAvatarSmall');
+          avatarSmall.textContent = walletAddress.slice(2, 4).toUpperCase();
+        } else {
+          profileBtn.classList.remove('visible');
+        }
+      } else {
+        btn.textContent = '连接钱包';
+        btn.classList.remove('connected');
+        badge.textContent = '测试网';
+        badge.classList.add('testnet');
+        profileBtn.classList.remove('visible');
+      }
+    }
+
+    // ============================================
+    // Subscription Logic
+    // ============================================
+    async function checkSubscriptionStatus() {
+      if (!walletAddress) {
+        isSubscribed = false;
+        renderUI();
+        return;
+      }
+
+      try {
+        if (isDemoMode) {
+          const stored = localStorage.getItem('cghub_subscription_' + walletAddress);
+          isSubscribed = stored === 'active';
+        } else {
+          isSubscribed = await contract.isSubscriber(walletAddress);
+        }
+      } catch(err) {
+        console.error('检查订阅状态失败:', err);
+        isSubscribed = false;
+      }
+
+      updateWalletUI();
+      renderUI();
+      renderForum();
+    }
+
+    async function initiateSubscribe() {
+      if (!walletAddress) {
+        connectWallet();
+        return;
+      }
+
+      document.getElementById('confirmBtn').disabled = false;
+      document.getElementById('txTo').textContent =
+        (CONTRACT_ADDRESS || 'Demo').substring(0, 14) + '...' + (CONTRACT_ADDRESS || '').slice(-4);
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+    }
+
+    async function confirmSubscribe() {
+      const btn = document.getElementById('confirmBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span>等待确认...';
+
+      try {
+        if (isDemoMode) {
+          await new Promise(r => setTimeout(r, 1500));
+          localStorage.setItem('cghub_subscription_' + walletAddress, 'active');
+          isSubscribed = true;
+          closeModal();
+          renderUI();
+          return;
+        }
+
+        const fee = subscriptionFee || ethers.parseEther('1');
+        const tx = await contract.subscribe({ value: fee });
+        btn.innerHTML = '<span class="spinner"></span>区块链确认中...';
+        await tx.wait();
+
+        closeModal();
+        await checkSubscriptionStatus();
+
+      } catch(err) {
+        console.error('订阅失败:', err);
+        const errDiv = document.getElementById('subscribeError');
+        errDiv.textContent = '订阅失败: ' + (err.reason || err.message || '用户取消');
+        errDiv.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = '确认支付';
+      }
+    }
+
+    // ============================================
+    // UI Rendering
+    // ============================================
+    function renderUI() {
+      renderStatusBanner();
+      renderPremiumContent();
+      renderSubscribeCTA();
+    }
+
+    function renderStatusBanner() {
+      const container = document.getElementById('statusBanner');
+
+      if (!walletAddress) {
+        container.innerHTML = `
+          <div class="status-card">
+            <div class="status-icon locked">🔒</div>
+            <div class="status-info">
+              <h3>连接钱包查看订阅状态</h3>
+              <p>点击右上角「连接钱包」开始体验</p>
+            </div>
+          </div>`;
+        return;
+      }
+
+      if (isSubscribed) {
+        container.innerHTML = `
+          <div class="status-card">
+            <div class="status-icon subscribed">✓</div>
+            <div class="status-info">
+              <h3>船票会员</h3>
+              <p>您已订阅，可访问全部高级内容</p>
+            </div>
+          </div>`;
+      } else {
+        container.innerHTML = `
+          <div class="status-card">
+            <div class="status-icon locked">🔒</div>
+            <div class="status-info">
+              <h3>免费访客</h3>
+              <p class="mono">${walletAddress.slice(0,8)}...${walletAddress.slice(-6)}</p>
+            </div>
+          </div>`;
+      }
+    }
+
+    function renderPremiumContent() {
+      const container = document.getElementById('premiumContent');
+
+      if (isSubscribed) {
+        container.innerHTML = premiumContentData.map(item => `
+          <div class="content-card premium">
+            <span class="badge premium">${item.badge}</span>
+            <h3>${item.title}</h3>
+            <p>${item.excerpt}</p>
+          </div>`).join('');
+      } else {
+        container.innerHTML = premiumContentData.map(item => `
+          <div class="content-card locked">
+            <span class="badge locked">${item.badge}</span>
+            <h3>${item.title}</h3>
+            <p>${item.excerpt}</p>
+            <div class="lock-overlay">
+              <div class="lock-icon">🔒</div>
+              <p>订阅后解锁</p>
+            </div>
+          </div>`).join('');
+      }
+    }
+
+    function renderSubscribeCTA() {
+      const container = document.getElementById('subscribeCTA');
+      if (!container) return;
+      container.style.display = isSubscribed ? 'none' : 'block';
+    }
+
+    // ============================================
+    // Profile
+    // ============================================
+    function openProfile() {
+      if (!walletAddress || !isSubscribed) return;
+      renderProfile();
+      document.getElementById('drawerOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProfile(e) {
+      if (e && e.target !== document.getElementById('drawerOverlay')) return;
+      document.getElementById('drawerOverlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function getProfileStats() {
+      const posts = loadPosts() || [];
+      const postCount = posts.length;
+      const likeCount = posts.reduce((sum, p) => sum + (p.likes || 0), 0);
+      const pointsPerPost = 10;
+      const pointsPerLike = 2;
+      const totalPoints = posts.reduce((sum, p) => {
+        let pts = 0;
+        if (p.earned) pts += pointsPerPost;
+        if (p.liked) pts += pointsPerLike;
+        return sum + pts;
+      }, 0);
+      return { postCount, likeCount, totalPoints };
+    }
+
+    function getProfileActivity() {
+      const posts = loadPosts() || [];
+      return posts.slice(0, 3).map(p => ({
+        type: 'post',
+        text: p.content.slice(0, 40) + (p.content.length > 40 ? '...' : ''),
+        time: p.time
+      }));
+    }
+
+    function getRankInfo(points) {
+      if (points >= 500) return { rank: '核心成员', threshold: 500, next: null };
+      if (points >= 200) return { rank: '活跃成员', threshold: 200, next: 500 };
+      if (points >= 50)  return { rank: '新晋成员', threshold: 50, next: 200 };
+      return { rank: '初来乍到', threshold: 0, next: 50 };
+    }
+
+    function renderProfile() {
+      const container = document.getElementById('profileContent');
+      const { postCount, likeCount, totalPoints } = getProfileStats();
+      const rankInfo = getRankInfo(totalPoints);
+      const initials = walletAddress.slice(2, 4).toUpperCase();
+      const shortAddr = walletAddress.slice(0, 8) + '...' + walletAddress.slice(-6);
+
+      // Rank progress
+      const nextThreshold = rankInfo.next;
+      const prevThreshold = rankInfo.threshold;
+      const progress = nextThreshold
+        ? Math.min(100, Math.round(((totalPoints - prevThreshold) / (nextThreshold - prevThreshold)) * 100))
+        : 100;
+
+      // Achievements
+      const achievements = [
+        { label: '首次发言', active: postCount >= 1 },
+        { label: '10积分', active: totalPoints >= 10 },
+        { label: '50积分', active: totalPoints >= 50 },
+        { label: '活跃成员', active: totalPoints >= 200 },
+        { label: '核心成员', active: totalPoints >= 500 }
+      ];
+
+      // Recent activity
+      const activity = getProfileActivity();
+      const activityHtml = activity.length
+        ? activity.map(a => `
+          <div class="activity-item">
+            <div class="activity-icon">✦</div>
+            <div>
+              <div class="activity-text">${escapeHtml(a.text)}</div>
+              <div class="activity-time">${timeAgo(a.time)}</div>
+            </div>
+          </div>`).join('')
+        : '<div class="activity-item"><div class="activity-icon">✦</div><div><div class="activity-text" style="color:var(--text-quiet)">还没有发言记录</div></div></div>';
+
+      container.innerHTML = `
+        <div class="profile-hero">
+          <div class="profile-avatar">
+            ${initials}
+            <div class="member-badge">★</div>
+          </div>
+          <div class="profile-address">${shortAddr}</div>
+          <div class="profile-wallet-id">
+            <span>船票会员</span>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div class="profile-stat points">
+            <div class="stat-value">${totalPoints}</div>
+            <div class="stat-label">积分</div>
+          </div>
+          <div class="profile-stat">
+            <div class="stat-value">${postCount}</div>
+            <div class="stat-label">发言</div>
+          </div>
+          <div class="profile-stat">
+            <div class="stat-value">${likeCount}</div>
+            <div class="stat-label">获赞</div>
+          </div>
+        </div>
+
+        <div class="profile-rank">
+          <div class="profile-rank-header">
+            <h4>${rankInfo.rank}</h4>
+            <span class="rank-badge">${totalPoints} / ${nextThreshold || 'MAX'}</span>
+          </div>
+          <div class="rank-bar-bg">
+            <div class="rank-bar-fill" style="width:${progress}%"></div>
+          </div>
+          <div class="rank-bar-label">${nextThreshold ? '距离下一级还需 ' + (nextThreshold - totalPoints) + ' 积分' : '已达最高等级'}</div>
+        </div>
+
+        <div class="profile-achievements">
+          ${achievements.map(a => `<span class="achievement-pill${a.active ? ' active' : ''}">${a.label}</span>`).join('')}
+        </div>
+
+        <div class="profile-activity">
+          <h4>最近动态</h4>
+          ${activityHtml}
+        </div>
+      `;
+    }
+
+    // ============================================
+    // Init
+    // ============================================
+    renderUI();
+    renderForum();
+  </script>
+</body>
+</html>
