@@ -37,17 +37,23 @@
 Step 1：git pull origin main
         （先拉取最新仓库内容）
 
-Step 2：读取 .repo-guide.md
+Step 2：读取 memory.md
+        （加载核心共享记忆：创始人信息、项目状态、当前优先级、品牌规范）
+
+Step 3：读取 .repo-guide.md
         （了解隐私规范和协作协议）
 
-Step 3：读取 docs/04-book-plan/conversation-index.md
+Step 4：读取 docs/00-context/CGHub-项目全景结构总结_YYYY-MM-DD.md
+        （如有最新全景总结文件，先读这个）
+
+Step 5：读取 docs/04-book-plan/conversation-index.md
         （了解历史会话索引）
 
-Step 4：读取最新的那条 conversation-*.md
+Step 6：读取最新的那条 conversation-*.md
         （接上最新上下文）
 
-Step 5：根据任务类型，读取对应的项目文件：
-       - 书籍相关 → docs/04-book-plan/CGHub书籍框架大纲_V2.md
+Step 7：根据任务类型，读取对应的项目文件：
+       - 书籍相关 → docs/04-book-plan/创客经济-书籍大纲.md
        - 封面设计 → docs/04-book-plan/CGHub封面设计提示词.md
        - 白皮书   → docs/03-whitepaper/ 目录下的文件
        - 合伙人   → docs/02-partner-recruitment/ 目录下的文件
@@ -127,8 +133,8 @@ Slogan：点燃创客之光，点亮未来梦想
 Gitee：https://gitee.com/carey-hugo/creators-galaxy
 GitHub：由Gitee镜像同步
 
-当前书籍：《AI新时代——当机器人学会分配》
-英文名：The AI Epoch — When Machines Learn to Distribute
+当前书籍：《创客经济：AI时代的个体价值操作系统》
+英文名：Maker Economy: The OS for Individual Value in the AI Era
 ```
 
 ---

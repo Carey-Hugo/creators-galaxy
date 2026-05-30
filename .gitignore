@@ -1,2 +1,6 @@
 CreatorsGalaxy/
 token_auto_push.sh
+demo/cghub-contracts/node_modules/
+
+__pycache__/
+*.pyc
