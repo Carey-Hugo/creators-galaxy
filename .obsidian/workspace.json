@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/04-book-plan/conversation-2026-05-05.md",
+                "file": "docs/06-execution-plan/CGHub-创客星球发展规划概览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conversation-2026-05-05"
+              "title": "CGHub-创客星球发展规划概览"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 336.5
   },
   "right": {
     "id": "c2fabd8b31b622af",
@@ -171,6 +171,16 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "c68d13ac35c69fd2",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
         ],
         "currentTab": 5
@@ -188,56 +198,57 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "realclaudian:Open Claudian": false
     }
   },
   "active": "50df00a94f71176b",
   "lastOpenFiles": [
-    "CGHub书籍策划案.md",
-    "CGHub书籍框架和大纲.md",
+    "docs/06-execution-plan/CGHub-MVP黑客松执行方案.md",
+    "docs/06-execution-plan/CGHub-创客星球发展规划概览.md",
+    "docs/06-execution-plan/CGHub迭代路线图_v1.md",
+    "docs/06-execution-plan/创客星球系统执行计划_v1.1.md",
+    "docs/06-execution-plan/创客星球系统执行计划.md",
+    "docs/04-book-plan/09-Harness-AI失控边界-定稿.md",
+    "docs/04-book-plan/CGHub封面设计提示词.md",
+    "docs/04-book-plan/main-agent-instructions.md",
+    "docs/04-book-plan/main-agent-protocol.md",
+    "docs/04-book-plan/conversation-index.md",
+    "docs/04-book-plan/conversation-2026-05-05.md",
+    "docs/04-book-plan/conversation-2026-05-01.md",
+    "docs/04-book-plan/conversation-2025-05-01.md",
+    "docs/04-book-plan/CGHub中文版封面优化提示词.md",
+    "docs/04-book-plan/CGHub书籍框架大纲_V2.md",
+    "docs/04-book-plan/CGHub书籍策划案.md",
+    "docs/08-author-profile/doc_17413ee9eb62_胡戈人生自传（下篇）.md",
+    "docs/08-author-profile/doc_30c1b5e0a343_公众号结尾引流钩子模板.md",
+    "docs/08-author-profile/doc_6c38316b6e30_当下每时每刻（持续更新）.md",
+    "docs/08-author-profile/doc_3a311e10a480_胡戈人生自传（上篇）.md",
+    "docs/01-knowledge-base/images/content-funnel.png",
     "CGHub项目全景知识库.md",
     "CGHub商业生态系统白皮书_V2.md",
-    "CGHub商业生态系统白皮书.md",
-    "CGHub合伙人招募计划.md",
-    "CGHub海报文案集.md",
     "创客星球战略规划总纲.md",
+    "未命名.base",
+    "demo/cghub-contracts/node_modules/form-data/lib/browser.js",
+    "demo/cghub-contracts/node_modules/form-data/lib/form_data.js",
+    "demo/cghub-contracts/node_modules/form-data/lib/populate.js",
+    "demo/cghub-contracts/node_modules/form-data/README.md",
+    "demo/cghub-contracts/node_modules/form-data/package.json",
+    "demo/cghub-contracts/node_modules/form-data/License",
+    "demo/cghub-contracts/node_modules/form-data/lib",
+    "demo/cghub-contracts/node_modules/form-data/index.d.ts",
+    "demo/cghub-contracts/node_modules/form-data/CHANGELOG.md",
+    "demo/cghub-contracts/node_modules/form-data",
+    "demo/cghub-contracts/node_modules/for-each/test/test.js",
+    "demo/cghub-contracts/node_modules/for-each/README.md",
+    "demo/cghub-contracts/node_modules/ts-command-line-args/coverage/lcov-report/sort-arrow-sprite.png",
+    "demo/cghub-contracts/node_modules/ts-command-line-args/coverage/lcov-report/favicon.png",
+    "demo/cghub-contracts/node_modules/undici/docs/assets/lifecycle-diagram.png",
+    "demo/cghub-contracts/node_modules/sc-istanbul/lib/assets/sort-arrow-sprite.png",
     "docs/05-poster-copy/images/why-100-yuan-ticket.png",
-    "docs/04-content-strategy/小报童-发刊词.md",
-    "docs/04-content-strategy/创客星球小报童产品体系.md",
-    "docs/04-content-strategy/内容创作全局规划.md",
     "docs/04-content-strategy/generated-covers/xiaobaotong-preface-cover.png",
-    "docs/04-content-strategy/generated-covers/xiaobaotong-preface-cover.html",
-    "docs/04-content-strategy/generated-covers",
-    "docs/04-book-plan/conversation-2026-05-05.md",
-    "docs/05-product-requirements/创客星球产品需求文档.md",
-    "docs/08-author-profile/doc_b8bd66513618_公众号文案风格萃取.md",
-    "docs/08-author-profile/doc_e6a730035ec5_IP价值清单.md",
-    "docs/08-author-profile/doc_6c38316b6e30_当下每时每刻（持续更新）.md",
-    "docs/07-technical-design/CGHub去中心化代码仓库技术方案.md",
-    "docs/07-english/CGHub_Business_Ecosystem_Whitepaper_EN.md",
-    "docs/07-english/CGHub_Book_Plan_EN.md",
     "docs/05-poster-copy/images/value-creator-owner.png",
     "docs/05-poster-copy/images/super-individual-manifesto.png",
-    "docs/05-poster-copy/images/sports-idle-sharing-recruitment.png",
-    "docs/05-poster-copy/images/pet-economy-recruitment.png",
-    "docs/05-poster-copy/images/i-have-a-dream-poster.png",
-    "docs/05-poster-copy/images/contribution-ownership.png",
-    "docs/05-poster-copy/images/centralized-vs-decentralized.png",
-    "docs/04-content-strategy/战斗檄文集.md",
-    "docs/04-content-strategy/创客星球战斗檄文-中英双语-定稿版.md",
-    "docs/04-book-plan/CGHub封面设计提示词.md",
-    "docs/04-book-plan/generated-covers/CGHub_中文版_组合预览.png",
-    "docs/03-whitepaper/CGHub商业生态系统白皮书.md",
-    "docs/02-partner-recruitment/CGHub合伙人招募计划.md",
-    "docs/00-context/CGHub-当前上下文同步.md",
-    "docs/00-brand/CGHub品牌命名与双语规范.md",
-    "docs/08-author-profile",
-    "docs/06-execution-plan",
-    "docs/05-product-requirements",
-    "docs/00-context",
-    "CGHub_Book_Cover_Prompt.txt",
-    "docs/07-technical-design",
-    "docs/04-content-strategy",
-    "docs/04-book-plan/generated-covers"
+    "docs/05-poster-copy/images/sports-idle-sharing-recruitment.png"
   ]
 }
