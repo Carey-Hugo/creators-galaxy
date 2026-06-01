@@ -130,7 +130,9 @@ x402协议生成贡献证明（可验证的支付凭证）
 ## 八、联系方式
 
 微信：HugoAID
+公众号：胡戈AI赋能
 Telegram：@Carey Hugo
+推特X：Carey Hugo@ejbskns84
 
 ---
 
