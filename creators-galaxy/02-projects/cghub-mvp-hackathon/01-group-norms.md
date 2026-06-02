@@ -87,6 +87,19 @@
 
 ---
 
+### 今晚 Open Day 参与方式
+
+**Zoom 会议：**
+- 链接：https://us06web.zoom.us/j/83363381707?pwd=EBLgDxtSqFUFfGILalRDivEZ6usgNf.1
+- 会议号：833 6338 1707
+- 密码：797161
+
+**X 直播：**
+- 直播链接：https://x.com/i/broadcasts/1kKzDDaVzZRJv
+- 回放：如活动已结束，可直接点开 X 直播链接查看回放
+
+---
+
 ## 8. 提交物要求（官方）
 
 - [ ] README（项目说明）
