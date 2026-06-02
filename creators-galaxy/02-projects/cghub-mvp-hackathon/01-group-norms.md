@@ -224,10 +224,111 @@
 
 ## 16. 参赛报名链接
 
-## 17. 修订记录
+## 17. 参考项目：AgentVault（ Monad Blitz 黑客松）
+
+**项目仓库**：https://github.com/HOLYGITHUBUSER/hecthon_monad_hangzhou_20260413
+**定位**：基于 Monad 链的 Agent 原生安全支付系统
+**获奖**：第2名，$500 + 机械键盘
+
+### 技术架构（可直接借鉴）
+
+```
+AI Agent (Claude Code / OpenClaw)
+    ↓ MCP 调用
+MCP Server（11个工具）
+    ↓ SDK（含预检/重试/错误翻译）
+Smart Contract Wallet（链上合约）
+    ↓ 执行支付
+x402 付费 API / MPP 服务
+```
+
+### 核心技术组件
+
+| 组件 | 说明 | CGHub可借鉴 |
+|------|------|------------|
+| **Smart Contract Wallet** | 非托管链上金库，Owner持主私钥，Agent持Session Key | CGHub贡献资金托管 |
+| **Policy Engine** | 差异化单笔/日限额 + 白名单 + 超额审批 | CGHub分账规则引擎 |
+| **10层安全检查** | 授权→过期→暂停→单笔→全局→余额→次数→日额→白名单→审批 | CGHub资金安全模型 |
+| **MCP Server** | 11个工具，AI Agent自然语言调用合约 | CGHub的Agent协作接口 |
+| **x402协议** | HTTP 402机器对机器支付，Agent按次付费调用API | CGHub价值结算协议 |
+| **Telegram审批Bot** | 大额支付推送人类确认 | CGHub争议裁决通知 |
+| **链上账本/审计** | 每笔操作记录+policyHit策略命中 | CGHub贡献记录不可篡改 |
+| **React Dashboard** | 全功能面板：存取款/授权/审批/白名单/账本 | CGHub管理界面 |
+
+### 合约核心功能（AgentVault.sol 465行）
+
+**Owner操作**：`deposit()` / `withdraw()` / `authorizeAgent()` / `revokeAgent()` / `updateAgentConfig()` / `addWhitelist()` / `approvePayment()` / `rejectPayment()` / `emergencyPause()`
+
+**Agent操作**：`agentPay()` / `agentWithdraw()`
+
+**查询**：`getLedgerEntry()` / `getAgentDailyOps()` / `getAgentConfig()`
+
+### 演示场景设计（3个必做场景）
+
+| 场景 | 流程 | 预期结果 |
+|------|------|---------|
+| **Scenario 1** | Agent小额支付API费用（日限额内） | ✅ 自动通过 |
+| **Scenario 2** | Agent超额支付（超单笔限额） | ❌ 被合约拒绝，返回PaymentError |
+| **Scenario 3** | 查看审计日志 | 📋 完整支付记录+policyHit |
+
+### 技术栈参考
+
+- 智能合约：Solidity 0.8.28
+- SDK：ethers.js v6 + TypeScript
+- MCP Server：@modelcontextprotocol/sdk
+- 前端：React 19 + Vite + TailwindCSS（零UI库）
+- 通知：Telegram Bot API
+- 机器支付：x402协议（HTTP 402）
+
+### CGHub MVP可复用的模式
+
+1. **合约架构**：参考AgentVault的Policy Engine，做CGHub的分账规则引擎
+2. **MCP工具**：参考11个MCP工具设计，做CGHub的贡献记录/价值分配接口
+3. **演示场景**：参考3场景设计，做CGHub的贡献→记录→x402证明→分账演示
+4. **Dashboard**：参考React Dashboard，做CGHub的贡献管理面板
+5. **Telegram Bot**：参考审批Bot，做CGHub的争议裁决通知
+
+---
+
+> **重要提示**：Cobo赛道要求Agent资金操作必须通过CAW（不是自己写的合约），但AgentVault的**架构思路**（合约钱包+Policy Engine+MCP+审计账本）完全可以复用到CGHub的产品设计中。
+
+---
+
+## 18. CGHub Hackathon MVP 方向建议
+
+基于官方赛道要求 + AgentVault参考项目，建议：
+
+### 最小闭环（Demo Day必须展示）
+
+```
+贡献者A提交任务 → Agent记录贡献 → x402证明 → 合约分账 → 到账通知
+```
+
+### 技术选型建议
+
+| 模块 | 建议技术 | 说明 |
+|------|---------|------|
+| 链上合约 | Solidity（可参考AgentVault架构） | 贡献记录+分账规则 |
+| Agent SDK | TypeScript + ethers.js | 贡献预检/记录/分账调用 |
+| MCP Server | @modelcontextprotocol/sdk | AI Agent自然语言交互 |
+| 证明协议 | x402（HTTP 402） | 贡献证明的机器付费协议 |
+| 通知 | Telegram Bot | 分账到账/争议裁决通知 |
+| 前端 | React + Vite + TailwindCSS | 贡献管理Dashboard |
+
+### 分工建议（3-5人）
+
+- **合约 + 后端**：Solidity写贡献记录合约+分账规则引擎，部署到Cobo/测试网
+- **Agent SDK + MCP**：Python/TS写SDK，集成x402，实现贡献记录流程
+- **前端 + 审批Bot**：React Dashboard + Telegram Bot，人类审批 + 审计日志查看
+
+---
+
+## 19. 修订记录
 
 | 版本 | 日期 | 修订内容 |
 |------|------|---------|
 | v0.1 | 2026-06-02 | 初始版本，Hugo 发起 |
 | v0.2 | 2026-06-02 | 补充官方时间节点、Openday提醒 |
 | v0.3 | 2026-06-02 | 同步赛道方向、奖池、AI工具、参赛方式、提交物清单、评审标准、合规边界、报名链接 |
+| v0.4 | 2026-06-02 | 详细同步官方两个赛道内容、Cobo CAW规则、提交要求 |
+| v0.5 | 2026-06-02 | 补充AgentVault参考项目（架构/合约/MCP/演示场景），输出CGHub MVP方向建议和分工建议 |
