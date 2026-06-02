@@ -96,22 +96,78 @@
 
 ---
 
-## 10. 赛道方向
+## 10. 赛道方向（详细版）
 
-| 赛道 | 奖池 |
-|------|------|
-| Cobo 赛道 | 3500 USDT |
-| Z.AI 赛道 | 3500 USDT（含 API 补贴） |
+| 赛道 | 奖池 | 核心关注 |
+|------|------|---------|
+| Cobo 赛道 | 3500 USDT | Agentic Commerce × Agentic Wallet |
+| Z.AI 赛道 | 3500 USDT + API补贴 | Web3 × Long-Horizon Task |
 
-**方向一｜Agentic Commerce × Agentic Wallet**
-- Agent 在受控边界内完成支付、采购、托管、交易、分账、结算
-- Agent-Native Payments、Agent-to-Agent 工作协议、资源采购 Agent、自主交易/资金调度、多 Agent 经济协作
+---
 
-**方向二｜Web3 × Long-Horizon Task**
-- 复杂任务拆解、持续执行多步骤计划、自我纠错
-- Web3 Coding Agent、智能合约审计 Agent、多链适配 Agent、AI-Powered 3D World Builder、链上内容生产、创作者 DAO 协作系统
+### Cobo 赛道｜Agentic Economy × Cobo Agentic Wallet
 
-> 核心判断：AI Agent + Web3 能力真正结合，形成可演示的最小闭环
+**核心：Agent 参与经济活动的应用或基础设施，Agent 需要有真实的资金执行能力**
+
+赛道方向（可选）：
+- **01｜Agent-Native Payments** — Agent成为互联网一等支付公民，HTTP 402自动完成支付，不依赖API Key
+  - 示例：Agent自主调用付费LLM、购买数据集、租用GPU
+- **02｜Trustless Agent Work Agreements** — 基于ERC-8183实现Agent间去信任工作协议：发布→托管→交付→验收/驳回→付款
+  - 示例：Research Agent发包给Analyst Agent，自动比稿验收付款
+- **03｜Agent Resource Procurement** — Agent根据任务自主发现、比价、采购算力、数据、API、存储等资源
+- **04｜Autonomous Trading** — Agent自主执行链上交易策略：套利、做市、组合管理、流动性挖矿
+- **05｜A2A Economy** — 多个Agent各自拥有钱包，Agent-to-Agent经济体：互雇、拍卖、分账、管理Treasury
+
+**Cobo赛道规则（硬性）：**
+1. 项目必须围绕 Agent 与资金操作场景展开
+2. Agent 的资金相关操作必须通过 **Cobo Agentic Wallet（CAW）** 完成
+3. Agent 需要具备真实的资金执行能力（支付/转账/结算/收益管理/资产调度），不能只停留在流程设计
+4. CAW 必须是资金流程中的**关键组件**，不能是可替换的展示元素
+5. 最终成果必须为**可运行或可演示的产品原型**，不接受纯PPT/概念设计/Mockup
+
+**提交要求补充：**
+- GitHub Repo + README
+- Demo视频（建议3-5分钟）
+- 使用CAW的关键代码或配置说明
+- 如涉及链上交互：测试网地址 + Transaction Hash + Agent Wallet地址 + 流程截图
+
+**Cobo赛道评审侧重：**
+- 场景贴合度：AI如何参与经济活动，不只是把钱包作为附属功能
+- CAW关键性：CAW是否是资金流程关键组件
+- 资金流程完整度：Demo展示Agent从任务触发到资金操作完成的主要流程
+- 可演示性：稳定展示核心流程
+- 风险边界说明：权限/账户/链上交互的边界和控制方式
+
+**Cobo参考资料：**
+- 官网：https://www.cobo.com/agentic-wallet
+- Recipes：https://agenticwallet.cobo.com/agentic-wallet/recipes
+- 文档：https://www.cobo.com/products/agentic-wallet/manual/start-here/introduction
+- SDK：https://www.cobo.com/products/agentic-wallet/manual/developer/quickstart-overview
+
+---
+
+### Z.AI 赛道｜Web3 × Long-Horizon Task
+
+**核心：让Agent自主拆解复杂任务、制定多步骤计划、持续调用工具、迭代修复，完成从需求到交付的完整Web3工作流**
+
+赛道方向（可选）：
+- **01｜Agentic Dev Tools for Web3** — 用一句话交付完整Web3工程：需求分析→合约设计→代码编写→测试迭代→漏洞修复→部署准备→文档输出
+- **02｜Long-Horizon Tasks × Gaming** — 复杂游戏关卡设计/虚拟世界构建/剧情生成与任务编排
+- **03｜AI × 3D World / 空间构建** — AI-Powered 3D World Builder（虚拟地产/NFT展馆/DAO活动空间/Web3游戏场景与关卡设计）
+- **04｜Long-Horizon Tasks × 链上数据** — 多链适配Agent/链上数据分析与可视化/自动化报告
+- **05｜AI × 内容生产** — 长程内容生产工作流：选题→调研→创作→发布→数据分析
+- **06｜Long-Horizon Tasks × 创作者经济** — 创作者DAO协作系统：任务拆解→贡献追踪→价值分配
+
+**Z.AI赛道规则：**
+- 体现长程、自主、持续执行，不做一次性生成或普通API调用
+- 最终成果需为可运行或可演示的产品原型
+
+---
+
+> **CGHub应选择赛道分析：**
+> - CGHub的Payment/Commerce主线（贡献记录→价值分配）→ 高度吻合**Cobo赛道方向02/05**（Trustless Agent Work Agreements + A2A Economy）
+> - CGHub的Governance方向（规则制定/争议裁决/角色权限）→ 可延伸至**Z.AI赛道方向06**（创作者DAO协作系统）
+> - **建议：主攻Cobo赛道**，Z.AI赛道可作为演示补充
 
 ---
 
