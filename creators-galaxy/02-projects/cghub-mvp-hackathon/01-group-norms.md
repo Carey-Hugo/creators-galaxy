@@ -273,12 +273,13 @@ x402 付费 API / MPP 服务
 
 ### 技术栈参考
 
-- 智能合约：Solidity 0.8.28
+- 智能合约：Solidity 0.8.28 + **Foundry**（替代Hardhat）
 - SDK：ethers.js v6 + TypeScript
 - MCP Server：@modelcontextprotocol/sdk
 - 前端：React 19 + Vite + TailwindCSS（零UI库）
 - 通知：Telegram Bot API
 - 机器支付：x402协议（HTTP 402）
+- 测试网：**Monad Testnet**（Mumbai已弃用，不推荐）
 
 ### CGHub MVP可复用的模式
 
@@ -308,7 +309,8 @@ x402 付费 API / MPP 服务
 
 | 模块 | 建议技术 | 说明 |
 |------|---------|------|
-| 链上合约 | Solidity（可参考AgentVault架构） | 贡献记录+分账规则 |
+| 链上合约 | Solidity + **Foundry**（替代Hardhat） | 更快、更安全的测试框架 |
+| 测试网 | **Monad Testnet** 或其他活跃测试网（Mumbai已弃用） | polygon Mumbai测试网不稳定 |
 | Agent SDK | TypeScript + ethers.js | 贡献预检/记录/分账调用 |
 | MCP Server | @modelcontextprotocol/sdk | AI Agent自然语言交互 |
 | 证明协议 | x402（HTTP 402） | 贡献证明的机器付费协议 |
@@ -317,7 +319,7 @@ x402 付费 API / MPP 服务
 
 ### 分工建议（3-5人）
 
-- **合约 + 后端**：Solidity写贡献记录合约+分账规则引擎，部署到Cobo/测试网
+- **合约 + 后端**：Solidity+Foundry写贡献记录合约+分账规则引擎，部署到测试网
 - **Agent SDK + MCP**：Python/TS写SDK，集成x402，实现贡献记录流程
 - **前端 + 审批Bot**：React Dashboard + Telegram Bot，人类审批 + 审计日志查看
 
@@ -332,3 +334,4 @@ x402 付费 API / MPP 服务
 | v0.3 | 2026-06-02 | 同步赛道方向、奖池、AI工具、参赛方式、提交物清单、评审标准、合规边界、报名链接 |
 | v0.4 | 2026-06-02 | 详细同步官方两个赛道内容、Cobo CAW规则、提交要求 |
 | v0.5 | 2026-06-02 | 补充AgentVault参考项目（架构/合约/MCP/演示场景），输出CGHub MVP方向建议和分工建议 |
+| v0.6 | 2026-06-02 | 技术栈调整：Foundry替代Hardhat，Mumbai测试网替换为Monad Testnet |
