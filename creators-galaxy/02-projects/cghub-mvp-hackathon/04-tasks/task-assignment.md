@@ -1,8 +1,9 @@
 # CGHub MVP 黑客松 · 任务分配与代码仓库结构
 
-> 版本：v1.0 | 日期：2026-06-03
+> 版本：**v1.1** | 日期：2026-06-03（晚更新）
 > 黑客松周期：2026-06-01 → 2026-06-14（两周）
 > 赛道：Cobo · Agentic Economy × Cobo Agentic Wallet
+> **v1.1 变更**：合约合并为 ContributionPool；测试网统一 Sepolia；签名机制 x402+EIP-712 分工（详见文末"v1.1 变更说明"）
 
 ---
 
@@ -13,18 +14,17 @@ creators-galaxy/
 └── 02-projects/
     └── cghub-mvp-hackathon/
         ├── contracts-合约/           # 🔴 合约火堆产出
-        │   ├── ContributionLedger.sol    # 贡献记录核心合约
-        │   ├── Distribution.sol           # 收益分配合约
+        │   ├── ContributionPool.sol      # 贡献分账资金池（含贡献记录+收益分配，已合并）
         │   ├── interfaces/                # 接口定义
-        │   │   ├── IContributionLedger.sol
-        │   │   └── IDistribution.sol
-        │   ├── libs/                      # 工具库
-        │   │   └── x402verifier.sol       # x402证明验证
+        │   │   └── IContributionPool.sol  # （可选）
         │   ├── test/                      # 合约测试
-        │   │   ├── ContributionLedger.t.sol
-        │   │   └── Distribution.t.sol
-        │   └── scripts/                   # 部署脚本
-        │       └── deploy.ts
+        │   │   └── ContributionPool.t.sol
+        │   ├── scripts/                   # 部署/演示脚本
+        │   │   ├── deploy.s.sol
+        │   │   └── RecordDemoContribution.s.sol
+        │   └── docs/introduce/            # 接口文档 + ABI
+        │       ├── ContributionPool.abi.json
+        │       └── CGHub-合约接口对接说明.md
         │
         ├── frontend-前端/             # 🟡 前端火堆产出
         │   ├── src/
@@ -282,5 +282,85 @@ creators-galaxy/
 
 ---
 
-*文档状态：v1.0 | 最后更新：2026-06-03*
+*文档状态：v1.1 | 最后更新：2026-06-03（Hermes 补位）*
 *归档位置：creators-galaxy/02-projects/cghub-mvp-hackathon/04-tasks/*
+
+---
+
+# 附录：v1.1 变更说明（2026-06-03 晚）
+
+## 变更 1：合约合并为 ContributionPool
+
+**v1.0 设计**：
+- `ContributionLedger.sol`（贡献记录）
+- `Distribution.sol`（收益分配）
+- `x402verifier.sol` 库
+
+**v1.1 实际交付**：
+- `ContributionPool.sol`（合并实现，含贡献记录+分账+claim）
+- 签名机制改用 EIP-712（OpenZeppelin EIP712）
+
+**为什么合并**：
+- 当前 MVP 单一合约更简单、gas 更省、接口更清晰
+- EIP-712 是 Web3 行业标准，可读性比 x402 自定义库好
+- 联调压力小，2 周 MVP 周期内可交付
+
+**v1.0 任务分配表的调整**：
+
+| v1.0 任务 | v1.1 实际 | 说明 |
+|----------|----------|------|
+| `ContributionLedger.sol` | → 合并入 `ContributionPool.sol` | 函数名调整为 `recordContributionBySig` |
+| `Distribution.sol` | → 合并入 `ContributionPool.sol` | 函数名调整为 `fundRound` / `finalizeRound` / `claim` / `claimFor` |
+| `IContributionLedger.sol` | — | 当前 MVP 不需要接口隔离 |
+| `IDistribution.sol` | — | 同上 |
+| `x402verifier.sol` | → 改用 EIP-712 | Agent 业务层仍可做 x402，链上验签 EIP-712（见分工） |
+
+## 变更 2：测试网统一 Sepolia
+
+**v1.0 文档**：`Polygon Mumbai`（前端文档）
+**v1.1 实际**：`Ethereum Sepolia`（合约已部署）
+
+**为什么**：
+- 合约组用 Sepolia，USDC 地址 `0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238` 是 **Circle 官方 Sepolia USDC**
+- Mumbai 的 USDC 测试基础设施不如 Sepolia 完善
+- Sepolia 是当前 L1 测试网主流
+
+**前端调整**：
+- `chainId = 11155111`（不是 80001/80002）
+- RPC 改用 Sepolia 节点（Infura/Alchemy 都支持）
+- 已部署的 Cobo CAW 测试钱包可能需要重新配置链
+
+## 变更 3：签名机制 x402 + EIP-712 分工
+
+**v1.0 设计**：x402verifier 库验签
+**v1.1 实际**：EIP-712 + x402 分工
+
+| 层 | 技术 | 负责方 |
+|----|------|--------|
+| 业务层 | x402（HTTP 402 Payment Required） | Agent |
+| 签名层 | EIP-712（agentSigner 私钥签 ContributionProof） | Agent |
+| 链上层 | `ECDSA.recover` 验签 | 合约 |
+
+**Agent 业务层**生成 canonical payload → **Agent 签名层**做 EIP-712 → **合约**验签 + 累加
+
+## 变更 4：数据模型 score 优先
+
+**v1.0 隐含**：前端填"贡献金额"
+**v1.1 实际**：合约按 `score` 比例分账（`pending = funded * myScore / totalScore`）
+
+**前端调整**：
+- 贡献表单增加"贡献分数"字段（或由 Agent 算分）
+- 详见 `docs-文档/frontend-quickstart.md` 第 5.3 节
+
+---
+
+# 附录：Hermes 补位工作登记（透明化）
+
+| 时间 | 补位事项 | 受影响火堆 | 通知掌火人 |
+|------|---------|-----------|-----------|
+| 2026-06-03 22:00 | 起草 `docs-文档/frontend-quickstart.md` | 🟡 前端 | ✅ 已 DM 同步 |
+| 2026-06-03 22:00 | 起草 `docs-文档/agent-signing-template.md` | 🔵 Agent | ✅ 已 DM 同步 |
+| 2026-06-03 22:00 | 更新 task-assignment.md 到 v1.1 | 🔴 合约 | ✅ 群内公告同步 |
+| 2026-06-03 22:00 | 起草 4 个 DM 催办模板（6/4 12:00 触发） | 全部 | — |
+
+**原则**：补位完成必须 30 分钟内告知掌火人，避免"被抢活"误解。
