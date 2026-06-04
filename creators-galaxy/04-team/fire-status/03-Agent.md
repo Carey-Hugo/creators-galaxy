@@ -24,8 +24,10 @@
 | 2026-06-03 | Hermes 起草 agent-signing-template.md（含 x402 业务层 + EIP-712 链上分工） | ✅ |
 | 2026-06-03 | Hugo + Hermes 发群公告 + DM 给 Agent 掌火人 | ✅ |
 | 2026-06-04 12:00 | **必须回复**：签名机制分工（业务 x402 + 链上 EIP-712） | 🟢 **Hermes 拍板：并存** |
-| 2026-06-04 18:00 | **必须产出**：record-contribution.ts 第一版（可跑） | 🟡 **Hermes 出草稿备援** |
 | 2026-06-04 12:00 | Hermes 12:00 节点检查：Agent 风险点第一天，Hermes 主动补 | ✅ |
+| 2026-06-04 12:00 | 6h fire-status 同步：未收到大番薯群消息，Hermes 草稿已发 DM 问"你接 OR 我推 PR" | ✅ |
+| 2026-06-04 18:00 | **必须产出**：record-contribution.ts 第一版（可跑） | 🟡 **Hermes 出草稿备援** |
+| 2026-06-04 18:00 | L1 升级：18:00 没回 → Hermes 直接推 PR | 🟡 升级触发器已写入 cron |
 | 2026-06-04 EOD | HTTP 端点 /api/sign-contribution | 🟡 Hermes 草稿含此 |
 
 ---
@@ -66,4 +68,4 @@
 
 ---
 
-> **最后更新**：2026-06-04 10:00
+> **最后更新**：2026-06-04 12:00（6h 同步 by cron 9c117e476344）
