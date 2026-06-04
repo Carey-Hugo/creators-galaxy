@@ -1,92 +1,147 @@
-# CGHub 黑客松 · 进展同步 · 2026-06-04 12:00
+# CGHub 黑客松 · 进展同步 · 2026-06-04 午
 
-> 本文档跟踪 6/4 12:00 节点检查结果。
-> 触发：cron 12:00 节点检查（`hermes-coordination-authority` §一）
-> 状态：**Hermes 按授权拍板**——5 个对齐 + Cobo 凭据路径 + Agent 草稿支援
-
----
-
-## 🚦 12:00 节点检查结果（已按 v2.0 建议方案拍板）
-
-### 5 个对齐问题 · Hermes 拍板结论
-
-| # | 问题 | 建议方案 | 实际状态 | 拍板结论 |
-|---|------|---------|---------|---------|
-| 1 | 合约命名 | ContributionPool 统一 | ❌ 12:00 前未回 | ✅ **ContributionPool**（拍板） |
-| 2 | 测试网 | Sepolia 统一 | ❌ 12:00 前未回 | ✅ **Sepolia**（拍板） |
-| 3 | 签名机制 | EIP-712 链上 + x402 业务层并存 | ❌ 12:00 前未回 | ✅ **EIP-712 + x402 并存**（拍板） |
-| 4 | 数据模型 | 前端补"贡献分数"字段 | ❌ 12:00 前未回 | ✅ **前端补字段**（拍板） |
-| 5 | Cobo CAW 凭据 | 6/4 12:00 截止 | ❌ 12:00 前未到位 | 🟡 **启动备用方案**（见下） |
-
-**拍板依据**：`task-assignment-v2.md` 第二节、第三节 + `hermes-coordination-authority.md` §1。
-**同步动作**：白织/老实人/大番薯 DM 已发模板（执行记录见 `04-team/fire-status/dm-templates/`）。
-
-### Cobo CAW 凭据处理
-
-- **现状**：6/4 12:00 未到位
-- **拍板**：启动**方案 A · mock 数据先行**：
-  - 6/4 EOD：Hermes 出 mock 凭据 `.env.example` 样例（AGENT_WALLET_API_KEY=WALLET_UUID=API_URL 全部 mock 值）
-  - 6/4 EOD：Hermes 出 mock 贡献数据 5 条（contributor/source/evidenceId/score 完整）
-  - 6/5 EOD：老实人拿 mock 数据先跑通前端链路
-  - 6/5→6/9 备用升级路径：拿不到真凭据 → Demo 用录屏+截图兜底（见 `task-assignment-v2.md` §六）
-- **升级触发器**：
-  - 6/5 12:00 仍没拿到 → L2（Hermes 在群里公开点出 + 主动帮写催 CAW 团队话术）
-  - 6/9 12:00 仍没拿到 → L3（Hermes 直接出 mock 走完全流程，Demo 用录屏兜底）
+> 本文档跟踪 4 个火堆的实时进展、贡献者记录、待解决问题
+> **贡献追踪表是奖金分配和星钻发放的核心凭证，所有贡献必须即时记录**
 
 ---
 
-## 🔵 Agent 火堆 · record-contribution.ts（6/4 18:00 截止）
+## ✅ 今日进展
 
-**当前状态**：大番薯尚未出 PR，群里未回进展。
-**Hermes 主动补位**（按 `task-assignment-v2.md` §三、§六 风险 + 备用方案）：
+### 🔵 Agent 火堆 · 大番薯（D1 重大产出）
 
-- Hermes 出**草稿 PR**放到 `reference-agent-safe-pay/agent/record-contribution.ts.draft`（备份在 vault）
-- DM 大番薯："**你接 OR 我出草稿**？18:00 没回我直接推 PR 到 `agent` 分支"
-- 草稿包含 4 项 checklist（见 `04-team/fire-status/03-Agent.md`）：
-  - [ ] signContribution(contributor, source, evidenceId, score, paymentId)
-  - [ ] curl 调 /api/sign-contribution 拿到完整返回
-  - [ ] cast verifyTypedData 自检通过
-  - [ ] cast send 上链一条 demo，scores() 累加成功
+**贡献者**：大番薯
+**贡献内容**（已交付）：
+- ✅ **Agent 模块方案文档**（架构 + x402 + Cobo 接入 + 对接接口）
+- ✅ **所有组件骨架代码已提交**
 
-**判断**：6/4 是 D1，Agent 风险点第一天——必须主动补，不能等。
+**MCP 工具能力包**（已具备，前端可对接）：
+- 签贡献（EIP-712 签名）
+- 上链（recordContributionBySig）
+- 查可领（pending 查询）
+- 触发分账（distribution 触发）
 
----
+**架构决策**：
+- 大番薯明确：**round 状态、pending 等展示数据**前端**直接读合约**，**不在 Agent 层重复做**
+- 这是个**重要的去重决策**——避免双重数据源，Agent 只做"动作+证明"层
 
-## 📅 8 人 · 今日必做（已按 v2.0 个性化清单锁定）
+**待对齐**：
+1. **agentSigner 私钥** —— 大番薯需要拿到
+2. （其他细节未说）
 
-| 成员 | 火堆 | 今日必做 1 句 | 状态 |
-|------|------|--------------|------|
-| **白织** | 🔴 合约 | 12:00 前回 5 个对齐（**已超时，Hermes 拍板**）+ 推 Cobo 凭据到 CAW 团队 | 🟡 Hermes 已拍板 |
-| **大番薯** | 🔵 Agent | 18:00 前出 `record-contribution.ts`（**Hermes 出草稿备援**） | 🟡 草稿备援中 |
-| **mini Quan** | 🔵 Agent | 看 `task-assignment-v2.md` §四，准备 6/5 第一次出活 | 🟢 待启动 |
-| **老实人** | 🟡 前端 | 切 Sepolia + 接入 ABI + 补"贡献分数"字段 + 等 Cobo 凭据 | 🟡 进行中 |
-| **loong** | 🟡 前端 | 配合老实人切 Sepolia + 接 ABI | 🟢 配合 |
-| **Fox** | 🟡 前端 | 看 `task-assignment-v2.md` §四，6/5 链路跑通配合 | 🟢 待命 |
-| **老曹健身版** | 🟢 辅助 | **6/4 必须出**测试计划 + "我需要别人提供什么"清单 | 🟡 待启动 |
-| **bc_tools** | 🟢 辅助 | 看 PRD + task-assignment v2.0（理解架构，6/7 起可上手） | 🟢 学习 |
+**贡献追踪条目**：
 
----
-
-## 🕐 时间节点 · 接下来 24h
-
-| 时间 | 节点 | 责任 |
-|------|------|------|
-| **6/4 18:00** | 大番薯 record-contribution.ts 第一版（OR Hermes 推草稿 PR） | 大番薯 + Hermes |
-| **6/4 18:00** | Hermes 出 mock 数据 + mock 凭据 .env.example | Hermes |
-| **6/4 22:00** | 今日进展同步（progress-sync-0604.md 22:00 版） | Hermes cron |
-| **6/5 12:00** | Agent 火堆签名机制实际落地确认 | 大番薯 |
-| **6/5 EOD** | 🔴 **全链路首跑**（最关键里程碑）—— 提前量铁律 | 老实人 + 全体 |
-| **6/5 22:00** | 全链路首跑结果同步 | Hermes cron |
+| 贡献者 | 类别 | 内容 | 时间 | 凭证 |
+|--------|------|------|------|------|
+| 大番薯 | 方案文档 | Agent 模块方案（架构/x402/Cobo/接口）| 2026-06-04 | 已提交（未列路径）|
+| 大番薯 | 代码骨架 | 所有 Agent 组件骨架 | 2026-06-04 | 已提交（未列路径）|
+| 大番薯 | MCP 工具 | 签贡献/上链/查可领/触发分账 | 2026-06-04 | Agent 能力包 |
+| 大番薯 | 架构决策 | round/pending 数据前端直读合约 | 2026-06-04 | 群消息 |
 
 ---
 
-## ⚠️ Hugo 私聊重点关注
+### 🔴 合约火堆 · 白织
+- 状态：昨天 6/3 晚已完成 Sepolia 部署（ContributionPool 0x876A0741223EddaE081Ef22beA513E92335B1Bd5）
+- 今日进展：待群里回复（5 个对齐问题 12:00 截止）
+- 贡献追踪条目：6/3 部署 + 文档（已记）
 
-- **Cobo CAW 凭据** 仍是最大风险——Hugo 是否有 CAW 团队私聊渠道加速？
-- **大番薯 18:00 截止**——若 Hermes 草稿 PR 落地，等于 Agent 火堆"代劳"第一天，需要 Hugo 后续让大番薯接力
-- **老实人前端联调**——6/5 EOD 是 D2 关键里程碑，今晚 22:00 检查前端切 Sepolia 进展
+### 🟡 前端火堆 · 老实人
+- 状态：MVP 已合入 main（贡献提交 + 钱包连接）
+- 今日进展：待群里回复（切 Sepolia + 接 ABI）
+- ⚠️ **大番薯新信息影响**：原本"前端要展示 round 状态/pending"是 Agent 做的，现在改前端**直读合约**。这意味着老实人需要多做：
+  - 用 viem/wagmi 直接读 `getRoundState` / `getPending`
+  - 不再等 Agent 接口
+- 贡献追踪条目：6/3 MVP（已记）
+
+### 🟢 辅助火堆 · 老曹健身版
+- 状态：昨日说"做测试打辅助"
+- 今日进展：待出测试计划 + 需求清单
+- 贡献追踪条目：暂无
 
 ---
 
-> **最后更新**：2026-06-04 12:00 | 维护：Hermes（cron 12:00 节点检查）
-> **归档位置**：`creators-galaxy/02-projects/cghub-mvp-hackathon/04-tasks/progress-sync-0604.md`
+## 🚨 紧急事项（v2.1 提前量铁律触发）
+
+### 🔴 紧急 1：agentSigner 私钥（影响所有上链测试）
+
+**问题**：大番薯要 agentSigner 私钥才能跑 record-contribution
+**根因**：合约用 EIP-712 验签，agentSigner 是签名方；私钥不发给 Agent，所有上链动作都跑不通
+**现状**：
+- 私钥应在白织手里（他部署的合约，agentSigner 应该是他设置的）
+- 还没给到大番薯
+
+**Hermes 行动路径**（3 选 1，按最优）：
+1. **问白织要**（最直接）—— Herme s 12:00 之前 DM 问白织
+2. **问 Hugo 决策** —— agentSigner 是谁设的？是单一私钥还是多签？
+3. **临时方案** —— 大番薯自己生成一个测试私钥，配置到合约 owner 那边的 agentSigner 槽位（需要 owner 权限调 setAgentSigner）
+
+**风险**：
+- L3 落后（按 v2.1 提前量铁律，agentSigner 不到位 = D2 6/5 EOD "全链路首跑"完不成）
+- 必须今天 18:00 之前解决
+
+**Hugo 决策点**：
+- agentSigner 私钥是白织自己生成（测试网自己掌握）还是用 Cobo 提供的 Agent 钱包？
+- Cobo Agentic Wallet 本来就要做"Agent 持钱包"，这正好契合
+
+### 🟡 紧急 2：前端"直读合约"架构变更
+
+**变更**：原本前端通过 Agent 查 round 状态/pending，**现在改前端直读合约**
+
+**影响**：
+- 老实人/loong 工作量略增（要写合约读函数 + wagmi hook）
+- Agent 模块更纯粹（只做"动作+证明"，不做"查询"）
+- **优势**：去重，避免双数据源；UI 响应更快
+
+**需要确认**：
+- ✅ 大番薯已决策，Hermes/Hugo 默认接受
+- 待办：老实人 6/4 EOD 前确认能改、6/5 接入读合约
+
+---
+
+## 📋 6/4 剩余关键节点
+
+| 时间 | 节点 | 责任 | 状态 |
+|------|------|------|------|
+| **12:00** | 5 个对齐问题截止 | 4 个火堆 | 🟡 群里等回复 |
+| **12:00** | Cobo CAW 凭据 | 白织 | 🟡 群里等回复 |
+| **14:00** | agentSigner 私钥到位 | 白织/Hermes | 🔴 紧急 |
+| **18:00** | Agent 第一版 record-contribution | 大番薯 | 🟢 提前交付（骨架已提交）|
+| **22:00** | 每日进展同步（cron 自动）| Hermes | ⏰ |
+
+---
+
+## 📊 8 人·今日进展（截至 6/4 中午）
+
+| 成员 | 火堆 | 今日动作 | 状态 | 卡点 |
+|------|------|---------|------|------|
+| Hugo | 统筹 | 战略决策 | 🟢 在线 | — |
+| Hermes | 协调 | v2.0/v2.1 任务分解 + Git 同步 | ✅ 已完成 | — |
+| 白织 | 合约 | 待回 5 个对齐 + Cobo 凭据 + agentSigner | 🟡 12:00 截止 | agentSigner 是大番薯新提的，需马上答 |
+| 大番薯 | Agent | **方案文档 + 骨架代码 + MCP 4 工具** | ✅ **D1 重大产出** | agentSigner 私钥未到位 |
+| 老实人 | 前端 | 待切 Sepolia + 接 ABI + 改"直读合约" | 🟡 进行中 | 大番薯新决策要追加工作量 |
+| loong | 前端 | 配合老实人 | 🟡 待动 | — |
+| Fox | 机动 | 待命 | 🟢 | — |
+| mini Quan | Agent 后端 | 待起 agent-backend 骨架 | 🟡 6/5 出活 | — |
+| 老曹健身版 | 辅助 | 待出测试计划 + 需求清单 | 🟡 | — |
+| bc_tools | 学习 | 看架构 | 🟢 | — |
+
+---
+
+## 🎯 Hermes 接下来动作
+
+1. **立刻**（< 30 min）：
+   - DM 白织要 agentSigner 私钥（紧急）
+   - 群里公告"大番薯 D1 重大产出已记录"
+   - 同步给 Hugo 私聊："agentSigner 决策点需要你拍板"
+
+2. **12:00 节点**（cron 自动触发）：
+   - 检查 5 个对齐 + Cobo 凭据
+   - 检查 agentSigner 是否到位
+
+3. **今晚 22:00**（cron 自动触发）：
+   - 写完整 progress-sync-0604.md（含所有 8 人进展）
+   - Git 提交推送
+
+---
+
+*最后更新：2026-06-04 12:15 | 维护：Hermes（军师）*
+*归档位置：creators-galaxy/02-projects/cghub-mvp-hackathon/04-tasks/progress-sync-0604.md*
