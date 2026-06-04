@@ -6,7 +6,7 @@
 
 import { ethers } from 'ethers';
 import { loadPoolAbi } from './abi.js';
-import { cawTxCall, cawTxWait } from './caw.js';
+import { contractCall, waitTx } from './executor.js';
 import { config } from './config.js';
 
 export class WalletAgent {
@@ -29,8 +29,8 @@ export class WalletAgent {
       contributor,
     ]);
     const requestId = `claim-${config.round.projectId}-${config.round.roundId}-${contributor.slice(2, 10)}`;
-    const sub = await cawTxCall(config.chain.poolAddress, calldata, requestId);
-    const done = await cawTxWait(sub.txId);
+    const sub = await contractCall(config.chain.poolAddress, calldata, requestId);
+    const done = await waitTx(sub.txId);
     return { txId: sub.txId, status: done.status, hash: done.hash };
   }
 }

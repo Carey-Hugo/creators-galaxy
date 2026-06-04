@@ -7,7 +7,7 @@
 import { ethers } from 'ethers';
 import { z } from 'zod';
 import { loadPoolAbi } from '../src/abi.js';
-import { cawTxCall, cawTxWait } from '../src/caw.js';
+import { contractCall, waitTx } from '../src/executor.js';
 import { config } from '../src/config.js';
 import type { ContributionProof } from '../src/types.js';
 
@@ -40,8 +40,8 @@ export const submitContributionTool = {
 
     // request-id 用 proofHash 派生，幂等（同一条 proof 重发会被去重）
     const requestId = `record-${proof.proofHash.slice(2, 18)}`;
-    const sub = await cawTxCall(config.chain.poolAddress, calldata, requestId);
-    const done = await cawTxWait(sub.txId);
+    const sub = await contractCall(config.chain.poolAddress, calldata, requestId);
+    const done = await waitTx(sub.txId);
     return { txId: sub.txId, status: done.status, txHash: done.hash };
   },
 };
