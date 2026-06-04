@@ -1,0 +1,31 @@
+{
+  "last_run": "2026-06-04 21:28:41 CST",
+  "groups": {
+    "创客星球 MVP 黑客松": {
+      "chat_id": -1003916141713,
+      "max_id": 613,
+      "last_archived_id": 613,
+      "last_run_archived_count": 0
+    },
+    "Hugo一人公司": {
+      "chat_id": -5076629166,
+      "max_id": 5735,
+      "last_archived_id": 5735,
+      "last_run_archived_count": 9
+    },
+    "创客星球CGHub": {
+      "chat_id": -5223347644,
+      "inaccessible": true,
+      "reason": "old-style group, privacy mode blocks forwardMessage",
+      "last_checked": "2026-06-04 21:28:41 CST"
+    },
+    "AI x Web3 School": {
+      "chat_id": -5291819613,
+      "inaccessible": true,
+      "reason": "old-style group, privacy mode blocks forwardMessage",
+      "last_checked": "2026-06-04 21:28:41 CST"
+    }
+  },
+  "first_run": false,
+  "cleanup_chat_id": 8288483959
+}
