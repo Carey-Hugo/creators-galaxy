@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-05 01:11:19 CST",
+  "last_run": "2026-06-05 04:00:48 CST",
   "groups": {
     "创客星球 MVP 黑客松": {
       "chat_id": -1003916141713,
@@ -17,13 +17,13 @@
       "chat_id": -5223347644,
       "inaccessible": true,
       "reason": "old-style group, privacy mode blocks forwardMessage",
-      "last_checked": "2026-06-05 01:11:19 CST"
+      "last_checked": "2026-06-05 04:00:48 CST"
     },
     "AI x Web3 School": {
       "chat_id": -5291819613,
       "inaccessible": true,
       "reason": "old-style group, privacy mode blocks forwardMessage",
-      "last_checked": "2026-06-05 01:11:19 CST"
+      "last_checked": "2026-06-05 04:00:48 CST"
     }
   },
   "first_run": false,
