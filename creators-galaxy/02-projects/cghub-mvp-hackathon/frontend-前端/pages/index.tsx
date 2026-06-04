@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { ContributionForm } from "../components/ContributionForm";
 import { WalletConnect } from "../components/WalletConnect";
 import { DistributionView } from "../components/DistributionView";
+import { useContributionPool } from "../hooks/useContributionPool";
+import { useWallet } from "../hooks/useWallet";
 import { useCoboWallet } from "../hooks/useCoboWallet";
 
 interface ContributionItem {
@@ -16,7 +18,28 @@ export default function Home() {
   const [contributions, setContributions] = useState<ContributionItem[]>([]);
   const [distributionResult, setDistributionResult] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const { connectCoboWallet, isCoboReady, requestDistribution } = useCoboWallet();
+
+  const {
+    address,
+    signer,
+    chainId,
+    shortAddress,
+    isConnected,
+    isLoading: walletLoading,
+    error: walletError,
+    connectWallet,
+    disconnect,
+  } = useWallet();
+  const { isCoboReady, connectCoboWallet, requestDistribution } = useCoboWallet();
+  const {
+    round,
+    score,
+    claimed,
+    pending,
+    loading: contractLoading,
+    error: contractError,
+    refresh,
+  } = useContributionPool(address, signer);
 
   useEffect(() => {
     const saved = window.localStorage.getItem("cghub-contributions");
@@ -45,32 +68,14 @@ export default function Home() {
     };
 
     setContributions((current) => [newContribution, ...current]);
-    setMessage("贡献记录已保存，准备调用 Cobo SDK 发起分配。");
+    setMessage("贡献记录已保存。请先连接钱包并刷新链上状态。合约上链需要 Agent 返回 proof + signature。" );
 
-    if (!isCoboReady) {
-      setMessage("正在初始化 Cobo Agentic Wallet，请先连接钱包。");
-      await connectCoboWallet();
+    if (!isConnected) {
+      await connectWallet();
     }
 
-    try {
-      const distributionInfo = await requestDistribution({
-        contributionId: newContribution.id,
-        amount: values.amount,
-        note: values.title,
-      });
-      setDistributionResult(distributionInfo);
-      setContributions((current) =>
-        current.map((item) =>
-          item.id === newContribution.id
-            ? { ...item, status: "distributed" }
-            : item
-        )
-      );
-      setMessage("已完成 Cobo 分账请求；请在 Cobo App 中确认 Pact 审批。" );
-    } catch (error) {
-      setMessage(
-        "Cobo 分账请求失败。请检查 Cobo Agentic Wallet 登录状态或 SDK 配置。"
-      );
+    if (!isCoboReady) {
+      await connectCoboWallet();
     }
   };
 
@@ -79,16 +84,24 @@ export default function Home() {
       <header className="page-header">
         <div>
           <p className="eyebrow">CGHub MVP 黑客松</p>
-          <h1>前端火堆：贡献记录 + Cobo Wallet 分账</h1>
-          <p>目标：实现贡献提交、钱包连接、Cobo 分账触发、贡献和分配状态展示。</p>
+          <h1>前端火堆：ContributionPool 合约对接</h1>
+          <p>目标：读取 Sepolia 合约状态、展示我的分数/可领金额、并为 Agent 签名上链打基础。</p>
         </div>
-        <WalletConnect />
+        <WalletConnect
+          address={address}
+          isConnected={isConnected}
+          isLoading={walletLoading}
+          error={walletError}
+          chainId={chainId}
+          onConnect={connectWallet}
+          onDisconnect={disconnect}
+        />
       </header>
 
       <section className="panel">
         <div className="panel-header">
           <h2>贡献提交</h2>
-          <p>填写贡献内容并触发分账请求，走通 Demo 演示闭环。</p>
+          <p>填写贡献内容后，前端将记录本地状态并等待 Agent 返回 proof/signature 上链。</p>
         </div>
         <ContributionForm onSubmit={handleSubmit} />
       </section>
@@ -96,11 +109,20 @@ export default function Home() {
       <section className="panel grid-two">
         <div>
           <div className="panel-header">
-            <h2>当前进度</h2>
+            <h2>链上合约状态</h2>
           </div>
           <div className="status-box">
-            <p>{message || "请先连接钱包并提交一笔贡献。"}</p>
-            <p>Cobo Wallet 状态：{isCoboReady ? "已准备" : "未准备"}</p>
+            <p>{message || "请连接钱包并刷新链上数据。"}</p>
+            <p>合约读取：{contractLoading ? "加载中..." : contractError ? contractError : "正常"}</p>
+            <p>当前钱包：{address ? shortAddress : "未连接"}</p>
+            <p>当前分数：{score}</p>
+            <p>已领取：{claimed}</p>
+            <p>可领取：{pending}</p>
+            <p>Round 是否存在：{round ? (round.exists ? "是" : "否") : "未知"}</p>
+            <p>Round 是否 finalize：{round ? (round.finalized ? "已结束" : "未结束") : "未知"}</p>
+            <button className="button secondary" onClick={refresh}>
+              刷新链上数据
+            </button>
           </div>
         </div>
         <DistributionView result={distributionResult} />
