@@ -1,0 +1,483 @@
+{
+  "Hugo一人公司": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780275785,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: MEMORY 定期巡检\n(job_id: f8c6b9d73878)\n-------------\n\nMEMORY 使用率正常（4195 字符，40 行），无需整理。\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder MEMORY 定期巡检\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579797,
+      "message_id": 7605,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780275785,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780311056,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "封面图确认：",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579844,
+      "message_id": 7606,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780311056,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780311062,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "photo": [
+        {
+          "height": 39,
+          "width": 90,
+          "file_id": "AgACAgEAAxkDAAIV_WodZBbLufx6p412F-pmQjnlovhCAAJjDGsbkcToRLbjaEGQ1eowAQADAgADcwADOwQ",
+          "file_size": 832,
+          "file_unique_id": "AQADYwxrG5HE6ER4"
+        },
+        {
+          "height": 137,
+          "width": 320,
+          "file_id": "AgACAgEAAxkDAAIV_WodZBbLufx6p412F-pmQjnlovhCAAJjDGsbkcToRLbjaEGQ1eowAQADAgADbQADOwQ",
+          "file_size": 10638,
+          "file_unique_id": "AQADYwxrG5HE6ERy"
+        },
+        {
+          "height": 342,
+          "width": 800,
+          "file_id": "AgACAgEAAxkDAAIV_WodZBbLufx6p412F-pmQjnlovhCAAJjDGsbkcToRLbjaEGQ1eowAQADAgADeAADOwQ",
+          "file_size": 56211,
+          "file_unique_id": "AQADYwxrG5HE6ER9"
+        },
+        {
+          "height": 547,
+          "width": 1280,
+          "file_id": "AgACAgEAAxkDAAIV_WodZBbLufx6p412F-pmQjnlovhCAAJjDGsbkcToRLbjaEGQ1eowAQADAgADeQADOwQ",
+          "file_size": 137616,
+          "file_unique_id": "AQADYwxrG5HE6ER-"
+        },
+        {
+          "height": 820,
+          "width": 1918,
+          "file_id": "AgACAgEAAxkDAAIV_WodZBbLufx6p412F-pmQjnlovhCAAJjDGsbkcToRLbjaEGQ1eowAQADAgADdwADOwQ",
+          "file_size": 275824,
+          "file_unique_id": "AQADYwxrG5HE6ER8"
+        }
+      ],
+      "supergroup_chat_created": false,
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579845,
+      "message_id": 7607,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780311062,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780311451,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "封面图v2（电影胶片风格，红船+历史画面水印）：",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579847,
+      "message_id": 7608,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780311451,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780311458,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "photo": [
+        {
+          "height": 39,
+          "width": 90,
+          "file_id": "AgACAgEAAxkDAAIWBWodZaIO_AuKTWF9hdWR3eOyX54dAAJkDGsbkcToRGAQ7qjEK1RmAQADAgADcwADOwQ",
+          "file_size": 786,
+          "file_unique_id": "AQADZAxrG5HE6ER4"
+        },
+        {
+          "height": 137,
+          "width": 320,
+          "file_id": "AgACAgEAAxkDAAIWBWodZaIO_AuKTWF9hdWR3eOyX54dAAJkDGsbkcToRGAQ7qjEK1RmAQADAgADbQADOwQ",
+          "file_size": 11136,
+          "file_unique_id": "AQADZAxrG5HE6ERy"
+        },
+        {
+          "height": 342,
+          "width": 800,
+          "file_id": "AgACAgEAAxkDAAIWBWodZaIO_AuKTWF9hdWR3eOyX54dAAJkDGsbkcToRGAQ7qjEK1RmAQADAgADeAADOwQ",
+          "file_size": 60334,
+          "file_unique_id": "AQADZAxrG5HE6ER9"
+        },
+        {
+          "height": 548,
+          "width": 1280,
+          "file_id": "AgACAgEAAxkDAAIWBWodZaIO_AuKTWF9hdWR3eOyX54dAAJkDGsbkcToRGAQ7qjEK1RmAQADAgADeQADOwQ",
+          "file_size": 152190,
+          "file_unique_id": "AQADZAxrG5HE6ER-"
+        },
+        {
+          "height": 821,
+          "width": 1916,
+          "file_id": "AgACAgEAAxkDAAIWBWodZaIO_AuKTWF9hdWR3eOyX54dAAJkDGsbkcToRGAQ7qjEK1RmAQADAgADdwADOwQ",
+          "file_size": 307975,
+          "file_unique_id": "AQADZAxrG5HE6ER8"
+        }
+      ],
+      "supergroup_chat_created": false,
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579848,
+      "message_id": 7609,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780311458,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780313079,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "封面图v3（中文黑体+描边效果）：",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579850,
+      "message_id": 7610,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780313079,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780313087,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "photo": [
+        {
+          "height": 39,
+          "width": 90,
+          "file_id": "AgACAgEAAxkDAAIWCmoda_8CHptmCzbQdKb3BRk31um2AAJlDGsbkcToRC49yXQv28TPAQADAgADcwADOwQ",
+          "file_size": 808,
+          "file_unique_id": "AQADZQxrG5HE6ER4"
+        },
+        {
+          "height": 137,
+          "width": 320,
+          "file_id": "AgACAgEAAxkDAAIWCmoda_8CHptmCzbQdKb3BRk31um2AAJlDGsbkcToRC49yXQv28TPAQADAgADbQADOwQ",
+          "file_size": 11618,
+          "file_unique_id": "AQADZQxrG5HE6ERy"
+        },
+        {
+          "height": 342,
+          "width": 800,
+          "file_id": "AgACAgEAAxkDAAIWCmoda_8CHptmCzbQdKb3BRk31um2AAJlDGsbkcToRC49yXQv28TPAQADAgADeAADOwQ",
+          "file_size": 62506,
+          "file_unique_id": "AQADZQxrG5HE6ER9"
+        },
+        {
+          "height": 548,
+          "width": 1280,
+          "file_id": "AgACAgEAAxkDAAIWCmoda_8CHptmCzbQdKb3BRk31um2AAJlDGsbkcToRC49yXQv28TPAQADAgADeQADOwQ",
+          "file_size": 156432,
+          "file_unique_id": "AQADZQxrG5HE6ER-"
+        },
+        {
+          "height": 821,
+          "width": 1916,
+          "file_id": "AgACAgEAAxkDAAIWCmoda_8CHptmCzbQdKb3BRk31um2AAJlDGsbkcToRC49yXQv28TPAQADAgADdwADOwQ",
+          "file_size": 316266,
+          "file_unique_id": "AQADZQxrG5HE6ER8"
+        }
+      ],
+      "supergroup_chat_created": false,
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579850,
+      "message_id": 7611,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780313087,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780318976,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "封面图在这：",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579876,
+      "message_id": 7612,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780318976,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780318983,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "photo": [
+        {
+          "height": 39,
+          "width": 90,
+          "file_id": "AgACAgEAAxkDAAIWZ2odgwdwSXHvmMldXX7LrkrztsgbAAJuDGsbkcToRF4n0IWwyA9tAQADAgADcwADOwQ",
+          "file_size": 953,
+          "file_unique_id": "AQADbgxrG5HE6ER4"
+        },
+        {
+          "height": 137,
+          "width": 320,
+          "file_id": "AgACAgEAAxkDAAIWZ2odgwdwSXHvmMldXX7LrkrztsgbAAJuDGsbkcToRF4n0IWwyA9tAQADAgADbQADOwQ",
+          "file_size": 13934,
+          "file_unique_id": "AQADbgxrG5HE6ERy"
+        },
+        {
+          "height": 342,
+          "width": 800,
+          "file_id": "AgACAgEAAxkDAAIWZ2odgwdwSXHvmMldXX7LrkrztsgbAAJuDGsbkcToRF4n0IWwyA9tAQADAgADeAADOwQ",
+          "file_size": 68106,
+          "file_unique_id": "AQADbgxrG5HE6ER9"
+        },
+        {
+          "height": 548,
+          "width": 1280,
+          "file_id": "AgACAgEAAxkDAAIWZ2odgwdwSXHvmMldXX7LrkrztsgbAAJuDGsbkcToRF4n0IWwyA9tAQADAgADeQADOwQ",
+          "file_size": 143716,
+          "file_unique_id": "AQADbgxrG5HE6ER-"
+        }
+      ],
+      "supergroup_chat_created": false,
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780579877,
+      "message_id": 7613,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780318983,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    }
+  ]
+}

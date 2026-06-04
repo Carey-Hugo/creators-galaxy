@@ -1,0 +1,35 @@
+[
+  {
+    "original_msg_id": 5218,
+    "cleanup_msg_id": 7575,
+    "date": "2026-06-04T21:01:11+08:00",
+    "text": "",
+    "caption": "",
+    "from_user_id": 8647436141,
+    "from_user_name": "总助main",
+    "from_user_username": "hermes_humain_bot",
+    "chat_id": -5076629166
+  },
+  {
+    "original_msg_id": 5219,
+    "cleanup_msg_id": 7576,
+    "date": "2026-06-04T21:01:11+08:00",
+    "text": "已发送到 Telegram群组「Hugo一人公司」：\n\n📄 CGHub-发展规划概览-入门手册.html\n- 图片已全部Base64内嵌（8张data:image）\n- 微信直接打开即可显示，无需联网加载外部图片",
+    "caption": "",
+    "from_user_id": 8647436141,
+    "from_user_name": "总助main",
+    "from_user_username": "hermes_humain_bot",
+    "chat_id": -5076629166
+  },
+  {
+    "original_msg_id": 5229,
+    "cleanup_msg_id": 7578,
+    "date": "2026-06-04T21:01:16+08:00",
+    "text": "帮我转换为PDF格式吧",
+    "caption": "",
+    "from_user_id": 8647436141,
+    "from_user_name": "总助main",
+    "from_user_username": "hermes_humain_bot",
+    "chat_id": -5076629166
+  }
+]
