@@ -1,0 +1,250 @@
+{
+  "Hugo一人公司": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780471009,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "不对啊，是8+2",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581376,
+      "message_id": 7675,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780471009,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780471016,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "🤖 MiniMax-M2.7\n\n对！我数错了。让我重新核对——",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581376,
+      "message_id": 7676,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780471016,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780471017,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "🔎 search_files: \"## \\w+|^### \\w+\"\n💻 terminal: \"cd /home/ubuntu/creators-galaxy/creat...\"\n🔧 patch: \"/home/ubuntu/creators-galaxy/creators...\" (×5)\n💻 terminal: \"cd /home/ubuntu/creators-galaxy/creat...\"",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581377,
+      "message_id": 7677,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780471017,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 2,
+          "offset": 34,
+          "type": "bold"
+        },
+        {
+          "length": 2,
+          "offset": 64,
+          "type": "bold"
+        },
+        {
+          "length": 2,
+          "offset": 109,
+          "type": "bold"
+        },
+        {
+          "length": 2,
+          "offset": 137,
+          "type": "bold"
+        },
+        {
+          "length": 9,
+          "offset": 141,
+          "type": "bold"
+        },
+        {
+          "length": 2,
+          "offset": 199,
+          "type": "bold"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780471027,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "数清楚了：\n\n- 🔴 合约：白织、大番薯、mini Quan = 3人\n- 🟡 前端：老实人、loong、Fox、白织 = 4人（白织兼）\n- 🔵 Agent：大番薯、mini Quan、loong、Fox = 4人\n- 🟢 辅助：老曹健身版、bc_tools = 2人\n\n实际人数（去重）： 老实人、白织、大番薯、mini Quan、loong、Fox、老曹健身版、bc_tools = 8人\n\n我数成 7 了，少算了。让我更正：",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581378,
+      "message_id": 7678,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780471027,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 6,
+          "offset": 2,
+          "type": "bold"
+        },
+        {
+          "length": 5,
+          "offset": 10,
+          "type": "bold"
+        },
+        {
+          "length": 6,
+          "offset": 164,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 194,
+          "type": "bold"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780471079,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "✅ 已修正归档：\n\n8位创客：\n1. 白织（合约掌火人·兼前端支援）\n2. 老实人（前端掌火人）\n3. 大番薯（Agent掌火人·兼合约支援）\n4. mini Quan（合约+Agent）\n5. loong（前端+Agent）\n6. Fox（前端+Agent）\n7. 老曹健身版（辅助掌火人）\n8. bc_tools（辅助）\n\n+ 2核心： Hugo（发起人）+ Hermes（总助）\n\n= 10人团队（Git已推送 ✅）\n\n把白织数漏了，只看到火堆小计3+4+4+2=13，没意识到他跨火堆出现两次要去重。下次直接看候选人库的人数。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581378,
+      "message_id": 7679,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780471079,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    }
+  ]
+}

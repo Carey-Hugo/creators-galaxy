@@ -1,0 +1,275 @@
+{
+  "Hugo一人公司": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780470571,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "好的",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581072,
+      "message_id": 7664,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780470571,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780470577,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "🤖 MiniMax-M2.7\n\n好的，我先把群里最近的成员介绍信息全部搜出来，然后整理归档。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581073,
+      "message_id": 7665,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780470577,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780470578,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "🔍 session_search: \"recall: \"掌火人 自我介绍 背景 城市 经验\"\"\n🔎 search_files: \"老实人|大番薯|loong|Fox|老曹|bc_tools|白织|mini...\"\n📚 skill_view: \"cghub-team-roster\"\n📖 read_file: \"/home/ubuntu/creators-galaxy/creators...\"\n✍️ write_file: \"/home/ubuntu/creators-galaxy/creators...\"\n💻 terminal: \"cd /home/ubuntu/creators-galaxy/creat...\"",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581073,
+      "message_id": 7666,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780470578,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 13,
+          "offset": 2,
+          "type": "code"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780470872,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "好，candidates.md 里有候选人的详细信息。让我加载归档技能 + 读取候选人文件，按规范补全归档。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581075,
+      "message_id": 7667,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780470872,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 14,
+          "offset": 20,
+          "type": "code"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780470896,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "好，候选库 7 人齐全。现在合并归档到 team-roster.md，加入黑客松火堆角色，并 Git 提交。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581076,
+      "message_id": 7668,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780470896,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 11,
+          "offset": 2,
+          "type": "bold"
+        },
+        {
+          "length": 5,
+          "offset": 15,
+          "type": "bold"
+        },
+        {
+          "length": 44,
+          "offset": 21,
+          "type": "code"
+        },
+        {
+          "length": 5,
+          "offset": 67,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 259,
+          "type": "bold"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780470915,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "✅ 团队档案已补全并归档：\n\n文件位置： creators-galaxy/docs/00-brand/team-roster.md\n\n归档内容：\n- 核心团队：Hugo（发起人）+ Hermes（总助）\n- 🔴 合约火堆：白织（掌火人）+ 大番薯、mini Quan\n- 🟡 前端火堆：老实人（掌火人）+ loong、Fox\n- 🔵 Agent火堆：大番薯（掌火人）+ mini Quan、loong、Fox\n- 🟢 辅助火堆：老曹健身版（掌火人）+ bc_tools\n- 火堆矩阵 + 招募缺口已全部补齐\n\nGit： 已提交并推送到 Gitee ✅\n\n档案现共 7+2=9 人，所有人都有完整背景/技能/角色字段，随时可查。要不要也发一份到 Hugo一人公司 群组？",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581076,
+      "message_id": 7669,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780470915,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    }
+  ]
+}
