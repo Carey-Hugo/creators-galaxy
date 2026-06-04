@@ -23,9 +23,10 @@
 | 2026-06-03 | Cobo Agentic Wallet CLI 跑通（Pact 协议已验证） | ✅ |
 | 2026-06-03 | Hermes 起草 agent-signing-template.md（含 x402 业务层 + EIP-712 链上分工） | ✅ |
 | 2026-06-03 | Hugo + Hermes 发群公告 + DM 给 Agent 掌火人 | ✅ |
-| 2026-06-04 12:00 | **必须回复**：签名机制分工（业务 x402 + 链上 EIP-712） | 🟡 待回 |
-| 2026-06-04 18:00 | **必须产出**：record-contribution.ts 第一版（可跑） | 🟡 待办 |
-| 2026-06-04 EOD | HTTP 端点 /api/sign-contribution | 🟡 待办 |
+| 2026-06-04 12:00 | **必须回复**：签名机制分工（业务 x402 + 链上 EIP-712） | 🟢 **Hermes 拍板：并存** |
+| 2026-06-04 18:00 | **必须产出**：record-contribution.ts 第一版（可跑） | 🟡 **Hermes 出草稿备援** |
+| 2026-06-04 12:00 | Hermes 12:00 节点检查：Agent 风险点第一天，Hermes 主动补 | ✅ |
+| 2026-06-04 EOD | HTTP 端点 /api/sign-contribution | 🟡 Hermes 草稿含此 |
 
 ---
 
