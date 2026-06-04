@@ -1,0 +1,359 @@
+{
+  "Hugo一人公司": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780319170,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "photo": [
+        {
+          "height": 39,
+          "width": 90,
+          "file_id": "AgACAgEAAxkDAAIWbWodg8EJXRwu4YaiDo1cGdCUa6P9AAJvDGsbkcToRER4bR8vf2MfAQADAgADcwADOwQ",
+          "file_size": 1205,
+          "file_unique_id": "AQADbwxrG5HE6ER4"
+        },
+        {
+          "height": 137,
+          "width": 320,
+          "file_id": "AgACAgEAAxkDAAIWbWodg8EJXRwu4YaiDo1cGdCUa6P9AAJvDGsbkcToRER4bR8vf2MfAQADAgADbQADOwQ",
+          "file_size": 17092,
+          "file_unique_id": "AQADbwxrG5HE6ERy"
+        },
+        {
+          "height": 343,
+          "width": 800,
+          "file_id": "AgACAgEAAxkDAAIWbWodg8EJXRwu4YaiDo1cGdCUa6P9AAJvDGsbkcToRER4bR8vf2MfAQADAgADeAADOwQ",
+          "file_size": 91249,
+          "file_unique_id": "AQADbwxrG5HE6ER9"
+        },
+        {
+          "height": 549,
+          "width": 1280,
+          "file_id": "AgACAgEAAxkDAAIWbWodg8EJXRwu4YaiDo1cGdCUa6P9AAJvDGsbkcToRER4bR8vf2MfAQADAgADeQADOwQ",
+          "file_size": 217984,
+          "file_unique_id": "AQADbwxrG5HE6ER-"
+        },
+        {
+          "height": 821,
+          "width": 1915,
+          "file_id": "AgACAgEAAxkDAAIWbWodg8EJXRwu4YaiDo1cGdCUa6P9AAJvDGsbkcToRER4bR8vf2MfAQADAgADdwADOwQ",
+          "file_size": 419321,
+          "file_unique_id": "AQADbwxrG5HE6ER8"
+        }
+      ],
+      "supergroup_chat_created": false,
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780580445,
+      "message_id": 7622,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780319170,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 16,
+          "offset": 0,
+          "type": "bold"
+        },
+        {
+          "length": 47,
+          "offset": 21,
+          "type": "code"
+        },
+        {
+          "length": 4,
+          "offset": 75,
+          "type": "bold"
+        },
+        {
+          "length": 186,
+          "offset": 80,
+          "type": "pre"
+        },
+        {
+          "length": 8,
+          "offset": 268,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 400,
+          "type": "bold"
+        },
+        {
+          "length": 13,
+          "offset": 427,
+          "type": "bold"
+        },
+        {
+          "length": 6,
+          "offset": 442,
+          "type": "bold"
+        },
+        {
+          "length": 8,
+          "offset": 480,
+          "type": "code"
+        },
+        {
+          "length": 15,
+          "offset": 489,
+          "type": "code"
+        },
+        {
+          "length": 8,
+          "offset": 505,
+          "type": "code"
+        },
+        {
+          "length": 32,
+          "offset": 527,
+          "type": "code"
+        },
+        {
+          "length": 39,
+          "offset": 569,
+          "type": "code"
+        },
+        {
+          "length": 13,
+          "offset": 639,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 655,
+          "type": "bold"
+        },
+        {
+          "length": 11,
+          "offset": 696,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 730,
+          "type": "bold"
+        },
+        {
+          "length": 13,
+          "offset": 748,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 799,
+          "type": "code"
+        },
+        {
+          "length": 18,
+          "offset": 804,
+          "type": "code"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780391855,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "✅ CAW 最小可运行示例已完成\n\n路径：02-projects/cghub-mvp-hackathon/03-caw-example/\n\n---\n\n文件结构\n03-caw-example/\n├── quickstart.ts       ← 核心代码\n├── .env.example        ← 环境变量模板\n├── README.md           ← 3分钟概念速通\n├── package.json        ← @cobo/agentic-wallet ^0.1.7\n└── tsconfig.json\n\n\n跑通流程（5步）\n1. 提交 Pact（请求转帐权限，Policy 超额自动拒绝）\n2. 等待 Owner 在 Cobo App 审批（已 Paired 则自动生效）\n3. 拿到 pact-scoped API Key\n4. 执行合规转帐 0.001 ETH → 成功 ✅\n5. 尝试超额转帐 0.005 ETH → Policy 直接拦截 ✅\n\n关键代码验证\n- SDK 版本：0.1.7（npm 最新）\n- API 类：PactsApi TransactionsApi AuditApi — 全部匹配官方文档\n- transferTokens(wallet_uuid, ...) 参数签名 ✅\n- submitPact({ wallet_id, intent, spec }) ✅\n- TypeScript 编译：0 errors ✅\n\nCAW 核心概念（3分钟）\n- Pact：Agent 说\"我要干什么 + 什么限制\"，Owner 审批后生效\n- Policy Deny：服务器端直接拒绝，不上链，不花 gas\n- 审计日志：每次允许/拒绝都有记录\n\n下一步（等你填 .env）\n队友进群后，把 CAW API Key + Wallet UUID 填入 .env，npm run quickstart 就能跑。\n\n---\n\n团队协作更正已记录：已确认团队作战，TG共创群「创客星球 MVP 黑客松」，我们都在。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780580480,
+      "message_id": 7623,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780391855,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 2,
+          "offset": 43,
+          "type": "bold"
+        },
+        {
+          "length": 3,
+          "offset": 60,
+          "type": "bold"
+        },
+        {
+          "length": 3,
+          "offset": 81,
+          "type": "bold"
+        },
+        {
+          "length": 5,
+          "offset": 99,
+          "type": "bold"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780447794,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "📋 CGHub MVP黑客松 · Day2 作战日志\n\n🔴 合约火堆 · 掌火人：白织\n🟡 前端火堆 · 掌火人：老实人\n🔵 Agent火堆 · 掌火人：大番薯\n🟢 辅助火堆 · 掌火人：老曹健身版\n\n⏰ 关键节点：\n- Day 7（6/7）：第一周收尾检查\n- Day 10（6/10）：MVP核心功能完成\n- Day 14（6/14）：Demo展示评审\n\n📌 规则：\n- 掌火人各自统筹版块\n- 全员可跨火堆交流学习\n- 讨论在本群，信息同步透明\n- 所有贡献里程碑实时记录，作为奖金分配和代币空投依据\n\n完整日志文件已归档 GitHub，随时可查。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780580501,
+      "message_id": 7624,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780447794,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "document": {
+        "file_name": "02-Day2-2026-06-03.md",
+        "file_id": "BQACAgEAAxkDAAIXLmofejdd2J99wNscmDjmpqFMDu-6AAI2BgACvD4BRV4BvEHPAwwBOwQ",
+        "file_size": 2723,
+        "file_unique_id": "AgADNgYAArw-AUU"
+      },
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780447799,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780580502,
+      "message_id": 7625,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780447799,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780449308,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "📋 创客星球(CGHub) MVP黑客松 PRD v1.0\n\n📌 全局介绍：\n创客星球(CGHub) — AI生产力×Web3生产关系×共同富裕\n使命：创新实践人类命运共同体蓝图\nDemo核心：贡献记录→x402证明→Cobo Agentic Wallet自动收益分配\n\n⏰ 关键节点：\n- 6/7 Day7：第一周收尾中间检查\n- 6/10 Day10：MVP核心功能完成\n- 6/13 截止日：Demo提交（中午）\n- 6/14 Demo Day：路演评审\n\n🔴 合约火堆（白织）：ContributionLedger.sol + Cobo SDK接入\n🟡 前端火堆（老实人）：贡献提交UI + 分配合成界面\n🔵 Agent火堆（大番薯）：Agent调用 + x402证明 + Cobo Wallet\n🟢 辅助火堆（老曹健身版）：测试 + 文档 + 脚本\n\n完整PRD文档已归档GitHub。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780580504,
+      "message_id": 7626,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780449308,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    }
+  ]
+}
