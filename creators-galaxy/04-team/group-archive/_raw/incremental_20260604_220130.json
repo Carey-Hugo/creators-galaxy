@@ -1,0 +1,42 @@
+{
+  "Hugo一人公司": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780471154,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "💾 Skill 'cghub-canonical-reference' created.",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780581684,
+      "message_id": 7683,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780471154,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    }
+  ]
+}
