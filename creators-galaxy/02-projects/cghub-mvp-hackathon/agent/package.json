@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx src/index.ts",
-    "mcp": "tsx src/mcp-server.ts"
+    "mcp": "tsx src/mcp-server.ts",
+    "api": "tsx src/http-server.ts"
   },
   "dependencies": {
     "@cobo/agentic-wallet": "^0.1.7",
