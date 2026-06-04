@@ -33,9 +33,30 @@
 | 贡献者 | 类别 | 内容 | 时间 | 凭证 |
 |--------|------|------|------|------|
 | 大番薯 | 方案文档 | Agent 模块方案（架构/x402/Cobo/接口）| 2026-06-04 | 已提交（未列路径）|
-| 大番薯 | 代码骨架 | 所有 Agent 组件骨架 | 2026-06-04 | 已提交（未列路径）|
-| 大番薯 | MCP 工具 | 签贡献/上链/查可领/触发分账 | 2026-06-04 | Agent 能力包 |
+| 大番薯 | 代码骨架 | 所有 Agent 组件骨架 | 2026-06-04 | commit `2bcd4752` |
+| 大番薯 | MCP 工具 | 签贡献/上链/查可领/触发分账 | 2026-06-04 | `agent/tools/{sign-contribution,submit-contribution,check-pending,trigger-claim}.ts` |
 | 大番薯 | 架构决策 | round/pending 数据前端直读合约 | 2026-06-04 | 群消息 |
+| 大番薯 | Agent 源文件 | contribution-recorder/x402-prover/wallet-agent/mcp-server/index/config/types/abi | 2026-06-04 | `agent/src/*.ts`（8 个文件）|
+
+**Agent 仓库结构**（已确认）：
+
+```
+02-projects/cghub-mvp-hackathon/agent/
+├── src/
+│   ├── contribution-recorder.ts    # 贡献记录核心
+│   ├── x402-prover.ts              # x402 证明生成
+│   ├── wallet-agent.ts             # Cobo Wallet 调用
+│   ├── mcp-server.ts               # MCP Server 入口
+│   ├── index.ts                    # 总入口
+│   ├── config.ts                   # 配置
+│   ├── types.ts                    # 类型定义
+│   └── abi.ts                      # 合约 ABI 封装
+└── tools/
+    ├── sign-contribution.ts        # MCP 工具：签贡献
+    ├── submit-contribution.ts      # MCP 工具：上链
+    ├── check-pending.ts            # MCP 工具：查可领
+    └── trigger-claim.ts            # MCP 工具：触发分账
+```
 
 ---
 
