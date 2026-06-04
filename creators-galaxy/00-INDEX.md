@@ -77,6 +77,10 @@
 > 关键战略/架构决策在这里登记，方便随时回看。
 
 - **2026-06-04** · 4 场景共享记忆架构搭建完成（`03-scenarios/` + `04-team/` + cron 归档）
+- **2026-06-04** · 4 堆火堆状态已对齐（5 个接口不一致问题已识别），12:00 待 4 掌火人拍板
+- **2026-06-04** · Hugo 授权：12:00 未回 → Hermes 主动 DM；进度落后 → 本火堆优先，跨火堆必要时调度
+- **2026-06-03** · Day 3 关键发现：5 个接口不一致问题（命名/Sepolia/签名/数据模型/Cobo 凭据），6/4 12:00 前必须拉齐，否则 6/12 联调会崩
+- **2026-06-03** · Hermes 起草 3 份补位文档（frontend-quickstart / agent-signing-template / task-assignment v1.1）
 - **2026-06-03** · Day 17 学习 Cobo Agentic Wallet，跑通 CLI + Pact 协议
 - **2026-06-01** · Day 15 黑客松正式启动，Day 3 团队分工确定
 
@@ -86,19 +90,25 @@
 
 ### 学习线
 - W1 ✅ W2 ✅ 完成
-- W3 进行中（待 Hugo 发截图确认任务）
-- W3-01/02（viem 读链 + ABI）5/31 已跑通
-- W3-03 Agent Workflow / W3-04 Agent Wallet 未确认状态
+- W3 进行中任务 **29 个**（4 张截图覆盖，已去重入档 `w3-tasks-2026-06-04.md`）
+- W3 关键任务：赞助方问题(+5) / 完整Week 4 Ready Pack(+40) / 技术验证计划(+30) / 项目流程图(+30) / 深度研究包(+30) / Sponsor SDK API Plan(+30) / Z.AI赛道对齐(+30)
+- 6/3 Day 17 学习 Cobo Agentic Wallet 已跑通 CLI + Pact
 
-### 项目线
-- 黑客松 Day 4/14（6/4）
-- 4 堆篝火 Day 3 启动（6/3），实际进展待对齐
-- 关键节点：Day 7 中间检查点、Day 10 MVP 核心完成、Day 14 Demo
+### 项目线（Day 4/14）
+- ✅ 4 堆火堆 Day 3 进展已对齐：前端 MVP 完工、合约已部署 Sepolia、Agent 待启动、辅助待启动
+- 🚨 5 个接口不一致问题待 6/4 12:00 拉齐（命名/Sepolia/签名/数据模型/Cobo凭据）
+- 🔑 合约地址：0x876A0741223EDdaE081Ef22beA513E92335B1Bd5 (Sepolia)
+- 关键节点：Day 7 中间检查点（6/7）、Day 10 MVP 核心（6/10）、Day 14 Demo（6/14）
 
-### 待办
-- 🔴 等 Hugo 发 W3 截图 → 我做 W3 学习计划
-- 🔴 等 Hugo 发 4 堆火堆状态 → 我做跟进协调
-- 🟡 团队 8 位合伙人档案建档（已知 7 位 + 老曹，candidates.md 已有 7 位）
+### Hermes 已起草 3 份补位文档
+- `frontend-quickstart.md` (Sepolia + ABI + 4 useHook)
+- `agent-signing-template.md` (EIP-712 + x402 分工)
+- `task-assignment.md v1.1` (4 项变更说明)
+
+### 今日时间表
+- 12:00 检查 4 个对齐问题，未回用模板 A/B/C/D DM 催办
+- 18:00 收齐决策 + Cobo 凭据
+- 22:00 第一份每日进度同步（Hermes 主动起草）
 
 ---
 
