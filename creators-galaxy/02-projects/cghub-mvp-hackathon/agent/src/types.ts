@@ -27,6 +27,7 @@ export interface ContributionInput {
   source: string;          // 贡献来源，如 github
   evidenceId: string;      // 证据 id，如 pr-123
   paymentId: string;       // 业务支付 id，进 paymentIdHash
+  proofSalt?: string;      // proofHash 的盐，不传用默认；需与合约侧约定一致
 }
 
 /** x402 支付证明（Cobo payment 返回的精简形态） */

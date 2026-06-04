@@ -10,26 +10,31 @@ import type { ContributionInput, ContributionProof, SignedContribution } from '.
 
 const wallet = () => new ethers.Wallet(config.agentPrivateKey);
 
+// proofHash 的盐，默认值要和合约侧约定一致（合约脚本 PROOF_SALT 默认 "demo-proof"）
+const PROOF_SALT_DEFAULT = 'cghub-proof';
+
 /**
  * proofHash：防重放 key，必须唯一非零。
- * TODO: canonical 序列化规则要和白织那边统一（方案第九节第 6 条），否则 hash 对不上。
+ * 对齐合约脚本 RecordDemoContribution.s.sol：
+ *   keccak256(abi.encodePacked(proofSalt, projectId, roundId, contributor, nonce))
+ * 唯一性靠 nonce + contributor。
  */
 function buildProofHash(input: ContributionInput, nonce: bigint): string {
-  const canonical = JSON.stringify({
-    projectId: config.round.projectId.toString(),
-    roundId: config.round.roundId.toString(),
-    contributor: input.contributor,
-    source: input.source,
-    evidenceId: input.evidenceId,
-    score: input.score,
-    nonce: nonce.toString(),
-  });
-  return ethers.keccak256(ethers.toUtf8Bytes(canonical));
+  return ethers.solidityPackedKeccak256(
+    ['string', 'uint256', 'uint256', 'address', 'uint256'],
+    [input.proofSalt ?? PROOF_SALT_DEFAULT, config.round.projectId, config.round.roundId, input.contributor, nonce],
+  );
 }
 
-/** paymentIdHash：挂 x402 支付 id，对账锚点 */
-function buildPaymentIdHash(paymentId: string): string {
-  return ethers.keccak256(ethers.toUtf8Bytes(paymentId));
+/**
+ * paymentIdHash：挂 x402 支付 id，对账锚点。
+ * 对齐合约脚本：keccak256(abi.encodePacked(paymentId, projectId, roundId, contributor, nonce))
+ */
+function buildPaymentIdHash(input: ContributionInput, nonce: bigint): string {
+  return ethers.solidityPackedKeccak256(
+    ['string', 'uint256', 'uint256', 'address', 'uint256'],
+    [input.paymentId, config.round.projectId, config.round.roundId, input.contributor, nonce],
+  );
 }
 
 /** 组装 proof（还没签名） */
@@ -41,7 +46,7 @@ export function buildProof(input: ContributionInput): ContributionProof {
     contributor: input.contributor,
     score: BigInt(input.score),
     proofHash: buildProofHash(input, nonce),
-    paymentIdHash: buildPaymentIdHash(input.paymentId),
+    paymentIdHash: buildPaymentIdHash(input, nonce),
     nonce,
     deadline: BigInt(Math.floor(Date.now() / 1000) + 3600), // 1 小时过期
   };
@@ -52,7 +57,7 @@ export async function signProof(proof: ContributionProof): Promise<string> {
   return wallet().signTypedData(EIP712_DOMAIN, EIP712_TYPES, proof);
 }
 
-/** 链下自检：恢复出来的地址要等于 agentSigner（白织说明 9.6） */
+/** 链下自检：恢复出来的地址要等于 agentSigner */
 export function selfVerify(proof: ContributionProof, signature: string): boolean {
   const recovered = ethers.verifyTypedData(EIP712_DOMAIN, EIP712_TYPES, proof, signature);
   return recovered.toLowerCase() === wallet().address.toLowerCase();
