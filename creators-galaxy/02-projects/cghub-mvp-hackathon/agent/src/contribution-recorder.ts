@@ -10,8 +10,8 @@ import type { ContributionInput, ContributionProof, SignedContribution } from '.
 
 const wallet = () => new ethers.Wallet(config.agentPrivateKey);
 
-// proofHash 的盐，默认值要和合约侧约定一致（合约脚本 PROOF_SALT 默认 "demo-proof"）
-const PROOF_SALT_DEFAULT = 'cghub-proof';
+// proofHash 的盐，以合约侧为准：合约脚本 RecordDemoContribution.s.sol 的 PROOF_SALT 默认 "demo-proof"
+const PROOF_SALT_DEFAULT = 'demo-proof';
 
 /**
  * proofHash：防重放 key，必须唯一非零。
