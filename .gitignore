@@ -1,6 +1,8 @@
 CreatorsGalaxy/
 token_auto_push.sh
 demo/cghub-contracts/node_modules/
+creators-galaxy/02-projects/cghub-mvp-hackathon/agent/node_modules/
 
 __pycache__/
 *.pyc
+CLAUDE.md
