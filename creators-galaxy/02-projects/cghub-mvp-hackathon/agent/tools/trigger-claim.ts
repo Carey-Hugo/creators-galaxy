@@ -21,8 +21,7 @@ export const triggerClaimTool = {
       return { skipped: true, reason: 'pending 为 0，无可领金额' };
     }
 
-    await agent.ensurePactReady();
     const res = await agent.claimForContributor(args.contributor);
-    return { txId: res.txId, status: res.status, pending: pending.toString() };
+    return { txId: res.txId, status: res.status, txHash: res.hash, pending: pending.toString() };
   },
 };

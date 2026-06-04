@@ -23,15 +23,21 @@ export const config = {
     poolAddress: env('POOL_ADDRESS', '0x876A0741223EDdaE081Ef22beA513E92335B1Bd5'),
     usdcAddress: env('USDC_ADDRESS', '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238'),
     chainId: Number(env('CHAIN_ID', '11155111')),
-    rpcUrl: env('SEPOLIA_RPC_URL', ''),
+    rpcUrl: env('SEPOLIA_RPC_URL', 'https://ethereum-sepolia-rpc.publicnode.com'),
   },
   round: {
     projectId: BigInt(env('PROJECT_ID', '1')),
     roundId: BigInt(env('ROUND_ID', '1')),
   },
-  // 私钥
+  // agentSigner 私钥（链下签 EIP-712 proof）
   agentPrivateKey: env('AGENT_PRIVATE_KEY', ''),       // 必须等于链上 agentSigner()
-  executorPrivateKey: env('EXECUTOR_PRIVATE_KEY', ''), // 发记录交易、出 gas
+  // CAW：用 caw CLI 发链上交易，钱包本身当 executor（不需要单独的 executor 私钥）
+  caw: {
+    bin: env('CAW_BIN', `${process.env.HOME ?? ''}/.cobo-agentic-wallet/bin/caw`),
+    pactId: env('CAW_PACT_ID', ''),
+    srcAddress: env('CAW_SRC_ADDRESS', ''), // CAW 钱包 EVM 地址
+    chainId: env('COBO_CHAIN_ID', 'SETH'),
+  },
 };
 
 /** EIP-712 domain（白织说明 9.1） */
