@@ -37,8 +37,13 @@
 | 2026-06-04 18:00 | **必须完成**：record-contribution.ts 第一版（可跑） | 🟢 **已提前 6h 交付骨架** |
 | 2026-06-04 18:00 | L1 升级：18:00 没回 → Hermes 直接推 PR | 🟢 **已不需要**（大番薯自己推了） |
 | 2026-06-04 18:00 | 6h fire-status 同步：18:00 节点 Agent 火堆领先 6h+，下周可提前进入联调 | ✅ **火堆绿灯** |
-| 2026-06-04 EOD | HTTP 端点 /api/sign-contribution —— 大番薯自交付 | 🟡 等真实数据联调 |
-| 2026-06-05 EOD | D2 关键里程碑：全链路真实数据首跑（需 agentSigner 到位） | 🟡 依赖合约火堆 |
+| 2026-06-04 18:01 | **🎉 agentSigner 私钥自然到位**：commit `b72ac3be` 提交 `agent/.env`（含 CAW API_KEY + agentSigner 私钥）| 🟢 L1 阻塞解除 |
+| 2026-06-04 18:44 | **🎉 CAW executor 上链**：commit `8631e63c` 改用 `caw tx call`，端到端实测 tx `0xa56bfc61…` | 🟢 |
+| 2026-06-04 18:57 | **🎉🎉 Cobo SDK 纯 HTTP executor**：commit `2c7c6bbe` 删 `caw.ts`，签名在 Cobo 服务端完成，**队友拉仓库即跑**（tx `0x103525…`）| 🟢🎉 **全链路贯通** |
+| 2026-06-04 19:14 | **🎉 群消息机制修复**：@Hermes 1 分钟内响应（B2 方案）| 🟢 跨场景打通 |
+| 2026-06-04 19:30 | Hermes bot 身份纠错（@hermes_humain_bot vs @hermes_huseo_bot）| 🟢 skill v2.2.3 沉淀 |
+| 2026-06-04 EOD | HTTP 端点 /api/sign-contribution —— 大番薯自交付 | 🟢 **已端到端实测** |
+| 2026-06-05 EOD | D2 关键里程碑：全链路真实数据首跑 | 🟢 **前置条件全部就位** |
 
 ---
 
@@ -101,21 +106,39 @@
 
 ---
 
-## 🔴 L1 升级：agentSigner 阻塞
+## 🆕 18:00 → 21:00 EOD 重大反转
 
-**问题**：大番薯要 agentSigner 私钥才能跑 record-contribution
-**根因**：合约用 EIP-712 验签，agentSigner 是签名方；私钥不发给 Agent，所有上链动作都跑不通
-**现状**：
-- 私钥应在白织手里（他部署的合约，agentSigner 应该是他设置的）
-- 还没给到大番薯
+### 🎉🎉 全链路贯通（agentSigner 阻塞自然解除）
 
-**Hermes 行动路径**（3 选 1）：
-1. **问白织要**（最直接）—— 18:00 之前 DM 问白织
-2. **临时方案** —— 大番薯自己生成一个测试私钥，配置到合约 owner 那边的 agentSigner 槽位（需要 owner 权限调 `setAgentSigner`）
+**反转时间线**（18:00 fire-status 报 L1 阻塞 → 18:57 全链路贯通，**56 分钟闭环**）：
 
-**风险**：
-- L3 落后（按 v2.1 提前量铁律，agentSigner 不到位 = D2 6/5 EOD "全链路首跑"完不成）
-- 必须今天 18:00 之前解决（已升级）
+1. **18:01** `b72ac3be` —— 大番薯提交 `agent/.env`（含 CAW 凭据 + agentSigner 私钥）—— **白织/owner 18:00 之前就发了私钥**，18:01 大番薯收到即提交
+2. **18:44** `8631e63c` —— 改用 **CAW 钱包当 executor**（`caw tx call` + 轮询），端到端实测上链，tx `0xa56bfc61…` ✅
+3. **18:57** `2c7c6bbe` —— 再收敛到 **Cobo SDK 服务端签名**（`pact-scoped api_key` + `contractCall`），**删 `caw.ts`**，纯 HTTP 无 caw CLI，tx `0x103525…` ✅
+
+**架构演进**（从硬到软）：
+- 旧方案：本地 EOA + executor 私钥（需要私钥分享）
+- v1 (18:44)：CAW 钱包 + `caw tx call`（需要 caw CLI + TSS 分片）
+- v2 (18:57)：**Cobo SDK 服务端签名**（任意机器 + api_key 即可驱动同一钱包）
+
+**意义**：
+- 队友拉仓库 `npm install && npm run` 即跑（.env + ABI 已在仓库，私有仓库共享）
+- 后续不需要 caw CLI / TSS 分片 / 私钥分享 = **降低接入门槛**
+- 风险：私有仓库转公开或泄露需立即轮换 agentSigner 私钥 + CAW API key
+
+### 🟢 L1 阻塞已解除（无需升级）
+
+| 原 18:00 L1 条件 | 21:00 状态 |
+|----------------|-----------|
+| agentSigner 私钥到位 | ✅ 18:01 自然到位（私钥发放时间 < fire-status 同步时间）|
+| 端到端上链实测 | ✅ 18:44 CAW executor / 18:57 SDK executor 两次成功 |
+| 队友可拉仓库跑 | ✅ README 重写为"拉下来即用" |
+
+### 🎉 群消息机制（跨场景打通）
+- 19:14 B2 方案：@Hermes 1 分钟内响应（**Hermes 现在能在群里主动 @ 大番薯**）
+- 19:30 bot 身份纠错：@hermes_humain_bot 才是真我，huseo profile 那个 bot（搜优seo）一直在误导
+- 5 群里 2 群已是 admin：Hugo一人公司(-5076629166) / AI x Web3 School(-5291819613)
+- 3 群待升 admin：创客星球CGHub(-5223347644) / MoWa愿力文明(-5163870876) / 创客星球 MVP 黑客松(-1003916141713)
 
 ---
 
@@ -144,11 +167,10 @@
 
 ## 🚦 当前卡点
 
-- 🔴 **L1 紧急**：agentSigner 私钥未到位（影响所有上链测试）—— 18:00 升级触发，**由合约火堆白织解决**
-- 🟢 **大番薯火堆 6h 内无任何阻塞**（D1 重大产出）
-- 🟡 6/5 D2 真实数据首跑依赖合约火堆给 agentSigner
+- 🟢 **大番薯火堆 6h+ 内无任何阻塞**（D1 重大产出 + 18:01/18:44/18:57 三 commit 全链路贯通）
+- 🟢 6/5 D2 真实数据首跑前置条件全部就位（agentSigner 到位 + 端到端实测上链 + 队友可拉仓库跑）
+- 🟢 群消息机制打通（19:14 B2 方案）—— Hermes 现在能主动 @ 大番薯协调
+- 🟡 5 群 bot 升 admin：2 群已 admin，3 群待升（创客星球CGHub / MoWa愿力文明 / 创客星球 MVP 黑客松）
 
----
-
-> **最后更新**：2026-06-04 18:00（6h 同步 by cron 9c117e476344）
-> **本轮新增**：🎉 D1 重大产出（commit 2bcd4752）+ 🆕 架构决策 + 🔴 agentSigner 新阻塞
+> **最后更新**：2026-06-04 21:02（21:00 EOD 4 场景归档 by cron `ce4de7218b35`）
+> **本轮新增**：🎉🎉 全链路贯通（agentSigner 自然解除，18:00 L1 阻塞 18:01 自然解决）+ 🆕 群消息机制打通
