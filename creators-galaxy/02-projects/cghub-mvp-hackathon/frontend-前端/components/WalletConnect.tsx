@@ -6,7 +6,7 @@ interface WalletConnectProps {
   isLoading: boolean;
   error?: string | null;
   chainId?: number | null;
-  onConnect: () => Promise<void>;
+  onConnect: () => Promise<string | null>;
   onDisconnect: () => void;
 }
 
