@@ -4,7 +4,7 @@ import { WalletConnect } from "../components/WalletConnect";
 import { DistributionView } from "../components/DistributionView";
 import { useContributionPool } from "../hooks/useContributionPool";
 import { useWallet } from "../hooks/useWallet";
-import { useCoboWallet } from "../hooks/useCoboWallet";
+import { signContribution, submitContribution } from "../lib/agent-api";
 
 interface ContributionItem {
   id: string;
@@ -30,7 +30,6 @@ export default function Home() {
     connectWallet,
     disconnect,
   } = useWallet();
-  const { isCoboReady, connectCoboWallet, requestDistribution } = useCoboWallet();
   const {
     round,
     score,
@@ -40,6 +39,14 @@ export default function Home() {
     error: contractError,
     refresh,
   } = useContributionPool(address, signer);
+
+  const toScore = (amount: string) => {
+    const parsed = Number(amount);
+    if (!Number.isFinite(parsed) || parsed <= 0) {
+      throw new Error("贡献金额必须大于 0。");
+    }
+    return Math.max(1, Math.round(parsed * 100));
+  };
 
   useEffect(() => {
     const saved = window.localStorage.getItem("cghub-contributions");
@@ -59,8 +66,9 @@ export default function Home() {
     amount: string;
     description: string;
   }) => {
+    const contributionId = `${Date.now()}`;
     const newContribution: ContributionItem = {
-      id: `${Date.now()}`,
+      id: contributionId,
       title: values.title,
       amount: values.amount,
       description: values.description,
@@ -68,14 +76,38 @@ export default function Home() {
     };
 
     setContributions((current) => [newContribution, ...current]);
-    setMessage("贡献记录已保存。请先连接钱包并刷新链上状态。合约上链需要 Agent 返回 proof + signature。" );
+    setDistributionResult("");
 
-    if (!isConnected) {
-      await connectWallet();
-    }
+    try {
+      const contributor = address ?? (await connectWallet());
+      if (!contributor) {
+        throw new Error("请先连接钱包，Agent 需要你的钱包地址作为贡献者地址。");
+      }
 
-    if (!isCoboReady) {
-      await connectCoboWallet();
+      setMessage("正在请求 Agent 签名贡献 proof...");
+      const signed = await signContribution({
+        contributor,
+        score: toScore(values.amount),
+        source: "frontend",
+        evidenceId: contributionId,
+        paymentId: `frontend-${contributionId}`,
+      });
+
+      setMessage("Agent 已签名，正在由 executor 钱包提交上链...");
+      const submitted = await submitContribution(signed);
+
+      setContributions((current) =>
+        current.map((item) =>
+          item.id === contributionId ? { ...item, status: "submitted" } : item
+        )
+      );
+      setDistributionResult(`贡献已上链：${submitted.txHash}`);
+      setMessage("贡献已提交上链，正在刷新链上状态。");
+      await refresh();
+      setMessage("贡献已提交上链，链上状态已刷新。");
+    } catch (err) {
+      console.error(err);
+      setMessage(err instanceof Error ? err.message : "贡献提交失败，请检查 Agent API。");
     }
   };
 
@@ -85,7 +117,7 @@ export default function Home() {
         <div>
           <p className="eyebrow">CGHub MVP 黑客松</p>
           <h1>前端火堆：ContributionPool 合约对接</h1>
-          <p>目标：读取 Sepolia 合约状态、展示我的分数/可领金额、并为 Agent 签名上链打基础。</p>
+          <p>目标：读取 Sepolia 合约状态、提交贡献到 Agent，并把签名记录上链。</p>
         </div>
         <WalletConnect
           address={address}
@@ -101,7 +133,7 @@ export default function Home() {
       <section className="panel">
         <div className="panel-header">
           <h2>贡献提交</h2>
-          <p>填写贡献内容后，前端将记录本地状态并等待 Agent 返回 proof/signature 上链。</p>
+          <p>填写贡献内容后，前端会调用 Agent 签名，再由 executor 钱包提交到 ContributionPool。</p>
         </div>
         <ContributionForm onSubmit={handleSubmit} />
       </section>
