@@ -5,6 +5,7 @@ creators-galaxy/02-projects/cghub-mvp-hackathon/agent/node_modules/
 
 __pycache__/
 *.pyc
+.npm-cache/
 CLAUDE.md
 
 # 注：本项目为私有仓库，agent/.env 含测试网凭证，按团队约定随仓库提交，方便队友拉取即跑。

@@ -13,17 +13,17 @@ export function useWallet() {
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   }, [address]);
 
-  const connectWallet = useCallback(async () => {
+  const connectWallet = useCallback(async (): Promise<string | null> => {
     setError(null);
     if (typeof window === "undefined") {
       setError("未检测到浏览器环境。请在浏览器中打开该页面。");
-      return;
+      return null;
     }
 
     const anyWindow = window as any;
     if (!anyWindow.ethereum) {
       setError("未检测到浏览器钱包。请安装 MetaMask 或 Cobo Agentic Wallet 扩展。");
-      return;
+      return null;
     }
 
     setIsLoading(true);
@@ -37,9 +37,11 @@ export function useWallet() {
       setAddress(connectedAddress);
       setSigner(signerInstance);
       setChainId(Number(network.chainId));
+      return connectedAddress;
     } catch (connectError) {
       console.error(connectError);
       setError("钱包连接失败，请检查钱包并重试。" + (connectError instanceof Error ? ` ${connectError.message}` : ""));
+      return null;
     } finally {
       setIsLoading(false);
     }

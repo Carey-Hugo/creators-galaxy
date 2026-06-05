@@ -1,6 +1,6 @@
 # Agent HTTP API（给前端）
 
-> 给前端火堆（老实人）对接。前端不碰链、不碰私钥、不碰 CAW 凭证，调下面这几个接口就行。
+> 给前端火堆（老实人）对接。前端可以连接浏览器钱包、读取合约状态；贡献上链和 claim 这类 CAW 执行动作走下面接口，前端不碰私钥、不碰 CAW 凭证。
 > 起服务：`npm run api`（默认 `http://localhost:8787`，改 `PORT` 环境变量）。已开 CORS。
 
 ## 接口
@@ -45,7 +45,7 @@ POST /api/submit-contribution
 
 返回：`{ "txHash": "0x..." }`
 
-> 也可以前端不调这个、由我后端自动上链。看你方便，二选一。
+> 这步会让 CAW 钱包发 `recordContributionBySig`。本机 `cobo-tss-node` signer 必须在线；如果卡在 `Processing/signing`，先检查 signer。
 
 ### 3. 查可领金额
 
@@ -64,13 +64,14 @@ POST /api/trigger-claim
 
 返回：`{ "txId": "...", "status": "..." }`，无可领时返回 `{ "skipped": true, "reason": "..." }`
 
-> 这步后端持 CAW 凭证、走 Cobo contractCall 调合约 claimFor。需要 Cobo 钱包已开通（见下）。
+> 这步后端持 CAW 凭证、走 Cobo contractCall 调合约 claimFor。和上链记录一样，需要 CAW 钱包、active pact，以及本机 `cobo-tss-node` signer 在线。
 
 ## 关于 CAW 凭证
 
 CAW 的 API Key / pact key 是机密，**不下发前端**——claim/支付都走上面的接口，由后端持凭证执行。
 
-前端若要展示钱包信息，我可以提供**非机密**的：Cobo 钱包地址 + wallet UUID + 链（Sepolia/SETH）。这些等 Cobo 钱包开通后给。
+前端若要展示钱包信息，可以使用**非机密**信息：Cobo 钱包地址 + wallet UUID + 链（Sepolia/SETH）。
 
-> ⏳ 待办：Cobo Agentic Wallet 还没开通（谁开、谁审批 Pact 待定）。开通前接口 1/2/3 能用（不依赖 CAW），接口 4 跑不了。
-> 如果前端是想自己用 Cobo SDK 做"连接钱包/支付 UI"，那是另一回事——告诉我具体场景，我们对一下，因为 CAW 是服务端 agent 钱包，跟前端钱包连接不是一个东西。
+当前联调状态：CAW 钱包和 pact 已可用；接口 2/4 依赖 CAW signer。接口 1 只用 `agentSigner` 链下签 proof，不依赖 CAW。接口 3 是只读 RPC。
+
+如果前端是想自己用 Cobo SDK 做"连接钱包/支付 UI"，那是另一回事——CAW 是服务端 agent 钱包，跟浏览器钱包连接不是一个东西。
