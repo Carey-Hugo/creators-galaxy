@@ -1,7 +1,7 @@
 /**
  * 链上交易执行器：用 Cobo SDK + api_key 让 CAW 钱包发交易。
- * 签名在 Cobo 服务端完成（纯 HTTP，不依赖本地 TSS 节点），所以任何机器只要有 .env 里的
- * api_key + CAW_PACT_ID 就能驱动同一把钱包——队友拉仓库即可用，无需装 caw。
+ * SDK 负责向 CAW 提交 contractCall；真正的 CAW 钱包交易签名仍需要对应钱包的
+ * 本地 cobo-tss-node signer 在线，否则交易会停在 Processing/signing。
  *
  * 用 pact 的 scoped api_key 发交易（CAW_PACT_ID 指向一个覆盖目标合约的 active pact）。
  */

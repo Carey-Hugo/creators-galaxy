@@ -31,7 +31,7 @@ export const config = {
   },
   // agentSigner 私钥（链下签 EIP-712 proof）
   agentPrivateKey: env('AGENT_PRIVATE_KEY', ''),       // 必须等于链上 agentSigner()
-  // CAW：用 Cobo SDK 发链上交易（服务端签名），钱包本身当 executor
+  // CAW：用 Cobo SDK 提交链上交易；本地 cobo-tss-node signer 需在线完成钱包签名
   caw: {
     pactId: env('CAW_PACT_ID', ''),
     srcAddress: env('CAW_SRC_ADDRESS', ''), // CAW 钱包 EVM 地址

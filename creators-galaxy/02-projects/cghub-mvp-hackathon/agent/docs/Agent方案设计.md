@@ -230,7 +230,7 @@ const calldata = iface.encodeFunctionData("claimFor", [projectId, roundId, contr
 
 ### 6.2 我们这里提供给前端火堆的信息
 
-前端不碰链和私钥，调我的 MCP 工具：提交贡献 → `sign-contribution` + `submit-contribution`；查可领 → `check-pending`；触发领取 → `trigger-claim`。
+前端可以连接浏览器钱包、读取合约状态；私钥和 CAW 凭证不下发前端。提交贡献 → `sign-contribution` + `submit-contribution`；查可领 → `check-pending`；触发领取 → `trigger-claim`。
 
 展示类数据（round 状态、已领、审计）前端可以直接读合约 `rounds()`/`claimed()` + 监听事件（白织说明第 13 节有最小对接清单），不一定都过我。哪些走我、哪些前端直连，Day5 前跟老实人对一下，别重复造。
 
