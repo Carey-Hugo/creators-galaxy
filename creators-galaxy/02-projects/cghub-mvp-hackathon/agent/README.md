@@ -4,21 +4,34 @@
 
 ## 干嘛的
 
-Agent 用 agentSigner 私钥把贡献签成合约认的 EIP-712 证明，再让 CAW 钱包把交易发上链（记录贡献 / 代领分账）。签名在 Cobo 服务端完成，本机不需要装 caw、不需要 TSS 分片。
+Agent 用 agentSigner 私钥把贡献签成合约认的 EIP-712 证明，再让 CAW 钱包把交易发上链（记录贡献 / 代领分账）。链下 proof 签名由 `AGENT_PRIVATE_KEY` 完成；CAW 钱包发链上交易时需要本机 `cobo-tss-node` signer 在线，否则交易会停在 `Processing/signing`。
 
 闭环：`agentSigner 签 proof（链下）→ CAW 钱包 contractCall 上链 → ContributionPool 验签记账 / claimFor 分账`。
 
-## 队友怎么跑（拉下来即用）
+## 本地联调怎么跑
+
+先启动 CAW 本地 signer（只在持有这把 CAW 钱包 profile 的机器上需要）：
+
+```bash
+caw node start
+```
+
+然后启动 Agent API：
 
 ```bash
 cd agent
 npm install
-npm run dev    # 端到端自测：签贡献 → CAW 上链 recordContributionBySig
 npm run api    # 起 HTTP API 给前端（默认 :8787），见 docs/API.md
+```
+
+需要单独跑端到端自测时再用：
+
+```bash
+npm run dev    # 签贡献 → CAW 上链 recordContributionBySig，会真实提交一笔测试交易
 npm run mcp    # 起 MCP server（stdio）
 ```
 
-`.env` 已随仓库提交（私有库），凭证都在里面，**不用再配**。`abi/ContributionPool.abi.json` 也在仓库里。签名走 Cobo 服务端，所以任何机器都能用同一把 CAW 钱包。
+`.env` 是本地机密配置，按 `.env.example` 填，避免提交到仓库。队友要跑真实 CAW 上链，需要拿到对应 CAW 凭证、active pact，并完成/复用这把钱包的本地 TSS profile；否则可以只跑前端读取和签名接口级联调。
 
 ## 目录
 
@@ -37,19 +50,21 @@ agent/
 ├── tools/                       # MCP 工具：sign/submit-contribution、check-pending、trigger-claim
 ├── abi/ContributionPool.abi.json
 ├── docs/{Agent方案设计.md, API.md}
-├── .env / .env.example
+├── .env.example                 # .env 本地创建，勿提交
 ├── package.json / tsconfig.json
 ```
 
 ## 现状
 
 - ✅ 记录链路实测上链：`npm run dev` 跑通 sign → CAW recordContributionBySig（Sepolia）
+- ✅ 前端联调：`npm run api` + 前端按钮可走 sign → submit → refresh
+- ✅ CAW signer 要求已确认：本机 `cobo-tss-node` 在线时可签名并广播；不在线会卡在 `Processing/signing`
 - ✅ ABI / EIP-712 / 哈希规则 / proofSalt 全部对齐链上合约（链上实测一致）
 - ✅ proof/signature HTTP API 可用（前端对接见 docs/API.md）
 - ⏳ claimFor 分账：代码已接同机制，待 owner `finalizeRound` 后可实测
 - ⏳ x402：待团队定演到多深（方案 3.3）
 
-## 关键配置（已在 .env）
+## 关键配置（本地 .env）
 
 - `AGENT_PRIVATE_KEY`：agentSigner（链上 `agentSigner()` 对应私钥）
 - `AGENT_WALLET_API_KEY` / `_WALLET_UUID`：CAW 钱包凭证
