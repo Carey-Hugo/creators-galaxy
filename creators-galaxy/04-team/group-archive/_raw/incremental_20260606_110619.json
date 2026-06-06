@@ -1,0 +1,75 @@
+{
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 12,
+          "offset": 18,
+          "type": "code"
+        },
+        {
+          "length": 12,
+          "offset": 50,
+          "type": "url"
+        },
+        {
+          "length": 21,
+          "offset": 210,
+          "type": "italic"
+        },
+        {
+          "length": 6,
+          "offset": 231,
+          "type": "bot_command"
+        },
+        {
+          "length": 6,
+          "offset": 231,
+          "type": "italic"
+        },
+        {
+          "length": 29,
+          "offset": 237,
+          "type": "italic"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780714598,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Model switched to MiniMax-M2.7\nProvider: MiniMax (minimaxi.com)\nContext: 204,800 tokens\nMax output: 131,072 tokens\nCost: $0.30/M in, $1.20/M out, cache read $0.06/M\nCapabilities: reasoning, tools, open weights\n(session only — use `/model <name> --global` to persist)",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780715178,
+      "message_id": 8527,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780714598,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 5
+    }
+  ]
+}
