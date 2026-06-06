@@ -4,9 +4,23 @@
 > 归档频率：每 5 分钟（cron `ea6425732577` 自动）
 > 数据来源：4 个群（创客星球 MVP 黑客松 / AI x Web3 School / Hugo一人公司 / 创客星球CGHub）
 > 启动时间：2026-06-04 20:08 CST（首次完整归档）
-> 最后更新：2026-06-04 20:36 CST
+> 最后更新：2026-06-06 10:56 CST
 
 ---
+
+## 🆕 最新增量（2026-06-06 10:56）
+
+- 本轮新增：4 条（创客星球 MVP 黑客松 2 条；AI x Web3 School 2 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
+- 归档切片：`by-date/2026-06-06/10-52.md`、`by-date/2026-06-06/10-56.md`
+- 原始备份：`_raw/incremental_20260606_105649.json`
+- 注意：AI x Web3 School 已按脚本真实映射归档到 supergroup `-1003874621397`；用户旧表里的 `-5076629166` 实际为 Hugo一人公司。
+
+| 时间 | 成员 | 群 | id | 标签 | 分值 | 摘要 |
+|------|------|----|----|------|------|------|
+| 09:00:47 | Hermes | AI x Web3 School | 3 | #闲聊 | 0.1 | Cronjob Response: AI×Web3 学习日提醒 |
+| 10:52:52 | Hugo | 创客星球 MVP 黑客松 | 622 | #@Hermes | 1.5 | /model@hermes_humain_bot |
+| 10:52:55 | Hermes | 创客星球 MVP 黑客松 | 623 | #进展 | 2.0 | ⚙ Model Configuration |
+| 10:56:36 | Hugo | AI x Web3 School | 4 | #@Hermes | 1.5 | /model@hermes_humain_bot |
 
 ## 🏆 贡献榜（截至首次完整归档）
 

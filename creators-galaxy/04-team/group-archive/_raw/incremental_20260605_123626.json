@@ -1,0 +1,89 @@
+{
+  "创客星球 MVP 黑客松": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 18,
+          "offset": 0,
+          "type": "mention"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780634129,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "@hermes_humain_bot 帮我诊断确认下：\n1、你是否已经能看到所有成员在本群发的消息，并记录任务进度归档日志，作为成员价值贡献记录和收益分配参考依据，如果还不能实现应该怎么操作设置？\n2、所有群成员@你的对话，你是否已经能够看到并及时回复，如果还不能实现应该怎么操作设置？",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780634173,
+      "message_id": 8308,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780634129,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      }
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780634135,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "📚 skill_view: \"hermes-agent\"\n📚 skill_view: \"cghub-hackathon-workflow\"\n📚 skill_view: \"cghub-shared-memory\"\n💻 terminal: \"python3 - <<'PY' import os,re,yaml,js...\"\n⏰ cronjob: \"list\"\n💻 terminal: \"systemctl --user list-units 'hermes-g...\"",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780634174,
+      "message_id": 8309,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780634135,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      }
+    }
+  ]
+}
