@@ -4,30 +4,21 @@
 > 归档频率：每 5 分钟（cron `ea6425732577` 自动）
 > 数据来源：4 个群（创客星球 MVP 黑客松 / AI x Web3 School / Hugo一人公司 / 创客星球CGHub）
 > 启动时间：2026-06-04 20:08 CST（首次完整归档）
-> 最后更新：2026-06-06 21:31 CST
+> 最后更新：2026-06-06 21:36 CST
 
 ---
 
-## 🆕 最新增量（2026-06-06 21:31）
+## 🆕 最新增量（2026-06-06 21:36）
 
-- 本轮新增：10 条（创客星球 MVP 黑客松 10 条；AI x Web3 School 0 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
-- 归档切片：`by-date/2026-06-06/14-33.md`、`by-date/2026-06-06/15-11.md`、`by-date/2026-06-06/21-28.md`、`by-date/2026-06-06/21-30.md`、`by-date/2026-06-06/21-31.md`
-- 原始备份：`_raw/incremental_20260606_213149.json`
-- 关键进展：Leo/老实人 15:11 报告前端联调版完成：Sepolia + ContributionPool、首页提交贡献、Dashboard 链上状态/审计事件、Cobo `claimFor` 触发入口均已接好；下一步需要大番薯启动带 `.env` 的 Agent API、白织确认 round fund/finalize。
+- 本轮新增：1 条（创客星球 MVP 黑客松 1 条；AI x Web3 School 0 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
+- 归档切片：`by-date/2026-06-06/21-32.md`
+- 原始备份：`_raw/incremental_20260606_213630.json`
+- 关键进展：无新增人类贡献；本轮仅归档 Hermes bot 自身在 21:32 对 Hugo“继续”的回应。内容判断：主线已进入“稳定验收 + 可提交”，辅助火堆 L2 仍红灯，建议 Hermes 直接补位 Demo 验收清单/录屏脚本。
 - 注意：`创客星球CGHub` 仍为老式 group/隐私限制，需升级 supergroup 才能完整归档。
 
 | 时间 | 成员 | 群 | id | 标签 | 分值 | 摘要 |
 |------|------|----|----|------|------|------|
-| 14:33:39 | Leo | 创客星球 MVP 黑客松 | 624 | #闲聊 | 0.1 | Carey 新仓库拉我进区 |
-| 15:11:28 | Leo | 创客星球 MVP 黑客松 | 625 | #接口 #进展 #资源 | 2.0 | 前端这边已完成联调版：  1. 已切 Sepolia，接入 ContributionPool： 0x876A0741223EDdaE081Ef22beA513E92335B1Bd5 |
-| 21:28:20 | Carey Hugo | 创客星球 MVP 黑客松 | 626 | #闲聊 | 0.1 | @xaochen8 👍👍👍 |
-| 21:28:23 | 总助main | 创客星球 MVP 黑客松 | 627 | #闲聊 | 0.1 | ⏱️ Rate limited. Waiting 2.9s (attempt 2/3)... |
-| 21:28:27 | 总助main | 创客星球 MVP 黑客松 | 628 | #闲聊 | 0.1 | ⏱️ Rate limited. Waiting 5.5s (attempt 3/3)... |
-| 21:28:50 | 总助main | 创客星球 MVP 黑客松 | 629 | #闲聊 | 0.1 | ⚠️ Max retries (3) exhausted — trying fallback... |
-| 21:28:50 | 总助main | 创客星球 MVP 黑客松 | 630 | #闲聊 | 0.1 | ❌ Rate limited after 3 retries — HTTP 402: Error code: 402 - {'error': '此 API Key 的消费额度已用完 |
-| 21:28:50 | 总助main | 创客星球 MVP 黑客松 | 631 | #闲聊 | 0.1 | API call failed after 3 retries: HTTP 402: Error code: 402 - {'error': '此 API Key 的消费额度已用完 |
-| 21:30:55 | Carey Hugo | 创客星球 MVP 黑客松 | 632 | #闲聊 | 0.1 | 继续 |
-| 21:31:15 | 总助main | 创客星球 MVP 黑客松 | 633 | #闲聊 | 0.1 | 📚 skill_view: "cghub-hackathon-workflow" |
+| 21:32:57 | 总助main | 创客星球 MVP 黑客松 | 634 | #进展 #卡点 #资源 | 0（bot 自身不计分） | 继续。当前判断：主线不是“能不能跑通”，而是“能不能稳定验收 + 可提交”；建议今晚封 Demo 主线、补测试/验收清单、明天催三端 ack。 |
 
 ## 🏆 贡献榜（截至首次完整归档）
 
@@ -199,4 +190,4 @@
 
 ---
 
-*最后更新：2026-06-04 20:36 CST | 维护：cron `ea6425732577` + Hermes*
+*最后更新：2026-06-06 21:36 CST | 维护：cron `ea6425732577` + Hermes*
