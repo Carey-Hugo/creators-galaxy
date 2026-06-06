@@ -1,0 +1,446 @@
+{
+  "创客星球 MVP 黑客松": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 5,
+          "offset": 0,
+          "type": "text_mention",
+          "user": {
+            "first_name": "Carey",
+            "id": 8288483959,
+            "is_bot": false,
+            "language_code": "zh-hans",
+            "last_name": "Hugo"
+          }
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Leo",
+          "id": 7300961173,
+          "is_bot": false,
+          "username": "xaochen8"
+        },
+        "date": 1780727619,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Carey 新仓库拉我进区",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752690,
+      "message_id": 8614,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780727619,
+      "forward_from": {
+        "id": 7300961173,
+        "is_bot": false,
+        "first_name": "Leo",
+        "username": "xaochen8"
+      },
+      "__source_message_id": 624
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 6,
+          "offset": 960,
+          "type": "url"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Leo",
+          "id": 7300961173,
+          "is_bot": false,
+          "username": "xaochen8"
+        },
+        "date": 1780729888,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "前端这边已完成联调版：\n\n1. 已切 Sepolia，接入 ContributionPool：\n   0x876A0741223EDdaE081Ef22beA513E92335B1Bd5\n   projectId=1 / roundId=1\n\n2. 首页已支持：\n   - 钱包连接\n   - 贡献标题/金额/贡献分数/说明提交\n   - 调 Agent API 获取 EIP-712 proof/signature\n   - 调 Agent API 上链记录贡献\n   - 读取链上 score / claimed / pending / round 状态\n   - 触发 Cobo claimFor 代领\n\n3. Dashboard 已支持：\n   - 链上 Round 状态展示\n   - 当前钱包 score / claimed / pending\n   - Owner / Agent Signer 展示\n   - 链上审计事件展示：fund / contribution / finalize / claim\n   - 本地提交记录复盘\n\n4. 前端不持有 CAW API Key，也不需要 AGENT_PRIVATE_KEY。\n   CAW 凭据、pact、TSS signer 应该只在 agent 后端环境里。\n\n5. 本地 build 已通过：\n   npm run build ✅\n\n当前需要团队验证：\n- 大番薯：用带 agent/.env 的环境启动 agent API：\n  cd agent && npm install && npm run api\n  默认 http://localhost:8787\n- 确认以下接口可用：\n  /api/sign-contribution\n  /api/submit-contribution\n  /api/pending\n  /api/trigger-claim\n- 白织/合约侧确认 round 已 fund，并在联调后 finalize，这样 pending 和 claimFor 才能展示真实结果。\n\n我这边本地没有 agent/.env，所以不能在我机器上真实跑 CAW submit/claim。\n但前端接口已经按 agent/docs/API.md 接好，只要 Agent 服务带凭据跑起来，把 NEXT_PUBLIC_AGENT_API_URL 指过去即可验证。",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752690,
+      "message_id": 8615,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780729888,
+      "forward_from": {
+        "id": 7300961173,
+        "is_bot": false,
+        "first_name": "Leo",
+        "username": "xaochen8"
+      },
+      "__source_message_id": 625
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 9,
+          "offset": 0,
+          "type": "mention"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780752500,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "@xaochen8 👍👍👍",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752691,
+      "message_id": 8616,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752500,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 626
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780752503,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "⏱️ Rate limited. Waiting 2.9s (attempt 2/3)...",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752691,
+      "message_id": 8617,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752503,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 627
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780752507,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "⏱️ Rate limited. Waiting 5.5s (attempt 3/3)...",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752692,
+      "message_id": 8618,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752507,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 628
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780752530,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "⚠️ Max retries (3) exhausted — trying fallback...",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752692,
+      "message_id": 8619,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752530,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 629
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 44,
+          "offset": 95,
+          "type": "url"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780752530,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "link_preview_options": {
+        "url": "https://aicodewith.com/zh/dashboard/api-keys"
+      },
+      "supergroup_chat_created": false,
+      "text": "❌ Rate limited after 3 retries — HTTP 402: Error code: 402 - {'error': '此 API Key 的消费额度已用完，请前往 https://aicodewith.com/zh/dashboard/api-keys 调整额度 (request_id: req_1780752513303_eafc8089)'}",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752693,
+      "message_id": 8620,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752530,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 630
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 44,
+          "offset": 95,
+          "type": "url"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780752530,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "link_preview_options": {
+        "url": "https://aicodewith.com/zh/dashboard/api-keys"
+      },
+      "supergroup_chat_created": false,
+      "text": "API call failed after 3 retries: HTTP 402: Error code: 402 - {'error': '此 API Key 的消费额度已用完，请前往 https://aicodewith.com/zh/dashboard/api-keys 调整额度 (request_id: req_1780752513303_eafc8089)'}",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752694,
+      "message_id": 8621,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752530,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 631
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780752655,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "继续",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752694,
+      "message_id": 8622,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752655,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 632
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780752675,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "📚 skill_view: \"cghub-hackathon-workflow\"",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780752695,
+      "message_id": 8623,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780752675,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 633
+    }
+  ]
+}
