@@ -1,0 +1,103 @@
+{
+  "创客星球 MVP 黑客松": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 24,
+          "offset": 0,
+          "type": "bot_command"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780817938,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "/model@hermes_humain_bot",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780818368,
+      "message_id": 9000,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780817938,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 641
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 5,
+          "offset": 168,
+          "type": "code"
+        },
+        {
+          "length": 11,
+          "offset": 226,
+          "type": "code"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780817940,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Error: Could not resolve credentials for provider 'OpenAI Codex': Codex refresh token was already consumed by another client (e.g. Codex CLI or VS Code extension). Run codex in your terminal to generate fresh tokens, then run hermes auth to re-authenticate.",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780818369,
+      "message_id": 9001,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780817940,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 642
+    }
+  ]
+}
