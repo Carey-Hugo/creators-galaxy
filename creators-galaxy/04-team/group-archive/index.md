@@ -4,25 +4,26 @@
 > 归档频率：每 5 分钟（cron `ea6425732577` 自动）
 > 数据来源：4 个群（创客星球 MVP 黑客松 / AI x Web3 School / Hugo一人公司 / 创客星球CGHub）
 > 启动时间：2026-06-04 20:08 CST（首次完整归档）
-> 最后更新：2026-06-07 08:36 CST
+> 最后更新：2026-06-07 08:51 CST
 
 ---
 
-## 🆕 最新增量（2026-06-07 08:36）
+## 🆕 最新增量（2026-06-07 08:51）
 
-- 本轮新增：4 条（创客星球 MVP 黑客松 2 条；AI x Web3 School 2 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
-- 人类新增：Hugo 2 条 `/model@hermes_humain_bot`（均已归档为 #@Hermes）；bot 自身 2 条（不计入人类贡献）
-- 归档切片：`by-date/2026-06-07/08-00.md`、`by-date/2026-06-07/08-12.md`、`by-date/2026-06-07/08-22.md`
-- 原始备份：`_raw/incremental_20260607_083626.json`
-- 关键进展：无黑客松技术/产品新进展；本轮主要是 Hugo 在 MVP 群与 AI x Web3 School 群触发模型选择命令，以及 WCB API 健康检查报 402 额度耗尽（bot 自身通知，不计贡献）。
+- 本轮新增：5 条（创客星球 MVP 黑客松 2 条；AI x Web3 School 3 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
+- 人类新增：Hugo 2 条 `/model@hermes_humain_bot`（均已归档为 #@Hermes）；bot 自身 3 条（不计入人类贡献）
+- 归档切片：`by-date/2026-06-07/08-12.md`、`by-date/2026-06-07/08-22.md`、`by-date/2026-06-07/08-42.md`
+- 原始备份：`_raw/incremental_20260607_084559.json`、`_raw/incremental_20260607_085115.json`
+- 关键进展：无黑客松技术/产品新进展；本轮主要是 Hugo 在 MVP 群与 AI x Web3 School 群触发模型选择命令，bot 返回模型选择/取消信息。
 - 注意：`创客星球CGHub` 仍为老式 group/隐私限制，需升级 supergroup 才能完整归档。
 
 | 时间 | 成员 | 群 | id | 标签 | 分值 | 摘要 |
 |------|------|----|----|------|------|------|
-| 08:00:46 | 总助main | AI x Web3 School | 6 | #闲聊 | 0（bot 自身不计分） | WCB API 健康检查失败：HTTP 402，API Key 消费额度已用完。 |
-| 08:12:51 | Hugo | AI x Web3 School | 7 | #@Hermes | +1.5 | `/model@hermes_humain_bot` |
-| 08:22:11 | Hugo | 创客星球 MVP 黑客松 | 635 | #@Hermes | +1.5 | `/model@hermes_humain_bot` |
-| 08:22:13 | 总助main | 创客星球 MVP 黑客松 | 636 | #闲聊 | 0（bot 自身不计分） | Model selection cancelled. |
+| 08:12:53 | 总助main | AI x Web3 School | 8 | #闲聊 | 0（bot 自身不计分） | Model Configuration / 当前模型 MiniMax-M2.7。 |
+| 08:22:40 | Hugo | 创客星球 MVP 黑客松 | 637 | #@Hermes | +1.5 | `/model@hermes_humain_bot` |
+| 08:22:42 | 总助main | 创客星球 MVP 黑客松 | 638 | #闲聊 | 0（bot 自身不计分） | Model selection cancelled. |
+| 08:42:33 | Hugo | AI x Web3 School | 9 | #@Hermes | +1.5 | `/model@hermes_humain_bot` |
+| 08:42:35 | 总助main | AI x Web3 School | 10 | #闲聊 | 0（bot 自身不计分） | Model switched to MiniMax-M3。 |
 
 ## 🏆 贡献榜（截至首次完整归档）
 
@@ -30,7 +31,7 @@
 
 | 排名 | 成员 | 消息数 | 贡献分 | 覆盖群 |
 |------|------|--------|--------|--------|
-| 1 | Hugo | 161 | 208.0 | 创客星球 MVP 黑客松 + Hugo一人公司 + AI x Web3 School |
+| 1 | Hugo | 163 | 211.0 | 创客星球 MVP 黑客松 + Hugo一人公司 + AI x Web3 School |
 | 2 | 老实人 | 17 | 24.6 | 创客星球 MVP 黑客松 |
 | 3 | 白织 | 14 | 11.4 | 创客星球 MVP 黑客松 |
 | 4 | loong | 9 | 4.6 | 创客星球 MVP 黑客松 |
@@ -39,13 +40,13 @@
 | 7 | Fox | 2 | 3.0 | 创客星球 MVP 黑客松 |
 | 8 | 大番薯 | 9 | 2.8 | 创客星球 MVP 黑客松 |
 | 9 | bc_tools | 2 | 0.2 | 创客星球 MVP 黑客松 |
-| — | Hermes（bot 自身）| 459 | 0（不计分）| 全部 |
+| — | Hermes（bot 自身）| 462 | 0（不计分）| 全部 |
 
 ## 📊 8 人活跃度（按贡献分）
 
 | 成员 | 消息数 | 贡献分 | 首条消息 | 末条消息 | 趋势 |
 |------|--------|--------|---------|---------|------|
-| Hugo | 161 | 208.0 | 05-29 14:16 | 06-07 08:22 | ↑ |
+| Hugo | 163 | 211.0 | 05-29 14:16 | 06-07 08:42 | ↑ |
 | 老实人 | 17 | 24.6 | 06-02 19:54 | 06-04 15:46 | — |
 | 白织 | 14 | 11.4 | 06-02 18:34 | 06-04 19:13 | — |
 | loong | 9 | 4.6 | 06-02 23:15 | 06-04 11:16 | — |
@@ -57,9 +58,9 @@
 
 ## 🔴 @Hermes 消息监控（SLA 1 分钟）
 
-- 总 @Hermes 消息（含 bot 自身）：65
-- @Hermes 且非 bot 自身：51
-- **未及时回复（应 1 分钟内回）**：51
+- 总 @Hermes 消息（含 bot 自身）：67
+- @Hermes 且非 bot 自身：53
+- **未及时回复（应 1 分钟内回）**：51（历史遗留；本轮 2 条 `/model` 已有 bot 响应/取消回执）
 
 | 时间 | 来源 | 文本 |
 |------|------|------|
@@ -89,9 +90,9 @@
 
 ## 📈 归档统计
 
-- 总消息：689
-- 创客星球 MVP 黑客松：588
-- AI x Web3 School：2
+- 总消息：694
+- 创客星球 MVP 黑客松：590
+- AI x Web3 School：5
 - Hugo一人公司：99
 
 ## ⚠️ 已知局限（关键技术约束）
@@ -100,8 +101,8 @@
 
 | 群 | chat_id | 群类型 | bot 状态 | 可归档性 |
 |------|---------|--------|----------|---------|
-| 创客星球 MVP 黑客松 | -1003916141713 | supergroup | administrator | ✅ 完整归档（当前至 id=636）|
-| AI x Web3 School | -1003874621397 | supergroup | administrator | ✅ 已恢复归档（当前至 id=7）|
+| 创客星球 MVP 黑客松 | -1003916141713 | supergroup | administrator | ✅ 完整归档（当前至 id=638）|
+| AI x Web3 School | -1003874621397 | supergroup | administrator | ✅ 已恢复归档（当前至 id=10）|
 | Hugo一人公司 | -5076629166 | group | administrator | ⚠️ 老式 group，仍受限 |
 | 创客星球CGHub | -5223347644 | group | administrator | ⚠️ 老式 group，仍受限 |
 
