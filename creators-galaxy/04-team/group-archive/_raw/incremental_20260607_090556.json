@@ -1,0 +1,95 @@
+{
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 19,
+          "offset": 70,
+          "type": "bold"
+        },
+        {
+          "length": 9,
+          "offset": 91,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 160,
+          "type": "bold"
+        },
+        {
+          "length": 6,
+          "offset": 419,
+          "type": "bold"
+        },
+        {
+          "length": 16,
+          "offset": 810,
+          "type": "bold"
+        },
+        {
+          "length": 33,
+          "offset": 833,
+          "type": "text_link",
+          "url": "https://aiweb3.school/zh/handbook/"
+        },
+        {
+          "length": 58,
+          "offset": 872,
+          "type": "text_link",
+          "url": "https://aiweb3.school/zh/handbook/"
+        },
+        {
+          "length": 5,
+          "offset": 932,
+          "type": "bold"
+        },
+        {
+          "length": 2,
+          "offset": 948,
+          "type": "bold"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780794255,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "link_preview_options": {
+        "url": "https://aiweb3.school/zh/handbook/"
+      },
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: AI×Web3 学习日提醒\n(job_id: 7e912374d33f)\n-------------\n\n📅 今日计划（2026-06-07）\n\n🔑 今日核心目标：不再继续堆新提交，优先把 Web3 基础短板补实，并把 Week 1–3 已提交内容整理成可复用的黑客松技术基础。\n\n📚 学习路径（三选一）：\n- 最小路径：复习 Web3 基础概念：EOA / 智能账户 / 多签 / 合约 Call vs Transaction / RPC，并整理 5 条你真正理解的卡片。\n- 推荐路径：完成一次「Agent 读取链上状态」小练习：选一个测试网合约或地址，用 RPC / 区块链浏览器解释它的状态、交易、调用逻辑。\n- 挑战路径：把“AI Agent → 钱包权限 → 合约读取/调用 → 链上记录”画成一张 CGHub Hackathon MVP 技术流程图，作为 Week 4 项目材料。\n\n✅ 任务清单：\n- [ ] 复盘 Week 1 Web3 基础概念卡片，重点补：EOA、智能账户、多签、Session Key（来源：Week 1｜Web3 Track）\n- [ ] 重新解释一次「Call vs Transaction」：什么免费、什么需要 Gas、什么会上链（来源：Week 1｜Web3 Track）\n- [ ] 选一个测试网交易或合约地址，用区块链浏览器写出：发起者、接收者、Gas、状态变化（来源：Week 1｜Web3 Track）\n- [ ] 用 Agent 视角写 1 段：如果 CGHub Agent 要调用链上服务，最小权限应该如何设计（来源：Week 3｜AI × Web3 Bridge）\n- [ ] 更新今日 daily note，记录：今天补了哪些 Web3 短板、还有哪些不懂（来源：30 天学习计划｜Daily Workflow）\n\n📖 Handbook 阅读章节：\n- 主线：AI × Web3 School Handbook｜Web3 基础\n- 辅线：AI × Web3 School Handbook｜Agent / Wallet / Permission 相关内容\n\n⚠️ 注意：\n- 今天是学习第 21 天。\n- 当前 WCB API 显示：Week 1 主线 Web3 / AI / 综合任务多数已提交或已通过；未开始项主要是回放类、活动类、Sponsor Workshop / 自组织分享类，不建议今天硬补。\n- Week 3 进度已经很靠前，今天不要再“抢进度”，优先补 Web3 零基础短板，为 Week 4 Hackathon Sprint 做准备。\n- 6/5 daily note 记录：Sponsor Workshop 相关任务已明确跳过；唯一非 Sponsor Workshop 的 W3 文档剩余是「黑客松报名网站 Bug / PR 反馈」，可作为有余力时的挑战项。\n- 打卡在完成所有任务后生成。\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder AI×Web3 学习日提醒\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780794356,
+      "message_id": 8894,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780794255,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 11
+    }
+  ]
+}

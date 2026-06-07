@@ -4,26 +4,22 @@
 > 归档频率：每 5 分钟（cron `ea6425732577` 自动）
 > 数据来源：4 个群（创客星球 MVP 黑客松 / AI x Web3 School / Hugo一人公司 / 创客星球CGHub）
 > 启动时间：2026-06-04 20:08 CST（首次完整归档）
-> 最后更新：2026-06-07 08:51 CST
+> 最后更新：2026-06-07 09:20 CST
 
 ---
 
-## 🆕 最新增量（2026-06-07 08:51）
+## 🆕 最新增量（2026-06-07 09:20）
 
-- 本轮新增：5 条（创客星球 MVP 黑客松 2 条；AI x Web3 School 3 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
-- 人类新增：Hugo 2 条 `/model@hermes_humain_bot`（均已归档为 #@Hermes）；bot 自身 3 条（不计入人类贡献）
-- 归档切片：`by-date/2026-06-07/08-12.md`、`by-date/2026-06-07/08-22.md`、`by-date/2026-06-07/08-42.md`
-- 原始备份：`_raw/incremental_20260607_084559.json`、`_raw/incremental_20260607_085115.json`
-- 关键进展：无黑客松技术/产品新进展；本轮主要是 Hugo 在 MVP 群与 AI x Web3 School 群触发模型选择命令，bot 返回模型选择/取消信息。
+- 本轮新增：1 条（AI x Web3 School 1 条；创客星球 MVP 黑客松 0 条；Hugo一人公司 0 条；创客星球CGHub 0 条）
+- 人类新增：0 条；bot 自身 1 条（不计入人类贡献）
+- 归档切片：`by-date/2026-06-07/09-04.md`
+- 原始备份：`_raw/incremental_20260607_090556.json`
+- 关键进展：无黑客松技术/产品新进展；本轮仅归档 AI×Web3 学习日提醒 cron 回执。
 - 注意：`创客星球CGHub` 仍为老式 group/隐私限制，需升级 supergroup 才能完整归档。
 
 | 时间 | 成员 | 群 | id | 标签 | 分值 | 摘要 |
 |------|------|----|----|------|------|------|
-| 08:12:53 | 总助main | AI x Web3 School | 8 | #闲聊 | 0（bot 自身不计分） | Model Configuration / 当前模型 MiniMax-M2.7。 |
-| 08:22:40 | Hugo | 创客星球 MVP 黑客松 | 637 | #@Hermes | +1.5 | `/model@hermes_humain_bot` |
-| 08:22:42 | 总助main | 创客星球 MVP 黑客松 | 638 | #闲聊 | 0（bot 自身不计分） | Model selection cancelled. |
-| 08:42:33 | Hugo | AI x Web3 School | 9 | #@Hermes | +1.5 | `/model@hermes_humain_bot` |
-| 08:42:35 | 总助main | AI x Web3 School | 10 | #闲聊 | 0（bot 自身不计分） | Model switched to MiniMax-M3。 |
+| 09:04:15 | 总助main | AI x Web3 School | 11 | #闲聊 | 0（bot 自身不计分） | AI×Web3 学习日提醒：今日优先补 Web3 基础短板，不继续堆新提交。 |
 
 ## 🏆 贡献榜（截至首次完整归档）
 
@@ -90,9 +86,9 @@
 
 ## 📈 归档统计
 
-- 总消息：694
+- 总消息：695
 - 创客星球 MVP 黑客松：590
-- AI x Web3 School：5
+- AI x Web3 School：6
 - Hugo一人公司：99
 
 ## ⚠️ 已知局限（关键技术约束）
@@ -102,7 +98,7 @@
 | 群 | chat_id | 群类型 | bot 状态 | 可归档性 |
 |------|---------|--------|----------|---------|
 | 创客星球 MVP 黑客松 | -1003916141713 | supergroup | administrator | ✅ 完整归档（当前至 id=638）|
-| AI x Web3 School | -1003874621397 | supergroup | administrator | ✅ 已恢复归档（当前至 id=10）|
+| AI x Web3 School | -1003874621397 | supergroup | administrator | ✅ 已恢复归档（当前至 id=11）|
 | Hugo一人公司 | -5076629166 | group | administrator | ⚠️ 老式 group，仍受限 |
 | 创客星球CGHub | -5223347644 | group | administrator | ⚠️ 老式 group，仍受限 |
 
