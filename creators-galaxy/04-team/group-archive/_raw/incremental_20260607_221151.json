@@ -1,0 +1,90 @@
+{
+  "创客星球 MVP 黑客松": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 12,
+          "offset": 3,
+          "type": "bold"
+        },
+        {
+          "length": 21,
+          "offset": 32,
+          "type": "code"
+        },
+        {
+          "length": 24,
+          "offset": 56,
+          "type": "bold"
+        },
+        {
+          "length": 8,
+          "offset": 97,
+          "type": "code"
+        },
+        {
+          "length": 8,
+          "offset": 162,
+          "type": "code"
+        },
+        {
+          "length": 11,
+          "offset": 213,
+          "type": "bold"
+        },
+        {
+          "length": 18,
+          "offset": 231,
+          "type": "bold"
+        },
+        {
+          "length": 9,
+          "offset": 370,
+          "type": "bold"
+        },
+        {
+          "length": 17,
+          "offset": 473,
+          "type": "bold"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780841177,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "📋 6/7 EOD 进展同步（22:00 终版 · 详细 → progress-sync-0607.md）\n\n今日（4 堆静默期 · Day 7 中间检查点）：\n- ✅ 唯一新 commit 35d257d1（5min 群消息归档），0 项目功能 commit\n- ✅ 21:00 EOD 4 场景归档完成（commit 22cf6991）\n- 🟢 三主线（合约/前端/Agent）已进入 Demo 稳定验收/封板阶段\n\n明日 6/8 关键节点：\n- 🔴 18:00 辅助火堆 L2 强制升级（老曹健身版 81h+ 沉默 · Hermes 自动准备 L2 升级包）\n- 🟡 12:00 白织 Pact 草稿 + 老实人\"直读合约\"ack（4 天未回）\n- 🟢 09:00 Hugo 起床：3 群升 admin + 查主对话模型\n\nHugo 重点关注：\n1. 6/8 18:00 辅助 L2 升级 cc 决策\n2. 6/8 起床查 gpt-5.5 session only 状态（Codex refresh token 冲突未解）\n3. 公开仓库密钥轮换必须 6/8 启动（6/14 Demo 倒计时 7 天）\n\n理解了吗？",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780841497,
+      "message_id": 9280,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780841177,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 647
+    }
+  ]
+}
