@@ -1,0 +1,190 @@
+{
+  "创客星球 MVP 黑客松": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 24,
+          "offset": 0,
+          "type": "bot_command"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780791731,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "/model@hermes_humain_bot",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780792570,
+      "message_id": 8852,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780791731,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 635
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780791733,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Model selection cancelled.",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780792571,
+      "message_id": 8853,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780791733,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 636
+    }
+  ],
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 44,
+          "offset": 164,
+          "type": "url"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780790446,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "link_preview_options": {
+        "url": "https://aicodewith.com/zh/dashboard/api-keys"
+      },
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: WCB API 健康检查\n(job_id: 44337aabc1d9)\n-------------\n\nAPI call failed after 3 retries: HTTP 402: Error code: 402 - {'error': '此 API Key 的消费额度已用完，请前往 https://aicodewith.com/zh/dashboard/api-keys 调整额度 (request_id: req_1780790445231_5e8d9c0b)'}\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder WCB API 健康检查\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780792585,
+      "message_id": 8858,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780790446,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 6
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 24,
+          "offset": 0,
+          "type": "bot_command"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1780791171,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "/model@hermes_humain_bot",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780792585,
+      "message_id": 8859,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780791171,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 7
+    }
+  ]
+}
