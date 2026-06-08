@@ -4,9 +4,19 @@
 > 归档频率：每 5 分钟（cron `ea6425732577` 自动）
 > 数据来源：4 个群（创客星球 MVP 黑客松 / AI x Web3 School / Hugo一人公司 / 创客星球CGHub）
 > 启动时间：2026-06-04 20:08 CST（首次完整归档）
-> 最后更新：2026-06-07 15:55 CST
+> 最后更新：2026-06-08 11:50 CST（11:45 + 11:50 两个 cron 周期 4 群全静默 / 0 新消息）
 
 ---
+
+## 🆕 最新增量（2026-06-08 11:50）
+
+- 本轮新增：**0 条**（4 群全静默；11:45 节点亦 0 新消息）
+- 脚本诊断：✅ exit code 0 + ✅ "Archived: ; state saved." + ✅ state `last_run` 更新 → **真静默**（v2.15）
+- 4 群内部一致性：MVP hackathon max_id=647==last / Hugo一人公司 max_id=6056==last / AI x Web3 School max_id=14==last / 创客星球CGHub 仍 inaccessible
+- 验证：admin 升级生效（`getChatMember` 实测 4 群 bot 都是 administrator）
+- 注意：**创客星球CGHub 仍 inaccessible**——bot 已是 admin 但 forwardMessage 仍失败，老式 group 的硬限制（supergroup 升级是唯一修复路径，Hugo 还没做）
+- AI x Web3 School 长期 max_id=14 异常——admin 升级已生效但 bot 仍看不到新消息，疑似该群历史消息量极低或被 bot 进群时机限制
+- 下一轮 cron：12:00（5 min 后）继续观察；如 Hugo/成员开始群聊会立即捕获
 
 ## 🆕 最新增量（2026-06-07 15:55）
 
