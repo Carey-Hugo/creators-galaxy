@@ -1,0 +1,145 @@
+{
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 12,
+          "offset": 187,
+          "type": "bold"
+        },
+        {
+          "length": 19,
+          "offset": 259,
+          "type": "bold"
+        },
+        {
+          "length": 9,
+          "offset": 280,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 339,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 357,
+          "type": "bold"
+        },
+        {
+          "length": 19,
+          "offset": 382,
+          "type": "code"
+        },
+        {
+          "length": 4,
+          "offset": 485,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 619,
+          "type": "bold"
+        },
+        {
+          "length": 6,
+          "offset": 801,
+          "type": "bold"
+        },
+        {
+          "length": 16,
+          "offset": 1031,
+          "type": "bold"
+        },
+        {
+          "length": 40,
+          "offset": 1054,
+          "type": "text_link",
+          "url": "https://aiweb3.school/roadmap"
+        },
+        {
+          "length": 19,
+          "offset": 1124,
+          "type": "text_link",
+          "url": "https://aiweb3.school/roadmap"
+        },
+        {
+          "length": 5,
+          "offset": 1165,
+          "type": "bold"
+        },
+        {
+          "length": 15,
+          "offset": 1181,
+          "type": "bold"
+        },
+        {
+          "length": 8,
+          "offset": 1236,
+          "type": "bold"
+        },
+        {
+          "length": 11,
+          "offset": 1263,
+          "type": "bold"
+        },
+        {
+          "length": 14,
+          "offset": 1327,
+          "type": "bold"
+        },
+        {
+          "length": 10,
+          "offset": 1440,
+          "type": "bold"
+        },
+        {
+          "length": 55,
+          "offset": 1537,
+          "type": "italic"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1780967444,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "link_preview_options": {
+        "is_disabled": true
+      },
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: AI×Web3 学习日提醒\n(job_id: 7e912374d33f)\n-------------\n\nThe system auto-delivers, so the final response IS the message. Here's the plan.\n\n---\n\n早安 Hugo ☕ 6/9（周二）今日学习计划来了\n\n⚠️ WCB API 今日异常：3 次重试都 INTERNAL_SERVER_ERROR，本计划基于 6/5 末次成功快照 + W4 公开信息生成\n\n📅 今日计划（2026-06-09）\n\n🔑 今日核心目标：W4 Day 2 重启节奏 — 补 4 天 Web3 静默期短板 + 黑客松 D-5 技术热身\n\n📚 学习路径（三选一）：\n\n🟢 最小路径（30 分钟，推荐先这个重启）：\n- 写 daily/2026-06-09.md（4 天欠账 + 今日重启声明）\n- 读 1 段 handbook（C1 Chain-aware Context 入门）\n- 不接 WCB 任务（先恢复节奏）\n\n🟡 推荐路径（90 分钟，正常推进）：\n- 最小路径全部\n- 读完 C1 链上数据 → Agent 上下文 整章\n- 在测试网 Sepolia 查 1 个合约（用 Etherscan 练手）\n- 写 1 张概念卡：Transaction Receipt 字段解释\n\n🔴 挑战路径（3 小时，有余力）：\n- 推荐路径全部\n- 把 W3 已提交 23 个任务里\"涉及链上交互\"的部分（CAW Quickstart、x402、Agent Wallet）汇总成 1 张《CGHub 技术底座图》→ 这是 6/14 Demo 的素材\n- W3-16 黑客松报名网站 Bug / PR 反馈（+10 分，唯一远程可补 W3 任务，可顺手做了）\n\n✅ 任务清单：\n- [ ] 写 6/9 daily + 补 6/6/7/8 欠账说明（来源：30 天学习计划｜每日强制）\n- [ ] 读 handbook C1 Chain-aware Context（来源：W4 主线｜Bridge 第一步）\n- [ ] Etherscan 查 1 个测试网合约（来源：W1 收尾｜Web3 基础）\n- [ ] （可选）W3-16 黑客松网站 Bug 反馈 +10 分（来源：W3 收尾｜唯一非 Sponsor 可补任务）\n\n📖 Handbook 阅读章节：\n- 主线：C1 Chain-aware Context：把链上数据引入 Agent 上下文 — Bridge 融合层第 1 步，W4 必读\n- 辅线：B5 账户抽象 ERC-4337 入门 — 为 Agent Wallet 铺垫\n\n⚠️ 注意：\n- 📅 今天是 学习第 23 天 / 30 天（5/18 Day 1 起）— 收官周开始\n- 📅 WCB Day 23 = W4 Day 2（W3 已 6/7 结束）\n- 🔴 优先补 Web3 短板：C1/C2/C4 是 Bridge 基础，AI 强 Web3 弱 = 黑客松 6/14 风险\n- 🤐 6/5-6/8 静默 4 天：今天重启不必焦虑，30 分钟就能回到节奏\n- 📝 6/6 06.06 Co-learning 活动类已过期（无影响），6/8 06.08 Co-learning 周日还有 1 次机会\n- 🛠 WCB API 异常：今天不用急着交任务，先恢复学习；API 恢复后我会重新拉 W4 任务清单\n- 📌 打卡在完成所有任务后生成（今天可以单独写 6/9 daily，不必立刻打卡）\n\n---\nHermes · 9:00 cron · 状态：WCB API 故障 / W4 启动日 / 静默 4 天后重启\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder AI×Web3 学习日提醒\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1780967835,
+      "message_id": 10485,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1780967444,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 15
+    }
+  ]
+}
