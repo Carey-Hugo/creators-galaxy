@@ -534,3 +534,14 @@
 - [2026-06-07 08:42:33] AI x Web3 School · id=9 · #@Hermes · +1.5分
   > /model@hermes_humain_bot
 
+## 🆕 6/10 16:00 增量（v2.34 反例重跑真实脚本）
+
+| 时间 | 群 | id | 标签 | 分值 | 摘要 |
+|------|----|----|------|------|------|
+| 16:00:42 | 创客星球 MVP 黑客松 | 648 | #@Hermes | +1.5 | "`/model@hermes_humain_bot`" → 成功切到 gpt-5.5 / aicodewith |
+| 16:00:13 | AI x Web3 School | 18 | #@Hermes | +1.5 | "`/model@hermes_humain_bot`" → bot 列出 provider 列表，未切换 |
+
+- **Carey 跨 2 群连发 `/model` 测试主对话模型**——MVP 群成功切到 gpt-5.5 / aicodewith；AI x Web3 School 群只触发 provider 列表展示
+- 本轮 Carey 增量 = **+3.0**（2 条 `@Hermes` 各 1.5）
+- 跨场景决策判定：carey 个人工具操作（不是项目功能 commit），**不**触发 00-INDEX 新增决策
+- v2.10 白天静默期延续（4 堆掌火人仍 ~5 天静默自 6/5 起）
