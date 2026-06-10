@@ -1,0 +1,82 @@
+{
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1781049639,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: WCB API 健康检查\n(job_id: 44337aabc1d9)\n-------------\n\nAPI call failed after 3 retries: HTTP 429: usage limit exceeded, 5-hour usage limit reached for Token Plan Plus (3298000/3298000 used), resets at 2026-06-10T10:00:00+08:00 (2056)\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder WCB API 健康检查\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781056915,
+      "message_id": 11073,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781049639,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 16
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1781053263,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: AI×Web3 学习日提醒\n(job_id: 7e912374d33f)\n-------------\n\nAPI call failed after 3 retries: HTTP 429: usage limit exceeded, 5-hour usage limit reached for Token Plan Plus (3298000/3298000 used), resets at 2026-06-10T10:00:00+08:00 (2056)\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder AI×Web3 学习日提醒\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781056915,
+      "message_id": 11074,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781053263,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 17
+    }
+  ]
+}
