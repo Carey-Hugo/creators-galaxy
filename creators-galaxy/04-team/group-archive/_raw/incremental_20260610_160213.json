@@ -1,0 +1,224 @@
+{
+  "创客星球 MVP 黑客松": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 24,
+          "offset": 0,
+          "type": "bot_command"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1781078442,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "/model@hermes_humain_bot",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781078518,
+      "message_id": 11258,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781078442,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 648
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 7,
+          "offset": 18,
+          "type": "code"
+        },
+        {
+          "length": 21,
+          "offset": 71,
+          "type": "italic"
+        },
+        {
+          "length": 6,
+          "offset": 92,
+          "type": "bot_command"
+        },
+        {
+          "length": 6,
+          "offset": 92,
+          "type": "italic"
+        },
+        {
+          "length": 29,
+          "offset": 98,
+          "type": "italic"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1781078445,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "Model switched to gpt-5.5\nProvider: aicodewith\nContext: 256,000 tokens\n(session only — use `/model <name> --global` to persist)",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781078518,
+      "message_id": 11259,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781078445,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 649
+    }
+  ],
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 24,
+          "offset": 0,
+          "type": "bot_command"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "Carey",
+          "id": 8288483959,
+          "is_bot": false,
+          "language_code": "zh-hans",
+          "last_name": "Hugo"
+        },
+        "date": 1781078413,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "/model@hermes_humain_bot",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781078532,
+      "message_id": 11264,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781078413,
+      "forward_from": {
+        "id": 8288483959,
+        "is_bot": false,
+        "first_name": "Carey",
+        "last_name": "Hugo",
+        "language_code": "zh-hans"
+      },
+      "__source_message_id": 18
+    },
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 19,
+          "offset": 2,
+          "type": "bold"
+        },
+        {
+          "length": 10,
+          "offset": 38,
+          "type": "code"
+        },
+        {
+          "length": 12,
+          "offset": 68,
+          "type": "url"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1781078415,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "supergroup_chat_created": false,
+      "text": "⚙ Model Configuration\n\nCurrent model: MiniMax-M3\nProvider: MiniMax (minimaxi.com)\n\nSelect a provider:",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781078533,
+      "message_id": 11265,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781078415,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 19
+    }
+  ]
+}

@@ -4,9 +4,30 @@
 > 归档频率：每 5 分钟（cron `ea6425732577` 自动）
 > 数据来源：4 个群（创客星球 MVP 黑客松 / AI x Web3 School / Hugo一人公司 / 创客星球CGHub）
 > 启动时间：2026-06-04 20:08 CST（首次完整归档）
-> 最后更新：2026-06-08 11:50 CST（11:45 + 11:50 两个 cron 周期 4 群全静默 / 0 新消息）
+> 最后更新：2026-06-10 16:03 CST（5min cron `ea6425732577` v2.34 反例重跑真实脚本：跨 2 群 4 条新消息 / Carey 个人 /model 测试）
 
 ---
+
+## 🆕 最新增量（2026-06-10 16:03 CST）
+
+- 本轮新增：**4 条**（**创客星球 MVP 黑客松 2 条** + **AI x Web3 School 2 条**；Hugo一人公司 0 条；创客星球CGHub 仍 inaccessible）
+- 人类新增：2 条（Carey Hugo 跨两群 `/model@hermes_humain_bot` 测试）；bot 自身 2 条（不计入人类贡献）
+- 归档切片：`by-date/2026-06-10/16-00.md`
+- 原始备份：`_raw/incremental_20260610_160213.json`
+- 关键进展：Carey 跨创客星球 MVP 黑客松 + AI x Web3 School 两群连续发 `/model@hermes_humain_bot` 切换主对话模型：
+  - MVP 群：成功切到 **gpt-5.5 / aicodewith**（256k context, session only）
+  - AI x Web3 School 群：bot 列出可选 provider 列表（**MiniMax / minimaxi.com 当前**），未实际切换
+  - **跨场景决策**：Carey 个人模型测试，**不**影响 4 火堆项目功能 commit（v2.10 白天静默期判定关键）
+- 4 群内部一致性：MVP hackathon max=649==last+2 / Hugo一人公司 max=6056==last / AI x Web3 School max=19==last+2 / 创客星球CGHub 仍 inaccessible
+- 脚本诊断：v2.34 反例（sibling 15:55 走 skip-mode + state.last_run 15:56 距今 327s > 300s）→ **重跑真实脚本**（省 skip 风险）
+- 下一轮 cron：16:05（5 min 后）继续观察；Hugo 在群里 `@Hermes` 测试对话模型，bot 已自动响应
+
+| 时间 | 成员 | 群 | id | 标签 | 分值 | 摘要 |
+|------|------|----|----|------|------|------|
+| 16:00:42 | Carey Hugo | 创客星球 MVP 黑客松 | 648 | #@Hermes | +1.5 | "`/model@hermes_humain_bot`" |
+| 16:00:45 | 总助main（bot）| 创客星球 MVP 黑客松 | 649 | #闲聊 | 0（bot 自身不计分）| "Model switched to gpt-5.5 / aicodewith / 256k context (session only)" |
+| 16:00:13 | Carey Hugo | AI x Web3 School | 18 | #@Hermes | +1.5 | "`/model@hermes_humain_bot`" |
+| 16:00:15 | 总助main（bot）| AI x Web3 School | 19 | #闲聊 | 0（bot 自身不计分）| "⚙ Model Configuration / Current: MiniMax-M3 / Provider: MiniMax" |
 
 ## 🆕 最新增量（2026-06-08 11:50）
 
