@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-14 05:50:50 CST",
+  "last_run": "2026-06-14 05:56:22 CST",
   "groups": {
     "创客星球 MVP 黑客松": {
       "chat_id": -1003916141713,
@@ -17,7 +17,7 @@
       "chat_id": -5223347644,
       "inaccessible": true,
       "reason": "old-style group, privacy mode blocks forwardMessage or probe failed",
-      "last_checked": "2026-06-14 05:50:50 CST",
+      "last_checked": "2026-06-14 05:56:22 CST",
       "max_id": 0,
       "last_archived_id": 0,
       "last_run_archived_count": 0
