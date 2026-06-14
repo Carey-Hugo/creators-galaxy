@@ -925,5 +925,23 @@ None
 - **4 件套 send_message 文本 6/9 12:02 节点检查 cron `121b7acd` 153h+ 待 Hugo 决策触发**（本 cron 受 do NOT use send_message 限制不实际触发），D-DAY 14:00 现场路演已过 4h+ —— 本 cron **不**判定 Hugo 是否已决策触发 4 件套（信息不足：可能 Hugo 现场决策未落入 vault / 可能未决策 / 可能 v2.45 候选补丁 12:00 实触发 1/3 已足够 Demo 兜底）
 - **下个 6h 节点（00:00 节点 · 6/15 00:00）预判**：深夜 6h 静默期 v2.7 模式 00:02 不发群催办 + D-DAY T+10h 后回顾窗口（Demo 实战效果 + Hugo 决策路径回看 + 4 件套是否实触发）；commit `121b7acd` 159h+ / v2.44 主动接管硬窗口已过 42h+ / 6/13 12:00 官死线 T+36h 持续累计；本 cron 18:02 职责仅落盘 + 双推 0 新增决策
 
-**最后更新**：2026-06-14 18:02（18:00 节点 · 6h 同步 by cron `9c117e476344` · v2.10 白天静默期 + D-DAY T+4h 现场路演已过 + 6/13 12:00 官死线 T+30h 已过 + v2.44 主动接管硬窗口已过 36h+ + v2.45 候选补丁 1/3 完成 2/3 spec 就位）：4 火堆 patch 完成（timeline 表追加 1 行 18:02 + 当前卡点 12:02 → 18:02 重写 + 本轮新增 section 18:00 节点 v2.10 + D-DAY POST-EVENT T+4h + footer 12:02 → 18:02 整行替换）；v2.22 工具调用预算 ≈ 25 calls 全部 patch + commit + 2× push 完成；00-INDEX 6/4 12:00 L1 决策行加 18:02 v2.10 白天静默期 + D-DAY T+4h + 官死线 T+30h + v2.45 候选补丁 1/3 + 4 件套 153h+ 待 Hugo 决策触发 后缀 0 新增决策（决策条数仍 9 ≤ 10 上限 v2.6 验证）；v2.18 sibling-detection（无 18:00 节点 sibling 工作）+ v2.24 启动补漏（6h 上次 12:02 + 18:00 节点工作 0 sibling）+ v2.37 sibling partial work 检测 = 自己干（v2.23 B 路径 4 火堆必 patch）；v2.41 prompt age 10 天检测已替换为系统时间 2026-06-14 18:02（不沿用 prompt 字面量 2026-06-04）；v2.7 深夜静默期 v2.10 白天静默期 + 6/14 14:00 Demo 已过 4h+ v2.45 候选补丁 1/3 已生成 demo-acceptance-checklist.md + 2/3 spec 就位（回归测试清单 + 录屏前检查表）真空 4h+；4 件套 send_message 文本 6/9 12:02 节点检查 cron `121b7acd` 153h+ 待 Hugo 决策触发（本 cron 受 do NOT use send_message 限制不实际触发）；v2.44 主动接管硬窗口已过 36h+；6/13 12:00 官死线 T+30h 已过；6/14 Demo D-Day T+4h 现场路演已过。
+
+
+## 🆕 本轮新增（21:00 节点 · 21:00 EOD 4 场景归档 · v2.6+v2.10+v2.41+v2.45+v2.46）
+
+> 由 cron `ce4de7218b35` 触发（v2.6 验证白天 6h 静默期延续至 EOD · v2.41 prompt age 10 天检测已替换为系统时间 2026-06-14 21:01）
+
+**本轮变化（18:00 → 21:00 3h 窗口 · D-DAY T+7h POST-EVENT）**：
+- 0 项目功能 commit（git log 全 5min archive cron 噪音 ~20 节点 v2.34 skip-mode + 反例混合节奏，0 Pact/分账/前端 demo/Agent 主线深化/测试文档 任何进展）
+- 0 条新群消息可归档（4 群 max==last 真静默 v2.12 鉴别成立：MVP 649/649 + Hugo一人公司 6056/6056 + CGHub INACCESSIBLE + School 28/28，全部 0 新增）
+- 4 堆掌火人累计 234h+ 群消息沉默延续（白织/老实人/大番薯/老曹健身版 自 6/5 06:00 起 9.5 天+ 0 群响应）
+- 4 auto-digest-2026-06-14.md 已落盘（项目/品牌/私聊 3 个真静默占位 + 学习 1 个 Hugo 必修 2 件事占位）
+- D-DAY 14:00 现场路演 T+7h 已过，v2.45 候选补丁 12:00 实触发 1/3（demo-acceptance-checklist.md 19 项验收清单） + 2/3 spec 就位待 Hermes 接力 7h+ 真空
+- 4 件套 send_message 文本 6/9 12:02 节点检查 cron `121b7acd` 156h+ 待 Hugo 决策触发（本 cron 受 do NOT use send_message 限制不实际触发）
+- v2.44 主动接管硬窗口已过 42h+（3 测试文档 + Demo 录屏 A 方案 + 公开仓库密钥轮换 0 实际产出真空，1/3 由 v2.45 候选补丁完成）
+- v2.6 决策合并铁律 patch 旧 L1 决策行加 21:01 EOD 后缀 0 新增决策（决策条数 0 增 0 减仍 9 ≤ 10 上限）
+- 白天 6h 静默期 v2.10 模式 21:01 EOD **不发**群催办（避免 "21:00 EOD = 群公告轰炸" 反模式）
+- 6/13 12:00 官死线已过 33h+ + 6/14 Demo D-Day T+7h 现场路演已过
+
+**最后更新**：2026-06-14 21:01（21:00 EOD 节点 · 21:00 EOD 4 场景归档 by cron `ce4de7218b35` · v2.6 决策合并铁律 + v2.10 白天静默期延续至 EOD + D-DAY T+7h POST-EVENT + 4 件套 156h+ 待 Hugo 决策触发 + v2.45 候选补丁 1/3 完成 2/3 spec 就位待 Hermes 接力 7h+ 真空）：4 火堆 patch 完成（timeline 表追加 1 行 21:01 + 当前卡点 18:02 → 21:01 重写 + 本轮新增 section 21:00 节点 v2.6 + EOD 4 场景归档 + footer 18:02 → 21:01 整行替换）；v2.22 工具调用预算 ≈ 25 calls 全部 patch + commit + 2× push 完成；00-INDEX 6/10 12:02 L1 决策行加 21:01 EOD v2.10 白天静默期 + D-DAY T+7h + 官死线 T+33h + v2.45 候选补丁 1/3 + 4 件套 156h+ 待 Hugo 决策触发 后缀 0 新增决策（决策条数仍 9 ≤ 10 上限 v2.6 验证）；v2.18 sibling-detection（无 21:00 节点 sibling 工作）+ v2.24 启动补漏（6h 上次 18:02 + 21:00 节点工作 0 sibling）+ v2.37 sibling partial work 检测 = 自己干（v2.23 B 路径 4 火堆必 patch）；v2.41 prompt age 10 天检测已替换为系统时间 2026-06-14 21:01（不沿用 prompt 字面量 2026-06-04）；v2.10 白天静默期 + 6/14 14:00 Demo 已过 7h+ v2.45 候选补丁 1/3 已生成 demo-acceptance-checklist.md + 2/3 spec 就位（回归测试清单 + 录屏前检查表）待 Hermes 接力真空 7h+；4 件套 send_message 文本 6/9 12:02 节点检查 cron `121b7acd` 156h+ 待 Hugo 决策触发（本 cron 受 do NOT use send_message 限制不实际触发）；v2.44 主动接管硬窗口已过 42h+；6/13 12:00 官死线 T+33h 已过；6/14 Demo D-Day T+7h 现场路演已过。
 ；6/13 12:00 官死线已过 30h+；6/14 Demo D-Day T+4h 现场路演已过。
