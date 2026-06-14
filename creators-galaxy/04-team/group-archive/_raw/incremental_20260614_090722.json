@@ -1,0 +1,180 @@
+{
+  "AI x Web3 School": [
+    {
+      "channel_chat_created": false,
+      "delete_chat_photo": false,
+      "entities": [
+        {
+          "length": 33,
+          "offset": 70,
+          "type": "bold"
+        },
+        {
+          "length": 9,
+          "offset": 105,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 172,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 189,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 234,
+          "type": "bold"
+        },
+        {
+          "length": 7,
+          "offset": 312,
+          "type": "bold"
+        },
+        {
+          "length": 6,
+          "offset": 370,
+          "type": "bold"
+        },
+        {
+          "length": 19,
+          "offset": 500,
+          "type": "code"
+        },
+        {
+          "length": 16,
+          "offset": 706,
+          "type": "bold"
+        },
+        {
+          "length": 2,
+          "offset": 727,
+          "type": "bold"
+        },
+        {
+          "length": 15,
+          "offset": 730,
+          "type": "text_link",
+          "url": "https://www.cobo.com/developers"
+        },
+        {
+          "length": 2,
+          "offset": 776,
+          "type": "bold"
+        },
+        {
+          "length": 22,
+          "offset": 779,
+          "type": "text_link",
+          "url": "https://web3career.build/handbook"
+        },
+        {
+          "length": 5,
+          "offset": 824,
+          "type": "bold"
+        },
+        {
+          "length": 18,
+          "offset": 837,
+          "type": "bold"
+        },
+        {
+          "length": 6,
+          "offset": 911,
+          "type": "bold"
+        },
+        {
+          "length": 9,
+          "offset": 1014,
+          "type": "bold"
+        },
+        {
+          "length": 12,
+          "offset": 1084,
+          "type": "bold"
+        },
+        {
+          "length": 14,
+          "offset": 1135,
+          "type": "bold"
+        },
+        {
+          "length": 4,
+          "offset": 1187,
+          "type": "bold"
+        },
+        {
+          "length": 13,
+          "offset": 1246,
+          "type": "bold"
+        },
+        {
+          "length": 20,
+          "offset": 1260,
+          "type": "code"
+        },
+        {
+          "length": 23,
+          "offset": 1284,
+          "type": "code"
+        },
+        {
+          "length": 7,
+          "offset": 1388,
+          "type": "bold"
+        },
+        {
+          "length": 43,
+          "offset": 1451,
+          "type": "italic"
+        },
+        {
+          "length": 30,
+          "offset": 1497,
+          "type": "italic"
+        }
+      ],
+      "forward_origin": {
+        "sender_user": {
+          "first_name": "总助main",
+          "id": 8647436141,
+          "is_bot": true,
+          "username": "hermes_humain_bot"
+        },
+        "date": 1781398898,
+        "type": "user"
+      },
+      "group_chat_created": false,
+      "link_preview_options": {
+        "url": "https://www.cobo.com/developers"
+      },
+      "supergroup_chat_created": false,
+      "text": "Cronjob Response: AI×Web3 学习日提醒\n(job_id: 7e912374d33f)\n-------------\n\n📅 今日计划（2026-06-14 · 周日 · Day 28）\n\n🔑 今日核心目标：W4 收尾日——补 Web3 短板、查清 6/5 之后 9 天断更原因、把 MVP 推进状态盘清楚。\n\n---\n\n📚 学习路径（三选一）：\n\n- 🟢 最小路径（1.5h）：1 篇 Web3 必读 + 写今日 daily note\n- 🟡 推荐路径（3h）：Web3 基础 1h + W3-16 收尾 30min + 4 堆火堆状态同步 30min + 写 daily note 1h\n- 🔴 挑战路径（5h）：推荐路径 + W4 MVP 状态盘点 1.5h + 起草 W5 任务规划 1h\n\n---\n\n✅ 任务清单：\n\n- [ ] 读 1 份 Web3 必读（Cobo 开发者门户入门章节，30-60 min）（来源：Web3 短板补课）\n- [ ] W3-16 黑客松报名网站 Bug / PR 反馈（+10 分远程可补）（来源：W3 收尾）\n- [ ] 写 daily/2026-06-14.md——把 6/5 至今 9 天的断更根因查清楚并入档（来源：学习规范）\n- [ ] 4 堆篝火状态同步（白织/CAW 凭据 + 12:00 接口对齐 + DM 模板使用情况）（来源：CGHub 项目线｜B-项目-黑客松-MVP）\n- [ ] （可选）盘点 W4 MVP 当前 demo 状态 + 起草 W5 任务清单（来源：W4-5｜Hackathon MVP）\n\n---\n\n📖 Handbook 阅读章节：\n\n- 主线：Cobo 开发者门户 - 入门（WCB 必读门槛）—— Web3 零基础用户的最近路径\n- 辅线：WCB Handbook - Web3 基础（具体链接以 WCB 站内为准）\n\n---\n\n⚠️ 注意：\n\n- 📍 今天是 30 天学习计划第 28 天，剩 2 天（6/15、6/16）。6/16 是计划终点，建议 6/15 做 W3-W4 完整复盘。\n- 🚨 断更 9 天（6/5 → 6/14）—— WCB API 返回空任务列表 + 9 天无 daily note，需要先确认：是 Hugo 这段时间没在学，还是 daily note 生成流程断了？\n- 🩹 Web3 是真短板——W3 已经是 Web3 × AI Bridge 周，6/5 还在补 W3 任务。今天必须主动补，不能再拖。\n- 🔥 W4 是 MVP 构建周——按计划今天是 W4 最后一天，需要确认 demo 是否能跑通。\n- ⏭️ W5 = 6/15-6/21：根据 W4 产出决定是进入\"完善 Demo\"还是\"返工基础\"。\n- 📝 打卡节奏：完成所有任务后由我生成草稿 → Hugo 手动提交 WCB（按 6/4 教正的节奏，不抢活）。\n\n---\n\n📊 WCB API 状态：tasks.listForLearner 返回 {\"ok\":true,\"result\":[]}——W3 任务清空，符合\"W3=6/1-6/7 已结束\"的预期。W4 任务如果存在，需要用 WCB 站内截图确认（按 6/4 教正：\"Hugo 截图为准\"）。\n\n🤔 异常提醒：如果 Hugo 看到此计划后发现\"W4 早该有任务\"，请截图发我，我对齐 W4-W5 任务清单。\n\n---\n\n生成人：Hermes（AI × Web3 School Learning Agent）  \n生成时间：2026-06-14 09:00（cron 自动）\n\nTo stop or manage this job, send me a new message (e.g. \"stop reminder AI×Web3 学习日提醒\").",
+      "chat": {
+        "first_name": "Carey",
+        "id": 8288483959,
+        "last_name": "Hugo",
+        "type": "private"
+      },
+      "date": 1781399241,
+      "message_id": 12877,
+      "from": {
+        "first_name": "总助main",
+        "id": 8647436141,
+        "is_bot": true,
+        "username": "hermes_humain_bot"
+      },
+      "forward_date": 1781398898,
+      "forward_from": {
+        "id": 8647436141,
+        "is_bot": true,
+        "first_name": "总助main",
+        "username": "hermes_humain_bot"
+      },
+      "__source_message_id": 28
+    }
+  ]
+}
