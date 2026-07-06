@@ -1,0 +1,24 @@
+{
+  "id": "conv-1783318383833-r9fo9hr52",
+  "providerId": "claude",
+  "title": "我检查一下记忆和项目相关文件，确认下上下文。\n\n根据记忆，这个项目是一个帮助人们找到自己\"愿力...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783318383834,
+  "updatedAt": 1783318403022,
+  "lastResponseAt": 1783318403022,
+  "sessionId": "8b28acdb-dbcd-49ac-ab4e-2aef3082689f",
+  "providerState": {
+    "providerSessionId": "8b28acdb-dbcd-49ac-ab4e-2aef3082689f"
+  },
+  "currentNote": "docs/04-book-plan/19-为什么我劝你先别急着学AI-初稿.md",
+  "usage": {
+    "model": "deepseek-v4-flash",
+    "inputTokens": 167,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 26624,
+    "contextWindow": 200000,
+    "contextTokens": 26791,
+    "percentage": 13,
+    "contextWindowIsAuthoritative": true
+  }
+}

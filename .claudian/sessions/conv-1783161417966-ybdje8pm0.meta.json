@@ -1,0 +1,25 @@
+{
+  "id": "conv-1783161417966-ybdje8pm0",
+  "providerId": "claude",
+  "title": "误入歧途今儿",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1783161417968,
+  "updatedAt": 1783165391153,
+  "lastResponseAt": 1783162544764,
+  "sessionId": null,
+  "providerState": {
+    "providerSessionId": "6258c50c-a4e4-4512-adf8-c21cec9f6393",
+    "previousProviderSessionIds": [
+      "007711a1-3547-4f47-be53-f755ea606049"
+    ]
+  },
+  "usage": {
+    "model": "deepseek-chat",
+    "inputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 0,
+    "percentage": 0
+  }
+}
