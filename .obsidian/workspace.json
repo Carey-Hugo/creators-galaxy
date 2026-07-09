@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/06-courses/01-lead-course/day1-2-slides.md",
+                "file": "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "day1-2-slides"
+              "title": "20-越学越慌是把工具当方向-初稿"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "#20",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -202,8 +202,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "aa4b87c2d2fe7adc",
+  "active": "9a89851589143fd1",
   "lastOpenFiles": [
+    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
+    "docs/06-courses/01-lead-course/day1-2-slides.md",
     "docs/06-courses/scripts/create-day1-2-pptx-v2.js",
     "docs/06-courses/01-lead-course/images/style-test/C-watercolor.png",
     "docs/06-courses/01-lead-course/images/style-test/A-geometric.png",
@@ -230,7 +232,6 @@
     "docs/04-book-plan/planning/AI新时代-扩展版-V4.0.md",
     "docs/04-book-plan/drafts/backup-serial-topics/20-找方向到底在找什么-初稿.md",
     "docs/04-book-plan/drafts/backup-serial-topics",
-    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
     "docs/04-book-plan/drafts/20-框架-2026-07-08.md",
     "docs/04-book-plan/drafts/20-标题候选-2026-07-08.md",
     "docs/04-book-plan/_theory-notes/2026-07-08-全书体系全盘底图.md",
@@ -238,9 +239,7 @@
     "docs/04-book-plan/_theory-notes/2026-07-08-004-以终为始长期主义.md",
     "docs/04-book-plan/_theory-notes/2026-07-08-002-003-协作本能与命运共同体.md",
     "docs/00-brand/yuanli-qicheng/品牌视觉规范.md",
-    "docs/00-brand/yuanli-qicheng",
     "docs/06-courses/01-lead-course/day1-2-script.md",
-    "docs/06-courses/01-lead-course/day1-2-slides.md",
     "docs/06-courses/00-knowledge-system/content-map.md",
     "docs/06-courses/01-lead-course/yuanli-qicheng-outline-v2.md",
     "docs/06-courses/01-lead-course/yuanli-qicheng-stage1-outline.md",
