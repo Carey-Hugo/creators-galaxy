@@ -1,0 +1,24 @@
+{
+  "id": "conv-1783572647158-d5srrlxue",
+  "providerId": "claude",
+  "title": "诊断：原文版本号大量过时（仅 DeepSeek V4 属实），且框架停留在「追模型、学 pro...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1783572647159,
+  "updatedAt": 1783573377965,
+  "lastResponseAt": 1783573377965,
+  "sessionId": "d8260baf-6e2e-4c57-b250-fe26262f8173",
+  "providerState": {
+    "providerSessionId": "d8260baf-6e2e-4c57-b250-fe26262f8173"
+  },
+  "currentNote": "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
+  "usage": {
+    "model": "deepseek-v4-flash",
+    "inputTokens": 3182,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 57856,
+    "contextWindow": 200000,
+    "contextTokens": 61038,
+    "percentage": 31,
+    "contextWindowIsAuthoritative": true
+  }
+}
