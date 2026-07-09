@@ -1,0 +1,254 @@
+{
+  "main": {
+    "id": "0f26b60dfa4ddeaf",
+    "type": "split",
+    "children": [
+      {
+        "id": "8243b33b87001b6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a89851589143fd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/06-courses/01-lead-course/day1-2-slides.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "day1-2-slides"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1b73601f3b5023d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c9be14c4d830958",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa4b87c2d2fe7adc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "353370ae1d5241dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "7080c67fd6da9f52",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 336.5
+  },
+  "right": {
+    "id": "c2fabd8b31b622af",
+    "type": "split",
+    "children": [
+      {
+        "id": "52432188cee1af04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "327a0a46208a3e25",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "7d69946e21f391d0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "7a8a201b66f8be80",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "9736d15de797f72b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "322e2ee33b03014e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "1a097856b908a1a4",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "8157d268accb947a",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 449.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false,
+      "realclaudian:Open Claudian": false
+    }
+  },
+  "active": "aa4b87c2d2fe7adc",
+  "lastOpenFiles": [
+    "docs/06-courses/scripts/create-day1-2-pptx-v2.js",
+    "docs/06-courses/01-lead-course/images/style-test/C-watercolor.png",
+    "docs/06-courses/01-lead-course/images/style-test/A-geometric.png",
+    "docs/06-courses/01-lead-course/images/style-test/C-watercolor-thumb.png",
+    "docs/06-courses/01-lead-course/images/style-test/B-photographic-thumb.png",
+    "docs/06-courses/01-lead-course/images/style-test/B-photographic.png",
+    "docs/06-courses/01-lead-course/images/style-test",
+    "docs/06-courses/01-lead-course/images/pyramid_opt.png",
+    "docs/06-courses/01-lead-course/images/pyramid.png",
+    "docs/06-courses/01-lead-course/images/p6-lonely-sail.png",
+    "docs/06-courses/01-lead-course/images/p6-lonely-sail-thumb.png",
+    "docs/06-courses/01-lead-course/images/p3-x-vs-check.png",
+    "docs/06-courses/01-lead-course/images",
+    "docs/06-courses/01-lead-course/day2-slides.md",
+    "docs/06-courses/01-lead-course/_design-spec.md",
+    "docs/06-courses/01-lead-course/Day1-2-课件-v7.pptx",
+    "docs/06-courses/01-lead-course/Day1-2-课件-v6.pptx",
+    "docs/06-courses/01-lead-course/Day1-2-课件-v5.pptx",
+    "docs/06-courses/01-lead-course/Day1-2-课件-v4.pptx",
+    "docs/06-courses/01-lead-course/Day1-2-课件-v3.pptx",
+    "docs/06-courses/01-lead-course/Day1-2-课件-v2.pptx",
+    "docs/06-courses/00-knowledge-system/tomorrow-plan.md",
+    "docs/04-book-plan/planning/双书总架构-V4-2026-07-08.md",
+    "docs/04-book-plan/planning/AI新时代-扩展版-V4.0.md",
+    "docs/04-book-plan/drafts/backup-serial-topics/20-找方向到底在找什么-初稿.md",
+    "docs/04-book-plan/drafts/backup-serial-topics",
+    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
+    "docs/04-book-plan/drafts/20-框架-2026-07-08.md",
+    "docs/04-book-plan/drafts/20-标题候选-2026-07-08.md",
+    "docs/04-book-plan/_theory-notes/2026-07-08-全书体系全盘底图.md",
+    "docs/04-book-plan/_theory-notes/2026-07-08-005-心力痛苦哲学-反例档案.md",
+    "docs/04-book-plan/_theory-notes/2026-07-08-004-以终为始长期主义.md",
+    "docs/04-book-plan/_theory-notes/2026-07-08-002-003-协作本能与命运共同体.md",
+    "docs/00-brand/yuanli-qicheng/品牌视觉规范.md",
+    "docs/00-brand/yuanli-qicheng",
+    "docs/06-courses/01-lead-course/day1-2-script.md",
+    "docs/06-courses/01-lead-course/day1-2-slides.md",
+    "docs/06-courses/00-knowledge-system/content-map.md",
+    "docs/06-courses/01-lead-course/yuanli-qicheng-outline-v2.md",
+    "docs/06-courses/01-lead-course/yuanli-qicheng-stage1-outline.md",
+    "creators-galaxy/01-projects/yilin-community-restart/37-益邻家园与EYA益雅水晶命名定稿-2026-06-30.md",
+    "docs/04-book-plan/references/platform-publish-track.md",
+    "docs/references/multipost-platform-list.md",
+    "docs/references/mowa-wisdom-coach-dao-fa-shu-qi-yong.md",
+    "docs/06-courses/00-knowledge-system/reuse-matrix.md",
+    "docs/06-courses/00-knowledge-system/content-inventory.md"
+  ]
+}
