@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8243b33b87001b6d",
+        "id": "44960440dcdc6271",
         "type": "tabs",
         "children": [
           {
-            "id": "9a89851589143fd1",
+            "id": "9f784028e43989e3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
+                "file": "docs/04-book-plan/drafts/21-愿力是护城河-初稿.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20-越学越慌是把工具当方向-初稿"
+              "title": "21-愿力是护城河-初稿"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 336.5
+    "width": 316.5
   },
   "right": {
     "id": "c2fabd8b31b622af",
@@ -202,53 +202,53 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "1a097856b908a1a4",
+  "active": "9f784028e43989e3",
   "lastOpenFiles": [
-    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md.tmp.9468.1783573356311",
-    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md.tmp.9468.1783573322675",
-    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md.tmp.9468.1783572758322",
-    "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md.tmp.9468.1783572755136",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/22-共识产品包V1.0-内部讨论优化稿-2026-07-14.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/14-共识产品包V0.1-胡哥组长起草稿-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/13-MoWa系统逻辑图-参考资料-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/14-共识产品包V0.4-MoWa愿力文明长期内容体系-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/14-共识产品包V0.5-MoWa愿力文明长期内容体系-2026-07-11.md",
+    "docs/04-book-plan/drafts/21-愿力是护城河-初稿.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/26-邀约沟通共识产品包V1.0-两版-长版只出框架-2026-07-14.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/25-愿力实践共生大会共识底座V1.0-明哥源头参考版-2026-07-14.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/24-邀约沟通产品包V0.7-内部讨论优化稿-2026-07-14.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/_INDEX-2026-07-14.md",
     "docs/04-book-plan/drafts/20-越学越慌是把工具当方向-初稿.md",
-    "docs/06-courses/01-lead-course/day1-2-slides.md",
-    "docs/06-courses/scripts/create-day1-2-pptx-v2.js",
+    "微信图片_20260710134040_93_12113.png",
+    "docs/04-book-plan/generated-covers/20-cover-final.png",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/01-第一次筹备会/02-第一次筹备会复盘-暴露型成功-2026-07-10.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/01-第一次筹备会/01-第一次筹备会纪要-组织压力测试-2026-07-10.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/18-711香港活动流程-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/17-基金会核心发展纲领V2.1-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/16-王晶总裁主旨演讲原文-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/15-人类命运共同体基金会启动发布会-参考资料-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/15-人类命运共同体基金会-三件套综合消化-2026-07-11.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/08-如何让一群强意志强经验强判断的人不互相抵消而彼此增益.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/07-愿力实践共生大会第二次筹备会-会议方案.pdf",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/06-7月9日愿力实践共生大会筹备会-关键共识与下一步行动计划.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/04-杨靖-愿力实践共学基地与各地愿力实践社区.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/05-MoWa的硬实力已存在-但更多是未经编目的文明矿山.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/02-愿力实践联合发起共识包V0.1.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/03-愿力生态发展DAO协作协议V0.1-让不同的光共同照向真实结果.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/02-核心文件-其他/01-杨靖-愿力生态发展不是全国推广也不是给MoWa招募普通成员.docx",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/00-项目源头/02-大会为什么要开-共识梳理版V0.2-明哥+慧中-2026-07-10.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/00-项目源头/03-大会7大发布+7幕剧+8类人-明哥+天玉-2026-07-10.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/00-项目源头/01-大会源头说明一页纸V0.1-明哥-2026-07-10.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-黄奇帆AI人才组合组织生态.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-黄仁勋Lex人性护城河.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-黄仁勋AI五层架构.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-霍夫曼AI赋能5%.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-超级智体方跃人机共生.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-赫拉利AIAgent不是工具.md",
+    "creators-galaxy/03-scenarios/C-品牌-CGHub/daily/article-digest-2026-07-10-米磊硬科技复杂对抗熵增.md",
     "docs/06-courses/01-lead-course/images/style-test/C-watercolor.png",
     "docs/06-courses/01-lead-course/images/style-test/A-geometric.png",
     "docs/06-courses/01-lead-course/images/style-test/C-watercolor-thumb.png",
     "docs/06-courses/01-lead-course/images/style-test/B-photographic-thumb.png",
     "docs/06-courses/01-lead-course/images/style-test/B-photographic.png",
-    "docs/06-courses/01-lead-course/images/style-test",
     "docs/06-courses/01-lead-course/images/pyramid_opt.png",
     "docs/06-courses/01-lead-course/images/pyramid.png",
-    "docs/06-courses/01-lead-course/images/p6-lonely-sail.png",
-    "docs/06-courses/01-lead-course/images/p6-lonely-sail-thumb.png",
-    "docs/06-courses/01-lead-course/images/p3-x-vs-check.png",
-    "docs/06-courses/01-lead-course/images",
-    "docs/06-courses/01-lead-course/day2-slides.md",
-    "docs/06-courses/01-lead-course/_design-spec.md",
-    "docs/06-courses/01-lead-course/Day1-2-课件-v7.pptx",
-    "docs/06-courses/01-lead-course/Day1-2-课件-v6.pptx",
-    "docs/06-courses/01-lead-course/Day1-2-课件-v5.pptx",
-    "docs/06-courses/01-lead-course/Day1-2-课件-v4.pptx",
-    "docs/06-courses/00-knowledge-system/tomorrow-plan.md",
-    "docs/04-book-plan/planning/双书总架构-V4-2026-07-08.md",
-    "docs/04-book-plan/planning/AI新时代-扩展版-V4.0.md",
-    "docs/04-book-plan/drafts/backup-serial-topics/20-找方向到底在找什么-初稿.md",
-    "docs/04-book-plan/drafts/20-框架-2026-07-08.md",
-    "docs/04-book-plan/drafts/20-标题候选-2026-07-08.md",
-    "docs/04-book-plan/_theory-notes/2026-07-08-全书体系全盘底图.md",
-    "docs/04-book-plan/_theory-notes/2026-07-08-005-心力痛苦哲学-反例档案.md",
-    "docs/04-book-plan/_theory-notes/2026-07-08-004-以终为始长期主义.md",
-    "docs/04-book-plan/_theory-notes/2026-07-08-002-003-协作本能与命运共同体.md",
-    "docs/00-brand/yuanli-qicheng/品牌视觉规范.md",
-    "docs/06-courses/01-lead-course/day1-2-script.md",
-    "docs/06-courses/00-knowledge-system/content-map.md",
-    "docs/06-courses/01-lead-course/yuanli-qicheng-outline-v2.md",
-    "docs/06-courses/01-lead-course/yuanli-qicheng-stage1-outline.md",
-    "creators-galaxy/01-projects/yilin-community-restart/37-益邻家园与EYA益雅水晶命名定稿-2026-06-30.md",
-    "docs/04-book-plan/references/platform-publish-track.md",
-    "docs/references/multipost-platform-list.md",
-    "docs/references/mowa-wisdom-coach-dao-fa-shu-qi-yong.md",
-    "docs/06-courses/00-knowledge-system/reuse-matrix.md",
-    "docs/06-courses/00-knowledge-system/content-inventory.md"
+    "docs/06-courses/01-lead-course/images/p6-lonely-sail.png"
   ]
 }
