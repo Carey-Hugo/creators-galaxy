@@ -1,0 +1,23 @@
+{
+  "clientId": "0ecccaac71d152a79c0f526ec95c009b",
+  "apiKey": "pyhTaTxUMAn3d5A7X0US5gfIytfy4YpLyVbAlsuPSq9l0Z6yOq/FHyhqsj+zHmGd9/9SdD7QJA==",
+  "folderMappingMode": "default-only",
+  "folderMappings": [],
+  "hasCompletedWizard": false,
+  "direction": "bidirectional",
+  "conflictStrategy": "newest-wins",
+  "pullTargetFolder": "IMA",
+  "pullMirrorNotebookFolders": true,
+  "pullIncludeNotebookIds": [],
+  "trigger": "on-save",
+  "intervalMinutes": 30,
+  "wikiLinkStrategy": "plain-text",
+  "stripFrontmatter": false,
+  "includeAttachments": true,
+  "onChangeStrategy": "recreate",
+  "maxNoteBytes": 5242880,
+  "lastSyncAt": 0,
+  "lastPullAt": 0,
+  "fileStates": {},
+  "remoteIndex": {}
+}
