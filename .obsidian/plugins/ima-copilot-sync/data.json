@@ -1,0 +1,25 @@
+{
+  "syncFolder": "ima",
+  "syncIntervalMinutes": 60,
+  "syncNotes": true,
+  "syncKnowledgeBase": true,
+  "personalKnowledgeBases": [
+    {
+      "kbId": "AIOi-s_p5p0TnPMl13Z6sqnL7mo1G_jiYcLO_JGO4r4=",
+      "name": "AI新时代AB书/课程"
+    }
+  ],
+  "lastSyncTime": 1786161667083,
+  "enableDebugLog": false,
+  "linkFormat": "auto",
+  "syncDeleteMode": "mark-deleted",
+  "downloadImages": false,
+  "imageSizeLimit": 0,
+  "imageSizeLimitUnit": "MB",
+  "downloadFiles": false,
+  "fileSizeLimit": 0,
+  "fileSizeLimitUnit": "MB",
+  "publicKnowledgeBases": [],
+  "forceReadingMode": true,
+  "downloadEnhanced": true
+}
