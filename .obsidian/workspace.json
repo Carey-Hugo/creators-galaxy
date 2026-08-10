@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/05-poster-copy/consult-ai/咨询图文介绍-v1.md",
+                "file": "docs/04-book-plan/drafts/29-从劳动稀缺到愿力稀缺-连载草稿.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "咨询图文介绍-v1"
+              "title": "29-从劳动稀缺到愿力稀缺-连载草稿"
             }
           }
         ]
@@ -208,6 +208,14 @@
   },
   "active": "9f784028e43989e3",
   "lastOpenFiles": [
+    "docs/04-book-plan/drafts/29-从劳动稀缺到愿力稀缺-书籍素材版.md",
+    "docs/04-book-plan/drafts/29-从劳动稀缺到愿力稀缺-连载草稿.md",
+    "docs/05-poster-copy/consult-ai/咨询图文介绍-v1.md",
+    "docs/06-execution-plan/愿力启程-周一执行清单-2026-08-10.md",
+    "docs/05-poster-copy/consult-ai/社群分发文案.md",
+    "docs/05-poster-copy/consult-ai/咨询图文介绍-v2-胡哥定稿.md",
+    "docs/04-book-plan/planning/双书总架构-V5-2026-08-10.md",
+    "docs/04-book-plan/drafts/29-AI时代什么值得被定价-公众号发布版.html",
     "ima/个人知识库/AI新时代AB书_课程/AI 把人从公司里推出去，Web3 把人在公司外连起来——生产关系的双向运动.md",
     "docs/06-execution-plan/愿力启程-每日节奏规划-v1.md",
     "docs/06-execution-plan/愿力启程-周执行计划-v2.md",
@@ -215,7 +223,6 @@
     "docs/05-poster-copy/consult-ai/咨询海报-科技未来-备选.png",
     "docs/05-poster-copy/consult-ai/咨询海报-温暖曙光-备选.png",
     "docs/05-poster-copy/consult-ai/咨询海报-v3-初始版.png",
-    "docs/05-poster-copy/consult-ai/咨询图文介绍-v1.md",
     "docs/05-poster-copy/consult-ai",
     "ima/个人知识库/AI新时代AB书_课程/attachments/AI-时代第一问：当机器大量替代人工，普通人该如何安身立命？-0e32d7f9.png",
     "ima/个人知识库/AI新时代AB书_课程/AI 时代第一问：当机器大量替代人工，普通人该如何安身立命？.md",
@@ -241,18 +248,11 @@
     "ima/个人知识库/AI新时代AB书_课程/外卖骑手月入8000，普通家庭入不敷出：劳动最光荣，却为什么难养活一个家？.md",
     "ima/个人知识库/AI新时代AB书_课程/破解中产家庭焦虑：如何才能穿越K型分化，避免阶层滑落？.md",
     "ima/个人知识库/AI新时代AB书_课程/当AI把门槛铲平，普通人如何真正拿到属于自己的杠杆？.md",
-    "ima/个人知识库/AI新时代AB书_课程/520，我想跟你聊聊钱的问题.md",
-    "ima/个人知识库/AI新时代AB书_课程/不透明、中心化、可篡改：AI时代如何破局？.md",
-    "ima/个人知识库/AI新时代AB书_课程/当你创造的每一份价值贡献被永久记录在链上自动公平分配——一场文明演进正在发生.md",
-    "ima/个人知识库/AI新时代AB书_课程/卡帕西跳槽Anthropic背后：AI正在驱动一场组织形态大变革.md",
-    "ima/个人知识库/AI新时代AB书_课程/把自己活成一片森林，让万物为你生长：AI 时代的终极生存法则.md",
-    "ima/个人知识库/AI新时代AB书_课程/你以为在管AI，其实是AI在管你.md",
     "ima/个人知识库/AI新时代AB书_课程",
     "ima/个人知识库",
     "ima",
     "docs/04-book-plan/drafts/27-公众号发布版.html",
     "docs/04-book-plan/drafts/26-公众号发布版.html",
-    "docs/04-book-plan/generated-covers/25",
-    "docs/04-book-plan/drafts/25-Be-water-My-Friend-周星驰致敬李小龙-功夫女足-公众号发布版.html"
+    "docs/04-book-plan/generated-covers/25"
   ]
 }
