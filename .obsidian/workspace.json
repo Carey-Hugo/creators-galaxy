@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/33-新闻通稿-开幕稿-首届愿力实践共生大会-2026-08-14.md",
+                "file": "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/07-口播短视频/脚本-首批5条-2026-08-25.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "33-新闻通稿-开幕稿-首届愿力实践共生大会-2026-08-14"
+              "title": "脚本-首批5条-2026-08-25"
             }
           }
         ]
@@ -206,8 +206,17 @@
       "ima-copilot-sync:🐼 ima.copilot sync：立即同步": false
     }
   },
-  "active": "1a097856b908a1a4",
+  "active": "9f784028e43989e3",
   "lastOpenFiles": [
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/33-新闻通稿-开幕稿-首届愿力实践共生大会-2026-08-14.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/07-口播短视频/脚本-首批5条-2026-08-25.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/07-口播短视频",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/06-整体推进计划/05-口播短视频执行SOP-胡戈AI觉醒-2026-08-25.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/06-整体推进计划/04-四线内容规划V1-书籍×公众号×口播×课程-2026-08-25.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/06-整体推进计划/02-教练校准共创纪要-聚焦课程×工作坊-2026-08-25.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/06-整体推进计划/03-AI望舒反馈-愿力实践之一定稿-2026-08-23.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/06-整体推进计划/01-整体推进计划V0.1-益邻家园×愿力启程×CGHub-2026-08-19.md",
+    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/06-整体推进计划",
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/圆桌沙龙投屏背景-AI艺术字版-3840x1440-2026-08-14.png",
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/圆桌沙龙投屏背景-3840x1440-2026-08-14.png",
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/make_roundtable_bg_v2.py",
@@ -228,17 +237,13 @@
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/LED主画面-3840x1440.png",
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/LED主画面-3840x1440-无日期地点-柔和版-2026-08-14.png",
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/LED主画面-3840x1440-无日期地点-2026-08-14.png",
-    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters/B-议程预览.jpg",
     "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/rollup-posters",
-    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/countdown-posters",
-    "creators-galaxy/03-scenarios/D-项目-愿力实践共生大会/04-媒体宣传组/33-新闻通稿-开幕稿-首届愿力实践共生大会-2026-08-14.md",
     "docs/04-book-plan/drafts/29-从劳动稀缺到愿力稀缺-书籍素材版.md",
     "docs/05-poster-copy/consult-ai/咨询图文介绍-v1.md",
     "docs/06-execution-plan/愿力启程-周一执行清单-2026-08-10.md",
     "docs/05-poster-copy/consult-ai/社群分发文案.md",
     "docs/05-poster-copy/consult-ai/咨询图文介绍-v2-胡哥定稿.md",
     "docs/04-book-plan/planning/双书总架构-V5-2026-08-10.md",
-    "docs/04-book-plan/drafts/29-AI时代什么值得被定价-公众号发布版.html",
     "ima/个人知识库/AI新时代AB书_课程/AI 把人从公司里推出去，Web3 把人在公司外连起来——生产关系的双向运动.md",
     "docs/06-execution-plan/愿力启程-每日节奏规划-v1.md",
     "docs/06-execution-plan/愿力启程-周执行计划-v2.md",
@@ -248,11 +253,6 @@
     "ima/个人知识库/AI新时代AB书_课程/DeepSeek紧急组建Harness团队，对标Claude Code——AI失控的边界到底在哪里？.md",
     "ima/个人知识库/AI新时代AB书_课程/Altman 和黄仁勋双双给「抢饭碗论」降温——更值得关注的是组织形态正在悄悄换轨.md",
     "ima/个人知识库/AI新时代AB书_课程/AI让你走遍世界，却带不回一丝温暖.md",
-    "ima/个人知识库/AI新时代AB书_课程/AI 能重构能力，但重构不了_我愿意_.md",
-    "ima/个人知识库/AI新时代AB书_课程/致同路人：响应 WAIC 主席声明，主动担当，勇于作为.md",
-    "ima/个人知识库/AI新时代AB书_课程/致敬史上最牛创业团队：一套算法，28年改写中国.md",
-    "ima/个人知识库/AI新时代AB书_课程/越学越慌的人，不是没努力，是把AI工具当成了方向.md",
-    "docs/04-book-plan/drafts/28-AI时代第一问-初稿.md",
-    "ima/个人知识库/AI新时代AB书_课程/《AI 新时代（姊妹篇A_B书）》.md"
+    "ima/个人知识库/AI新时代AB书_课程/AI 能重构能力，但重构不了_我愿意_.md"
   ]
 }
