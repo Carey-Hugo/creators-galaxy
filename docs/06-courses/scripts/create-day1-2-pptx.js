@@ -195,7 +195,7 @@ s7.addText("评论区见 👇", {
 // Slide 8: Preview
 let s8 = pres.addSlide();
 s8.background = { color: DEEP_BLUE };
-s8.addText("明天见", {
+s8.addText("下一节见", {
   x: 0.8, y: 1.0, w: 8, h: 0.6, fontSize: 16, color: GOLD, fontFace: "Arial", bold: true, margin: 0
 });
 s8.addText("三个标志", {
@@ -204,7 +204,7 @@ s8.addText("三个标志", {
 s8.addText("测你离愿力还有多远", {
   x: 0.8, y: 2.8, w: 8, h: 0.6, fontSize: 18, color: "AAAAAA", fontFace: "Arial", margin: 0
 });
-s8.addText("🔥 明天见", {
+s8.addText("🔥 下一节见", {
   x: 0.8, y: 4.0, w: 3, h: 0.5, fontSize: 20, color: GOLD, fontFace: "Arial", bold: true, margin: 0
 });
 
@@ -424,7 +424,7 @@ s17.addText("为什么还是动不了？", {
 s17.addText("不是意志力问题", {
   x: 0.8, y: 2.8, w: 8, h: 0.6, fontSize: 20, color: "AAAAAA", fontFace: "Arial", margin: 0
 });
-s17.addText("🔥 明天揭秘", {
+s17.addText("🔥 下一节揭秘", {
   x: 0.8, y: 4.0, w: 4, h: 0.5, fontSize: 20, color: GOLD, fontFace: "Arial", bold: true, margin: 0
 });
 

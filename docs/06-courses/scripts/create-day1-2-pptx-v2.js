@@ -363,7 +363,7 @@ s8.addShape(pres.shapes.RECTANGLE, {
   fill: { color: NAVY, transparency: 35 }
 });
 
-s8.addText("明天见", {
+s8.addText("下一节见", {
   x: 0.8, y: 1.2, w: 3, h: 0.4,
   fontSize: 14, color: GOLD, fontFace: "WenQuanYi Zen Hei", bold: true, margin: 0
 });
@@ -380,7 +380,7 @@ s8.addText("测你离愿力还有多远", {
 
 addGoldLine(s8, 3.7);
 
-s8.addText("🔥 明天见", {
+s8.addText("🔥 下一节见", {
   x: 0.8, y: 4.0, w: 3, h: 0.5,
   fontSize: 18, color: GOLD, fontFace: "WenQuanYi Zen Hei", bold: true, margin: 0
 });

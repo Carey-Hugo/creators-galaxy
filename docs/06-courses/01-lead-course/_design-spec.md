@@ -129,7 +129,7 @@ PPT 尺寸：**10.00 × 5.62 inch**（横版 16:9 兼容 4:3 近似）
 | Day1 P5 | 愿望vs愿力 | C | hubspoke.png（全屏）| (0, 0) |
 | Day1 P6 | 终极一问 | C | p6-lonely-sail.png | (5.50, 1.30) |
 | Day1 P7 | 课后练习 | C | dashboard.png（全屏）| (0, 0) |
-| Day1 P8 | 明天预告 | C | comparison.png（全屏）| (0, 0) |
+| Day1 P8 | 下一节预告 | C | comparison.png（全屏）| (0, 0) |
 | Day2 P9 | Day2 封面 | — | logo | (8.30, 3.50) |
 
 > Day2 内部 P2-P8 在 v4 已用全屏背景图（愿力三标 + 自测表 + 钩子），Day2 不需要额外配图。
