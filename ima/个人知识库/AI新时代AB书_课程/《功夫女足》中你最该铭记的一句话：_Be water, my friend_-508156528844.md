@@ -4,7 +4,7 @@ media_id: "wechatarticle_94b1b7b3c84fda0f2d709ae8ce8d3115_083ac8a43b994499cba76d
 author:
   - "胡戈AI赋能"
 published: 2026-07-29T11:40:13
-created: 2026-09-01T10:30:15
+created: 2026-09-06T14:50:55
 ---
 # 《功夫女足》中你最该铭记的一句话："Be water, my friend"
 
