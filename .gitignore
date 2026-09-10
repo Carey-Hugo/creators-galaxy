@@ -10,3 +10,6 @@ CLAUDE.md
 
 # 注：本项目为私有仓库，agent/.env 含测试网凭证，按团队约定随仓库提交，方便队友拉取即跑。
 # ⚠️ 若仓库转公开或泄露，立即轮换 agent/.env 里的 agentSigner 私钥与 CAW API key。
+
+# 嵌套的独立 git 仓库（自身带 .git）——不作为父仓库 gitlink 提交（否则 clone 只能拿到空目录）
+creators-galaxy/02-projects/cghub-mvp-hackathon/reference-agent-safe-pay/
